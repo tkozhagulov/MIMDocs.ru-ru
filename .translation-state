@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "26cdf18ca132be9cd34d1a036c505de7817a59c5",
+  "LastProcessedCommit": "9f53063c5103f4facbfbadf9b8d865014e71bcfd",
   "LastTranslatedCommit": "d7f5d9ba5a0d9505c12f792d08896a5c0335a40e",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
@@ -12972,6 +12972,36 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.ru-ru\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf",
       "HandoffFileCommit": "120ece5a4c2c0da984a26111d6cfa147da7fbb2c",
       "HandoffDateTime": "2016-05-17T20:02:31.7826526Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "b84a6c7c7b53a122eefc3846ba93b92b34edb6ce": {
+      "FileHash": "b84a6c7c7b53a122eefc3846ba93b92b34edb6ce",
+      "SourceFileCommit": "b2578d50f855486183ae182330bacb688011c273",
+      "SourceFilePath": "MIMDocs\\DeployUse\\preparing-domain.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "MIMDocs\\DeployUse\\preparing-domain.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.ru-ru\\master\\preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.ru-ru.xlf",
+      "HandoffFileCommit": "cef511c37cf0d2e4b7784d86f720037b15b68e0b",
+      "HandoffDateTime": "2016-05-19T17:05:33.4575534Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
