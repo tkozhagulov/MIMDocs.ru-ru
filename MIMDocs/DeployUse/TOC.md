@@ -1,5 +1,5 @@
-# [Изучение вопроса](/microsoft-identity-manager/Understand/microsoft-identity-manager-2016)
-# [План и проект](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms)
+# [Изучение вопроса](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [План и проект](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Развертывание и использование](microsoft-identity-manager-deploy.md)
 ## [Первое развертывание](microsoft-identity-manager-deploy.md)
 ### [Настройка домена](preparing-domain.md)
@@ -17,9 +17,9 @@
 ## [Диспетчер сертификатов MIM](working-with-mim-certificate-manager.md)
 ### [Регистрация смарт-карт](certificate-manager-for-non-administrators.md)
 ### [Создание сертификатов программного обеспечения](certificate-manager-for-software-certificates.md)
-# [Справочник разработчика](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
+# [Ссылки для разработчиков](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO4-->
 
 
