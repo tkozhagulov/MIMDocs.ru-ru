@@ -29,7 +29,7 @@ ms.suite: ems
 Статьи в этом разделе содержат пошаговые инструкции по развертыванию Microsoft Identity Manager (MIM) 2016 для сценариев самообслуживания пользователей на новом сервере, где FIM и MIM ранее не развертывались.
 
 > [!NOTE]
-> Топология развертывания, описанная в этом разделе, предназначена только для начала работы и изучения MIM.  В [руководстве по планированию ресурсов](/microsoft-identity-manager/PlanDesign/capacity-planning-guide) приведены более подробные сведения о топологиях рабочего развертывания.  Рекомендуем ознакомиться с этой документации перед развертыванием MIM для использования в рабочей среде.
+> Топология развертывания, описанная в этом разделе, предназначена только для начала работы и изучения MIM.  В [руководстве по планированию ресурсов](/microsoft-identity-manager/plan-design/capacity-planning-guide) приведены более подробные сведения о топологиях рабочего развертывания.  Рекомендуем ознакомиться с этой документации перед развертыванием MIM для использования в рабочей среде.
 
 <!---
 Comment: Restore after PAM content is included
@@ -43,18 +43,18 @@ MIM работает с Active Directory (AD), поэтому выполните
 
 ## Следующий этап: подготовка сервера удостоверений
 После создания и настройки домена подготовьте корпоративный сервер управления удостоверениями. Сюда входят следующие задачи:
-- [Настройка сервера: Windows Server 2012 R2](prepare-server-ws2012r2.md)
-- [Настройка сервера: SQL Server 2014](prepare-server-sql2014.md)
-- [Настройка сервера: SharePoint](prepare-server-sharepoint.md)
-- [Настройка сервера: Exchange Server](prepare-server-exchange.md) (необязательно)
+- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
+- [SQL Server 2014](prepare-server-sql2014.md)
+- [SharePoint](prepare-server-sharepoint.md)
+- [Exchange Server](prepare-server-exchange.md) (необязательно).
 
 ## Последний этап: установка компонентов Microsoft Identity Manager 2016
 После настройки домена и сервера вы можете установить компоненты MIM и настроить их для синхронизации с AD.
-- [Установка MIM: служба синхронизации MIM](install-mim-sync.md)
-- [Установка MIM: служба и портал MIM](install-mim-service-portal.md)
-- [Установка MIM: синхронизация баз данных Active Directory и службы MIM](install-mim-sync-ad-service.md)
+- [Служба синхронизации MIM](install-mim-sync.md)
+- [Служба и портал MIM](install-mim-service-portal.md)
+- [Синхронизация баз данных Active Directory и службы MIM](install-mim-sync-ad-service.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO4-->
 
 

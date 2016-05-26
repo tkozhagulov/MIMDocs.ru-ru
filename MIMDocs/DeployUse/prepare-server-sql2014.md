@@ -32,7 +32,10 @@ ms.suite: ems
 [SharePoint"](prepare-server-sharepoint.md)
 
 > [!NOTE]
-> Во всех примерах ниже **mimservername** представляет имя контроллера домена, **contoso** — имя домена, а **Pass@word1** — пример пароля.
+> В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
+> - Имя контроллера домена — **mimservername**.
+> - Имя домена — **contoso**.
+> - Пароль — **Pass@word1**.
 
 ## Установка **SQL Server 2014 (стандартный выпуск)**
 
@@ -51,6 +54,6 @@ ms.suite: ems
 [SharePoint"](prepare-server-sharepoint.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 

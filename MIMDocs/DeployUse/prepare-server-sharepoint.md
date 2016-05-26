@@ -2,7 +2,7 @@
 # required metadata
 
 title: Настройка сервера управления удостоверениями&#58; SharePoint | Microsoft Identity Manager
-description: Установите и настройте SharePoint Foundation для размещения страницы портала MIM. 
+description: Установите и настройте SharePoint Foundation для размещения страницы портала MIM.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -32,15 +32,18 @@ ms.suite: ems
 [Exchange Server"](prepare-server-exchange.md)
 
 > [!NOTE]
-> Во всех примерах ниже **mimservername** представляет имя контроллера домена, **contoso** — имя домена, а **Pass@word1** — пример пароля.
+> В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
+> - Имя контроллера домена — **mimservername**.
+> - Имя домена — **contoso**.
+> - Пароль — **Pass@word1**.
 
 
 ## Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
 
 > [!NOTE]
-> Чтобы программа установки скачала необходимые компоненты, потребуется подключение к Интернету.
+> Чтобы установщик скачал необходимые компоненты, требуется подключение к Интернету. Если компьютер находится в виртуальной сети без доступа к Интернету, добавьте на компьютер дополнительный сетевой интерфейс, который предоставляет доступ к Интернету. Это можно отключить после завершения установки.
 
-По завершении установки сервер перезагрузится.
+Выполните следующие действия, чтобы установить SharePoint Foundation 2013 с пакетом обновления 1 (SP1). После завершения установки сервер будет перезагружен.
 
 1.  Запустите **PowerShell** от имени администратора домена.
 
@@ -70,7 +73,7 @@ ms.suite: ems
 
 2. Укажите этот сервер как сервер баз данных для базы данных конфигурации, а *Contoso\SharePoint* — как учетную запись доступа к базе данных для SharePoint.
 
-3. В качестве пароля введите парольную фразу фермы (он не будет использоваться в этой лабораторной среде).
+3. Создайте пароль для парольной фразы фермы.
 
 4. Когда мастер настройки завершит задание конфигурации 10 из 10, нажмите кнопку "Готово", и откроется веб-браузер.
 
@@ -84,45 +87,41 @@ ms.suite: ems
 
 ## Подготовка SharePoint для размещения портала MIM
 
-1. Создайте **веб-приложение SharePoint Foundation 2013**.
+> [!NOTE]
+> Изначально протокол SSL не будет настроен. Обязательно настройте протокол SSL или его аналог, прежде чем разрешать доступ к порталу.
 
-    > [!NOTE]
-    > Изначально протокол SSL не будет настроен. Обязательно настройте протокол SSL или его аналог, прежде чем разрешать доступ к порталу.
+1. Запустите **командную консоль SharePoint 2013** и выполните следующий сценарий PowerShell, чтобы создать **веб-приложение SharePoint Foundation 2013**.
 
-    1. Запустите  **командную консоль SharePoint 2013** и запустите следующий сценарий PowerShell:
+    ```
+    $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"
+    -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
+    ```
 
-        ```
-        $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
-        New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"
-        -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
-        ```
+    > [!NOTE] Появится предупреждение о том, что используется классический метод проверки подлинности Windows, и для выполнения завершающей команды может потребоваться несколько минут. По завершении в выходных данных будет указан URL-адрес нового портала. Не закрывайте окно **командной консоли SharePoint 2013**, чтобы перейти к нему позже.
 
-        2. Обратите внимание на предупреждение о том, что используется классический метод проверки подлинности Windows и для возврата завершающей команды может потребоваться несколько минут.  По завершении в выходных данных будет указан URL-адрес нового портала.  Оставьте окно **Командная консоль SharePoint 2013** открытым, так как оно потребуется на последующем этапе.
+2. Запустите командную консоль SharePoint 2013 и выполните следующий сценарий PowerShell, чтобы создать **семейство веб-сайтов SharePoint**, связанное с веб-приложением.
 
-2. Создайте **семейство веб-сайтов SharePoint** , связанное с этим веб-приложением.
+  ```
+  $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
+  $w = Get-SPWebApplication http://corpidm.contoso.local:82
+  New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator
+  -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin
+  $s = SpSite($w.Url)
+  $s.AllowSelfServiceUpgrade = $false
+  $s.CompatibilityLevel
+  ```
 
-    1. Запустите командную консоль SharePoint 2013 и выполните следующий сценарий PowerShell:
-
-        ```
-        $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
-        $w = Get-SPWebApplication http://corpidm.contoso.local:82
-        New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator
-        -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin
-        $s = SpSite($w.Url)
-        $s.AllowSelfServiceUpgrade = $false
-        $s.CompatibilityLevel
-        ```
-
-        2. Убедитесь, что в переменной *CompatibilityLevel* содержится результат "14".  (Дополнительные сведения см. в статье [Installing FIM 2010 R2 on SharePoint Foundation 2013](http://technet.microsoft.com/library/jj863242.aspx) (Установка FIM 2010 R2 в SharePoint Foundation 2013)). Если результат равен "15", то семейство веб-сайтов не было создано для версии 2010. Удалите семейство веб-сайтов и создайте его заново.
+  > [!NOTE] Убедитесь, что в переменной *CompatibilityLevel* содержится результат "14". Если результат равен "15", то семейство веб-сайтов не было создано для версии 2010. Удалите семейство веб-сайтов и создайте его заново.
 
 3. Отключите **состояние просмотра на стороне сервера SharePoint Server** и задачу SharePoint "Задание анализа работоспособности (каждый час, Microsoft SharePoint Foundation Timer, все серверы)", выполнив следующие команды PowerShell в **командной консоли SharePoint 2013**:
 
-    ```
-    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-    $contentService.ViewStateOnServer = $false;
-    $contentService.Update();
-    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-    ```
+  ```
+  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+  $contentService.ViewStateOnServer = $false;
+  $contentService.Update();
+  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+  ```
 
 4. На сервере управления удостоверениями откройте новую вкладку веб-браузера, перейдите по адресу http://localhost:82/ и войдите в качестве *contoso\Administrator*.  Откроется пустой сайт SharePoint под названием *Портал MIM* .
 
@@ -141,6 +140,6 @@ ms.suite: ems
 [Exchange Server"](prepare-server-exchange.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 

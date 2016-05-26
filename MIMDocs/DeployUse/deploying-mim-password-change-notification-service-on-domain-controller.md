@@ -66,6 +66,6 @@ ms.suite: ems
 Когда вы заново подключитесь к серверу DC от имени администратора домена, перейдите в папку *C:\Program Files\Microsoft Password Change Notification.* Запустите программу *pcnscfg.exe*.
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 
