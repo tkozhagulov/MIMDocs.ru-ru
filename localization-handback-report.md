@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/4c81ee602b46fa555d6fcb81f91b07e0eee7049f/MIMDocs/index.md) | InSyncHandedBackSuccess | [Details](#49841c26e9ecf9d5ea3642e5d9a80883a50eaa1881)
 
 ## Item Details
-##### <a name='49841c26e9ecf9d5ea3642e5d9a80883a50eaa1881'></a> Source: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/4c81ee602b46fa555d6fcb81f91b07e0eee7049f/MIMDocs/index.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/c0a9c2bd8bfd224c88d36d3b45ff7956d35f3804/MIMDocs/index.md)
-* Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/120ece5a4c2c0da984a26111d6cfa147da7fbb2c/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf)
-* Handoff Datetime: 2016-05-17 20:02:31
-* Handoff Reason: Include
-* Archive File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/6e8d9a96bb0fd1c87d93f826c4c9c5da8df23d63/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/archive/index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf)
-* Archive Datetime: 2016-05-19 21:38:08
-* Handback File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/bea96e092dbdb23346e7169f917c3de47dc1dae5/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf)
-* Handback Datetime: 2016-05-27 12:10:00
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
