@@ -27,8 +27,7 @@ ms.suite: ems
 
 # Установка MIM 2016: синхронизация Active Directory и службы MIM
 
->[!div class="step-by-step"]
-[< Служба и портал MIM](install-mim-service-portal.md)
+>[!div class="step-by-step"] [«Служба и портал MIM](install-mim-service-portal.md)
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
@@ -43,8 +42,7 @@ ms.suite: ems
 
 При настройке агента управления MIM необходимо указать учетную запись пользователя. В этом документе в качестве имени для этой учетной записи используется **MIMMA**.
 
-> [!NOTE]
-> Для агента управления MIM необходимо использовать ту же учетную запись, которая была указана во время установки службы MIM.
+> [!NOTE] Для агента управления MIM необходимо использовать ту же учетную запись, которая была указана во время установки службы MIM.
 
 ###Создание MIM MA
 
@@ -99,69 +97,69 @@ ms.suite: ems
 
 9.  На странице **Настройка потока атрибута** примените следующие сопоставления потока атрибутов и нажмите кнопку **Далее**.
 
-    | **Направление потока** | **Атрибут источника данных** | **Атрибут метавселенной** |
+    | **Атрибут источника данных** | **Направление потока** | **Атрибут метавселенной** |
     |-|-|-|
-    |Импорт|Импорт|accountName|
-    |Импорт|Импорт|company|
-    |Импорт|Импорт|displayName|
-    |Импорт|Импорт|employeeID|
-    |Импорт|Импорт|employeeType|
-    |Импорт|Импорт|firstName|
-    |Импорт|Импорт|lastName|
-    |Импорт|Импорт|Manager|
-    |Импорт|Импорт|objectSid|
-    |Экспортировать|Экспортировать|accountName|
-    |Экспортировать|Экспортировать|company|
-    |Экспортировать|Экспортировать|displayName|
-    |Экспортировать|Экспортировать|домен|
-    |Экспортировать|Экспортировать|employeeID|
-    |Экспортировать|Экспортировать|employeeType|
-    |Экспортировать|Экспортировать|firstName|
-    |Экспортировать|Экспортировать|lastName|
-    |Экспортировать|Экспортировать|manager|
-    |Экспортировать|Экспортировать|objectSid|
+    | AccountName | Экспортировать | accountName |
+    | DisplayName | Экспортировать | displayName |
+    | Домен | Экспортировать | домен |
+    | EmployeeID | Экспортировать | employeeID |
+    | EmployeeType | Экспортировать | employeeType |
+    | Электронная почта | Экспортировать | почта |
+    | Имя | Экспортировать | firstName |
+    | Фамилия | Экспортировать | lastName |
+    | ObjectSID | Экспортировать | objectSid |
 
 10.  В качестве типа объекта источника данных выберите **Человек**.
 
-    -   Select **Person** as the Metaverse object type.
+    -   В качестве типа объекта метавселенной выберите **Person**.
 
-    -   Select **Direct** as the Mapping Type.
+    -   В качестве типа сопоставления выберите **Прямое**.
 
-    -   For each row in the previous table, complete the following steps:
+    -   Для каждой строки в таблице выше выполните следующие действия.
 
-        -   Select the **Flow direction** shown for that row in the table.
+        -   Выберите **Направление потока**, показанное для этой строки в таблице.
 
-        -   Select the **Data source attribute** shown for that row in the table.
+        -   Выберите **Атрибут источника данных**, показанный для этой строки в таблице.
 
-        -   Select the **Metaverse attribute** shown for that row in the table.
+        -   Выберите **Атрибут метавселенной**, показанный для этой строки в таблице.
 
-        -   To apply the flow mapping, click **New**.
+        -   Чтобы применить сопоставление потока, нажмите кнопку **Создать**.
 
-    -   Select **Group** as the data source type and as the metaverse object type.
+    -   В качестве типа источника данных и типа объекта метавселенной выберите **Группа**.
 
-    -   Select **Direct** as the Mapping Type.
+    -   В качестве типа сопоставления выберите **Прямое**.
 
-    -   For each row in the following table, complete these steps:
+    -   Для каждой строки в следующей таблице выполните следующие действия.
 
-        -   Select the **Flow direction** shown for that row in the table.
+        -   Выберите **Направление потока**, показанное для этой строки в таблице.
 
-        -   Select the **Data source attribute** shown for that row in the table.
+        -   Выберите **Атрибут источника данных**, показанный для этой строки в таблице.
 
-        -   Select the **Metaverse attribute** shown for that row in the table.
+        -   Выберите **Атрибут метавселенной**, показанный для этой строки в таблице.
 
-        -   To apply the flow mapping, click **New**.
+        -   Чтобы применить сопоставление потока, нажмите кнопку **Создать**.
 
-    | Flow Direction | Data Source Attribute | Metaverse Attribute |
+    | **Атрибут источника данных** | **Направление потока** | **Атрибут метавселенной** |
     |-|-|-|
-    | Export | AccountName | accountName |
-    | Export | DisplayName | displayName |
-    | Export | Domain | domain |
-    | Export | Scope | scope |
-    | Export | Type | type |
-    | Export | Member | member |
-    | Export | MembershipLocked | membershipLocked |
-    | Export | MembershipAddWorkflow | membershipAddWorkflow |
-    | Export | Manager | manager |
+    | AccountName | Экспортировать | accountName |
+    | DisplayName | Экспортировать | displayName |
+    | Домен | Экспортировать | домен |
+    | Электронная почта | Экспортировать | почта |
+    | MailNickName | Экспортировать | mailNickName |
+    | Участник | Экспортировать | member |
+    | ObjectSID | Экспортировать | objectSid |
+    | Область | Экспортировать | область действия |
+    | Type | Экспортировать | type |
+    | УчастникshipAddWorkflow | Экспортировать | membershipAddWorkflow |
+    | УчастникshipLocked | Экспортировать | membershipLocked |
+    | DisplayName | Импорт | displayName |
+    | Область | Импорт | область действия |
+    | Type | Импорт | type |
+    | Участник | Импорт | member |
+    | AccountName | Импорт | accountName |
+    | DisplayedOwner | Импорт | displayedOwner |
+    | MailNickName | Импорт | mailNickName |
+
 
 11.  На странице **Настройка отмены подготовки** нажмите кнопку **Далее**.
 
@@ -439,10 +437,9 @@ ms.suite: ems
     - В списке **Run profiles** (Профили выполнения) выберите профиль выполнения, который требуется запустить.
     - Чтобы запустить профиль выполнения, нажмите кнопку **ОК**.
 
->[!div class="step-by-step"]
-[< Служба и портал MIM](install-mim-service-portal.md)
+>[!div class="step-by-step"] [«Служба и портал MIM](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
