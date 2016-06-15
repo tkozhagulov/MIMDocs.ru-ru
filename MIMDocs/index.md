@@ -21,12 +21,15 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
     <section id="hero-content">
       <h1>Документация по Microsoft Identity Manager</h1>
       <h2>Microsoft Identity Manager (MIM) предоставляет локальное удостоверение и возможности управления доступом, в том числе синхронизацию удостоверений, предотвращение краж удостоверений и многое другое.</h2>
-      <h3>Вы еще не использовали MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/" target="\_blank">Посетите страницу продукта &rarr;</a></h3>
+      <h3>Вы еще не использовали MIM? <a href="http://www.microsoft.com/en-us/server-cloud/products/microsoft-identity-manager/" target="\_blank">Посетите страницу продукта &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">
       <p>Готовы приступить к работе?</p>
       <ol class="action-list">
-        <li><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Попробовать сейчас</a></li>
+        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Запустите бесплатную пробную версию</a></li>
+      </ol>
+      <ol class="action-list">
+        <li><a href="http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=61395" target="\_blank" class="button-bordered button-translucent">Ознакомьтесь с новыми возможностями</a></li>
       </ol>
     </aside>
     <section id="featured" class="container">
@@ -137,6 +140,6 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 </article>
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
