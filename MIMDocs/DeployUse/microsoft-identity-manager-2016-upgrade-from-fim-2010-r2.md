@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Обновление с Forefront Identity Manager 2010 R2 | Microsoft Identity Manager
-description: Узнайте, как обновить FIM 2010 R2, а затем установить новые компоненты из MIM 2016.
-keywords:
+title: "Обновление с Forefront Identity Manager 2010 R2 | Microsoft Identity Manager"
+description: "Узнайте, как обновить FIM 2010 R2, а затем установить новые компоненты из MIM 2016."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7e61e201b277a2e8ec9fee785e9e34fca3b1cb29
+ms.openlocfilehash: 24a7bf5bfb0a7450becd08be6743ed7ab1755559
+
 
 ---
 
@@ -207,6 +201,7 @@ ms.suite: ems
 Примечание. Если надстройки и расширения FIM уже развернуты на компьютерах пользователей для SSPR, не следует настраивать новые телефонные шлюзы MFA для сброса паролей, пока все надстройки и расширения FIM не будут обновлены до MIM 2016.  Как для FIM 2010, так и для FIM 2010 R2 надстройки и расширения не распознают новые шлюзы, выдавая ошибку. В результате пользователь не может выполнить сброс пароля.
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
