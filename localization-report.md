@@ -1383,7 +1383,7 @@
 * Archive File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/4db239511a66d46231b79a0aa71c3185af2f5b80/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/archive/index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf)
 * Archive Datetime: 2016-07-01 23:27:26
 * Handback File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/636362a7567cb379b43d67efc543ab4e687bea63/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf)
-* Handback Datetime: 2016-07-04 10:55:15
+* Handback Datetime: 2016-07-04 11:26:40
 * Handback Error: [handback_transform_failed](#f589140e0feac52474256e7ab29b9d3a7a36c5ec81handback_transform_failed)
 * [Back to Top](#report-top)
 
