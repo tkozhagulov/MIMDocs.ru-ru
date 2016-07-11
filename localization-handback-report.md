@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-exchange.md) | InSyncHandedBackSuccess | [Details](#b69ea20f375869d4ad08987a08aba05913fd1db166)
 
 ## Item Details
+##### <a name='b69ea20f375869d4ad08987a08aba05913fd1db166'></a> Source: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-exchange.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/ad007a75a86770f8f35bf2a7180fb0c70279957b/MIMDocs/DeployUse/prepare-server-exchange.md)
+* Handoff File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/18a6f26bae8e1c4d2371890d8ec126c2730bd73f/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.ru-ru.xlf)
+* Handoff Datetime: 2016-06-27 09:09:56
+* Handoff Reason: Include
+* Archive File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/4db239511a66d46231b79a0aa71c3185af2f5b80/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/archive/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.ru-ru.xlf)
+* Archive Datetime: 2016-07-01 23:27:26
+* Handback File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/f25d9368c69ff156382fc3c05d1c6f8e0b17bd1b/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.ru-ru.xlf)
+* Handback Datetime: 2016-07-11 13:01:11
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

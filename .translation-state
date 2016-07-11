@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "d348acc2137d578c8625a6ebe5e05fbc0a1ff8fc",
-  "LastTranslatedCommit": "c3a5a6bd7b169ce16dfba4b254e0b8e79d558520",
+  "LastTranslatedCommit": "ad007a75a86770f8f35bf2a7180fb0c70279957b",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
       "FileHash": "c1e15c9548e46cbbff7810e63478074ceeb06152",
@@ -13976,14 +13976,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "cf936922540377a603a544abcb8fd7166d1f744f",
+      "TargetFileCommit": "ad007a75a86770f8f35bf2a7180fb0c70279957b",
       "TargetFilePath": "MIMDocs\\DeployUse\\prepare-server-exchange.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.ru-ru\\master\\prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.ru-ru.xlf",
-      "HandbackFileCommit": "0c1b32d34570a17b705204981c515f15b5658912",
-      "HandbackDateTime": "2016-05-26T16:25:43.5576536Z",
+      "HandbackFileCommit": "f25d9368c69ff156382fc3c05d1c6f8e0b17bd1b",
+      "HandbackDateTime": "2016-07-11T13:01:11.5345979Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-26T16:25:43.5576536Z",
+      "UpdatedDateTime": "2016-07-11T13:01:11.5345979Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.ru-ru\\master\\archive\\prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.ru-ru.xlf",
       "ArchiveFileCommit": "4db239511a66d46231b79a0aa71c3185af2f5b80",
       "ArchiveFileDateTime": "2016-07-01T23:27:26.3808205Z",
