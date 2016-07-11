@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 1
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 2
-[ In Sync Handback Files ](#insync-handback-success-list)| 45
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 1
+[ In Sync Handback Files ](#insync-handback-success-list)| 46
 [ Ignored Files ](#ignored-list)| 109
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -178,13 +178,13 @@
 ## <a name='outofsync-handback-success-list'></a> Out Of Sync Handback Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md) | OutofSyncHandedBackSuccess | [Details](#6b58093744656b9bfa62c1cfcab340ea88e6e1686)
  [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/5fa6f8f60d3ca99bc16333406663bd82ac4ec2e6/MIMDocs/PlanDesign/TOC.md) | OutofSyncHandedBackSuccess | [Details](#4cb419fa58037307e1352dd813e5f9b1767cfac5248)
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | InSyncHandedBackSuccess | [Details](#50c0edd60abfa6550cb5a873d32a842e8c0998115)
+ [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md) | InSyncHandedBackSuccess | [Details](#6b58093744656b9bfa62c1cfcab340ea88e6e1686)
  [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | InSyncHandedBackSuccess | [Details](#85e83b85f047ca2c2648b42ec68b832caae645ee7)
  [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-service-portal.md) | InSyncHandedBackSuccess | [Details](#eb2af412d9638035de591197fa191e990ade0ca19)
  [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-sync.md) | InSyncHandedBackSuccess | [Details](#8a99b3a291d2b145f453732a72244c43f9c535d611)
@@ -417,15 +417,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='6b58093744656b9bfa62c1cfcab340ea88e6e1686'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/5965f5ed66ad10ac63427f1e129f17ad41d565fe/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/c9be2fa70b2d25e40d9dcfc09e270eef015bfb18/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
 * Handoff File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/18a6f26bae8e1c4d2371890d8ec126c2730bd73f/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf)
 * Handoff Datetime: 2016-06-27 09:09:56
 * Handoff Reason: Include
 * Archive File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/4db239511a66d46231b79a0aa71c3185af2f5b80/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/archive/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf)
 * Archive Datetime: 2016-07-01 23:27:26
-* Handback File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/c23853214221fe38e674b2ea4c0074fc06e5b16c/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf)
-* Handback Datetime: 2016-05-03 20:58:16
+* Handback File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/c4e1c6295c488a9311d192dae0cd78e26a89d943/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf)
+* Handback Datetime: 2016-07-11 14:40:09
 * [Back to Top](#report-top)
 
 ##### <a name='85e83b85f047ca2c2648b42ec68b832caae645ee7'></a> Source: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
@@ -3473,9 +3473,9 @@
 * Archive Datetime: 2016-07-08 23:16:49
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/d833f012958b424ccbb038802f22c8b065cf78ef/MIMDocs/PlanDesign/TOC.md)
-* Current Handback File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/812580222e04f898d347203c3ab38f42c9d7f52c/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf)
-* Current Handback Datetime: 2016-05-20 09:44:20
+* Current Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/c9be2fa70b2d25e40d9dcfc09e270eef015bfb18/MIMDocs/PlanDesign/TOC.md)
+* Current Handback File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/c4e1c6295c488a9311d192dae0cd78e26a89d943/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf)
+* Current Handback Datetime: 2016-07-11 14:40:09
 * [Back to Top](#report-top)
 
 ##### <a name='e33a08d77a0b5c422cdbc8c19516b55df980a2c6249'></a> Source: [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md)
