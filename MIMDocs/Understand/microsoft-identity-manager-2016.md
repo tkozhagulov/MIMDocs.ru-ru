@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
-description: Ознакомьтесь с принципами работы MIM 2016, чтобы создать более безопасную и удобную процедуру управления удостоверениями в облачной и локальной среде.
-keywords:
+title: "Microsoft Identity Manager 2016 | Microsoft Identity Manager"
+description: "Ознакомьтесь с принципами работы MIM 2016, чтобы создать более безопасную и удобную процедуру управления удостоверениями в облачной и локальной среде."
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
+ms.openlocfilehash: 5247cce895344ac6148b735fe550eb16c39103c7
+
 
 ---
 
@@ -36,21 +30,10 @@ Microsoft Identity Manager 2016 можно использовать с Azure, ч
 ## Управление привилегированными пользователями
 Служба управления привилегированными пользователями управляет административным доступом, предоставляя временный доступ для определенных задач к конфиденциальным ресурсам. Это означает, что пользователям можно предоставлять только необходимый уровень доступа, что позволяет снизить вероятность получения кибер-взломщиками полного административного доступа. Кроме того, служба управления привилегированными пользователями извлекает и изолирует учетные записи администраторов из имеющихся лесов Active Directory.
 
-## Поддерживаемые платформы
-
-MIM поддерживает обновленный список продуктов и платформ, включая новейшие платформы Майкрософт и Office, стеки серверов, ОС Windows Client и Windows Server, SharePoint, SQL и Outlook, в частности:
-
--   Windows 8.1 с Internet Explorer 8 и более поздней версии
-
--   Windows Server 2012 R2
-
--   SQL 2014
-
--   Outlook 2013
-
--   System Center Service Manager 2012 и 2012 R2
+MIM поддерживает локальное решение управления привилегированными пользователями для управления Active Directory. Для начала обратитесь к статье [Использование управления привилегированным доступом](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 
