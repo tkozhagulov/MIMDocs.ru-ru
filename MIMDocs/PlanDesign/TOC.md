@@ -4,9 +4,10 @@
 ## [Планирование загрузки](capacity-planning-guide.md)
 ## [Топология развертывания](topology-considerations.md)
 # [Развертывание и использование](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# [Использование управления привилегированным доступом](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [Ссылки для разработчиков](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 
