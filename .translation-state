@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "d348acc2137d578c8625a6ebe5e05fbc0a1ff8fc",
-  "LastTranslatedCommit": "414b55c1a8f7bdd128633e7b4f384be642c08f9c",
+  "LastTranslatedCommit": "c3a5a6bd7b169ce16dfba4b254e0b8e79d558520",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
       "FileHash": "c1e15c9548e46cbbff7810e63478074ceeb06152",
@@ -13275,14 +13275,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "5965f5ed66ad10ac63427f1e129f17ad41d565fe",
+      "TargetFileCommit": "c3a5a6bd7b169ce16dfba4b254e0b8e79d558520",
       "TargetFilePath": "MIMDocs\\DeployUse\\working-with-mim-certificate-manager.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.ru-ru\\master\\working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.ru-ru.xlf",
-      "HandbackFileCommit": "c23853214221fe38e674b2ea4c0074fc06e5b16c",
-      "HandbackDateTime": "2016-05-03T20:58:16.1182402Z",
+      "HandbackFileCommit": "76bc69e56085f3162ec76202b541be1e7be95ea8",
+      "HandbackDateTime": "2016-07-11T12:45:30.7146978Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-03T20:58:16.1182402Z",
+      "UpdatedDateTime": "2016-07-11T12:45:30.7146978Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.ru-ru\\master\\archive\\working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.ru-ru.xlf",
       "ArchiveFileCommit": "4db239511a66d46231b79a0aa71c3185af2f5b80",
       "ArchiveFileDateTime": "2016-07-01T23:27:26.3808205Z",

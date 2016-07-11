@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\working-with-mim-certificate-manager.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-mim-certificate-manager.md) | InSyncHandedBackSuccess | [Details](#3e0e6cea0b268836bb6347e81694deec93320ce373)
 
 ## Item Details
+##### <a name='3e0e6cea0b268836bb6347e81694deec93320ce373'></a> Source: [MIMDocs\DeployUse\working-with-mim-certificate-manager.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-mim-certificate-manager.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\working-with-mim-certificate-manager.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/c3a5a6bd7b169ce16dfba4b254e0b8e79d558520/MIMDocs/DeployUse/working-with-mim-certificate-manager.md)
+* Handoff File: [working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/18a6f26bae8e1c4d2371890d8ec126c2730bd73f/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.ru-ru.xlf)
+* Handoff Datetime: 2016-06-27 09:09:56
+* Handoff Reason: Include
+* Archive File: [working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/4db239511a66d46231b79a0aa71c3185af2f5b80/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/archive/working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.ru-ru.xlf)
+* Archive Datetime: 2016-07-01 23:27:26
+* Handback File: [working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/76bc69e56085f3162ec76202b541be1e7be95ea8/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/working-with-mim-certificate-manager.96aa090a3f47ac4d3cab460f5cd884461f8c2180.ru-ru.xlf)
+* Handback Datetime: 2016-07-11 12:45:30
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
