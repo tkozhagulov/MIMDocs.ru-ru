@@ -1,42 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md) | InSyncHandedBackSuccess | [Details](#6b58093744656b9bfa62c1cfcab340ea88e6e1686)
- [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/5fa6f8f60d3ca99bc16333406663bd82ac4ec2e6/MIMDocs/PlanDesign/TOC.md) | OutofSyncHandedBackSuccess | [Details](#4cb419fa58037307e1352dd813e5f9b1767cfac5248)
 
 ## Item Details
-##### <a name='6b58093744656b9bfa62c1cfcab340ea88e6e1686'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/c9be2fa70b2d25e40d9dcfc09e270eef015bfb18/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
-* Handoff File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/18a6f26bae8e1c4d2371890d8ec126c2730bd73f/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf)
-* Handoff Datetime: 2016-06-27 09:09:56
-* Handoff Reason: Include
-* Archive File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/4db239511a66d46231b79a0aa71c3185af2f5b80/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/archive/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf)
-* Archive Datetime: 2016-07-01 23:27:26
-* Handback File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/c4e1c6295c488a9311d192dae0cd78e26a89d943/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.ru-ru.xlf)
-* Handback Datetime: 2016-07-11 14:40:09
-* [Back to Top](#report-top)
-
-##### <a name='4cb419fa58037307e1352dd813e5f9b1767cfac5248'></a> Source: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/5fa6f8f60d3ca99bc16333406663bd82ac4ec2e6/MIMDocs/PlanDesign/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/9aaa2306555b27f0f0e44a395756d29b100f9f25/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf)
-* Handoff Datetime: 2016-07-06 22:21:50
-* Handoff Reason: Include
-* Archive File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/3092bc3ec1633b19738fb7983bc69e1cc9dba366/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/archive/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf)
-* Archive Datetime: 2016-07-08 23:16:49
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/c9be2fa70b2d25e40d9dcfc09e270eef015bfb18/MIMDocs/PlanDesign/TOC.md)
-* Current Handback File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/c4e1c6295c488a9311d192dae0cd78e26a89d943/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.ru-ru.xlf)
-* Current Handback Datetime: 2016-07-11 14:40:09
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
