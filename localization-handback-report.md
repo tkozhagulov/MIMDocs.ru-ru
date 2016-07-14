@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md) | InSyncHandedBackSuccess | [Details](#e1f18ad9bfc7946a751af0b73bba4faf0689c265247)
 
 ## Item Details
-##### <a name='e1f18ad9bfc7946a751af0b73bba4faf0689c265247'></a> Source: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr/blob/bddc8ba2deec0dfb434e26082891a5199e0a15eb/MIMDocs/PlanDesign/supported-management-agents.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\PlanDesign\supported-management-agents.md](https://github.com/Microsoft/MIMDocs-pr.ru-ru/blob/db40b1591fd40647c3f40d28869ec8c3b25b7342/MIMDocs/PlanDesign/supported-management-agents.md)
-* Handoff File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/9aaa2306555b27f0f0e44a395756d29b100f9f25/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ru-ru.xlf)
-* Handoff Datetime: 2016-07-06 22:21:50
-* Handoff Reason: Include
-* Archive File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ru-ru.xlf](https://github.com/Microsoft/EM.handoff/blob/3092bc3ec1633b19738fb7983bc69e1cc9dba366/ol-handoff/Microsoft/MIMDocs-pr.ru-ru/master/archive/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ru-ru.xlf)
-* Archive Datetime: 2016-07-08 23:16:49
-* Handback File: [supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ru-ru.xlf](https://github.com/Microsoft/EM.handback/blob/6fe0b1c667ab210d420eff59114d4e1ee3c97e8a/ol-handback/Microsoft/MIMDocs-pr.ru-ru/master/supported-management-agents.11fc61920c5e2299976de7e0176ead23128cfc9b.ru-ru.xlf)
-* Handback Datetime: 2016-07-14 18:25:18
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
