@@ -20,7 +20,8 @@ ms.openlocfilehash: 1260b4e1792bf43a7288866cf3afa41fabe79fe9
 
 # Шаг 5. Установка отношений доверия между лесами PRIV и CORP
 
->[!div class="step-by-step"] [« Шаг 4](step-4-install-mim-components-on-pam-server.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« Шаг 4](step-4-install-mim-components-on-pam-server.md)
 [Шаг 6 »](step-6-transition-group-to-pam.md)
 
 
@@ -104,11 +105,12 @@ ms.openlocfilehash: 1260b4e1792bf43a7288866cf3afa41fabe79fe9
 
 На следующем шаге описывается перемещение группы в PAM.
 
->[!div class="step-by-step"] [« Шаг 4](step-4-install-mim-components-on-pam-server.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« Шаг 4](step-4-install-mim-components-on-pam-server.md)
 [Шаг 6 »](step-6-transition-group-to-pam.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
