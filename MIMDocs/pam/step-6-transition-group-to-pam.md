@@ -20,7 +20,8 @@ ms.openlocfilehash: b21e2fed4588572fd1b793c4942860871ae9a51c
 
 # Шаг 6. Перевод группы в управление привилегированных доступом (PAM)
 
->[!div class="step-by-step"] [« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Шаг 7 »](step-7-elevate-user-access.md)
 
 Привилегированная учетная запись создается в лесу PRIV с помощью командлетов PowerShell. Они выполняют следующие действия.
@@ -82,11 +83,12 @@ ms.openlocfilehash: b21e2fed4588572fd1b793c4942860871ae9a51c
 
 Если вы хотите проверить действительность прав доступа между лесами для административной учетной записи пользователя, перейдите к следующему шагу.
 
->[!div class="step-by-step"] [« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Шаг 7 »](step-7-elevate-user-access.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
