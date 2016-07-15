@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "7bde0a52219370e47852ca7551a93544777d957e",
-  "LastTranslatedCommit": "581dd8f82f4c8b46182a6487072aaed681fea548",
+  "LastTranslatedCommit": "e922ccb75c2c010f778d0591e2f3a0b73e3e1067",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
       "FileHash": "c1e15c9548e46cbbff7810e63478074ceeb06152",
@@ -16010,7 +16010,7 @@
       "TargetFilePath": "MIMDocs\\index.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\MIMDocs-pr.ru-ru\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf",
       "HandbackFileCommit": "636362a7567cb379b43d67efc543ab4e687bea63",
-      "HandbackDateTime": "2016-07-15T18:25:58.2586572Z",
+      "HandbackDateTime": "2016-07-15T18:54:26.3578648Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\e189a7\\ol-handback\\Microsoft\\MIMDocs-pr.ru-ru\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf failed.",
@@ -16020,7 +16020,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 4,
+      "HandbackFailureTimes": 5,
       "UpdatedDateTime": "2016-06-25T05:43:35.5891725Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.ru-ru\\master\\archive\\index.a54b2324d63a6d513b6900195023b9a8089553b4.ru-ru.xlf",
       "ArchiveFileCommit": "4db239511a66d46231b79a0aa71c3185af2f5b80",
