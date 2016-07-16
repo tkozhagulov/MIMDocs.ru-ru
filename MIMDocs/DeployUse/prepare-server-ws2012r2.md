@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Настройка сервера управления удостоверениями&#58; Windows Server 2012 R2 | Microsoft Identity Manager
-description: Пошаговые инструкции и сведения о минимальных требованиях для подготовки Windows Server 2012 RS к работе с MIM 2016.
-keywords:
+title: "Настройка сервера управления удостоверениями&#58; Windows Server 2012 R2 | Microsoft Identity Manager"
+description: "Пошаговые инструкции и сведения о минимальных требованиях для подготовки Windows Server 2012 RS к работе с MIM 2016."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: af9f7f75f19bb29f2e29577c787252f6b7fabb7d
+ms.openlocfilehash: cd4ac84af4e5416512cf546a5d23b342ebe13c39
+
 
 ---
 
 # Настройка сервера управления удостоверениями: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
-["Подготовка домена](preparing-domain.md)
-[SQL Server 2014"](prepare-server-sql2014.md)
+[« Подготовка домена](preparing-domain.md)
+[SQL Server 2014 »](prepare-server-sql2014.md)
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
@@ -112,10 +106,11 @@ ms.suite: ems
     ```
 
 >[!div class="step-by-step"]  
-["Подготовка домена](preparing-domain.md)
-[SQL Server 2014"](prepare-server-sql2014.md)
+[« Подготовка домена](preparing-domain.md)
+[SQL Server 2014 »](prepare-server-sql2014.md)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

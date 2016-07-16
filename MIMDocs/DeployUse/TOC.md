@@ -17,9 +17,10 @@
 ## [Диспетчер сертификатов MIM](working-with-mim-certificate-manager.md)
 ### [Регистрация смарт-карт](certificate-manager-for-non-administrators.md)
 ### [Создание сертификатов программного обеспечения](certificate-manager-for-software-certificates.md)
+# [Использование управления привилегированным доступом](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 # [Ссылки для разработчиков](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

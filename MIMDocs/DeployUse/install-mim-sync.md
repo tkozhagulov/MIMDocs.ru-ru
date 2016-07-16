@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Установка MIM 2016&#58; служба синхронизации MIM | Microsoft Identity Manager
-description: Начните работу с компонентами MIM 2016, установив и настроив службу синхронизации.
-keywords:
+title: "Установка MIM 2016&#58; служба синхронизации MIM | Microsoft Identity Manager"
+description: "Начните работу с компонентами MIM 2016, установив и настроив службу синхронизации."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: 8a99b3a291d2b145f453732a72244c43f9c535d6
+
 
 ---
 
 # Установка MIM 2016: служба синхронизации MIM
 
 >[!div class="step-by-step"]
-["Exchange Server](prepare-server-exchange.md)
-[Служба и портал MIM"](install-mim-service-portal.md)
+[« Exchange Server](prepare-server-exchange.md)
+[Служба и портал MIM »](install-mim-service-portal.md)
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
@@ -108,10 +102,11 @@ ms.suite: ems
     5. Необходимо выйти из системы и снова войти в нее, чтобы изменения членства в группе вступили в силу. Нажмите **Да** для выхода.
 
 >[!div class="step-by-step"]  
-["Exchange Server](prepare-server-exchange.md)
-[Служба и портал MIM"](install-mim-service-portal.md)
+[« Exchange Server](prepare-server-exchange.md)
+[Служба и портал MIM »](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

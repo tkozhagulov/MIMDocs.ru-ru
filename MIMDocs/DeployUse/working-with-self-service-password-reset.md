@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Использование самостоятельного сброса паролей | Microsoft Identity Manager
-description: Ознакомьтесь с новыми возможностями самостоятельного сброса паролей в MIM 2016, включая работу SSPR с многофакторной проверкой подлинности. 
-keywords:
+title: "Использование самостоятельного сброса паролей | Microsoft Identity Manager"
+description: "Ознакомьтесь с новыми возможностями самостоятельного сброса паролей в MIM 2016, включая работу SSPR с многофакторной проверкой подлинности."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3a4350e54383dc1098c778090bb29b435082045f
+
 
 ---
 
@@ -50,7 +44,7 @@ Azure MFA обеспечивает дополнительный механизм
 
 -   Служба синхронизации MIM 2016 установлена и запущена на сервере, присоединенном к домену AD.
 
--   Служба и портал MIM 2016, включающие портал регистрации SSPR и портал сброса SSPR, установлены и запущены на сервере (они могут быть размещены вместе со службой синхронизации).
+-   Служба и портал MIM 2016, включающие портал регистрации SSPR и портал сброса SSPR, установлены и запущены на сервере (они могут быть размещены вместе со службой синхронизации).&amp;
 
 -   Служба синхронизации MIM настроена для синхронизации удостоверений AD-MIM, в том числе:
 
@@ -60,7 +54,7 @@ Azure MFA обеспечивает дополнительный механизм
 
     -   Настройка правил синхронизации на портале MIM для синхронизации данных пользователей и выполнения действий на основе синхронизации в службе MIM.
 
--   Надстройки и расширения MIM 2016, в том числе встроенный клиент входа Windows SSPR, развернуты на сервере или отдельном клиентском компьютере.
+-   Надстройки и расширения MIM 2016, в том числе встроенный клиент входа Windows SSPR, развернуты на сервере или отдельном клиентском компьютере.&amp;
 
 ## Подготовка MIM к работе с многофакторной проверкой подлинности
 Настройка службы MIM Sync для поддержки сброса паролей и разблокирования учетных записей. Дополнительные сведения см. в статьях [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx) (Установка надстроек и расширений FIM), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx) (Установка SSPR для FIM), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) (Шлюзы проверки подлинности SSPR) и в [SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx) (Руководство по лаборатории тестирования SSPR).
@@ -211,6 +205,7 @@ Azure MFA обеспечивает дополнительный механизм
     ![Изображение для сброса пароля помощника по входу MIM](media/MIM-SSPR-PR1.JPG)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

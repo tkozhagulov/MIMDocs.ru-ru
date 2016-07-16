@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Настройка сервера управления удостоверениями&#58; SQL Server 2014 | Microsoft Identity Manager
-description: Установка SQL Server 2014 в рамках подготовки к установке MIM 2016.
-keywords:
+title: "Настройка сервера управления удостоверениями&#58; SQL Server 2014 | Microsoft Identity Manager"
+description: "Установка SQL Server 2014 в рамках подготовки к установке MIM 2016."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: 2c0ff0bdbba4bcf979def8d5c7aa381947d6cc87
+
 
 ---
 
 # Настройка сервера управления удостоверениями: SQL Server 2014
 
 >[!div class="step-by-step"]
-["Windows Server 2012 R2](prepare-server-ws2012r2.md)
-[SharePoint"](prepare-server-sharepoint.md)
+[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
+[SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
@@ -50,10 +44,11 @@ ms.suite: ems
     ```
 
 >[!div class="step-by-step"]  
-["Windows Server 2012 R2](prepare-server-ws2012r2.md)
-[SharePoint"](prepare-server-sharepoint.md)
+[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
+[SharePoint »](prepare-server-sharepoint.md)
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
