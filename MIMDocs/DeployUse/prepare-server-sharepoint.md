@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Настройка сервера управления удостоверениями&#58; SharePoint | Microsoft Identity Manager
-description: Установите и настройте SharePoint Foundation для размещения страницы портала MIM.
-keywords:
+title: "Настройка сервера управления удостоверениями&#58; SharePoint | Microsoft Identity Manager"
+description: "Установите и настройте SharePoint Foundation для размещения страницы портала MIM."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
+ms.openlocfilehash: b144f28b41eb8e02afa44495c0019ccc81022005
+
 
 ---
 
 # Настройка сервера управления удостоверениями: SharePoint
 
 >[!div class="step-by-step"]
-["SQL Server 2014](prepare-server-sql2014.md)
-[Exchange Server"](prepare-server-exchange.md)
+[« SQL Server 2014](prepare-server-sql2014.md)
+[Exchange Server »](prepare-server-exchange.md)
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
@@ -98,7 +92,8 @@ ms.suite: ems
     -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
-    > [!NOTE] Появится предупреждение о том, что используется классический метод проверки подлинности Windows, и для выполнения завершающей команды может потребоваться несколько минут. По завершении в выходных данных будет указан URL-адрес нового портала. Не закрывайте окно **командной консоли SharePoint 2013**, чтобы перейти к нему позже.
+    > [!NOTE] 
+    > Появится предупреждение о том, что используется классический метод проверки подлинности Windows, и для выполнения завершающей команды может потребоваться несколько минут. По завершении в выходных данных будет указан URL-адрес нового портала. Не закрывайте окно **командной консоли SharePoint 2013**, чтобы перейти к нему позже.
 
 2. Запустите командную консоль SharePoint 2013 и выполните следующий сценарий PowerShell, чтобы создать **семейство веб-сайтов SharePoint**, связанное с веб-приложением.
 
@@ -112,7 +107,8 @@ ms.suite: ems
   $s.CompatibilityLevel
   ```
 
-  > [!NOTE] Убедитесь, что в переменной *CompatibilityLevel* содержится результат "14". Если результат равен "15", то семейство веб-сайтов не было создано для версии 2010. Удалите семейство веб-сайтов и создайте его заново.
+  > [!NOTE] 
+  > Убедитесь, что в переменной *CompatibilityLevel* содержится результат "14". Если результат равен "15", то семейство веб-сайтов не было создано для версии 2010. Удалите семейство веб-сайтов и создайте его заново.
 
 3. Отключите **состояние просмотра на стороне сервера SharePoint Server** и задачу SharePoint "Задание анализа работоспособности (каждый час, Microsoft SharePoint Foundation Timer, все серверы)", выполнив следующие команды PowerShell в **командной консоли SharePoint 2013**:
 
@@ -136,10 +132,11 @@ ms.suite: ems
 7. Откройте средство **Администрирование**, перейдите в раздел **Службы**, найдите службу администрирования SharePoint и запустите ее, если она еще не запущена.
 
 >[!div class="step-by-step"]  
-["SQL Server 2014](prepare-server-sql2014.md)
-[Exchange Server"](prepare-server-exchange.md)
+[« SQL Server 2014](prepare-server-sql2014.md)
+[Exchange Server »](prepare-server-exchange.md)
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

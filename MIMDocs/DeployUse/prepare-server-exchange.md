@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Настройка сервера управления удостоверениями&#58; Exchange | Microsoft Identity Manager
-description: При необходимости разверните Exchange Server, чтобы позволить MIM 2016 отправлять электронную почту и создавать почтовые ящики.
-keywords:
+title: "Настройка сервера управления удостоверениями&#58; Exchange | Microsoft Identity Manager"
+description: "При необходимости разверните Exchange Server, чтобы позволить MIM 2016 отправлять электронную почту и создавать почтовые ящики."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: b69ea20f375869d4ad08987a08aba05913fd1db1
+
 
 ---
 
 # Set up an identity management server: Exchange
 
 >[!div class="step-by-step"]
-["SharePoint](prepare-server-sharepoint.md)
-[Служба синхронизации MIM"](install-mim-sync.md)
+[« SharePoint](prepare-server-sharepoint.md)
+[Служба синхронизации MIM »](install-mim-sync.md)
 
 ## Развертывание Microsoft Exchange Server
 Если службу MIM требуется настроить для отправки и получения электронной почты или подготовки почтовых ящиков, то необходимо, чтобы в среде присутствовала служба Exchange. Если служба Exchange еще не развернута, вы можете установить пробную версию в целях ознакомления.
@@ -45,10 +39,11 @@ ms.suite: ems
 3. Скачайте и установите [180-дневную пробную версию MS Exchange Server 2013](http://www.microsoft.com/en-us/evalcenter/evaluate-exchange-server-2013)
 
 >[!div class="step-by-step"]  
-["SharePoint](prepare-server-sharepoint.md)
-[Служба синхронизации MIM"](install-mim-sync.md)
+[« SharePoint](prepare-server-sharepoint.md)
+[Служба синхронизации MIM »](install-mim-sync.md)
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

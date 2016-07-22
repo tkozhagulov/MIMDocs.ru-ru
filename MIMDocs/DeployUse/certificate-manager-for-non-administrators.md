@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Регистрация смарт-карт для пользователей, не являющихся администраторами | Microsoft Identity Manager
-description: Узнайте, как зарегистрировать смарт-карты на компьютерах пользователей без прав администратора, чтобы они могли использовать диспетчер сертификатов.
-keywords:
+title: "Регистрация смарт-карт для пользователей, не являющихся администраторами | Microsoft Identity Manager"
+description: "Узнайте, как зарегистрировать смарт-карты на компьютерах пользователей без прав администратора, чтобы они могли использовать диспетчер сертификатов."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 50c0edd60abfa6550cb5a873d32a842e8c099811
+
 
 ---
 
@@ -48,7 +42,7 @@ ms.suite: ems
 
     Отредактируйте файл custom.data, изменив следующее:
 
-    1.  В элементе &lt;NonAdmin&gt; измените значение атрибута Value на True.
+    1.  В элементе &lt;NonAdmin&gt; измените значение атрибута Value на True
 
     2.  Сохраните файл и закройте редактор.
 
@@ -101,6 +95,7 @@ ms.suite: ems
 8.  **Запустите приложение CM и зарегистрируйте виртуальную смарт-карту.**
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Вопросы по топологии для развертывания MIM | Microsoft Identity Manager
-description: вы можете ознакомиться с общими сведениями о компонентах MIM 2016, а также рекомендациями по их развертыванию в вашей среде.
-keywords:
+title: "Вопросы по топологии для развертывания MIM | Microsoft Identity Manager"
+description: "вы можете ознакомиться с общими сведениями о компонентах MIM 2016, а также рекомендациями по их развертыванию в вашей среде."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c023d147d0fcc1525fefbe866c952e217f7bee6b
+ms.openlocfilehash: e33a08d77a0b5c422cdbc8c19516b55df980a2c6
+
 
 ---
 
@@ -71,6 +65,7 @@ ms.suite: ems
 - Скачиваемое [руководство по планированию ресурсов для Forefront Identity Manager (FIM) 2010](http://go.microsoft.com/fwlink/?LinkId=200180) содержит более подробные сведения о тестовой сборке и результатах тестирования производительности.
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

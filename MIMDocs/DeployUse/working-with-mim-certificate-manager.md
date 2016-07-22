@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Работа с диспетчером сертификатов MIM | Microsoft Identity Manager
-description: Узнайте, как развернуть приложение диспетчера сертификатов, чтобы позволить пользователям управлять своими правами доступа. 
-keywords:
+title: "Работа с диспетчером сертификатов MIM | Microsoft Identity Manager"
+description: "Узнайте, как развернуть приложение диспетчера сертификатов, чтобы позволить пользователям управлять своими правами доступа."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3e0e6cea0b268836bb6347e81694deec93320ce3
+
 
 ---
 
@@ -71,7 +65,7 @@ ms.suite: ems
 
 14. В левой области консоли MMC разверните узел **Центр сертификации (локальный)** и разверните свой центр сертификации в списке центров сертификации.
 
-15. Щелкните правой кнопкой мыши **Шаблоны сертификатов** и выберите пункт **Создать &gt; Выдаваемый шаблон сертификата**.
+15. Правой кнопкой мыши щелкните **Шаблоны сертификатов**и выберите **Создать &gt; Выдаваемый шаблон сертификата**.
 
 16. Выберите созданный шаблон из списка и нажмите кнопку **ОК**.
 
@@ -80,7 +74,7 @@ ms.suite: ems
 
 1.  Войдите на портал CM от имени пользователя с правами администратора.
 
-2.  Выберите "Администрирование" &gt; "Управлять шаблонами профилей" и убедитесь, что установлен флажок "MIM CM Sample Smart Card Logon Profile Template" (Пример шаблона профиля входа со смарт-картой MIM CM), а затем выберите "Copy a selected profile template" (Копировать выбранный профиль шаблона).
+2.  Выберите "Администрирование &gt; Управлять шаблонами профилей" и убедитесь, что установлен флажок "Шаблон профиля входа примера смарт-карты MIM CM", а затем выберите "Копировать выбранный профиль шаблона".
 
 3.  Введите имя профиля шаблона и нажмите кнопку **ОК**.
 
@@ -154,7 +148,7 @@ ms.suite: ems
 
     -   Откройте приложение Virtual Smart Card. Это упрощает поиск значений, необходимых для следующего шага.
 
-    -   На сервере AD FS откройте Windows PowerShell и выполните команду `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`, чтобы добавить приложение в качестве клиента на сервер AD FS и настроить CM на сервере.
+    -   На сервере AD FS откройте Windows PowerShell и выполните указанную ниже команду, чтобы добавить приложение в качестве клиента на сервер AD FS и настроить CM на сервере. `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
 
         Ниже приведен скрипт ConfigureMimCMClientAndRelyingParty.ps1:
 
@@ -255,12 +249,13 @@ ms.suite: ems
 
     -   serverFQDN — это полное имя компьютера сервера MIMCM.
 
-    -   Для получения справки по скрипту **ConfigureMIimCMClientAndRelyingParty.ps1** выполните команду `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`.
+    -   Для получения справки по скрипту **ConfigureMIimCMClientAndRelyingParty.ps1** выполните команду `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
 ## Развертывание приложения
-При настройке приложения CM в Центре загрузки скачайте файл MIMDMModernApp_&lt;версия&gt;_AnyCPU_Test.zip и извлеките его содержимое. APPX-файл — это установщик. Его можно развернуть так же, как и любое приложение Магазина Windows, используя [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)или [Intune](https://technet.microsoft.com/library/dn613839.aspx) для загрузки неопубликованного приложения, чтобы пользователи имели доступ к нему через корпоративный портал либо оно устанавливалось непосредственно на их компьютеры.
+При настройке приложения CM в центре загрузки скачайте файл MIMDMModernApp_&lt;версия&gt;_AnyCPU_Test.zip и извлеките его содержимое. APPX-файл — это установщик. Его можно развернуть так же, как и любое приложение Магазина Windows, используя [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)или [Intune](https://technet.microsoft.com/library/dn613839.aspx) для загрузки неопубликованного приложения, чтобы пользователи имели доступ к нему через корпоративный портал либо оно устанавливалось непосредственно на их компьютеры.
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

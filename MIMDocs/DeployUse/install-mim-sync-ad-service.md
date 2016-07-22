@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Установка MIM 2016&#58; синхронизация Active Directory и службы MIM | Microsoft Identity Manager
-description: Используйте агенты управления и службу синхронизации MIM, чтобы синхронизировать базы данных Active Directory и MIM.
-keywords:
+title: "Установка MIM 2016&#58; синхронизация Active Directory и службы MIM | Microsoft Identity Manager"
+description: "Используйте агенты управления и службу синхронизации MIM, чтобы синхронизировать базы данных Active Directory и MIM."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
+ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+
 
 ---
 
 # Установка MIM 2016: синхронизация Active Directory и службы MIM
 
->[!div class="step-by-step"] [«Служба и портал MIM](install-mim-service-portal.md)
+>[!div class="step-by-step"]
+[< Служба и портал MIM](install-mim-service-portal.md)
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
@@ -42,7 +37,8 @@ ms.suite: ems
 
 При настройке агента управления MIM необходимо указать учетную запись пользователя. В этом документе в качестве имени для этой учетной записи используется **MIMMA**.
 
-> [!NOTE] Для агента управления MIM необходимо использовать ту же учетную запись, которая была указана во время установки службы MIM.
+> [!NOTE]
+> Для агента управления MIM необходимо использовать ту же учетную запись, которая была указана во время установки службы MIM.
 
 ###Создание MIM MA
 
@@ -437,9 +433,11 @@ ms.suite: ems
     - В списке **Run profiles** (Профили выполнения) выберите профиль выполнения, который требуется запустить.
     - Чтобы запустить профиль выполнения, нажмите кнопку **ОК**.
 
->[!div class="step-by-step"] [«Служба и портал MIM](install-mim-service-portal.md)
+>[!div class="step-by-step"]
+[< Служба и портал MIM](install-mim-service-portal.md)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

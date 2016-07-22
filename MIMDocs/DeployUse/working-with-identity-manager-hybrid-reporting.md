@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Работа с гибридными отчетами диспетчера удостоверений | Microsoft Identity Manager
-description: Узнайте, как объединить локальные и облачные данные с помощью гибридных отчетов в Azure, а также как управлять этими отчетами и просматривать их.
-keywords:
+title: "Работа с гибридными отчетами диспетчера удостоверений | Microsoft Identity Manager"
+description: "Узнайте, как объединить локальные и облачные данные с помощью гибридных отчетов в Azure, а также как управлять этими отчетами и просматривать их."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: e2d0bd6120628d4fd2a14718fc205cde976c7785
+
 
 ---
 
@@ -100,7 +94,7 @@ ms.suite: ems
 Если вы хотите остановить передачу данных отчетов из Microsoft Identity Manager в Azure Active Directory, удалите агент гибридных отчетов. С помощью средства **Установка и удаление программ** Windows удалите гибридные отчеты Microsoft Identity Manager.
 
 ## События Windows, используемые для гибридных отчетов
-События, создаваемые Microsoft Identity Manager, заносятся в журнал событий Windows и отображаются в средстве просмотра событий в следующем разделе: "Журналы приложения и служб" -&gt; **Identity Manager Request Log** (Журнал запросов диспетчера удостоверений). Каждый запрос MIM экспортируется как событие в журнал событий Windows в структуре JSON. Эти данные можно экспортировать в систему SIEM.
+События, создаваемые Microsoft Identity Manager, заносятся в журнал событий Windows и отображаются в средстве просмотра событий в следующем разделе: "Журналы приложения и служб" &gt;**Журнала запросов диспетчера удостоверений**. Каждый запрос MIM экспортируется как событие в журнал событий Windows в структуре JSON. Эти данные можно экспортировать в систему SIEM.
 
 |Тип события|ID|Сведения о событии|
 |--------------|------|-----------------|
@@ -108,6 +102,7 @@ ms.suite: ems
 |Информация|4137|Расширение события 4121 MIM, если для одного события слишком много данных. Заголовок в этом событии имеет следующий вид: `"Request: <GUID> , message <xxx> out of <xxx>`|
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
