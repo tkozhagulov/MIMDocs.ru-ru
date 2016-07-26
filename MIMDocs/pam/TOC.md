@@ -11,7 +11,7 @@
 ### [Определение ролей](defining-roles-for-pam.md)
 ### [Высокий уровень доступности и аварийное восстановление](high-availability-disaster-recovery-considerations-bastion-environment.md)
 ### [Требования к оборудованию и программному обеспечению](hardware-software-requirements.md)
-## [Развертывание службы MIM для управления привилегированным доступом](configuring-mim-environment-for-pam.md)
+## [Настройка Privileged Access Management для MIM](configuring-mim-environment-for-pam.md)
 ### [Шаг 1. Домен CORP](step-1-prepare-corp-domain.md)
 ### [Шаг 2. Контроллер домена PRIV](step-2-prepare-priv-domain-controller.md)
 ### [Шаг 3. Сервер PAM](step-3-prepare-pam-server.md)
@@ -23,6 +23,6 @@
 # [Ссылки для разработчиков](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 
