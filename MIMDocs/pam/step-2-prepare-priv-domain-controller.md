@@ -1,10 +1,10 @@
 ---
-title: "Шаг 2. Подготовка контроллера домена PRIV | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Развертывание PAM. Шаг 2 — PRIV DC | Microsoft Identity Manager"
+description: "Подготовьте контроллер домена PRIV, предоставляющий среду бастиона, где изолировано Privileged Access Management."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 62d80222ea85fe5066cfa396b5e5a10bced4d3cd
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 048a17c6b8150501185b7a13c3d2cb292791c9e8
 
 
 ---
@@ -221,7 +221,7 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
-> [!NOTE] 
+> [!NOTE]
 > Другие леса также должны направлять в этот контроллер домена запросы DNS, связанные с лесом PRIV.  Если вы используете несколько лесов Active Directory, необходимо также добавить в каждый из них DNS-серверы условной пересылки.
 
 ### Настройка Kerberos
@@ -235,7 +235,7 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
   setspn -S FIMService/pamsrv PRIV\MIMService
   ```
 
-> [!NOTE] 
+> [!NOTE]
 > Далее в этом документе описывается, как установить компоненты сервера MIM 2016 на одном компьютере. Если вы планируете добавить еще один сервер для обеспечения высокой доступности, вам потребуется дополнительная настройка Kerberos, описанная в статье [FIM 2010: настройка проверки подлинности Kerberos](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
 ### Настройка делегирования для предоставления доступа к учетным записям службе MIM
@@ -307,6 +307,6 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

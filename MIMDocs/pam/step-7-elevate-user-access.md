@@ -1,10 +1,10 @@
 ---
-title: "Шаг 7. Повышение прав доступа пользователя | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Развертывание PAM. Шаг 7 — пользовательский доступ | Microsoft Identity Manager"
+description: "На завершающем этапе предоставьте временный доступ привилегированному пользователю, чтобы продемонстрировать успешное развертывание Privileged Access Management."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ee47c69788a98075372ca62943e0c4b101c5354f
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
 
 
 ---
@@ -46,7 +46,7 @@ ms.openlocfilehash: ee47c69788a98075372ca62943e0c4b101c5354f
 2. При появлении запроса введите пароль для учетной записи PRIV.Jen. Появится новое окно командной строки.
 3. Когда откроется окно Windows PowerShell, введите следующие команды:
 
-    > [!NOTE] 
+    > [!NOTE]
     > После выполнения этих команд все перечисленные ниже действия имеют ограничения по времени.
 
     ```
@@ -92,7 +92,7 @@ dir \\corpwkstn\corpfs
 7. Закройте диалоговое окно **Свойства браузера** .
 8. На левой вкладке нажмите кнопку **Активировать**. Выберите **Роль PAM** и нажмите кнопку **Активировать**.
 
-> [!Note] 
+> [!Note]
 > В этой среде также можно попробовать разрабатывать приложения, которые используют API REST PAM, описанный в [Справочнике по API REST управления привилегированным доступом (PAM)](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md).
 
 ## Сводка
@@ -103,6 +103,6 @@ dir \\corpwkstn\corpfs
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

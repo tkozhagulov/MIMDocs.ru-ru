@@ -1,10 +1,10 @@
 ---
-title: "Шаг 6. Перевод группы в управление привилегированным доступом (PAM) | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Развертывание PAM. Шаг 6 — перемещение группы | Microsoft Identity Manager"
+description: "Перенесите группу в лес PRIV, чтобы применить к ней Privileged Access Management."
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,8 +12,9 @@ ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: 01470689e862b47625346d5d5bc6bc7def11da9c
-ms.openlocfilehash: b21e2fed4588572fd1b793c4942860871ae9a51c
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 603e5e28f0eee0f648ef7e00ef137f5a08b2ba34
 
 
 ---
@@ -21,7 +22,7 @@ ms.openlocfilehash: b21e2fed4588572fd1b793c4942860871ae9a51c
 # Шаг 6. Перевод группы в управление привилегированных доступом (PAM)
 
 >[!div class="step-by-step"]
-[!div class="step-by-step"] [« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+[« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Шаг 7 »](step-7-elevate-user-access.md)
 
 Привилегированная учетная запись создается в лесу PRIV с помощью командлетов PowerShell. Они выполняют следующие действия.
@@ -84,11 +85,11 @@ ms.openlocfilehash: b21e2fed4588572fd1b793c4942860871ae9a51c
 Если вы хотите проверить действительность прав доступа между лесами для административной учетной записи пользователя, перейдите к следующему шагу.
 
 >[!div class="step-by-step"]
-[!div class="step-by-step"] [« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+[« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Шаг 7 »](step-7-elevate-user-access.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

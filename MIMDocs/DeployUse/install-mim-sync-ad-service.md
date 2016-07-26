@@ -1,10 +1,10 @@
 ---
-title: "Установка MIM 2016&#58; синхронизация Active Directory и службы MIM | Microsoft Identity Manager"
+title: "Синхронизация AD и службы MIM | Microsoft Identity Manager"
 description: "Используйте агенты управления и службу синхронизации MIM, чтобы синхронизировать базы данных Active Directory и MIM."
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
-ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: f17f256653936ffd06da9fae87dccfbf1c12a553
 
 
 ---
@@ -316,7 +316,7 @@ ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
 
     -   Тип ресурса метавселенной: person
     -   Внешняя система: ADMA
-    -   Тип ресурса внешней системы: person
+    -   Тип внешнего ресурса системы: пользователь
 
 6. На вкладке **Связь** укажите следующие сведения, а затем нажмите кнопку **Далее**.
 
@@ -328,10 +328,10 @@ ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
 
     | Правило потока | Источник | Destination |
     |-|-|-|
-    |Правило 1|samAccountName|f|
+    |Правило 1|samAccountName|accountName|
     |Правило 2|displayName|displayName|
-    |Правило 3|EmployeeType|EmployeeType|
-    |Правило 4|givenName|givenName|
+    |Правило 3|EmployeeType|employeeType|
+    |Правило 4|givenName|firstName|
     |Правило 5|sn|lastName|
     |Правило 6|Manager|manager|
     |Правило 7|objectSID|ObjectSID|
@@ -438,6 +438,6 @@ ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

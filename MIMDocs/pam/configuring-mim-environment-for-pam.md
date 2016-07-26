@@ -1,10 +1,10 @@
 ---
-title: "Настройка среды MIM для управления привилегированным доступом | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Развертывание и настройка PAM | Microsoft Identity Manager"
+description: "Руководство по установке MIM и настройке Privileged Access Management."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/15/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,13 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: 9cf126d898c93faf89d7119136cce4e4963bb63d
-ms.openlocfilehash: c9f2cf2ba1f42ea1513ae38d8089839d85ae5553
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 4b4953089cb676baae97988f380debbfefcd1083
 
 
 ---
 
-# Настройка среды MIM для управления привилегированным доступом
+# Настройка среды MIM для Privileged Access Management
 При настройке среды для доступа между лесами, установки и настройки Active Directory и Microsoft Identity Manager, а также демонстрации своевременного запроса доступа необходимо пройти семь этапов.
 
 Эти этапы описаны таким образом, чтобы вы могли построить тестовую среду с нуля. Если вы применяете PAM к существующей среде, вместо создания новых контроллеров доменов, соответствующих примерам, можете использовать собственные контроллеры доменов или учетные записи пользователей.
@@ -38,10 +39,10 @@ ms.openlocfilehash: c9f2cf2ba1f42ea1513ae38d8089839d85ae5553
 7.  Продемонстрируйте отправку запросов, их получение и использование повышенных прав привилегированного доступа к защищенному ресурсу.
 
 >[!div class="step-by-step"]
-[[!div class="step-by-step"] [Пуск »](step-1-prepare-corp-domain.md)](step-1-prepare-corp-domain.md)
+[Начало »](step-1-prepare-corp-domain.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Шаг 1. Подготовка узла и домена CORP | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Развертывание PAM. Шаг 1 — домен CORP | Microsoft Identity Manager"
+description: "Подготовьте домен CORP при помощи существующего или нового удостоверения для управления диспетчером привилегированных удостоверений"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/10/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 7d6888ad4d694ad0ed746598563de32d7c363936
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 9a2fafa86c5c928339ff8d7ad1593472046ccb98
 
 
 ---
@@ -94,7 +94,7 @@ ms.openlocfilehash: 7d6888ad4d694ad0ed746598563de32d7c363936
 
 При создании нового домена CORP необходимо также создать дополнительных пользователей и группы для демонстрации сценария PAM. Пользователь и группы для целей демонстрации не должны быть администраторами домена или управляться параметрами adminSDHolder в AD.
 
-> [!NOTE] 
+> [!NOTE]
 > Если у вас уже есть домен, который будет применяться как домен CORP, и в этом домене есть пользователь и группа, которые можно использовать для целей демонстрации, можете пропустить этот шаг и перейти к разделу [Настройка аудита](#configure-auditing).
 
 Мы собираемся создать группу безопасности с именем *CorpAdmins* и пользователя с именем *Jen*. При желании можете использовать другие имена.
@@ -167,7 +167,7 @@ ms.openlocfilehash: 7d6888ad4d694ad0ed746598563de32d7c363936
 
 Если у вас еще нет компьютера рабочей станции, подключенного к домену, подготовьте его, как описано ниже.  
 
-> [!NOTE] 
+> [!NOTE]
 > Если у вас уже есть рабочая станция, подключенная к домену, пропустите этот шаг и перейдите к разделу [Создание ресурса для целей демонстрации](#create-a-resource-for-demonstration-purposes).
 
 ### Установка Windows 8.1 или Windows 10 Enterprise как виртуальной машины
@@ -215,6 +215,6 @@ ms.openlocfilehash: 7d6888ad4d694ad0ed746598563de32d7c363936
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Модель разделения прав администратора по уровням | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Многоуровневая модель среды PAM | Microsoft Identity Manager"
+description: "Сведения о многоуровневой модели, разделяющей вашу систему по уровням уязвимости для рисков."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 509c05bbda5f0a0b936518fb023000771c45d4f7
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
 
 
 ---
@@ -44,7 +44,7 @@ ms.openlocfilehash: 509c05bbda5f0a0b936518fb023000771c45d4f7
 - администраторы домена (уровень 0) не могли войти на серверы предприятия (уровень 1) и рабочие станции обычного пользователя (уровень 2);
 - администраторы серверов (уровень 1) не могли войти на рабочие станции обычного пользователя (уровень 2).
 
->[!NOTE] 
+>[!NOTE]
 > Администраторы серверов не должны быть включены в группу администраторов домена. Сотрудники, ответственные за управление как контроллерами домена, так и серверами предприятия, должны иметь для этих целей отдельные учетные записи.
 
 Ограничения входа можно организовать с помощью:
@@ -62,6 +62,6 @@ ms.openlocfilehash: 509c05bbda5f0a0b936518fb023000771c45d4f7
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

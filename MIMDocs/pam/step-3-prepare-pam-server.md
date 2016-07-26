@@ -1,10 +1,10 @@
 ---
-title: "Шаг 3. Подготовка сервера PAM | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Развертывание PAM. Шаг 3 — сервер PAM | Microsoft Identity Manager"
+description: "Подготовьте сервер PAM, где будет размещаться SQL и SharePoint для развертывания Privileged Access Management."
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ec65078cea33b73aa9482e831a1870df477c6581
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 
 
 ---
@@ -118,7 +118,7 @@ ms.openlocfilehash: ec65078cea33b73aa9482e831a1870df477c6581
 
 С помощью установщика SharePoint Foundation 2013 с пакетом обновления 1 (SP1) установите необходимое программное обеспечение для SharePoint на компьютере PAMSRV.
 
-> [!NOTE] 
+> [!NOTE]
 > Чтобы установщик скачал необходимые компоненты, требуется подключение к Интернету. После их установки сервер перезагрузится.
 
 1. Щелкните PowerShell правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.  
@@ -158,7 +158,7 @@ ms.openlocfilehash: ec65078cea33b73aa9482e831a1870df477c6581
 
 2. Появится предупреждение о том, что используется классический метод проверки подлинности Windows, и для выполнения завершающей команды может потребоваться несколько минут.  По завершении в выходных данных будет указан URL-адрес нового портала.
 
-> [!NOTE] 
+> [!NOTE]
 > Не закрывайте окно командной консоли SharePoint 2013 — оно вам потребуется на следующем шаге.
 
 ## Создание семейства веб-сайтов SharePoint
@@ -212,6 +212,6 @@ ms.openlocfilehash: ec65078cea33b73aa9482e831a1870df477c6581
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

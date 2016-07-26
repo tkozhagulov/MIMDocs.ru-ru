@@ -1,10 +1,10 @@
 ---
-title: "Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Развертывание PAM. Шаг 4 — установка MIM | Microsoft Identity Manager"
+description: "Установите и настройте службу и портал MIM на сервере и рабочих станциях Privileged Access Management."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 4e0298099dad9b11812d533e23101fb995fe33d5
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: 4e0298099dad9b11812d533e23101fb995fe33d5
 
 Войдите в PAMSRV от имени PRIV\Administrator, чтобы установить службу и портал MIM и пример веб-приложения портала.
 
-  > [!NOTE] 
+  > [!NOTE]
   > Необходимо быть администратором домена; если запустить следующие команды без прав администратора домена, проверки доверия на следующем шаге пройдены не будут.
 
 Если вы скачали MIM, распакуйте архив установки MIM в новую папку.
@@ -44,7 +44,7 @@ ms.openlocfilehash: 4e0298099dad9b11812d533e23101fb995fe33d5
 
 2.  При настройке общих служб и подключения к базе данных MIM выберите параметр **Создать новую базу данных**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Если для обеспечения высокой доступности служба устанавливается несколько раз, установите флажок **Использовать существующую базу данных** для всех последующих установок.
 
 3.  При настройке подключения к почтовому серверу задайте в качестве почтового сервера имя узла сервера Exchange или SMTP для среды CORP (если у вас нет почтового сервера, используйте значение corpdc.contoso.local) и снимите флажки **Использовать SSL** и **Почтовый сервер — Exchange Server 2007 или Exchange Server 2010**.
@@ -193,6 +193,6 @@ ms.openlocfilehash: 4e0298099dad9b11812d533e23101fb995fe33d5
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

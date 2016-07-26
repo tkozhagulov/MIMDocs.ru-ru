@@ -1,10 +1,10 @@
 ---
-title: "Использование Azure MFA для активации | Диспетчер удостоверений (Майкрософт)"
-description: 
+title: "Использование Azure MFA для активации PAM | Microsoft Identity Manager"
+description: "Настройте Azure MFA в качестве дополнительного уровня безопасности при активации ролей пользователями в Privileged Access Management."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: d6f6927eec479c705fd9ef7f33fafdeec05857e0
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 518a7e165946049745c8eea15ecb61866d6f9c04
 
 
 ---
@@ -70,7 +70,7 @@ ms.openlocfilehash: d6f6927eec479c705fd9ef7f33fafdeec05857e0
 
 7.  Скопируйте полученный ZIP-файл на каждую систему, где установлена служба MIM. 
 
->[!NOTE] 
+>[!NOTE]
 > ZIP-файл содержит важную информацию, которая используется в службе Azure MFA.
 
 ## Настройка службы MIM для Azure MFA
@@ -99,7 +99,7 @@ ms.openlocfilehash: d6f6927eec479c705fd9ef7f33fafdeec05857e0
 
 11.  Сохраните и перезапишите файл **MfaSettings.xml** в папке службы MIM `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service`. 
 
-> [!NOTE] 
+> [!NOTE]
 > В конце процесса убедитесь, что к файлу **MfaSettings.xml**, всем его копиям и используемому ZIP-файлу не предоставлен общий доступ для чтения.
 
 ## Настройка пользователей PAM для многофакторной проверки подлинности Azure
@@ -151,6 +151,6 @@ Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 
