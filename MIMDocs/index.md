@@ -1,26 +1,29 @@
 ---
 asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
 layout: HubPage
-
-title: "Документация по Microsoft Identity Manager"
-description: "Техническая документация по Microsoft Intune: управление мобильными устройствами и приложениями"
-keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
-author: msstevenpo
-manager: stevenpo
-ms.date: 04/28/2016
+title: "Документация по диспетчеру удостоверений | Документы Microsoft"
+description: "Техническая документация по Microsoft Identity Manager — локальное управление удостоверениями и доступом"
+keywords: "документация по диспетчеру удостоверений, microsoft identity manager, MIM"
+author: kgremban
+manager: femila
+ms.date: 07/21/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
+translationtype: Human Translation
+ms.sourcegitcommit: 455a24d3008a2ef54e1229100e7150a1090c9b2e
+ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
+
 
 ---
-# Документация по управлению удостоверениями (Майкрософт)
+# Документация по управлению удостоверениями
 <article id="main">
     <section id="hero-content">
-      <h1>Документация по Microsoft Identity Manager</h1>
-      <h2>Microsoft Identity Manager (MIM) предоставляет локальное удостоверение и возможности управления доступом, в том числе синхронизацию удостоверений, предотвращение краж удостоверений и многое другое.</h2>
+      <h1>Документация по диспетчеру удостоверений</h1>
+      <h2>Сведения о настройке локального управления удостоверениями с помощью Microsoft Identity Manager. В руководствах показано, как настроить синхронизацию удостоверений, предотвращение кражи личных сведений и многое другое.</h2>
       <h3>Вы еще не использовали MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Посетите страницу продукта &rarr;</a></h3>     
     </section>
     <aside class="alert section-border">
@@ -41,6 +44,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
         </ul>
         <ul class="column column-half">
           <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Развертывание программного обеспечения MIM на новом сервере</a></li>
+          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Сведения о Privileged Access Management</a></li>
         </ul>
       </div>
     </section>
@@ -140,6 +144,7 @@ ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 </article>
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 
