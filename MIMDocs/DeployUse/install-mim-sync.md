@@ -4,7 +4,7 @@ description: "Начните работу с компонентами MIM 2016,
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: ba399da1431ea1d2d1633d0469e054ffd89f1d34
 
 
 ---
@@ -53,7 +53,7 @@ ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
 
     ![Изображение для выборочной установки](media/MIM-Install2.png)
 
-6.  На экране настройки базы данных синхронизации выберите:
+6.  На экране настройки базы данных службы синхронизации выберите следующее.
 
     1.  SQL Server находится на: **Этом компьютере**.
 
@@ -71,7 +71,7 @@ ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
 
     ![Изображение для учетной записи службы](media/MIM-Install4.png)
 
-8.  Укажите в установщике службы синхронизации MIM соответствующие группы безопасности:
+8.  Укажите в установщике службы синхронизации MIM нужные группы безопасности.
 
     1. Администратор = *contoso\MIMSyncAdmins*
 
@@ -91,7 +91,7 @@ ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
 
     1. Может появиться предупреждение об учетной записи службы синхронизации MIM, в этом случае нажмите **ОК**.
 
-    2. Будет установлена служба синхронизации MIM.
+    2. Служба синхронизации MIM будет установлена.
 
     3. Появляется уведомление о создании архива ключа шифрования. Нажмите кнопку **OК**, а затем выберите папку для сохранения архива.
 
@@ -107,6 +107,6 @@ ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
