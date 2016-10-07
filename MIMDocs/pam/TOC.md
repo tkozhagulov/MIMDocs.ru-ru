@@ -24,7 +24,7 @@
 ### [Шаг 1. Настройка домена PRIV](sp1-step1-configuring-priv-domain.md)
 ### [Шаг 2. Настройка домена CORP](sp1-step2-configuring-corp-domain.md)
 ### [Шаг 3. Настройка SQL](sp1-step3-installing-configuring-sql.md)
-### [Шаг 4. Настройка SharePoint](sp1-step4-configuring-sharepoiint.md)
+### [Шаг 4. Настройка SharePoint](sp1-step4-configuring-sharepoint.md)
 ### [Шаг 5. Установка и настройка PAM](sp1-step5-configuring-pam.md)
 ### [Шаг 6. Настройка доверия PAM](sp1-step6-setup-pam-trust.md)
 ### [Шаг 7. Настройка ведения журнала и фильтрации идентификаторов безопасности](sp1-step7-setup-sidhistory-sidfiltering.md)
