@@ -20,9 +20,19 @@
 ### [Шаг 6. Создание привилегированных учетных записей](step-6-transition-group-to-pam.md)
 ### [Шаг 7. Повышение прав доступа пользователя](step-7-elevate-user-access.md)
 ### [Настройка многофакторной проверки подлинности Azure](use-azure-mfa-for-activation.md)
+## [Настройка управления привилегированным доступом (PAM) с помощью сценариев](sp1-pam-configure-using-scripts.md)
+### [Шаг 1. Настройка домена PRIV](sp1-step1-configuring-priv-domain.md)
+### [Шаг 2. Настройка домена CORP](sp1-step2-configuring-corp-domain.md)
+### [Шаг 3. Настройка SQL](sp1-step3-installing-configuring-sql.md)
+### [Шаг 4. Настройка SharePoint](sp1-step4-configuring-sharepoiint.md)
+### [Шаг 5. Установка и настройка PAM](sp1-step5-configuring-pam.md)
+### [Шаг 6. Настройка доверия PAM](sp1-step6-setup-pam-trust.md)
+### [Шаг 7. Настройка ведения журнала и фильтрации идентификаторов безопасности](sp1-step7-setup-sidhistory-sidfiltering.md)
+### [Шаг 8. Проверка развертывания PAM](sp1-step8-pam-deployment-verification.md)
+### [Приложение](sp1-pam-deployment-addendum.md)
 # [Ссылки для разработчиков](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
