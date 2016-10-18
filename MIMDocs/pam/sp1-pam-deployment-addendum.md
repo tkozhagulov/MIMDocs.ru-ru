@@ -13,12 +13,12 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 482cfbbac3ea668ca4bf9d8a4a45469e61634f98
+ms.sourcegitcommit: bc56b57a06592527bab13aad879ca13466e968b3
+ms.openlocfilehash: cdd859ceb13d187af3303235c0fe1e496f2bfb6e
 
 
 ---
-# Приложение
+# Приложение. Сценарии развертывания PAM.
 
 ## Приложение 1. Настройка домена PRIV
 
@@ -70,10 +70,10 @@ ms.openlocfilehash: 482cfbbac3ea668ca4bf9d8a4a45469e61634f98
 
 ## Приложение 4. Действия в случае возникновения ошибок
 
-Все журналы сценариев сохраняются в расположении %AppData%\MIMPAMInstall. Выполните сжатие папки и полученный ZIP-файл отправьте по адресу электронной почты [mim2016@microsoft.com](mim2016@microsoft.com) вместе со сведениями об операции и ошибке.
+Все журналы сценариев сохраняются в расположении %AppData%\MIMPAMInstall. Выполните сжатие папки и полученный ZIP-файл отправьте по адресу электронной почты [mim2016@microsoft.com](mailto:mim2016@microsoft.com) вместе со сведениями об операции и ошибке.
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
