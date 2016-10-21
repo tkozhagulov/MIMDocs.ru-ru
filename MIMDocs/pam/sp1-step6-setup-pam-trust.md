@@ -4,7 +4,7 @@ description: "Подготовка домена CORP с существующим
 keywords: 
 author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,13 +13,13 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 46afda513e849e457f5f3644a46f244161467e50
+ms.sourcegitcommit: bc56b57a06592527bab13aad879ca13466e968b3
+ms.openlocfilehash: 52226bfa5742e39d834f80dac69317e10b6259c7
 
 
 ---
 
-# Настройка доверия PAM
+# Шаг 6. Настройка доверия PAM
 
 **Описанные действия можно не выполнять в среде, в которой есть только домен PRIV.** Войдите на сервер PAMServer с учетной записью MIMAdmin.
 
@@ -31,8 +31,12 @@ ms.openlocfilehash: 46afda513e849e457f5f3644a46f244161467e50
 
   При появлении запроса введите учетные данные администратора CORP. После ввода учетных данных будет установлено отношение доверия. На этом настройка будет завершена.
 
+>[!div class="step-by-step"]
+[« Шаг 5](sp1-step5-configuring-pam.md)
+[Шаг 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Oct16_HO1-->
 
 

@@ -4,7 +4,7 @@ description: "Подготовка домена CORP с существующим
 keywords: 
 author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 743ba586374ccc04e9ddafff759a00574e13f6ac
+ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
+ms.openlocfilehash: 9a617d8a5fbe8bcdac40cdf3250e5efedb7a0b84
 
 
 ---
@@ -24,7 +24,8 @@ ms.openlocfilehash: 743ba586374ccc04e9ddafff759a00574e13f6ac
 Пакет развертывания поставляется со сценариями проверки, способными выполнять сценарий PAM для подтверждения того, что развертывание PAM работает, как ожидалось.
 Чтобы использовать проверку развертывания, измените раздел PAMDeploymentConfig.xml с названием <PamValidation/>.
 
->[!Note] Для проверки требуется присоединенный к домену CORP домен клиентского компьютера с установленными клиентскими компонентами PAM. Сценарии по установке клиента представлены в Приложении.
+>[!NOTE]
+>Для проверки требуется присоединенный к домену CORP домен клиентского компьютера с установленными клиентскими компонентами PAM. Сценарии по установке клиента представлены в Приложении.
 
 Имя клиентского компьютера следует обновить в теге <PAMValidationClient/> файла PAMDeploymentConfig.xml. Остальные данные на узле <PAMValidation/> подлежат изменению только в том случае, если у них возникает конфликт с существующими пользователями или группами, поскольку данная проверка попытается создать их.
 Чтобы выполнить проверку, сделайте следующее.
@@ -72,8 +73,12 @@ ms.openlocfilehash: 743ba586374ccc04e9ddafff759a00574e13f6ac
   Изначально у пользователя не будет доступа к ресурсу. После своевременного добавления пользователя к роли ему предоставляется доступ. По истечении срока действия запроса у пользователя снова не будет доступа.
   В сценарии используется срок действия запроса по умолчанию (11 минут).
 
+>[!div class="step-by-step"]
+[« Шаг 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Приложение »](sp1-pam-deployment-addendum.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Oct16_HO1-->
 
 
