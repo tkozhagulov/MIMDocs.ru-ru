@@ -6,7 +6,6 @@ author: barclayn
 manager: MBaldwin
 ms.date: 09/26/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
@@ -19,7 +18,7 @@ ms.openlocfilehash: 82500ff42e24f5b155bfdd336566a2cd3d87fe7e
 
 ---
 
-# Сценарии развертывания PAM в MIM2016 SP1
+# <a name="mim2016-sp1-pam-deployment-scripts"></a>Сценарии развертывания PAM в MIM2016 SP1
 
 В этом пакете обновления мы представляем набор сценариев развертывания для упрощения развертывания PAM. Эти сценарии доступны в центре загрузки. Прежде чем пытаться использовать сценарии, важно убедиться, что перечисленные ниже предположения применяются в вашей среде.
 
