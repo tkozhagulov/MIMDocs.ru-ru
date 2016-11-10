@@ -3,6 +3,7 @@ title: "Приложение"
 description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
 ms.date: 09/27/2016
 ms.topic: article

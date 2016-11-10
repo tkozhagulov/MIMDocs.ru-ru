@@ -3,6 +3,7 @@ title: "Сценарии развертывания PAM в MIM2016 SP1"
 description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
 ms.date: 09/26/2016
 ms.topic: article
