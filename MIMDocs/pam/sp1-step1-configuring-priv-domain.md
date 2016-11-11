@@ -3,22 +3,25 @@ title: "Шаг 1. Настройка домена PRIV"
 description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7c5266f3d1c51e933855031f4128cbcb967d6e2
-ms.openlocfilehash: 37ac600701ed9d90790e557d2f282be45eed43b4
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 8c1127b81676dfa40dc9bca515b4c3c6d66a1298
 
 
 ---
-# Шаг 1. Настройка домена PRIV
+# <a name="step-1-configuring-the-priv-domain"></a>Шаг 1. Настройка домена PRIV
+
+>[!div class="step-by-step"]
+[Шаг 2 "](sp1-step2-configuring-corp-domain.md)
 
 1. Войдите в систему PRIVDC от имени администратора.
   * Если в этой среде только PRIV, войдите в систему CORPDC.
@@ -32,13 +35,17 @@ ms.openlocfilehash: 37ac600701ed9d90790e557d2f282be45eed43b4
 Если домен PRIV работает под управлением Windows Server 2016 и настроен уровень функциональности Windows Server 2016 Technical Preview 5, сценарий предложит включить необязательную функцию Privileged Access Management службы Active Directory, которая обязательна для сервера PAM. Для подтверждения и продолжения нажмите "Да".
 Если заданный уровень функциональности ниже Windows Server 2016, пропустите предупреждение о том, что дополнительная настройка не будет выполнена. После того как администратор повысит уровень функциональности до Windows Server 2016, нужно будет повторно запустить PAMDeployment.ps1 и конфигурацию леса PAM.
 
->[!Note] Следующие шаги не являются обязательными для конфигураций PRIVOnly.
+>[!NOTE]
+>Следующие шаги не являются обязательными для конфигураций PRIVOnly.
 
 Скопируйте файл SIDs.txt, созданный в $env: SYSTEMDRIVE\PAM, в аналогичную папку на CORPDC. Это требуется для CORPDC, чтобы настроить разрешения на чтение свойств пользователей CORP для пользователей PRIV.
 После выполнения сценария вам будет предложено перезагрузить компьютер, чтобы изменения вступили в силу.
 
+>[!div class="step-by-step"]
+[Шаг 2 "](sp1-step2-configuring-corp-domain.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 
