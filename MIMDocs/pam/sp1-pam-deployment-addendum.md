@@ -3,10 +3,10 @@ title: "Приложение"
 description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
 ms.date: 09/27/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
@@ -18,9 +18,9 @@ ms.openlocfilehash: cdd859ceb13d187af3303235c0fe1e496f2bfb6e
 
 
 ---
-# Приложение. Сценарии развертывания PAM.
+# <a name="pam-deployment-scripts-addendum"></a>Приложение. Сценарии развертывания PAM.
 
-## Приложение 1. Настройка домена PRIV
+## <a name="addendum-1-setting-up-the-priv-domain"></a>Приложение 1. Настройка домена PRIV
 
 После распаковки сжатого файла PAMDeploymentConfig.xml в папку $env:SYSTEMDRIVE\PAM внесите в него сведения о лесе PRIV. Обновите параметры DNSName, NetbiosName, имя контроллера домена, а также путь к базе данных, журналу и каталогу Sysvol. Кроме того, обновите режимы работы домена и леса. Если вы тестируете систему Windows Server Technical Preview 5, задайте для параметров DomainMode и ForestMode значение WinThreshold.
 
@@ -38,7 +38,7 @@ ms.openlocfilehash: cdd859ceb13d187af3303235c0fe1e496f2bfb6e
   * Пароль содержит как минимум один символ ВЕРХНЕГО регистра.
   * Пароль содержит как минимум один цифровой или специальный символ.
 
-## Приложение 2. Настройка домена CORP
+## <a name="addendum-2-setting-up-the-corp-domain"></a>Приложение 2. Настройка домена CORP
 
 Если вы только начинаете работать с PAM и вам требуется настроить тестовую среду, указанный сценарий также позволяет настраивать домен CORP. После распаковки сжатого файла PAMDeploymentConfig.xml в папку $env:SYSTEMDRIVE\PAM добавьте в него сведения о лесе CORP. Обновите параметры DNSName, NetbiosName, имя контроллера домена, путь к базе данных, журналу и каталогу Sysvol. Используйте операционную систему не старше Windows Server 2012 R2.
 
@@ -50,7 +50,7 @@ ms.openlocfilehash: cdd859ceb13d187af3303235c0fe1e496f2bfb6e
 
 Контроллер домена автоматически перезагрузится после завершения процедуры.
 
-## Приложение 3. Настройка клиента CORP для выполнения проверки
+## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>Приложение 3. Настройка клиента CORP для выполнения проверки
 
 Параметр ClientBinaryLocation в файле конфигурации должен указывать на расположение файла setup.exe.
 Войдите в клиент в качестве локального администратора и выполните следующие команды в окне PowerShell с повышенными правами.
@@ -68,7 +68,7 @@ ms.openlocfilehash: cdd859ceb13d187af3303235c0fe1e496f2bfb6e
 
 Перейдите к шагу 8 (см. выше в документе).
 
-## Приложение 4. Действия в случае возникновения ошибок
+## <a name="addendum-4-if-something-goes-wrong"></a>Приложение 4. Действия в случае возникновения ошибок
 
 Все журналы сценариев сохраняются в расположении %AppData%\MIMPAMInstall. Выполните сжатие папки и полученный ZIP-файл отправьте по адресу электронной почты [mim2016@microsoft.com](mailto:mim2016@microsoft.com) вместе со сведениями об операции и ошибке.
 
