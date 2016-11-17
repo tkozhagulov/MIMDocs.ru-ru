@@ -3,23 +3,23 @@ title: "Настройка управления привилегированны
 description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 96c734ade75f5c206858387cf45106761bc0a881
-ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
 
 
 ---
 
-# Настройка управления привилегированным доступом (PAM) с помощью сценариев
+# <a name="configure-pam-using-scripts"></a>Настройка управления привилегированным доступом (PAM) с помощью сценариев
 
 Если вы решили установить SQL и SharePoint на отдельных серверах, необходимо настроить их в соответствии с приведенными в документе инструкциями. Если компоненты SQL, SharePoint и PAM устанавливаются на одном компьютере, указанные ниже действия необходимо выполнить с этого компьютера.
 
@@ -39,11 +39,11 @@ ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
 5. Скопируйте тот же файл PAMDeploymentConfig.xml в папки %SYSTEMDRIVE%\PAM на всех компьютерах, контроллерах доменов CORP и PRIV, серверах PAM Server, SQL Server и SharePoint.
 
 
-## Журнал развертывания
+## <a name="deployment-worksheet"></a>Журнал развертывания
 
 Прежде чем приступить к развертыванию, обновите файл PAMDeploymentConfig.xml и разместите его обновленную копию на всех компьютерах.
 
-### Настройка
+### <a name="setup"></a>Настройка
 
 |Компьютер   | Запуск от имени   |Команды   |
 |---|---|---|
@@ -55,7 +55,7 @@ ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
 | Сервер PAMServer  | Локальный администратор (после присоединения к домену — администратор MIM)  | .\PAMDeployment.ps1. Выберите в меню пункт 5 (Настройка PAM в MIM)   |
 |  Сервер PAMServer |Администратор MIM   | .\PAMDeployment.ps1. Выберите в меню пункт 6 (Настройка доверия в PAM) .\PAMDeployment.ps1. Выберите в меню пункт 6 (Настройка доверия в PAM) |
 
-### Проверка
+### <a name="validation"></a>Проверка
 
 |  Компьютер | Запуск от имени   | Команды   |
 |---|---|---|
@@ -63,10 +63,14 @@ ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
 | Контроллер домена CORP  | Администратор домена CORP   | Import-module .\PAMValidation.psm1 ; Create-PAMValidationCORPDCConfig   |
 | Сервер PAMServer   | Администратор MIM  | Import-module .\PAMValidation.psm1 ; Move-PAMValidationUsersToPAM  |
 | Клиент домена CORP  | Пользователь домена CORP (локальный администратор)   |   Import-module .\PAMValidation.psm1 ; Enable-PAMUsersCORPClientRemote |
-|  Клиент домена CORP | <PRIV>Пользователь \PRIV.pamRequestor; при использовании PRIVOnly: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+|  Клиент домена CORP | <PRIV>Пользователь \PRIV.pamRequestor. При использовании PRIVOnly: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+
+
+>[!div class="step-by-step"]
+[Начало "](sp1-step1-configuring-priv-domain.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

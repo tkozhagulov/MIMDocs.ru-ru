@@ -1,25 +1,25 @@
 ---
-title: "Установка службы и портала MIM | Microsoft Identity Manager"
+title: "Установка службы и портала MIM | Документация Майкрософт"
 description: "Шаги по настройке и установке службы и портала MIM для Microsoft Identity Manager 2016"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
 
 
 ---
 
-# Установка MIM 2016: служба и портал MIM
+# <a name="install-mim-2016-mim-service-and-portal"></a>Установка MIM 2016: служба и портал MIM
 
 >[!div class="step-by-step"]
 [« Служба синхронизации MIM](install-mim-sync.md)
@@ -29,13 +29,13 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
 > - Имя контроллера домена — **mimservername**.
 > - Имя домена — **contoso**.
-> - Пароль — **Pass@word1**.
+> - Пароль — **Pass@word1**
 > - Имя учетной записи службы — **MIMService**.
 
 Если вы не настроили пакет установки MIM на предыдущем шаге, прежде чем продолжить, установите компоненты Microsoft Identity Manager 2016.
 
 
-## Настройка службы и портала MIM для установки
+## <a name="configure-mim-service-and-portal-for-installation"></a>Настройка службы и портала MIM для установки
 
 1. Запустите **установщик службы и портала MIM** из распакованной вложенной папки **Service and Portal**.
 
@@ -77,7 +77,7 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 16. Установите флажки, чтобы открыть порты 5725 и 5726 в брандмауэре и предоставлять всем вошедшим пользователям доступ к порталу MIM.
 
-## Настройка портала регистрации паролей MIM
+## <a name="configure-mim-password-registration-portal"></a>Настройка портала регистрации паролей MIM
 
 1.  В качестве имени учетной записи службы для регистрации SSPR укажите *contoso\MIMSSPR* и введите пароль *Pass@word1*.
 
@@ -89,7 +89,7 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 4. На следующем экране настройки портала регистрации паролей MIM введите *http://CorpIDM.contoso.local* в качестве адреса сервера службы MIM для портала регистрации паролей.
 
-## Настройка портала сброса паролей MIM
+## <a name="configure-mim-password-reset-portal"></a>Настройка портала сброса паролей MIM
 
 1.  В качестве имени учетной записи службы для регистрации SSPR укажите *Contoso\MIMSSPRService* и введите пароль *Pass@word1*.
 
@@ -101,7 +101,7 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 4. На следующем экране настройки портала регистрации паролей MIM введите *CorpIDname http://CorpIDname.domain.local* в качестве адреса сервера службы MIM для портала сброса паролей.
 
-## Установка службы и портала MIM
+## <a name="install-mim-service-and-portal"></a>Установка службы и портала MIM
 
 Когда все предварительные настройки будут завершены, нажмите кнопку **Установить**, чтобы начать установку выбранных компонентов **службы и портала**.
 
@@ -152,6 +152,6 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

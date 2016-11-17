@@ -1,25 +1,25 @@
 ---
-title: "Настройка SharePoint | Microsoft Identity Manager"
+title: "Настройка SharePoint | Документация Майкрософт"
 description: "Установите и настройте SharePoint Foundation для размещения страницы портала MIM."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
 
 
 ---
 
-# Настройка сервера управления удостоверениями: SharePoint
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Настройка сервера управления удостоверениями: SharePoint
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -29,10 +29,10 @@ ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
 > - Имя контроллера домена — **mimservername**.
 > - Имя домена — **contoso**.
-> - Пароль — **Pass@word1**.
+> - Пароль — **Pass@word1**
 
 
-## Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
+## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
 
 > [!NOTE]
 > Чтобы установщик скачал необходимые компоненты, требуется подключение к Интернету. Если компьютер находится в виртуальной сети без доступа к Интернету, добавьте на компьютер дополнительный сетевой интерфейс, который предоставляет доступ к Интернету. Это можно отключить после завершения установки.
@@ -59,7 +59,7 @@ ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
 
 4.  После завершения установки запустите мастер.
 
-## Использование мастера для настройки SharePoint
+## <a name="run-the-wizard-to-configure-sharepoint"></a>Использование мастера для настройки SharePoint
 
 Выполните действия, указанные в **мастере настройки продуктов SharePoint** , чтобы настроить SharePoint для работы с MIM.
 
@@ -79,7 +79,7 @@ ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
 
 8. В окне **Создание семейства веб-сайтов** нажмите кнопку **Пропустить**.  Затем нажмите кнопку **Готово**.
 
-## Подготовка SharePoint для размещения портала MIM
+## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Подготовка SharePoint для размещения портала MIM
 
 > [!NOTE]
 > Изначально протокол SSL не будет настроен. Обязательно настройте протокол SSL или его аналог, прежде чем разрешать доступ к порталу.
@@ -137,6 +137,6 @@ ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

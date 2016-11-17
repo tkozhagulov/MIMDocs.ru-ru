@@ -1,28 +1,28 @@
 ---
-title: "Сведения о гибридных отчетах | Microsoft Identity Manager"
+title: "Сведения о гибридных отчетах | Документация Майкрософт"
 description: "Гибридные отчеты Azure Active Directory позволяют создавать настраиваемые отчеты, включающие как облачные, так и локальные события."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: a074f3361e6d5be497b1a3c25d56aaa7008b128e
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: f21c15fdaa5fba9176cfc60a3c49017fa97fa935
 
 
 ---
 
-# Гибридные отчеты по управлению удостоверениями в Azure
+# <a name="hybrid-identity-management-reports-in-azure"></a>Гибридные отчеты по управлению удостоверениями в Azure
 С помощью Azure Active Directory (AD) можно создать один отчет, чтобы отслеживать управление удостоверениями, которое происходит локально или в облаке. Эта функция позволяет управлять всеми удостоверениями и просматривать данные в одном месте, что экономит время и сокращает общие затраты.
 
-## Что такое функция гибридных отчетов Azure AD?
+## <a name="what-is-azure-ad-hybrid-reporting"></a>Что такое функция гибридных отчетов Azure AD?
 Гибридные отчеты помогают специалистам в области ИТ устранить распространенные проблемы с отчетами об удостоверениях.
 
 1. **Сбор данных об управлении удостоверениями в разных системах.** Гибридные отчеты предоставляют сведения об управлении удостоверениями в Azure AD и Identity Manager.
@@ -31,7 +31,7 @@ ms.openlocfilehash: a074f3361e6d5be497b1a3c25d56aaa7008b128e
 
 3. **Снижение стоимости инфраструктуры системы отчетности.** Возможность хранения гибридных отчетов в облаке позволяет устранить необходимость в локальной инфраструктуре хранилища данных отчетов.
 
-## Как это работает?
+## <a name="how-does-it-work"></a>Как это работает?
 
 Чтобы собирать локальные данные, сначала необходимо установить агент создания отчетов на сервере Identity Manager. Этот агент можно скачать на странице настройки вашего каталога на [классическом портале Azure](https://manage.windowsazure.com/).
 
@@ -42,11 +42,11 @@ ms.openlocfilehash: a074f3361e6d5be497b1a3c25d56aaa7008b128e
 4. После запроса отчета события анализируются и фильтруются для требуемых отчетов.
 5. Классический портал Azure извлекает данные отчетов и отображает их в виде отчета о действиях.
 
-## См. также
+## <a name="see-also"></a>См. также
 - Дополнительные сведения см. в статье [Работа с гибридными отчетами диспетчера удостоверений](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting).
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

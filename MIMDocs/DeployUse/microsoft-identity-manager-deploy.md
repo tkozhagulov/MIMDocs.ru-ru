@@ -1,25 +1,25 @@
 ---
-title: "Развертывание MIM 2016 | Microsoft Identity Manager"
+title: "Развертывание MIM 2016| Документация Майкрософт"
 description: "Получите полный список действий, связанных с развертыванием Microsoft Identity Manager 2016 — от подготовки среды до настройки порталов."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/07/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 40dbec941eb2f0b1a01de0f47d44e01717aaca21
-ms.openlocfilehash: 77dae279f9078c55abf342a8956aaf77c62773d5
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 7fdad09650af245157264778d2732ac4327f25b5
 
 
 ---
 
-# Развертывание MIM 2016
+# <a name="deploy-mim-2016"></a>Развертывание MIM 2016
 Статьи в этом разделе содержат пошаговые инструкции по развертыванию Microsoft Identity Manager (MIM) 2016 для сценариев самообслуживания пользователей на новом сервере, где FIM и MIM ранее не развертывались.
 
 > [!NOTE]
@@ -29,18 +29,18 @@ ms.openlocfilehash: 77dae279f9078c55abf342a8956aaf77c62773d5
 
 Процесс развертывания MIM 2016 почти такой же, как и его предшественника, FIM 2010 R2. Документацию по FIM см. в [руководстве по развертыванию Forefront Identity Manager 2010 R2](https://technet.microsoft.com/library/jj134310).
 
-## Первый этап: подготовка домена
+## <a name="first-prepare-a-domain"></a>Первый этап: подготовка домена
 MIM работает с Active Directory (AD), поэтому выполните следующие действия, чтобы настроить контроллер домена AD.
 - [Настройка домена](preparing-domain.md)
 
-## Следующий этап: подготовка сервера удостоверений
+## <a name="next-prepare-an-identity-management-server"></a>Следующий этап: подготовка сервера удостоверений
 После создания и настройки домена подготовьте корпоративный сервер управления удостоверениями. Сюда входят следующие задачи:
-- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
-- [SQL Server 2014](prepare-server-sql2014.md)
+- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
+- [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (необязательно).
 
-## Последний этап: установка компонентов Microsoft Identity Manager 2016
+## <a name="finally-install-microsoft-identity-manager-2016-components"></a>Последний этап: установка компонентов Microsoft Identity Manager 2016
 После настройки домена и сервера вы можете установить компоненты MIM и настроить их для синхронизации с AD.
 - [Служба синхронизации MIM](install-mim-sync.md)
 - [Служба и портал MIM](install-mim-service-portal.md)
@@ -48,6 +48,6 @@ MIM работает с Active Directory (AD), поэтому выполните
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

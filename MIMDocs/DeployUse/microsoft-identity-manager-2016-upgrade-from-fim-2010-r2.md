@@ -1,25 +1,25 @@
 ---
-title: "Обновление с FIM 2010 R2 | Microsoft Identity Manager"
+title: "Обновление с FIM 2010 R2 | Документация Майкрософт"
 description: "Узнайте, как обновить FIM 2010 R2, а затем установить новые компоненты из MIM 2016."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
 
 
 ---
 
-# Обновление с Forefront Identity Manager 2010 R2
+# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Обновление с Forefront Identity Manager 2010 R2
 
 В этой статье содержатся сведения об обновлении Forefront Identity Manager (FIM) 2010 R2 до Microsoft Identity Manager (MIM) 2016. Процесс обновления состоит с трех этапов.
 
@@ -36,7 +36,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 - для FIM 2010 R2 настроены все необходимые локальные компоненты и компоненты среды (SQL Server, Exchange Server, SharePoint Services и т. д.).
 
 
-## Подготовка
+## <a name="preparation"></a>Подготовка
 
 1.  Создайте резервные копии базы данных службы FIM, базы данных FIM Sync, службы FIM Sync, также конфигурации и программного обеспечения служб.
 
@@ -44,7 +44,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 3.  Загрузка или распаковка программного обеспечения MIM.
 
-## Обновление службы синхронизации
+## <a name="upgrade-the-synchronization-service"></a>Обновление службы синхронизации
 
 1.  Войдите от имени администратора на сервер, где развернута служба синхронизации FIM 2010 R2 (Sync).
 
@@ -82,7 +82,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 13. Обратите внимание, что **служба синхронизации** снова запущена.
 
-## Обновление службы и портала
+## <a name="upgrade-the-service-and-portal"></a>Обновление службы и портала
 
 1.  Войдите от имени администратора на сервер, где развернуты служба и портал FIM 2010 R2.
 
@@ -138,7 +138,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 14. При установке портала MIM Portal укажите URL-адрес семейства веб-сайтов SharePoint, в котором размещается портал FIM. Нажмите кнопку **Далее**.
 
-## Установка портала регистрации паролей MIM
+## <a name="install-the-mim-password-registration-portal"></a>Установка портала регистрации паролей MIM
 
 1. Если устанавливается портал регистрации паролей MIM, укажите запрашиваемый URL-адрес портала регистрации паролей. Нажмите кнопку **Далее**.
 
@@ -168,7 +168,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
     2.  Определите, посещали ли портал пользователи экстрасети и интрасети или только пользователи интрасети, как было настроено для сброса пароля FIM.
 
-## Установка портала сброса паролей MIM
+## <a name="install-the-mim-password-reset-portal"></a>Установка портала сброса паролей MIM
 
 1. Если устанавливается портал сброса паролей MIM, укажите данные доступа и учетные данные для сброса паролей MIM.
 
@@ -188,7 +188,7 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
     2.  Укажите, могут ли посещать портал пользователи экстрасети и интрасети или только пользователи интрасети.
 
-## Завершение установки и обновления
+## <a name="finish-installation-and-upgrade"></a>Завершение установки и обновления
 
 1. После успешной настройки открывается страница установки. Нажмите кнопку **Установить** , чтобы начать установку и обновление службы и портала MIM.
 
@@ -202,6 +202,6 @@ ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
