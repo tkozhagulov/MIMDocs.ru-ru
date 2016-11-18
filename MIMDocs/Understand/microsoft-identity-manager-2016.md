@@ -1,42 +1,42 @@
 ---
-title: "Microsoft Identity Manager 2016 | Microsoft Identity Manager"
+title: "Microsoft Identity Manager 2016 | Документация Майкрософт"
 description: "Ознакомьтесь с принципами работы MIM 2016, чтобы создать более безопасную и удобную процедуру управления удостоверениями в облачной и локальной среде."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 00e11bca207529820eb7b52ab9887a5c3da9db19
-ms.openlocfilehash: 9121f6f7a11dc483763ac594dafae6d8df21c135
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 74d93047ad30d81546940fc4ece3d892fe6df2f8
 
 
 ---
 
-# Microsoft Identity Manager 2016
+# <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 Microsoft Identity Manager (MIM) 2016 основан на возможностях управления удостоверениями и доступом [FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx). Как и его предшественник, MIM позволяет управлять пользователями, учетными данными, политиками и доступом в организации.  Кроме того, в MIM 2016 добавлены функции гибридной среды и возможности управления привилегированным доступом, а также поддержка новых платформ.
 
 Эта версия Microsoft Identity Manager включает такие новые возможности, как диспетчер привилегированных пользователей и поддержку доступа к API REST для управления сертификатами. Теперь в управлении сертификатами добавлена поддержка топологий с несколькими лесами, приложение хранилища Windows для виртуальной смарт-карты и управление жизненным циклом сертификатов, обновленные события и возможности по устранению неполадок. Теперь сценарии самообслуживания включают разблокирование учетных записей и шлюз многофакторной проверки подлинности для сброса пароля.
 
-## Гибридная среда
+## <a name="hybrid-experience"></a>Гибридная среда
 Microsoft Identity Manager 2016 можно использовать с Azure, чтобы предоставить вам больше возможностей для управления средой. Гибридные отчеты в Azure обеспечивают централизованное хранение облачных и локальных данных. Кроме того, портал самостоятельного сброса пароля поддерживает Azure Multi-Factor Authentication (MFA).
 
-## Управление привилегированными пользователями
+## <a name="privileged-identity-management"></a>Управление привилегированными пользователями
 Служба управления привилегированными пользователями управляет административным доступом, предоставляя временный доступ для определенных задач к конфиденциальным ресурсам. Это означает, что пользователям можно предоставлять только необходимый уровень доступа, что позволяет снизить вероятность получения кибер-взломщиками полного административного доступа. Кроме того, служба управления привилегированными пользователями извлекает и изолирует учетные записи администраторов из имеющихся лесов Active Directory.
 
 MIM поддерживает локальное решение управления привилегированными пользователями для управления Active Directory. Для начала обратитесь к статье [Использование управления привилегированным доступом](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
 
-## См. также
+## <a name="related-topics"></a>См. также
 Microsoft Identity Manager по-прежнему тесно связан со своим предшественником, Forefront Identity Manager. Если по-прежнему используется FIM или требуется дополнительная документация, ознакомьтесь с [списком документации по FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx).
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

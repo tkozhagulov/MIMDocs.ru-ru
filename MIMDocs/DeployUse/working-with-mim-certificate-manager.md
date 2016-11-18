@@ -1,25 +1,25 @@
 ---
-title: "Диспетчер сертификатов MIM | Microsoft Identity Manager"
+title: "Диспетчер сертификатов MIM | Документация Майкрософт"
 description: "Узнайте, как развернуть приложение диспетчера сертификатов, чтобы позволить пользователям управлять своими правами доступа."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
 
 
 ---
 
-# Работа с диспетчером сертификатов MIM
+# <a name="working-with-the-mim-certificate-manager"></a>Работа с диспетчером сертификатов MIM
 После того как MIM 2016 и диспетчер сертификатов запущены и работают, вы можете развернуть приложение диспетчера сертификатов MIM из Магазина Windows, чтобы пользователи могли легко управлять физическими и виртуальными смарт-картами, а также сертификатами программного обеспечения. Чтобы развернуть приложение MIM CM, необходимо выполнить следующие действия:
 
 1.  создать шаблон сертификата;
@@ -30,7 +30,7 @@ ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
 
 4.  развернуть приложение через SCCM или Intune.
 
-## Создание шаблона сертификата
+## <a name="create-a-certificate-template"></a>Создание шаблона сертификата
 Шаблон сертификата для приложения CM создается как и обычно, за исключением того, что необходимо убедиться, что используется шаблон сертификата версии 3 или более поздней.
 
 1.  Войдите на сервер под управлением AD CS (сервер сертификатов).
@@ -69,7 +69,7 @@ ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
 
 16. Выберите созданный шаблон из списка и нажмите кнопку **ОК**.
 
-## Создание шаблона профиля
+## <a name="create-a-profile-template"></a>Создание шаблона профиля
 При создании шаблона профиля необходимо создать или удалить vSC и удалить коллекцию данных. Приложение CM не может обрабатывать собранные данные, поэтому требуется отключить его, как показано ниже.
 
 1.  Войдите на портал CM от имени пользователя с правами администратора.
@@ -94,7 +94,7 @@ ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
 
 11. Отключите сбор данных для каждой политики. Для этого выберите политику в области слева и снимите флажок **Пример элемента данных** , а затем нажмите кнопку **Удалить элементы сбора данных**. После этого щелкните **OK**.
 
-## Подготовка к развертыванию приложения CM
+## <a name="prepare-the-cm-app-for-deployment"></a>Подготовка к развертыванию приложения CM
 
 1.  В командной строке выполните следующую команду, чтобы распаковать приложение и извлечь содержимое в новую вложенную папку с именем appx, а также создать копию, чтобы не изменить исходный файл.
 
@@ -148,7 +148,7 @@ ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
 
     -   Откройте приложение Virtual Smart Card. Это упрощает поиск значений, необходимых для следующего шага.
 
-    -   На сервере AD FS откройте Windows PowerShell и выполните указанную ниже команду, чтобы добавить приложение в качестве клиента на сервер AD FS и настроить CM на сервере. `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    -   На сервере AD FS откройте Windows PowerShell и выполните команду `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`, чтобы добавить приложение в качестве клиента на сервер AD FS и настроить CM на сервере.
 
         Ниже приведен скрипт ConfigureMimCMClientAndRelyingParty.ps1:
 
@@ -249,13 +249,13 @@ ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
 
     -   serverFQDN — это полное имя компьютера сервера MIMCM.
 
-    -   Для получения справки по скрипту **ConfigureMIimCMClientAndRelyingParty.ps1** выполните команду `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    -   Для получения справки по скрипту **ConfigureMIimCMClientAndRelyingParty.ps1** выполните команду `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`.
 
-## Развертывание приложения
+## <a name="deploy-the-app"></a>Развертывание приложения
 При настройке приложения CM в центре загрузки скачайте файл MIMDMModernApp_&lt;версия&gt;_AnyCPU_Test.zip и извлеките его содержимое. APPX-файл — это установщик. Его можно развернуть так же, как и любое приложение Магазина Windows, используя [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)или [Intune](https://technet.microsoft.com/library/dn613839.aspx) для загрузки неопубликованного приложения, чтобы пользователи имели доступ к нему через корпоративный портал либо оно устанавливалось непосредственно на их компьютеры.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

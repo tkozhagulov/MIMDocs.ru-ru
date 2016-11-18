@@ -1,28 +1,28 @@
 ---
-title: "Создание сертификатов программного обеспечения | Microsoft Identity Manager"
+title: "Создание сертификатов программного обеспечения | Документация Майкрософт"
 description: "Узнайте, как использовать диспетчер сертификатов для создания и обновления сертификатов программного обеспечения с помощью шаблонов профилей."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
 
 
 ---
 
-# Создание сертификатов программного обеспечения с помощью диспетчера сертификатов
+# <a name="create-software-certificates-with-certificate-manager"></a>Создание сертификатов программного обеспечения с помощью диспетчера сертификатов
 Для регистрации и обновления сертификатов программного обеспечения права администратора и виртуальная смарт-карта не нужны. Обратите внимание, что на определенном этапе вам будет предложено разрешить операцию с сертификатом — это нормально.
 
-## Создание шаблона профиля сертификата программного обеспечения в диспетчере сертификатов MIM 2016
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Создание шаблона профиля сертификата программного обеспечения в диспетчере сертификатов MIM 2016
 
 1.  Создайте шаблон сертификата, который вы будете запрашивать для виртуальной смарт-карты. Откройте консоль MMC.
 
@@ -72,7 +72,7 @@ ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
 
     10. В списке выберите созданный шаблон (**Шаблон архива сертификатов**), а затем нажмите кнопку **ОК**.
 
-## Создание шаблона профиля
+## <a name="create-the-profile-template"></a>Создание шаблона профиля
 
 1.  Войдите на портал CM от имени пользователя с правами администратора.
 
@@ -98,6 +98,6 @@ ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
