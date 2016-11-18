@@ -3,23 +3,27 @@ title: "Шаг 8. Проверка развертывания PAM"
 description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
-ms.openlocfilehash: 9a617d8a5fbe8bcdac40cdf3250e5efedb7a0b84
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 7709b4df5bb196aba6abf056830bc73e024174ef
 
 
 ---
 
-# Шаг 8. Проверка развертывания PAM
+# <a name="step-8-pam-deployment-verification"></a>Шаг 8. Проверка развертывания PAM
+
+>[!div class="step-by-step"]
+[« Шаг 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Приложение »](sp1-pam-deployment-addendum.md)
 
 Пакет развертывания поставляется со сценариями проверки, способными выполнять сценарий PAM для подтверждения того, что развертывание PAM работает, как ожидалось.
 Чтобы использовать проверку развертывания, измените раздел PAMDeploymentConfig.xml с названием <PamValidation/>.
@@ -79,6 +83,6 @@ ms.openlocfilehash: 9a617d8a5fbe8bcdac40cdf3250e5efedb7a0b84
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

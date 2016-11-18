@@ -1,42 +1,42 @@
 ---
-title: "Настройка домена | Microsoft Identity Manager"
+title: "Настройка домена | Документация Майкрософт"
 description: "Создание контроллера домена Active Directory перед установкой MIM 2016"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80fde32862a322a7a067982d0b02c99a8b43063e
-ms.openlocfilehash: 4ee1742e388da1ccb973b64316629debe570add0
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: aa110cc31896ac08aa3f84fa48858d978efe0c63
 
 
 ---
 
-# Настройка домена
+# <a name="set-up-a-domain"></a>Настройка домена
 
 >[!div class="step-by-step"]
-["Windows Server 2012 R2"](prepare-server-ws2012r2.md)
+[Windows Server 2012 R2 "](prepare-server-ws2012r2.md)
 
 Microsoft Identity Manger (MIM) работает с доменом Active Directory (AD). Служба AD должна быть уже установлена. Кроме того, в вашей среде должен быть контроллер для домена, которым вы можете управлять.
 
 В этой статье рассматриваются действия по подготовке домена для работы с MIM.
 
-## Создание учетных записей пользователей и групп
+## <a name="create-user-accounts-and-groups"></a>Создание учетных записей пользователей и групп
 
-Всем компонентам развертывания MIM требуются собственные удостоверения в домене. Эти компоненты MIM включают службу, компонент синхронизации, а также SharePoint и SQL.
+Всем компонентам развертывания MIM требуются собственные удостоверения в домене. Сюда входят такие компоненты MIM, как служба и модуль синхронизации, а также SharePoint и SQL.
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
 > - Имя контроллера домена — **mimservername**.
 > - Имя домена — **contoso**.
-> - Пароль — **Pass@word1**.
+> - Пароль — **Pass@word1**
 
 1. Войдите в контроллер домена в качестве администратора (*например Contoso\Administrator*).
 
@@ -71,11 +71,11 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
 3.  Создайте группы безопасности во всех группах.
 
     ```
-    New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncAdmins
-    New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global       –SamAccountName MIMSyncOperators
-    New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global         –SamAccountName MIMSyncJoiners
-    New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncBrowse
-    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global          –SamAccountName MIMSyncPasswordReset
+    New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncAdmins
+    New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncOperators
+    New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncJoiners
+    New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncBrowse
+    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
@@ -90,10 +90,10 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
     ```
 
 >[!div class="step-by-step"]
-["Windows Server 2012 R2"](prepare-server-ws2012r2.md)
+[Windows Server 2012 R2 "](prepare-server-ws2012r2.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

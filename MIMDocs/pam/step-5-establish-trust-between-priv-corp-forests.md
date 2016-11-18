@@ -1,25 +1,25 @@
 ---
-title: "Развертывание PAM. Шаг 5 — ссылка на лес | Microsoft Identity Manager"
+title: "Развертывание PAM. Шаг 5 — ссылка на лес | Документация Майкрософт"
 description: "Установите отношение доверия между лесами PRIV и CORP таким образом, чтобы привилегированные пользователи в PRIV могли обращаться к ресурсам в CORP."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 16208efe08c5a2c0f63ee121c64c45cad5a73909
 
 
 ---
 
-# Шаг 5. Установка отношений доверия между лесами PRIV и CORP
+# <a name="step-5-establish-trust-between-priv-and-corp-forests"></a>Шаг 5. Установка отношений доверия между лесами PRIV и CORP
 
 >[!div class="step-by-step"]
 [« Шаг 4](step-4-install-mim-components-on-pam-server.md)
@@ -28,7 +28,7 @@ ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
 
 Контроллеры доменов PRIV и CONTOSO должны быть связаны отношением доверия с каждым доменом CORP (например, contoso.local). Это позволит пользователям в домене PRIV получить доступ к ресурсам в домене CORP.
 
-## Подключение каждого контроллера домена к соответствующему элементу
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>Подключение каждого контроллера домена к соответствующему элементу
 
 До установки отношений доверия в каждом контроллере домена необходимо настроить разрешение DNS-имен другого домена на основе IP-адреса другого контроллера домена или DNS-сервера.
 
@@ -46,7 +46,7 @@ ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
 
     ![Структура файла для ключа priv — снимок экрана](./media/PAM_GS_DNS_Manager.png)
 
-## Установление доверия в PAMSRV
+## <a name="establish-trust-on-pamsrv"></a>Установление доверия в PAMSRV
 
 В PAMSRV установите одностороннее отношение доверия с каждым доменом, таким как CORPDC, чтобы контроллер домена CORP доверял лесу PRIV.
 
@@ -68,7 +68,7 @@ ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## Предоставление лесам доступа для чтения в Active Directory
+## <a name="give-forests-read-access-to-active-directory"></a>Предоставление лесам доступа для чтения в Active Directory
 
 Для каждого существующего леса разрешите администраторам PRIV и службе мониторинга доступ на чтение в Active Directory.
 
@@ -91,7 +91,7 @@ ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
 
     На выходе также должно быть указано, что **фильтрация SID не включена для этого доверия**. Дополнительные сведения см. в статье [Отключение карантина фильтров SID](http://technet.microsoft.com/library/cc772816.aspx).
 
-## Запуск мониторинга и службы компонентов
+## <a name="start-the-monitoring-and-component-services"></a>Запуск мониторинга и службы компонентов
 
 1.  Войдите в PAMSRV как администратор домена PRIV (PRIV\Administrator).
 
@@ -112,6 +112,6 @@ ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

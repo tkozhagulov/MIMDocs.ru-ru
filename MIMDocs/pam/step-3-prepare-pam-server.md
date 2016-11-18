@@ -1,12 +1,12 @@
 ---
-title: "Развертывание PAM. Шаг 3 — сервер PAM | Microsoft Identity Manager"
+title: "Развертывание PAM. Шаг 3 — сервер PAM | Документация Майкрософт"
 description: "Подготовьте сервер PAM, где будет размещаться SQL и SharePoint для развертывания Privileged Access Management."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
@@ -14,19 +14,19 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 618b834452aa07a9f31582994fe32129a49f4249
 
 
 ---
 
-# Шаг 3. Подготовка сервера PAM
+# <a name="step-3-prepare-a-pam-server"></a>Шаг 3. Подготовка сервера PAM
 
 >[!div class="step-by-step"]
 [« Шаг 2](step-2-prepare-priv-domain-controller.md)
 [Шаг 4 »](step-4-install-mim-components-on-pam-server.md)
 
-## Установка Windows Server 2012 R2
+## <a name="install-windows-server-2012-r2"></a>Установка Windows Server 2012 R2
 Установите Windows Server 2012 R2, а именно Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64, на третьей виртуальной машине, чтобы создать компьютер *PAMSRV*. Поскольку на этом компьютере будут установлены SQL Server и SharePoint 2013, требуется как минимум 8 ГБ ОЗУ.
 
 1. Выберите редакцию **Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64**.
@@ -46,7 +46,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 7.  После перезагрузки сервера войдите в систему как администратор, откройте панель управления и присоедините PAMSRV к домену PRIV (priv.contoso.local).  Для этого потребуется указать имя пользователя и учетные данные администратора домена PRIV, например PRIV\Administrator. Когда появится приветствие, закройте диалоговое окно и перезагрузите сервер.
 
 
-### Добавление ролей веб-сервера (IIS) и сервера приложений
+### <a name="add-the-web-server-iis-and-application-server-roles"></a>Добавление ролей веб-сервера (IIS) и сервера приложений
 Добавьте роли Web Server (IIS) и Application Server, компоненты .NET Framework 3.5, модуль Active Directory для Windows PowerShell и другие компоненты, необходимые SharePoint.
 
 1.  Выполните вход как администратор домена PRIV (PRIV\Administrator) и запустите PowerShell.
@@ -61,7 +61,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
     Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-### Настройка политики безопасности сервера
+### <a name="configure-the-server-security-policy"></a>Настройка политики безопасности сервера
 Настройте политику безопасности сервера так, чтобы новые учетные записи могли работать как службы.
 
 1.  Запустите программу **локальной политики безопасности** .   
@@ -85,7 +85,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 16. Нажмите кнопку **Добавить**, введите имя пользователя *SharePoint* в домене *PRIV*, а на следующем экране мастера нажмите кнопку **Добавить этого пользователя с правами администратора**.  
 17. Закройте панель управления.  
 
-### Изменение конфигурации IIS
+### <a name="change-the-iis-configuration"></a>Изменение конфигурации IIS
 Изменить конфигурацию IIS для того, чтобы приложения могли использовать режим проверки подлинности Windows, можно двумя способами. Войдите в систему как MIMAdmin, а затем выберите один из следующих вариантов.
 
 Если вы хотите использовать PowerShell:
@@ -95,7 +95,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
     iisreset /STOP
     C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
     iisreset /START
-    ```  
+    ```
 
 Если вы хотите использовать текстовый редактор, например Блокнот:   
 1. Откройте файл **C:\Windows\System32\inetsrv\config\applicationHost.config**   
@@ -103,7 +103,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 3. Измените значение **overrideModeDefault** на *Разрешить*  
 4. Сохраните этот файл и перезапустите IIS с помощью команды PowerShell `iisreset /START`
 
-## Установите SQL Server
+## <a name="install-sql-server"></a>Установите SQL Server
 Если в среде бастиона еще не присутствует SQL Server, установите SQL Server 2012 (пакет обновления 1 или более поздней версии) или SQL Server 2014. Ниже предполагается, что используется SQL 2014.
 
 1. Выполните вход как MIMAdmin.
@@ -111,10 +111,10 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 3. Перейдите в каталог, где находится программа установки SQL Server.  
 4. Введите следующую команду:  
     ```
-    .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1"   /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
+    .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1" /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
     ```
 
-## Установка SharePoint Foundation 2013
+## <a name="install-sharepoint-foundation-2013"></a>Установка SharePoint Foundation 2013
 
 С помощью установщика SharePoint Foundation 2013 с пакетом обновления 1 (SP1) установите необходимое программное обеспечение для SharePoint на компьютере PAMSRV.
 
@@ -133,7 +133,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 4.  Выберите **полный тип сервера** .  
 5.  После завершения установки запустите мастер.  
 
-### Настройка SharePoint
+### <a name="configure-sharepoint"></a>Настройка SharePoint
 Запустите мастер настройки продуктов SharePoint, чтобы настроить SharePoint.
 
 1.  На вкладке "Подключение к ферме серверов" выберите пункт **Создать ферму серверов**.  
@@ -146,7 +146,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 8.  Выберите использование существующей управляемой учетной записи (PRIV\SharePoint), снимите флажки, чтобы отключить все дополнительные службы, и нажмите кнопку **Далее**.  
 9. В окне создания семейства веб-сайтов нажмите кнопку **Пропустить**, а затем **Готово**.  
 
-## Создание веб-приложения SharePoint Foundation 2013
+## <a name="create-a-sharepoint-foundation-2013-web-application"></a>Создание веб-приложения SharePoint Foundation 2013
 После завершения работы мастера создайте с помощью PowerShell веб-приложение SharePoint Foundation 2013 для размещения портала MIM. Поскольку это пошаговое руководство предназначено для демонстрации, SSL не включается.
 
 1.  Щелкните консоль управления SharePoint 2013 правой кнопкой мыши, выберите пункт **Запуск от имени администратора** и запустите следующий сценарий PowerShell:
@@ -161,7 +161,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 > [!NOTE]
 > Не закрывайте окно командной консоли SharePoint 2013 — оно вам потребуется на следующем шаге.
 
-## Создание семейства веб-сайтов SharePoint
+## <a name="create-a-sharepoint-site-collection"></a>Создание семейства веб-сайтов SharePoint
 Создайте семейство веб-сайтов SharePoint, связанное с этим веб-приложением, для размещения портала MIM.
 
 1.  Запустите **командную консоль SharePoint 2013**, если она еще не открыта, и выполните следующий сценарий PowerShell:
@@ -186,13 +186,13 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
     Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
     ```
 
-## Изменение параметров обновления
+## <a name="change-update-settings"></a>Изменение параметров обновления
 
 1. Откройте панель управления, перейдите к разделу **Центр обновления Windows** и щелкните **Изменить параметры**.  
 2. Измените параметры так, чтобы получать обновления центра обновления Windows и обновления других продуктов из центра обновления Майкрософт.  
 3. Прежде чем продолжить, повторно проверьте наличие обновлений и убедитесь, что все имеющиеся важные обновления установлены.
 
-## Настройка веб-сайта для локальной интрасети
+## <a name="set-the-website-as-the-local-intranet"></a>Настройка веб-сайта для локальной интрасети
 
 1. Запустите Internet Explorer и откройте новую вкладку веб-браузера.
 2. Перейдите по адресу http://pamsrv.priv.contoso.local:82/ и войдите в систему как PRIV\MIMAdmin.  Откроется пустой сайт SharePoint с именем "Портал MIM".  
@@ -200,7 +200,7 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 
 Если войти не удается, может потребоваться обновить имена участников-служб Kerberos, созданных ранее на [шаге 2](step-2-prepare-priv-domain-controller.md).
 
-## Запуск службы администрирования SharePoint
+## <a name="start-the-sharepoint-administration-service"></a>Запуск службы администрирования SharePoint
 
 В разделе **Службы** (в разделе "Средства администрирования") запустите службу **Администрирование SharePoint**, если она не запущена.
 
@@ -212,6 +212,6 @@ ms.openlocfilehash: 1a21399df9528f689b811400a660543853d88472
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,12 +1,12 @@
 ---
-title: "Развертывание PAM. Шаг 4 — установка MIM | Microsoft Identity Manager"
+title: "Развертывание PAM. Шаг 4 — установка MIM | Документация Майкрософт"
 description: "Установите и настройте службу и портал MIM на сервере и рабочих станциях Privileged Access Management."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
@@ -14,13 +14,13 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5b9653cb8de9e9fc788685ba027f84a795467cf6
 
 
 ---
 
-# Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM
+# <a name="step-4-install-mim-components-on-pam-server-and-workstation"></a>Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM
 
 >[!div class="step-by-step"]
 [« Шаг 3](step-3-prepare-pam-server.md)
@@ -34,7 +34,7 @@ ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 
 Если вы скачали MIM, распакуйте архив установки MIM в новую папку.
 
-##  Запустите программу установки службы и портала.  
+##  <a name="run-the-service-and-portal-install-program"></a>Запустите программу установки службы и портала.  
 
 Следуйте инструкциям и завершите установку.
 
@@ -55,7 +55,7 @@ ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
     - Имя учетной записи службы: *MIMService*  
     - Пароль учетной записи службы: *Pass@word1* (или пароль, созданный на шаге 2)  
     - Домен учетной записи службы: *PRIV*  
-    - Учетная запись электронной почты службы: *MIMService@priv.contoso.local*  
+    - Учетная запись электронной почты: *MIMService@priv.contoso.local*  
 
 6.  Примите значения по умолчанию для имени узла сервера синхронизации и укажите учетную запись агента управления MIM *PRIV\MIMMA*. Появится предупреждение об отсутствии службы синхронизации MIM. Это нормально, поскольку служба синхронизации MIM не используется в этом сценарии.
 
@@ -98,7 +98,7 @@ ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 
 После завершения установки сервер перезагрузится, затем убедитесь, что портал MIM активен, и разрешите пользователям просматривать собственный ресурс объекта в MIM.
 
-## Настройка правил политики управления для портала MIM
+## <a name="set-up-mim-portal-management-policy-rules"></a>Настройка правил политики управления для портала MIM
 
 1. После перезагрузки PAMSRV войдите в систему от имени PRIV\Administrator.
 
@@ -114,7 +114,7 @@ ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 
 7. Выберите это правило политики управления, снимите флажок **Политика отключена**, нажмите кнопку **ОК**, а затем **Отправить**.
 
-## Проверка подключений брандмауэра
+## <a name="verify-the-firewall-connections"></a>Проверка подключений брандмауэра
 
 Брандмауэр должен разрешать входящие подключения к TCP-портам 5725, 5726, 8086 и 8090.
 
@@ -131,7 +131,7 @@ ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 8.  Убедитесь, что в списке присутствует активная сеть priv.contoso.local и доменная сеть.  
 9. Закройте **панель управления**.
 
-## Настройка примера веб-приложения
+## <a name="set-up-the-sample-web-application"></a>Настройка примера веб-приложения
 
 В этом разделе описывается установка и настройка примера веб-приложения для API REST PAM MIM.
 
@@ -167,7 +167,7 @@ ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 
 7.  Убедитесь, что пользователь может пройти проверку подлинности REST API (необязательно). Откройте веб-браузер с правами администратора на сервере PAMSRV.  Перейдите на веб-сайт http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, пройдите проверку подлинности (при необходимости) и убедитесь, что началось скачивание.
 
-## Установка командлетов запрашивающей стороны MIM PAM
+## <a name="install-the-mim-pam-requestor-cmdlets"></a>Установка командлетов запрашивающей стороны MIM PAM
 
 Установите командлеты запрашивающей стороны MIM PAM на рабочей станции, настроенной на шаге 1.
 
@@ -193,6 +193,6 @@ ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

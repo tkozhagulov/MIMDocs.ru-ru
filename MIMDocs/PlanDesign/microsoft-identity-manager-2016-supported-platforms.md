@@ -1,25 +1,25 @@
 ---
-title: "Поддерживаемые платформы ПО | Microsoft Identity Manager"
+title: "Поддерживаемые платформы ПО | Документация Майкрософт"
 description: "Поиск продуктов и версий, совместимых с каждым из компонентов MIM 2016"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/29/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 69e2c327cf897dea450c43618a9b4ce3ab555cc0
-ms.openlocfilehash: 522e9321d7709a7967cfea3eb1cea809dfe8202e
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 55b7dc3c76c5e95153b5839ce1eb6bf4a7997889
 
 
 ---
 
-# Поддерживаемые платформы для MIM 2016
+# <a name="supported-platforms-for-mim-2016"></a>Поддерживаемые платформы для MIM 2016
 
 В этой таблице приведены поддерживаемые платформы и версии каждого компонента Microsoft Identity Manager 2016. Версии, отмеченные звездочкой (*), поддерживаются только в MIM 2016 с пакетом обновления 1.
 
@@ -54,7 +54,7 @@ ms.openlocfilehash: 522e9321d7709a7967cfea3eb1cea809dfe8202e
 || | Центр сертификации | Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
 || | База данных MIM CM | SQL Server 2008 R2 с пакетом обновления 3 (SP3)<br/>SQL Server 2012 с пакетом обновления 2 (SP2)<br/>SQL Server 2014 с пакетом обновления 1 (SP1) |
 | **Управление сертификатами MIM** (приложение) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| **Управление сертификатами MIM** (клиент и массовый клиент) | Windows | Windows 7 |
+| **Управление сертификатами MIM** (клиент и массовый клиент) | Windows | Windows 7 |
 | **MIM BHOLD Suite** | Windows Server | Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br/>Windows Server 2012 R2 |
 || | База данных BHOLD | SQL Server 2008 R2 с пакетом обновления 3 (SP3)<br/>SQL Server 2012 с пакетом обновления 2 (SP2) <br/> SQL Server 2014* |
 || | Почтовый сервер (необязательно) | Exchange Server 2007 с пакетом обновления 3 (SP3)<br/>Exchange Server 2010 с пакетом обновления 3 (SP3)<br/>Exchange Server 2013 с пакетом обновления 1 (SP1) |
@@ -62,6 +62,6 @@ ms.openlocfilehash: 522e9321d7709a7967cfea3eb1cea809dfe8202e
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

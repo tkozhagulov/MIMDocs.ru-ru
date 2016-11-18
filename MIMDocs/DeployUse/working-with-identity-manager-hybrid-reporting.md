@@ -1,27 +1,27 @@
 ---
-title: "Гибридные отчеты в Azure | Microsoft Identity Manager"
+title: "Гибридные отчеты в Azure | Документация Майкрософт"
 description: "Узнайте, как объединить локальные и облачные данные с помощью гибридных отчетов в Azure, а также как управлять этими отчетами и просматривать их."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ff0469da204a9bfa861273d66b04f5da51557c99
 
 
 ---
 
-# Работа с гибридными отчетами диспетчера удостоверений
+# <a name="working-with-identity-manager-hybrid-reporting"></a>Работа с гибридными отчетами диспетчера удостоверений
 
-## Доступные гибридные отчеты
+## <a name="available-hybrid-reports"></a>Доступные гибридные отчеты
 Первые три отчета Microsoft Identity Manager (MIM) в Azure AD — это **Действие сброса пароля**, **Регистрации для сброса пароля** и **Действия самообслуживания с группами**.
 
 -   В отчете "Действие сброса пароля" отображаются все сбросы пароля пользователями с помощью SSPR и предоставляются шлюзы или **методы** , используемые для проверки подлинности.
@@ -38,7 +38,7 @@ ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
 >
 > Если вы хотите удалить гибридное отчеты, удалите агент MIMreportingAgent.msi.
 
-## Необходимые компоненты
+## <a name="prerequisites"></a>Необходимые компоненты
 
 1.  Установите диспетчер удостоверений Майкрософт 2016, включая службу MIM.
 
@@ -46,7 +46,7 @@ ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
 
 3.  Убедитесь, что у вас есть исходящее подключение к Интернету от сервера диспетчера удостоверений к Azure.
 
-## Установка отчетов Microsoft Identity Manager в Azure AD
+## <a name="install-microsoft-identity-manager-reporting-in-azure-ad"></a>Установка отчетов Microsoft Identity Manager в Azure AD
 После установки агента отчетов данные из действия Microsoft Identity экспортируются из MIM в журнал событий Windows. Агент отчетов MIM обрабатывает события и отправляет их в Azure. Там события анализируются, расшифровываются и фильтруются для требуемых отчетов.
 
 1.  Установите диспетчер удостоверений Майкрософт 2016.
@@ -75,7 +75,7 @@ ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
 
     Данные отчета можно создать, сбросив пароль пользователя с помощью портала сброса паролей диспетчера удостоверений Майкрософт. Убедитесь, что пароль успешно сброшен и что данные отображаются на портале управления Azure AD.
 
-## Просмотр гибридных отчетов на классическом портале Azure
+## <a name="view-hybrid-reports-in-the-azure-classic-portal"></a>Просмотр гибридных отчетов на классическом портале Azure
 
 1.  Войдите на [классический портал Azure](https://manage.windowsazure.com/) с учетной записью глобального администратора для клиента.
 
@@ -90,19 +90,19 @@ ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
 > [!WARNING]
 > Для отображения данных диспетчера удостоверений в Azure AD может потребоваться некоторое время.
 
-## Остановка создания гибридных отчетов
+## <a name="stop-creating-hybrid-reports"></a>Остановка создания гибридных отчетов
 Если вы хотите остановить передачу данных отчетов из Microsoft Identity Manager в Azure Active Directory, удалите агент гибридных отчетов. С помощью средства **Установка и удаление программ** Windows удалите гибридные отчеты Microsoft Identity Manager.
 
-## События Windows, используемые для гибридных отчетов
+## <a name="windows-events-used-for-hybrid-reporting"></a>События Windows, используемые для гибридных отчетов
 События, создаваемые Microsoft Identity Manager, заносятся в журнал событий Windows и отображаются в средстве просмотра событий в следующем разделе: "Журналы приложения и служб" &gt;**Журнала запросов диспетчера удостоверений**. Каждый запрос MIM экспортируется как событие в журнал событий Windows в структуре JSON. Эти данные можно экспортировать в систему SIEM.
 
 |Тип события|ID|Сведения о событии|
 |--------------|------|-----------------|
-|Информация|4121|Данные события MIM, включающий все данные запроса.|
+|Данные|4121|Данные события MIM, включающий все данные запроса.|
 |Информация|4137|Расширение события 4121 MIM, если для одного события слишком много данных. Заголовок в этом событии имеет следующий вид: `"Request: <GUID> , message <xxx> out of <xxx>`|
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
