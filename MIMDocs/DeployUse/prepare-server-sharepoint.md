@@ -5,7 +5,7 @@ keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 12/01/2016
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
+ms.sourcegitcommit: c26816322bf6d281ae32f7fee69ed9f8e002e7c7
+ms.openlocfilehash: 94c0f931ad9a1e8f8f9196288107e4f75c72a211
 
 
 ---
@@ -29,10 +29,10 @@ ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
 > - Имя контроллера домена — **mimservername**.
 > - Имя домена — **contoso**.
-> - Пароль — **Pass@word1**
+> - Пароль — **Pass@word1**
 
 
-## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
+## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
 
 > [!NOTE]
 > Чтобы установщик скачал необходимые компоненты, требуется подключение к Интернету. Если компьютер находится в виртуальной сети без доступа к Интернету, добавьте на компьютер дополнительный сетевой интерфейс, который предоставляет доступ к Интернету. Это можно отключить после завершения установки.
@@ -65,7 +65,7 @@ ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
 
 1. На вкладке **Подключение к ферме серверов** создайте новую ферму серверов.
 
-2. Укажите этот сервер как сервер баз данных для базы данных конфигурации, а *Contoso\SharePoint* — как учетную запись доступа к базе данных для SharePoint.
+2. Укажите этот сервер как сервер баз данных для базы данных конфигурации, а *Contoso\SharePoint* — как учетную запись доступа к базе данных для SharePoint.
 
 3. Создайте пароль для парольной фразы фермы.
 
@@ -88,8 +88,7 @@ ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
 
     ```
     $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
-    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"
-    -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
     > [!NOTE]
@@ -110,7 +109,7 @@ ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
   > [!NOTE]
   > Убедитесь, что в переменной *CompatibilityLevel* содержится результат "14". Если результат равен "15", то семейство веб-сайтов не было создано для версии 2010. Удалите семейство веб-сайтов и создайте его заново.
 
-3. Отключите **состояние просмотра на стороне сервера SharePoint Server** и задачу SharePoint "Задание анализа работоспособности (каждый час, Microsoft SharePoint Foundation Timer, все серверы)", выполнив следующие команды PowerShell в **командной консоли SharePoint 2013**:
+3. Отключите **состояние просмотра на стороне сервера SharePoint Server** и задачу SharePoint "Задание анализа работоспособности (каждый час, Microsoft SharePoint Foundation Timer, все серверы)", выполнив следующие команды PowerShell в **командной консоли SharePoint 2013**:
 
   ```
   $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -137,6 +136,6 @@ ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 
