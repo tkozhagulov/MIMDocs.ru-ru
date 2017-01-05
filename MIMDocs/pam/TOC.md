@@ -1,5 +1,5 @@
 # [Изучение вопроса](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-# [План и проект](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+# [Планирование и проектирование](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Развертывание и использование](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
 # [Использование управления привилегированным доступом](privileged-identity-management-for-active-directory-domain-services.md)
 ## [Дополнительные сведения об управлении привилегированным доступом](privileged-identity-management-for-active-directory-domain-services.md)
@@ -33,6 +33,6 @@
 # [Ссылки для разработчиков](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
