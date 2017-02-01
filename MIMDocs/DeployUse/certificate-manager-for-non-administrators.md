@@ -1,11 +1,11 @@
 ---
-title: "Самостоятельное продление смарт-карт | Документация Майкрософт"
+title: "Самостоятельное обновление смарт-карты в Microsoft Identity Manager без прав администратора | Документация Майкрософт"
 description: "Узнайте, как зарегистрировать смарт-карты на компьютерах пользователей без прав администратора, чтобы они могли использовать диспетчер сертификатов."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,16 +13,16 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
 
 
 ---
 
-# <a name="enroll-smart-cards-for-nonadministrators"></a>Регистрация смарт-карт для пользователей, не являющихся администраторами
+# <a name="enroll-smart-cards-for-non-administrators"></a>Регистрация смарт-карт для пользователей, не являющихся администраторами
 Если пользователь не является локальным администратором на компьютере, по умолчанию он не сможет зарегистрировать смарт-карту на своих компьютерах. Представленная ниже процедура позволяет обойти это ограничение.
 
-## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>Включение обновления смарт-карты для пользователей без прав администратора в диспетчере сертификатов MIM 2016
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Включение обновления смарт-карты для пользователей без прав администратора в диспетчере сертификатов MIM 2016
 
 1.  **Распакуйте APPX-файл**
 
@@ -96,6 +96,6 @@ ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
