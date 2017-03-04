@@ -1,11 +1,11 @@
 ---
 title: "Приложение"
-description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
+description: "Это приложение к документам, посвященным развертыванию PAM с помощью скриптов. Здесь описывается настройка доменов PRIV и CORP, а также настройка клиента для проверки. Кроме того, здесь содержатся сведения о том, как запрашивать помощь."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 7f859a74d13a6741dbaf08a1641a73ae986c8343
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: f69fe68dc63323c0945a4902e34ea8153f938c02
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -71,9 +72,4 @@ ms.openlocfilehash: 7f859a74d13a6741dbaf08a1641a73ae986c8343
 ## <a name="addendum-4-if-something-goes-wrong"></a>Приложение 4. Действия в случае возникновения ошибок
 
 Все журналы сценариев сохраняются в расположении %AppData%\MIMPAMInstall. Выполните сжатие папки и полученный ZIP-файл отправьте по адресу электронной почты [mim2016@microsoft.com](mailto:mim2016@microsoft.com) вместе со сведениями об операции и ошибке.
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
