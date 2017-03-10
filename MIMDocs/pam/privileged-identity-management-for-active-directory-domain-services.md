@@ -1,11 +1,11 @@
 ---
-title: "Что такое PAM для ADDS? | Документация Майкрософт"
+title: "Управление привилегированным доступом для доменных служб Active Directory | Документация Майкрософт"
 description: "Сведения о Privileged Access Management и о том, как оно поможет управлять средой Active Directory и защищать ее."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -15,8 +15,9 @@ ms.suite: ems
 experimental: true
 experiment_id: kgremban_images
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 4b3779f33a8bbd2ad62c88343ef3611b17fc81a2
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: cea5a2fc162870c1125b35b75376881eb15cd2e9
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -95,9 +96,4 @@ PAM предоставляет следующие преимущества.
 > В отличие от этого срок действия ссылки оценивается в режиме реального времени диспетчером управления лицензиями (SAM). Несмотря на то, что добавление члена группы должно реплицироваться контроллером домена, который получает запрос на доступ, удаление члена группы в любом контроллере домена оценивается мгновенно.
 
 Такой рабочий процесс специально предназначен для этих административных учетных записей. Администраторы (или даже скрипты), которым иногда требуется доступ к привилегированным группам, могут запрашивать именно такой доступ. MIM записывает запрос и изменения в Active Directory, и вы можете просматривать их в окне просмотра событий или отправлять данные в решения корпоративного мониторинга, такие как System Center 2012 — Operations Manager Audit Collection Services (ACS) или средства других разработчиков.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

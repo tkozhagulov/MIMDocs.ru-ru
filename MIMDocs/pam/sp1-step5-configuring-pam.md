@@ -1,11 +1,11 @@
 ---
 title: "Шаг 5. Установка и настройка PAM"
-description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
+description: "В этой статье описывается шаг 5 настройки диспетчера привилегированных удостоверений с помощью скриптов и рассматриваются действия по развертыванию на сервере PAM."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: c641865548f753a609ccee8dbf12c329bb6a1c9f
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 862f62ab9bac87bcee31c35e249db34740e9fb14
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -46,9 +47,4 @@ ms.openlocfilehash: c641865548f753a609ccee8dbf12c329bb6a1c9f
 >[!div class="step-by-step"]
 [« Шаг 4](sp1-step4-configuring-sharepoint.md)
 [Шаг 6 »](sp1-step6-setup-pam-trust.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
