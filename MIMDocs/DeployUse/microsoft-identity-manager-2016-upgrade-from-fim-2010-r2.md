@@ -1,11 +1,11 @@
 ---
-title: "Обновление с FIM 2010 R2 | Документация Майкрософт"
+title: "Обновление с FIM 2010 R2 до Microsoft Identity Manager 2016 | Документация Майкрософт"
 description: "Узнайте, как обновить FIM 2010 R2, а затем установить новые компоненты из MIM 2016."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: fimguy
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
+ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
+ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 
 ---
@@ -200,8 +200,10 @@ ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
 
 Примечание. Если надстройки и расширения FIM уже развернуты на компьютерах пользователей для SSPR, не следует настраивать новые телефонные шлюзы MFA для сброса паролей, пока все надстройки и расширения FIM не будут обновлены до MIM 2016.  Как для FIM 2010, так и для FIM 2010 R2 надстройки и расширения не распознают новые шлюзы, выдавая ошибку. В результате пользователь не может выполнить сброс пароля.
 
+Руководство по обновлению Microsoft Identity Manager 2016 с пакетом обновления 1 (SP1) см. [здесь](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/).
 
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Feb17_HO2-->
 
 

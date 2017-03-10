@@ -19,6 +19,7 @@
 ### [Шаг 5. Установление доверия между PRIV и CORP](step-5-establish-trust-between-priv-corp-forests.md)
 ### [Шаг 6. Создание привилегированных учетных записей](step-6-transition-group-to-pam.md)
 ### [Шаг 7. Повышение прав доступа пользователя](step-7-elevate-user-access.md)
+### [Развертывание PAM диспетчера удостоверений (Майкрософт) (MIM) с помощью Windows Server 2016](deploy-pam-with-windows-server-2016.md)
 ### [Настройка многофакторной проверки подлинности Azure](use-azure-mfa-for-activation.md)
 ## [Настройка управления привилегированным доступом (PAM) с помощью сценариев](sp1-pam-configure-using-scripts.md)
 ### [Шаг 1. Настройка домена PRIV](sp1-step1-configuring-priv-domain.md)
@@ -33,6 +34,6 @@
 # [Ссылки для разработчиков](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
