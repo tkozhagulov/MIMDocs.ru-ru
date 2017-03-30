@@ -13,6 +13,7 @@ ms.assetid:
 translationtype: Human Translation
 ms.sourcegitcommit: 18accbf24fc7af1a27e2e88059a9a8371dfd2c4d
 ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
+ms.lasthandoff: 02/16/2017
 
 
 ---
@@ -39,7 +40,7 @@ ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
 Если в вашей лабораторной среде еще нет домена CORP, вам необходим дополнительный контроллер домена для этого домена. Контроллер домена CORP может работать под управлением Windows Server 2016 или Windows Server 2012 R2.
 
 
-Выполните установку, как описано в [руководстве по началу работы](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md), ** за исключением настроек, описанных ниже**.
+Выполните установку, как описано в [руководстве по началу работы](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md), **за исключением настроек, описанных ниже**.
 
 -   Если вы создаете новый домен CORP, во время выполнения инструкций из раздела [Шаг 1. Подготовка узла и домена CORP](/microsoft-identity-manager/pam/step-1-prepare-corp-domain.md) вы можете при необходимости настроить домен CORP для режима работы Windows Server 2016. **Если вы выбрали этот вариант, внесите следующие изменения**.
 
@@ -149,9 +150,4 @@ ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
 - [Управление привилегированным доступом для доменных служб Active Directory](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
 - [Настройка среды MIM для Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
 - [Настройка управления привилегированным доступом (PAM) с помощью сценариев](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
