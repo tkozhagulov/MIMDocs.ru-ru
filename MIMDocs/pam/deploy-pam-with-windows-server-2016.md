@@ -5,15 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 02/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 18accbf24fc7af1a27e2e88059a9a8371dfd2c4d
-ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
+ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/16/2017
 
     ```
     $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
-    Enable-ADOptionalFeature \$of -scope ForestOrConfigurationSet -target "priv.contoso.local"
+    Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
     ```
 
   -   После настройки делегирования и перед перезапуском сервера разрешите администраторам MIM и учетной записи службы MIM создавать и обновлять теневые субъекты.
@@ -95,7 +95,7 @@ ms.lasthandoff: 02/16/2017
 
  -   После настройки делегирования и перед перезапуском сервера разрешите администраторам MIM создавать и обновлять политику проверки подлинности.
 
-     а.  Откройте окно PowerShell и введите следующие команды, подставив имя своей учетной записи администратора MIM вместо mimadmin в каждой из четырех строк:
+     а.  Откройте **командную строку** с повышенными привилегиями и введите следующие команды, подставив имя своей учетной записи администратора MIM вместо "mimadmin" в каждой из четырех строк:
     ```
        dsacls "CN=AuthN Policies,CN=AuthN Policy
        Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
