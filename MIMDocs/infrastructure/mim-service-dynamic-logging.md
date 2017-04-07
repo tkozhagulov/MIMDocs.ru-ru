@@ -11,9 +11,9 @@ ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 90a0f144b7674bbfaf13138dfd926dbfc3c74f28
-ms.openlocfilehash: ddd707210d5cd6b618709a477d40e7771d73cfa1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
+ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
+ms.lasthandoff: 04/04/2017
 
 
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/27/2017
 *    Строка 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
 *    Строка 266: ``</system.diagnostics> ``
 
-![В выделенных разделах показаны новые записи динамического ведения журнала.](/media/mim-service-dynamic-logging/screen01.png)
+![В выделенных разделах показаны новые записи динамического ведения журнала.](media/mim-service-dynamic-logging/screen01.png)
 
 Уровни ведения журнала можно найти [здесь](https://msdn.microsoft.com/library/ms733025(v=vs.110).aspx#Anchor_3).
 
@@ -36,11 +36,11 @@ ms.lasthandoff: 03/27/2017
 
 Конфигурация динамического ведения журнала, расположенная в строке 266: Microsoft.ResourceManagement.Service.exe.config
 
-![В выделенных разделах показаны строки с разными областями ведения журнала.](/media/mim-service-dynamic-logging/screen02.png)
+![В выделенных разделах показаны строки с разными областями ведения журнала.](media/mim-service-dynamic-logging/screen02.png)
 
 По умолчанию расположение для ведения журнала — папка **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**. Учетной записи службы FIM потребуется разрешение на запись, чтобы создать в этом расположении динамический журнал.
 
-![Расположение папки журналов](/media/mim-service-dynamic-logging/screen03.png)
+![Расположение папки журналов](media/mim-service-dynamic-logging/screen03.png)
 
  >[!NOTE]
  В случае непредвиденных ошибок (синтаксических или других ошибок в файле конфигурации Microsoft.ResourceManagement.Service.exe.config) соответствующее сообщение об ошибке будет записано в файл Microsoft.ResourceManagement.Service.exe_Emergency.log с путем %TMP%, %TEMP% или %USERPROFILE% (любой из существующих).  
@@ -50,5 +50,5 @@ ms.lasthandoff: 03/27/2017
 
 Чтобы просмотреть трассировку, используйте [средство просмотра трассировки службы](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx).
 
- ![Снимок экрана средства просмотра трассировки службы](/media/mim-service-dynamic-logging/screen04.png)
+ ![Снимок экрана средства просмотра трассировки службы](media/mim-service-dynamic-logging/screen04.png)
 
