@@ -16,11 +16,12 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
 ms.openlocfilehash: 618b834452aa07a9f31582994fe32129a49f4249
+ms.lasthandoff: 11/10/2016
 
 
 ---
 
-# <a name="step-3-prepare-a-pam-server"></a>Шаг 3. Подготовка сервера PAM
+# <a name="step-3--prepare-a-pam-server"></a>Шаг 3. Подготовка сервера PAM
 
 >[!div class="step-by-step"]
 [« Шаг 2](step-2-prepare-priv-domain-controller.md)
@@ -51,7 +52,7 @@ ms.openlocfilehash: 618b834452aa07a9f31582994fe32129a49f4249
 
 1.  Выполните вход как администратор домена PRIV (PRIV\Administrator) и запустите PowerShell.
 
-2.  Введите следующие команды: Обратите внимание, что может потребоваться указать другое расположение исходных файлов для компонентов .NET Framework 3.5. Эти компоненты обычно отсутствуют при установке Windows Server, но доступны в папке параллельного размещения (SxS), находящейся в папке sources на установочном диске ОС, например "*d:\Sources\SxS".
+2.  Введите следующие команды: Обратите внимание, что может потребоваться указать другое расположение исходных файлов для компонентов .NET Framework 3.5. Эти компоненты обычно отсутствуют при установке Windows Server, но доступны в папке параллельного размещения (SxS), находящейся в папке sources на установочном диске ОС, например "d:\Sources\SxS\".
 
     ```
     import-module ServerManager
@@ -209,9 +210,4 @@ ms.openlocfilehash: 618b834452aa07a9f31582994fe32129a49f4249
 >[!div class="step-by-step"]
 [« Шаг 2](step-2-prepare-priv-domain-controller.md)
 [Шаг 4 »](step-4-install-mim-components-on-pam-server.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
