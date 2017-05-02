@@ -112,3 +112,5 @@
 #### [Получение ожидающего запроса PAM](/microsoft-identity-manager/reference/privileged-access-management-get-pending-requests)
 #### [Утверждение или отклонение ожидающего запроса PAM](/microsoft-identity-manager/reference/privileged-access-management-approve-reject-pending-request)
 #### [Получение сведений о сеансе PAM](/microsoft-identity-manager/reference/privileged-access-management-get-session-info)
+## [Техническая справочная информация]
+### [Справочник по XML конфигурации отображения элемента управления ресурса](/microsoft-identity-manager/reference/rcd-configuration-xml-reference)
