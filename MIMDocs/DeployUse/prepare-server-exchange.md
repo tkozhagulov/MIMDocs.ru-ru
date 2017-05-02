@@ -2,10 +2,10 @@
 title: "Настройка Exchange для MIM для отправки сообщений электронной почты и создания почтовых ящиков | Документация Microsoft"
 description: "При необходимости разверните Exchange Server, чтобы позволить MIM 2016 отправлять электронную почту и создавать почтовые ящики."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 01ccb55d200bfd1615ae62ccd30298117c0d6275
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -41,9 +42,4 @@ ms.openlocfilehash: 01ccb55d200bfd1615ae62ccd30298117c0d6275
 >[!div class="step-by-step"]  
 [« SharePoint](prepare-server-sharepoint.md)
 [Служба синхронизации MIM »](install-mim-sync.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

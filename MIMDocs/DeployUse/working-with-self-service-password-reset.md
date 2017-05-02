@@ -2,10 +2,10 @@
 title: "Использование портала самостоятельного сброса пароля | Документация Майкрософт"
 description: "Ознакомьтесь с новыми возможностями самостоятельного сброса паролей в MIM 2016, включая работу SSPR с многофакторной проверкой подлинности."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 72c773601cd722290b6e7a9d5d13458f0409cfdc
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -203,9 +204,4 @@ Azure MFA обеспечивает дополнительный механизм
 6.  Если пользователь выберет сброс пароля, потребуется ввести новый пароль дважды и нажать кнопку **Далее** , чтобы изменить пароль.
 
     ![Изображение для сброса пароля помощника по входу MIM](media/MIM-SSPR-PR1.JPG)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
