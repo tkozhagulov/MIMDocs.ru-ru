@@ -2,10 +2,10 @@
 title: "Что такое PAM для ADDS? | Документация Майкрософт"
 description: "Система управление привилегированным доступом (PAM) помогает организациям контролировать привилегированный доступ в существующей среде Active Directory."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/10/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -16,6 +16,7 @@ experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
 ms.openlocfilehash: 9a047644d07e3ee3c2d1abfde7753849b5ddc63b
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -93,9 +94,4 @@ PAM предоставляет следующие преимущества.
 > В отличие от этого срок действия ссылки оценивается в режиме реального времени диспетчером управления лицензиями (SAM). Несмотря на то, что добавление члена группы должно реплицироваться контроллером домена, который получает запрос на доступ, удаление члена группы в любом контроллере домена оценивается мгновенно.
 
 Такой рабочий процесс специально предназначен для этих административных учетных записей. Администраторы (или даже скрипты), которым иногда требуется доступ к привилегированным группам, могут запрашивать именно такой доступ. MIM записывает запрос и изменения в Active Directory, и вы можете просматривать их в окне просмотра событий или отправлять данные в решения корпоративного мониторинга, такие как System Center 2012 — Operations Manager Audit Collection Services (ACS) или средства других разработчиков.
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

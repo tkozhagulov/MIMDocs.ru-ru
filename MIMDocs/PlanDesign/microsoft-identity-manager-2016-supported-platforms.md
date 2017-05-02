@@ -2,8 +2,8 @@
 title: "Поддерживаемые платформы ПО | Документация Майкрософт"
 description: "Поиск продуктов и версий, совместимых с каждым из компонентов MIM 2016"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 03/28/2017
 ms.topic: article

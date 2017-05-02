@@ -2,10 +2,10 @@
 title: "Самостоятельное обновление смарт-карты в Microsoft Identity Manager без прав администратора | Документация Майкрософт"
 description: "Узнайте, как зарегистрировать смарт-карты на компьютерах пользователей без прав администратора, чтобы они могли использовать диспетчер сертификатов."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
+ms.lasthandoff: 02/07/2017
 
 
 ---
@@ -93,9 +94,4 @@ ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
 7.  **Установите приложение CM в учетной записи без прав администратора**
 
 8.  **Запустите приложение CM и зарегистрируйте виртуальную смарт-карту**
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
