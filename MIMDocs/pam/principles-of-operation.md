@@ -2,10 +2,10 @@
 title: "Основные сведения о компонентах PAM | Документация Майкрософт"
 description: "Privileged Access Management имеет некоторые общие с MIM компоненты, а также свои собственные. Подробнее о том, как они работают вместе."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -40,9 +41,4 @@ ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
 В результате, когда пользователи запрашивают повышение прав с помощью командлетов PowerShell и их запрос утверждается, служба MIM добавляет их учетную запись в лесу PRIV в группу в лесу PRIV. При входе пользователей в систему с привилегированной учетной записи их маркер Kerberos содержит идентификатор безопасности (SID), идентичный SID группы в лесу CORP. Так как лес СORP настроен на доверие лесу PRIV, учетная запись с повышенными привилегиями, используемая для доступа к ресурсу в лесу CORP, для ресурса, проверяющего членство в группе Kerberos, будет казаться членом этих групп безопасности ресурса. Это обеспечивается за счет проверки подлинности Kerberos между лесами.
 
 Кроме того, эти группы ограничены по времени, поэтому после предварительно настроенного периода, административная учетная запись пользователя больше не будет частью группы в лесу PRIV. В результате эту учетную запись больше нельзя будет использовать для доступа к дополнительным ресурсам.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
