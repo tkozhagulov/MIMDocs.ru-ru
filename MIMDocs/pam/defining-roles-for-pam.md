@@ -2,10 +2,10 @@
 title: "Определение привилегированных ролей для PAM | Документация Майкрософт"
 description: "Решите, какие привилегированные роли должны быть управляемыми, и определите для каждой из них политику управления."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -144,7 +145,7 @@ ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
 
 Ниже приведены примеры для типичных корпоративных сценариев.
 
-### <a name="tier-0-administrative-forest"></a>Уровень 0 — административный лес
+### <a name="tier-0---administrative-forest"></a>Уровень 0 — административный лес
 
 Роли, подходящие для учетных записей в среде бастиона, могут включать:
 
@@ -153,7 +154,7 @@ ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
 - пользователей, являющихся администраторами производственного леса;
 - пользователей, которым делегированы ограниченные административные права для приложений в производственном лесу.
 
-### <a name="tier-0-enterprise-production-forest"></a>Уровень 0 — производственный лес предприятия
+### <a name="tier-0---enterprise-production-forest"></a>Уровень 0 — производственный лес предприятия
 
 Роли, подходящие для управления учетными записями и ресурсами производственного леса уровня 0, могут включать в себя:
 
@@ -200,9 +201,4 @@ ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
 - службу поддержки;
 - администраторов групп безопасности;
 - поддержку рабочих станций.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

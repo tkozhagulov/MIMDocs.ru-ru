@@ -2,10 +2,10 @@
 title: "Общие сведения о среде PAM | Документация Майкрософт"
 description: "Необходимый номер и конфигурация виртуальных машин для успешного развертывания Privileged Access Management"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 750ba152813b4c03c913453c42e0e503e90b883b
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -31,9 +32,4 @@ ms.openlocfilehash: 750ba152813b4c03c913453c42e0e503e90b883b
 
 > [!NOTE]
 > Текущая CTP-версия службы MIM не совместима с содержимым базы данных или каталога из предыдущей CTP-версии. Если вы ранее работали с MIM для PAM или другими сценариями, выполните резервное копирование и архивирование виртуальных машин, используемых для этого теста, и начните развертывание с новыми образами виртуальной машины, которые ранее не применялись для сценариев MIM.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
