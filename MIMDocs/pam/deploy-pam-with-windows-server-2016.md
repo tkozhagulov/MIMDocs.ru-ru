@@ -5,15 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
-ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
-ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
+ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -40,9 +41,9 @@ ms.lasthandoff: 03/24/2017
 Если в вашей лабораторной среде еще нет домена CORP, вам необходим дополнительный контроллер домена для этого домена. Контроллер домена CORP может работать под управлением Windows Server 2016 или Windows Server 2012 R2.
 
 
-Выполните установку, как описано в [руководстве по началу работы](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md), **за исключением настроек, описанных ниже**.
+Выполните установку, как описано в [руководстве по началу работы](privileged-identity-management-for-active-directory-domain-services.md),  **за исключением настроек, описанных ниже**.
 
--   Если вы создаете новый домен CORP, во время выполнения инструкций из раздела [Шаг 1. Подготовка узла и домена CORP](/microsoft-identity-manager/pam/step-1-prepare-corp-domain.md) вы можете при необходимости настроить домен CORP для режима работы Windows Server 2016. **Если вы выбрали этот вариант, внесите следующие изменения**.
+-   Если вы создаете новый домен CORP, во время выполнения инструкций из раздела [Шаг 1. Подготовка узла и домена CORP](step-1-prepare-corp-domain.md) вы можете при необходимости настроить домен CORP для режима работы Windows Server 2016. **Если вы выбрали этот вариант, внесите следующие изменения**.
 
     -   Если вы используете носитель Windows Server 2016, вариант установки будет называться Windows Server 2016 (сервер с возможностями рабочего стола).
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/24/2017
 
 -   Если вы решили использовать Windows Server 2012 R2 в качестве операционной системы для контроллера домена CORP, установите исправления 2919442, 2919355 [и обновите 3155495](http://support.microsoft.com/kb/3156418) на контроллере домена CORP.
 
--   Следуйте инструкциям в разделе [Шаг 2. Подготовка первого контроллера домена PRIV](/microsoft-identity-manager/pam/step-2-prepare-priv-domain-controller.md), за исключением следующих поправок.
+-   Следуйте инструкциям в разделе [Шаг 2. Подготовка первого контроллера домена PRIV](step-2-prepare-priv-domain-controller.md), за исключением следующих поправок.
 
     -   Выполните установку с носителя Windows Server 2016. Вариант установки будет называться Windows Server 2016 (сервер с возможностями рабочего стола).
 
@@ -115,19 +116,19 @@ ms.lasthandoff: 03/24/2017
     ```
 
 
--   Следуйте инструкциям в разделе [Шаг 3. Подготовка сервера PAM](/microsoft-identity-manager/pam/step-3-prepare-pam-server.md), учитывая следующие поправки.
+-   Следуйте инструкциям в разделе [Шаг 3. Подготовка сервера PAM](step-3-prepare-pam-server.md), учитывая следующие поправки.
 
     -   При установке в Windows Server 2016 обратите внимание, что роль ApplicationServer недоступна.
 
     -   При установке MIM в Windows Server 2016 вы **не сможете установить SharePoint 2013**.
 
--   Следуйте инструкциям в разделе [Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM](/microsoft-identity-manager/pam/step-4-install-mim-components-on-pam-server.md), учитывая следующие поправки.
+-   Следуйте инструкциям в разделе [Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM](step-4-install-mim-components-on-pam-server.md), учитывая следующие поправки.
 
     -   Для пользователя, который устанавливает компоненты PAM и службы MIM, **в AD должно быть настроено право записи в домен PRIV**, так как установка MIM создает новое подразделение AD "Объекты PAM".
 
     -   Если платформа SharePoint не установлена, не устанавливайте портал MIM.
 
--   Следуйте инструкциям в разделе [Шаг 5. Установка отношений доверия между лесами PRIV и CORP](/microsoft-identity-manager/pam/step-5-establish-trust-between-priv-corp-forests.md), учитывая следующие поправки.
+-   Следуйте инструкциям в разделе [Шаг 5. Установка отношений доверия между лесами PRIV и CORP](step-5-establish-trust-between-priv-corp-forests.md), учитывая следующие поправки.
 
     -   При установке односторонних отношений доверия выполняйте только первые две команды PowerShell (get-credential and New-PAMTrust). **Не выполняйте команду New-PAMDomainConfiguration**.
 
@@ -147,7 +148,7 @@ ms.lasthandoff: 03/24/2017
 
 ## <a name="more-information"></a>Дополнительные сведения
 
-- [Управление привилегированным доступом для доменных служб Active Directory](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-- [Настройка среды MIM для Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-- [Настройка управления привилегированным доступом (PAM) с помощью сценариев](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
+- [Управление привилегированным доступом для доменных служб Active Directory](privileged-identity-management-for-active-directory-domain-services.md)
+- [Настройка среды MIM для Privileged Access Management](configuring-mim-environment-for-pam.md)
+- [Настройка управления привилегированным доступом (PAM) с помощью сценариев](sp1-pam-configure-using-scripts.md)
 

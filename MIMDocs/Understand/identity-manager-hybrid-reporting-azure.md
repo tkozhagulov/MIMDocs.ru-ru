@@ -1,49 +1,10 @@
 ---
-title: "Сведения о гибридных отчетах | Документация Майкрософт"
-description: "Гибридные отчеты о действиях аудита в Azure Active Directory позволяют просматривать облачные и локальные события аудита."
-keywords: 
-author: kgremban
-ms.author: fimguy
-manager: femila
-ms.date: 04/27/2017
-ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
-ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
-ms.reviewer: mwahl
-ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3144ee195675df5dc120896cc801a7124ee12214
-ms.openlocfilehash: 8ca0af93f2d72ccf2e314b20d13323b631eb02bc
-ms.lasthandoff: 04/27/2017
-
+redirect_url: /microsoft-identity-manager/identity-manager-hybrid-reporting-azure
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
+ms.openlocfilehash: 9e7bef397d00204d6a831963b85bb0e4f25cfcf2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/09/2017
 
 ---
-
-# <a name="hybrid-identity-management-audit-reports-in-azure-active-directory"></a>Гибридные отчеты об аудите управления удостоверениями в Azure Active Directory
-Отчеты о действиях аудита Azure Active Directory (AD) позволяют просматривать единый отчет для мониторинга управления удостоверениями и локально, и в облаке. Эта функция позволяет управлять всеми удостоверениями и просматривать данные в одном месте, что экономит время и сокращает общие затраты.
-
-## <a name="what-is-azure-active-directory-hybrid-reporting"></a>Что такое гибридные отчеты Azure Active Directory?
-Гибридные отчеты аудита помогают ИТ-специалистам устранить распространенные проблемы с отчетами об управлении удостоверениями.
-
-1. **Сбор данных об управлении удостоверениями в разных системах.** Гибридные отчеты предоставляют сведения об управлении удостоверениями в Azure AD и Identity Manager.
-
-2. **Экспорт данных отчетов и создание настраиваемых отчетов.** Помимо просмотра отчетов на портале Azure, можно также экспортировать данные для создания собственных настраиваемых представлений.
-
-3. **Снижение стоимости инфраструктуры системы отчетности.** Возможность хранения гибридных отчетов в облаке позволяет устранить необходимость в локальной инфраструктуре хранилища данных отчетов.
-
-## <a name="how-does-it-work"></a>Как это работает?
-
-Чтобы собирать локальные данные, сначала необходимо установить агент создания отчетов на сервере Identity Manager 2016. Агент создания отчетов можно скачать в [Центре загрузки Майкрософт](https://www.microsoft.com/en-us/download/details.aspx?id=####/).
-
-Процесс создания гибридных отчетов состоит из следующих этапов:
-1. После установки агента создания отчетов данные о действиях Identity Manager отправляются в журнал событий Windows.
-2. Агент создания отчетов обрабатывает события в журнале событий Windows и отправляет их на портал Azure.
-3. Данные о действиях хранятся в Azure один месяц.
-4. После запроса отчета события анализируются и фильтруются для требуемых отчетов.
-5. Портал Azure извлекает данные отчетов аудита и отображает их как аудит в отчете о действиях.
-
-## <a name="see-also"></a>См. также
-- Дополнительные сведения см. в статье [Работа с гибридными отчетами диспетчера удостоверений](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting).
-- Дополнительные сведения см. в статье [Отчеты о действиях аудита на портале Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
 
