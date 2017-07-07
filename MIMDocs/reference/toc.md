@@ -40,8 +40,3 @@
 #### [Получение ожидающего запроса PAM](privileged-access-management-get-pending-requests.md)
 #### [Утверждение или отклонение ожидающего запроса PAM](privileged-access-management-approve-reject-pending-request.md)
 #### [Получение сведений о сеансе PAM](privileged-access-management-get-session-info.md)
-
-
-<!--HONumber=Jan17_HO3-->
-
-
