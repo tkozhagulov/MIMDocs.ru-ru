@@ -13,21 +13,24 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-3--prepare-a-pam-server"></a>Шаг 3. Подготовка сервера PAM
+<a id="step-3--prepare-a-pam-server" class="xliff"></a>
+# Шаг 3. Подготовка сервера PAM
 
 >[!div class="step-by-step"]
 [« Шаг 2](step-2-prepare-priv-domain-controller.md)
 [Шаг 4 »](step-4-install-mim-components-on-pam-server.md)
 
-## <a name="install-windows-server-2012-r2"></a>Установка Windows Server 2012 R2
+<a id="install-windows-server-2012-r2" class="xliff"></a>
+## Установка Windows Server 2012 R2
 Установите Windows Server 2012 R2, а именно Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64, на третьей виртуальной машине, чтобы создать компьютер *PAMSRV*. Поскольку на этом компьютере будут установлены SQL Server и SharePoint 2013, требуется как минимум 8 ГБ ОЗУ.
 
 1. Выберите редакцию **Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64**.
@@ -47,7 +50,8 @@ ms.lasthandoff: 05/02/2017
 7.  После перезагрузки сервера войдите в систему как администратор, откройте панель управления и присоедините PAMSRV к домену PRIV (priv.contoso.local).  Для этого потребуется указать имя пользователя и учетные данные администратора домена PRIV, например PRIV\Administrator. Когда появится приветствие, закройте диалоговое окно и перезагрузите сервер.
 
 
-### <a name="add-the-web-server-iis-and-application-server-roles"></a>Добавление ролей веб-сервера (IIS) и сервера приложений
+<a id="add-the-web-server-iis-and-application-server-roles" class="xliff"></a>
+### Добавление ролей веб-сервера (IIS) и сервера приложений
 Добавьте роли Web Server (IIS) и Application Server, компоненты .NET Framework 3.5, модуль Active Directory для Windows PowerShell и другие компоненты, необходимые SharePoint.
 
 1.  Выполните вход как администратор домена PRIV (PRIV\Administrator) и запустите PowerShell.
@@ -62,7 +66,8 @@ ms.lasthandoff: 05/02/2017
     Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-### <a name="configure-the-server-security-policy"></a>Настройка политики безопасности сервера
+<a id="configure-the-server-security-policy" class="xliff"></a>
+### Настройка политики безопасности сервера
 Настройте политику безопасности сервера так, чтобы новые учетные записи могли работать как службы.
 
 1.  Запустите программу **локальной политики безопасности** .   
@@ -86,7 +91,8 @@ ms.lasthandoff: 05/02/2017
 16. Нажмите кнопку **Добавить**, введите имя пользователя *SharePoint* в домене *PRIV*, а на следующем экране мастера нажмите кнопку **Добавить этого пользователя с правами администратора**.  
 17. Закройте панель управления.  
 
-### <a name="change-the-iis-configuration"></a>Изменение конфигурации IIS
+<a id="change-the-iis-configuration" class="xliff"></a>
+### Изменение конфигурации IIS
 Изменить конфигурацию IIS для того, чтобы приложения могли использовать режим проверки подлинности Windows, можно двумя способами. Войдите в систему как MIMAdmin, а затем выберите один из следующих вариантов.
 
 Если вы хотите использовать PowerShell:
@@ -104,7 +110,8 @@ ms.lasthandoff: 05/02/2017
 3. Измените значение **overrideModeDefault** на *Разрешить*  
 4. Сохраните этот файл и перезапустите IIS с помощью команды PowerShell `iisreset /START`
 
-## <a name="install-sql-server"></a>Установите SQL Server
+<a id="install-sql-server" class="xliff"></a>
+## Установите SQL Server
 Если в среде бастиона еще не присутствует SQL Server, установите SQL Server 2012 (пакет обновления 1 или более поздней версии) или SQL Server 2014. Ниже предполагается, что используется SQL 2014.
 
 1. Выполните вход как MIMAdmin.
@@ -115,7 +122,8 @@ ms.lasthandoff: 05/02/2017
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1" /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
     ```
 
-## <a name="install-sharepoint-foundation-2013"></a>Установка SharePoint Foundation 2013
+<a id="install-sharepoint-foundation-2013" class="xliff"></a>
+## Установка SharePoint Foundation 2013
 
 С помощью установщика SharePoint Foundation 2013 с пакетом обновления 1 (SP1) установите необходимое программное обеспечение для SharePoint на компьютере PAMSRV.
 
@@ -134,7 +142,8 @@ ms.lasthandoff: 05/02/2017
 4.  Выберите **полный тип сервера** .  
 5.  После завершения установки запустите мастер.  
 
-### <a name="configure-sharepoint"></a>Настройка SharePoint
+<a id="configure-sharepoint" class="xliff"></a>
+### Настройка SharePoint
 Запустите мастер настройки продуктов SharePoint, чтобы настроить SharePoint.
 
 1.  На вкладке "Подключение к ферме серверов" выберите пункт **Создать ферму серверов**.  
@@ -147,7 +156,8 @@ ms.lasthandoff: 05/02/2017
 8.  Выберите использование существующей управляемой учетной записи (PRIV\SharePoint), снимите флажки, чтобы отключить все дополнительные службы, и нажмите кнопку **Далее**.  
 9. В окне создания семейства веб-сайтов нажмите кнопку **Пропустить**, а затем **Готово**.  
 
-## <a name="create-a-sharepoint-foundation-2013-web-application"></a>Создание веб-приложения SharePoint Foundation 2013
+<a id="create-a-sharepoint-foundation-2013-web-application" class="xliff"></a>
+## Создание веб-приложения SharePoint Foundation 2013
 После завершения работы мастера создайте с помощью PowerShell веб-приложение SharePoint Foundation 2013 для размещения портала MIM. Поскольку это пошаговое руководство предназначено для демонстрации, SSL не включается.
 
 1.  Щелкните консоль управления SharePoint 2013 правой кнопкой мыши, выберите пункт **Запуск от имени администратора** и запустите следующий сценарий PowerShell:
@@ -162,7 +172,8 @@ ms.lasthandoff: 05/02/2017
 > [!NOTE]
 > Не закрывайте окно командной консоли SharePoint 2013 — оно вам потребуется на следующем шаге.
 
-## <a name="create-a-sharepoint-site-collection"></a>Создание семейства веб-сайтов SharePoint
+<a id="create-a-sharepoint-site-collection" class="xliff"></a>
+## Создание семейства веб-сайтов SharePoint
 Создайте семейство веб-сайтов SharePoint, связанное с этим веб-приложением, для размещения портала MIM.
 
 1.  Запустите **командную консоль SharePoint 2013**, если она еще не открыта, и выполните следующий сценарий PowerShell:
@@ -187,13 +198,15 @@ ms.lasthandoff: 05/02/2017
     Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
     ```
 
-## <a name="change-update-settings"></a>Изменение параметров обновления
+<a id="change-update-settings" class="xliff"></a>
+## Изменение параметров обновления
 
 1. Откройте панель управления, перейдите к разделу **Центр обновления Windows** и щелкните **Изменить параметры**.  
 2. Измените параметры так, чтобы получать обновления центра обновления Windows и обновления других продуктов из центра обновления Майкрософт.  
 3. Прежде чем продолжить, повторно проверьте наличие обновлений и убедитесь, что все имеющиеся важные обновления установлены.
 
-## <a name="set-the-website-as-the-local-intranet"></a>Настройка веб-сайта для локальной интрасети
+<a id="set-the-website-as-the-local-intranet" class="xliff"></a>
+## Настройка веб-сайта для локальной интрасети
 
 1. Запустите Internet Explorer и откройте новую вкладку веб-браузера.
 2. Перейдите по адресу http://pamsrv.priv.contoso.local:82/ и войдите в систему как PRIV\MIMAdmin.  Откроется пустой сайт SharePoint с именем "Портал MIM".  
@@ -201,7 +214,8 @@ ms.lasthandoff: 05/02/2017
 
 Если войти не удается, может потребоваться обновить имена участников-служб Kerberos, созданных ранее на [шаге 2](step-2-prepare-priv-domain-controller.md).
 
-## <a name="start-the-sharepoint-administration-service"></a>Запуск службы администрирования SharePoint
+<a id="start-the-sharepoint-administration-service" class="xliff"></a>
+## Запуск службы администрирования SharePoint
 
 В разделе **Службы** (в разделе "Средства администрирования") запустите службу **Администрирование SharePoint**, если она не запущена.
 

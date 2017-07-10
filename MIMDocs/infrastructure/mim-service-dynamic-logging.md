@@ -10,22 +10,24 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
 ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/10/2017
 
 
 
 ---
-# <a name="mim-sp1-4414360--service-dynamic-logging"></a>Динамическое ведение журнала службы MIM с пакетом обновления 1 (SP1) (4.4.1436.0)
+<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
+# Динамическое ведение журнала службы MIM с пакетом обновления 1 (SP1) (4.4.1436.0)
 В версии 4.4.1436.0 мы представили новую возможность ведения журнала. Она позволит администратору и инженерам службы поддержки включать ведение журнала без перезапуска службы управления.
 
 После установки вы увидите следующую новую строку в вызванном Microsoft.ResourceManagement.Service.exe.config
 
-*    Строка 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
-*    Строка 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
-*    Строка 266: ``</system.diagnostics> ``
+*   Строка 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
+*   Строка 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
+*   Строка 266: ``</system.diagnostics> ``
 
 ![В выделенных разделах показаны новые записи динамического ведения журнала.](media/mim-service-dynamic-logging/screen01.png)
 
