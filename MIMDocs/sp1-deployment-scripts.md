@@ -16,12 +16,13 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 12c60e12dc5662ff0313e21bb9180b3709969af6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="mim2016-sp1-pam-deployment-scripts"></a>Сценарии развертывания PAM в MIM2016 SP1
+<a id="mim2016-sp1-pam-deployment-scripts" class="xliff"></a>
+# Сценарии развертывания PAM в MIM2016 SP1
 
 В этом пакете обновления мы представляем набор сценариев развертывания для упрощения развертывания PAM. Эти сценарии доступны в центре загрузки. Прежде чем пытаться использовать сценарии, важно убедиться, что перечисленные ниже предположения применяются в вашей среде.
 

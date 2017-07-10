@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="understand-the-components-of-pam"></a>Основные сведения о компонентах управления привилегированным доступом
+<a id="understand-the-components-of-pam" class="xliff"></a>
+# Основные сведения о компонентах управления привилегированным доступом
 
 В управлении привилегированным доступом административный доступ отделяется от обычных учетных записей пользователей. В этом решении используются параллельные леса:
 

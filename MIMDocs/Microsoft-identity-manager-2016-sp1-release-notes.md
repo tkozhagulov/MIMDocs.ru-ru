@@ -16,11 +16,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 69d44af5eaef3665f3a55ea91f48d3658cd5e65c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
-# <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Новые возможности Microsoft Identity Manager 2016 с пакетом обновления 1 (SP1) #
+<a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a>
+# Новые возможности Microsoft Identity Manager 2016 с пакетом обновления 1 (SP1) #
 
 Мы рады сообщить о выпуске [пакета обновлений 1 (SP1) для Microsoft Identity Manager (MIM) 2016](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212) в рамках стандартного цикла выпуска обновлений для обслуживания Microsoft Identity Manager. В этом документе представлен краткий обзор обновлений, улучшенных настроек, функций и изменений, включенных в этот выпуск.
 
@@ -30,9 +31,11 @@ ms.lasthandoff: 05/09/2017
 
 
 
-## <a name="updates-in-this-service-pack"></a>Содержание пакета обновлений #
+<a id="updates-in-this-service-pack" class="xliff"></a>
+## Содержание пакета обновлений #
 
-### <a name="mim"></a>MIM
+<a id="mim" class="xliff"></a>
+### MIM
 
 - **Совместимость портала MIM с различными браузерами для самообслуживания пользователей.** В этом пакете обновлений предусмотрена поддержка большинства популярных браузеров. Теперь пользователи могут получать доступ и работать с порталом MIM, самостоятельно управляя группами и профилями из браузеров Edge, Chrome или Safari.
 
@@ -40,7 +43,8 @@ ms.lasthandoff: 05/09/2017
 
 - **Проверка формата файла образа при передаче на портал.** В службе MIM теперь можно проверить формат файла образа при его передаче на портал.
 
-### <a name="privileged-access-managementpam"></a>Система управления привилегированным доступом (PAM)
+<a id="privileged-access-managementpam" class="xliff"></a>
+### Система управления привилегированным доступом (PAM)
 
 - **Поддержка леса PRIV в PAM (бастиона) для работы с Windows Server 2016.** Службу PAM в MIM можно настроить в среде с контроллерами домена под управлением леса доменных служб Active Directory, работающего в режиме Windows Server 2016. После настройки срок действия билета Kerberos пользователя будет ограничен оставшимся временем активности его роли.
 
@@ -57,17 +61,21 @@ ms.lasthandoff: 05/09/2017
     Командлеты выполняются автоматически в рамках сценариев развертывания.
 
 
-## <a name="platform-support"></a>Поддержка платформ
+<a id="platform-support" class="xliff"></a>
+## Поддержка платформ
 Актуальные сведения о поддержке платформ содержатся в документе [Поддерживаемые платформы для MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  Этот пакет обновления поддерживает такие новые платформы: SQL Server 2016 и SharePoint 2016.
 
-## <a name="issues-fixed-in-this-release-from-mim-2016-general-availability"></a>Проблемы с общей доступностью MIM 2016, исправленные в этом выпуске
+<a id="issues-fixed-in-this-release-from-mim-2016-general-availability" class="xliff"></a>
+## Проблемы с общей доступностью MIM 2016, исправленные в этом выпуске
 
-### <a name="pam"></a>PAM
+<a id="pam" class="xliff"></a>
+### PAM
 - Командлет New-PAMGroup не создает объекты MIM для локальных групп домена в лесу PRIV.
 - Выполнение командлета New-PAMDomainConfiguration завершается сбоем с появлением сообщения об ошибке "netdom".
 - Служба мониторинга PAM регистрировала предупреждения группам в лесу PRIV.
 
-## <a name="how-to-upgrade-to-service-pack-1"></a>Как установить пакет обновлений 1
+<a id="how-to-upgrade-to-service-pack-1" class="xliff"></a>
+## Как установить пакет обновлений 1
 
 Чтобы установить пакет обновлений 1 Microsoft Identity Manager 2016, следует выполнить приведенные ниже инструкции для всех служб, которые могут использоваться в развертывании.
 
