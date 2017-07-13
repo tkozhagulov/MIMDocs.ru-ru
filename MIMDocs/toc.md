@@ -1,232 +1,116 @@
-
 # [Изучение вопроса](microsoft-identity-manager-2016.md)
-
 ## [Основные сведения об MIM 2016](microsoft-identity-manager-2016.md)
-
 ## [Новые возможности в пакете обновления 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
-
 ### [Сценарии развертывания PAM в MIM 2016 SP1](sp1-deployment-scripts.md)
-
 ## [Гибридные отчеты в Azure](identity-manager-hybrid-reporting-azure.md)
-
 # [Планирование и проектирование](microsoft-identity-manager-2016-supported-platforms.md)
-
 ## [Поддерживаемые платформы](microsoft-identity-manager-2016-supported-platforms.md)
-
 ## [Подключение к каталогам](supported-management-agents.md)
-
 ## [Планирование загрузки](capacity-planning-guide.md)
-
 ## [Топология развертывания](topology-considerations.md)
-
 # [Развертывание и использование](microsoft-identity-manager-deploy.md)
-
 ## [Первое развертывание](microsoft-identity-manager-deploy.md)
-
 ### [Настройка домена](preparing-domain.md)
-
 ### [Настройка сервера: Windows Server](prepare-server-ws2012r2.md)
-
 ### [Настройка сервера: SQL](prepare-server-sql2014.md)
-
 ### [Настройка сервера: SharePoint](prepare-server-sharepoint.md)
-
 ### [Настройка сервера: Exchange](prepare-server-exchange.md)
-
 ### [Установка MIM: синхронизация](install-mim-sync.md)
-
 ### [Установка службы и портала MIM](install-mim-service-portal.md)
-
 ### [Установка MIM: базы данных синхронизации](install-mim-sync-ad-service.md)
-
 ## [Обновление с Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
-
 ## [Служба уведомлений о смене паролей](deploying-mim-password-change-notification-service-on-domain-controller.md)
-
 ## [Гибридные отчеты Identity Manager](working-with-identity-manager-hybrid-reporting.md)
-
 ## [Самостоятельный сброс пароля](working-with-self-service-password-reset.md)
-
 ## [Диспетчер сертификатов MIM](working-with-mim-certificate-manager.md)
-
 ### [Регистрация смарт-карт](certificate-manager-for-non-administrators.md)
-
 ### [Создание сертификатов программного обеспечения](certificate-manager-for-software-certificates.md)
-
 # [Использование управления привилегированным доступом](./pam/privileged-identity-management-for-active-directory-domain-services.md)
-
 ## [Дополнительные сведения об управлении привилегированным доступом](./pam/privileged-identity-management-for-active-directory-domain-services.md)
-
 ### [Основные сведения о компонентах](./pam/principles-of-operation.md)
-
 ## [Планирование развертывания управления привилегированным доступом](./pam/environment-overview.md)
-
 ### [Общие сведения о среде](./pam/environment-overview.md)
-
 ### [Многоуровневая модель](./pam/tier-model-for-partitioning-administrative-privileges.md)
-
 ### [Планирование среды бастиона](./pam/planning-bastion-environment.md)
-
 ### [Определение ролей](./pam/defining-roles-for-pam.md)
-
 ### [Высокий уровень доступности и аварийное восстановление](./pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
-
 ### [Требования к оборудованию и программному обеспечению](./pam/hardware-software-requirements.md)
-
 ## [Настройка Privileged Access Management для MIM](./pam/configuring-mim-environment-for-pam.md)
-
 ### [Шаг 1. Домен CORP](./pam/step-1-prepare-corp-domain.md)
-
 ### [Шаг 2. Контроллер домена PRIV](./pam/step-2-prepare-priv-domain-controller.md)
-
 ### [Шаг 3. Сервер PAM](./pam/step-3-prepare-pam-server.md)
-
 ### [Шаг 4. Установка MIM на сервере управления привилегированным доступом](./pam/step-4-install-mim-components-on-pam-server.md)
-
 ### [Шаг 5. Установление доверия между PRIV и CORP](./pam/step-5-establish-trust-between-priv-corp-forests.md)
-
 ### [Шаг 6. Создание привилегированных учетных записей](./pam/step-6-transition-group-to-pam.md)
-
 ### [Шаг 7. Повышение прав доступа пользователя](./pam/step-7-elevate-user-access.md)
-
 ### [Развертывание PAM диспетчера удостоверений (Майкрософт) (MIM) с помощью Windows Server 2016](./pam/deploy-pam-with-windows-server-2016.md)
-
 ### [Настройка многофакторной проверки подлинности Azure](./pam/use-azure-mfa-for-activation.md)
-
 ## [Настройка управления привилегированным доступом (PAM) с помощью сценариев](./pam/sp1-pam-configure-using-scripts.md)
-
 ### [Шаг 1. Настройка домена PRIV](./pam/sp1-step1-configuring-priv-domain.md)
-
 ### [Шаг 2. Настройка домена CORP](./pam/sp1-step2-configuring-corp-domain.md)
-
 ### [Шаг 3. Настройка SQL](./pam/sp1-step3-installing-configuring-sql.md)
-
 ### [Шаг 4. Настройка SharePoint](./pam/sp1-step4-configuring-sharepoint.md)
-
 ### [Шаг 5. Установка и настройка PAM](./pam/sp1-step5-configuring-pam.md)
-
 ### [Шаг 6. Настройка доверия PAM](./pam/sp1-step6-setup-pam-trust.md)
-
 ### [Шаг 7. Настройка ведения журнала и фильтрации идентификаторов безопасности](./pam/sp1-step7-setup-sidhistory-sidfiltering.md)
-
 ### [Шаг 8. Проверка развертывания PAM](./pam/sp1-step8-pam-deployment-verification.md)
-
 ### [Приложение](./pam/sp1-pam-deployment-addendum.md)
-
 # Управление инфраструктурой
-
 ## [Анализатор соответствия рекомендациям для Identity Manager](https://technet.microsoft.com/library/jj203402)
-
 ## [Служба уведомлений о смене паролей](https://technet.microsoft.com/library/e27c0bc6-c808-4fdb-9e59-58feeb419308)
-
 ## Управление сертификатами
-
 ### [Средство командной строки CLMUtil](https://technet.microsoft.com/library/cc720647)
-
 ### [Шаблоны профиля конфигурации](https://technet.microsoft.com/library/cc708656)
-
 ### [Использование веб-сайта управления сертификатами](https://technet.microsoft.com/library/cc720560)
-
 ### [Управление приложениями смарт-карты](https://technet.microsoft.com/library/cc708681)
-
 ### [Архивация и восстановление](https://technet.microsoft.com/library/dd883245)
-
 ## Самостоятельный сброс пароля
-
 ### [Программная регистрация пользователя](https://technet.microsoft.com/library/jj134294)
-
 ### [Настройки](https://technet.microsoft.com/library/jj134312)
-
 ## Служба и портал
-
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
-
 ### [Динамическое ведение журнала](./infrastructure/mim-service-dynamic-logging.md)
-
 ### [Руководство по экспорту производительности](https://technet.microsoft.com/library/hh322883)
-
 ## Отчеты
-
 ### [Предоставление данных о пользовательских отчетах и расширяемости](https://technet.microsoft.com/library/jj133861)
-
 ## [Программное обеспечение Microsoft Identity: версии сборок общедоступных выпусков](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
-
 # [Ссылки для разработчиков](./reference/microsoft-identity-manager-2016-developer-reference.md)
-
 ## [Справочник разработчика Microsoft Identity Manager 2016](./reference/microsoft-identity-manager-2016-developer-reference.md)
-
 ### [Справочник по API REST управления сертификатами](./reference/certificate-management-rest-api-reference.md)
-
 #### [Сведения о службе API REST управления сертификатами](./reference/certificate-management-rest-api-service-details.md)
-
 #### [Пошаговое руководство по регистрации с примером](./reference/sample-enrollment-walkthrough.md)
-
 #### [Получение шаблонов профилей](./reference/get-profile-templates.md)
-
 #### [Операции политики](./reference/policy-operations.md)
-
 ##### [Получение политики рабочих процессов](./reference/get-workflow-policy.md)
-
 ##### [Получение политики смарт-карты](./reference/get-smartcard-policy.md)
-
 #### [Операции запроса](./reference/request-operations.md)
-
 ##### [Создание запроса](./reference/create-request.md)
-
 ##### [Возвращение запроса](./reference/get-request.md)
-
 ##### [Отмена, прерывание и завершение запроса](./reference/cancel-abandon-complete-request.md)
-
 #### [Операции запроса сертификата](./reference/certificate-request-operations.md)
-
 ##### [Получение параметров создания запроса сертификата](./reference/get-certificate-request-generation-options.md)
-
 ##### [Получение ответов с сертификатами](./reference/get-certificate-responses.md)
-
 #### [Операции смарт-карты](./reference/smartcard-operations.md)
-
 ##### [Назначение смарт-карты запросу](./reference/assign-smartcard-to-request.md)
-
 ##### [Получение данных смарт-карты](./reference/get-smartcard-data.md)
-
 ##### [Получение ответа на проверку подлинности смарт-карты](./reference/get-smartcard-authentication-response.md)
-
 ##### [Получение диверсифицированного ключа администратора смарт-карты](./reference/get-smartcard-diversified-admin-key.md)
-
 ##### [Получение предложенного ПИН-кода смарт-карты](./reference/get-smartcard-proposed-pin.md)
-
 ##### [Обновление состояния смарт-карты](./reference/update-smartcard-status.md)
-
 #### [Операции с профилем](./reference/profile-operations.md)
-
 ##### [Получение данных профиля](./reference/get-profile-data.md)
-
 ##### [Операции по получению состояния профиля](./reference/get-profile-state-operations.md)
-
 #### [Операции с сертификатами](./reference/certificate-operations.md)
-
 ##### [Получение сертификатов смарт-карты или профиля](./reference/get-smartcard-profile-certificates.md)
-
 ##### [Получение сертификатов пользователей](./reference/get-user-certificates.md)
-
 ### [Справочник по API REST Privileged Access Management (PAM)](./reference/privileged-access-management-rest-api-reference.md)
-
 #### [Сведения о службе API REST PAM](./reference/privileged-access-management-rest-api-service-details.md)
-
 #### [Получение ролей PAM](./reference/privileged-access-management-get-roles.md)
-
 #### [Создание запроса PAM](./reference/privileged-access-management-create-request.md)
-
 #### [Получение запроса PAM](./reference/privileged-access-management-get-requests.md)
-
 #### [Закрытие запроса PAM](./reference/privileged-access-management-close-request.md)
-
 #### [Получение ожидающего запроса PAM](./reference/privileged-access-management-get-pending-requests.md)
-
 #### [Утверждение или отклонение ожидающего запроса PAM](./reference/privileged-access-management-approve-reject-pending-request.md)
-
 #### [Получение сведений о сеансе PAM](./reference/privileged-access-management-get-session-info.md)
-
 ## [Техническая справочная информация]
-
 ### [Справочник по XML конфигурации отображения элемента управления ресурса](./reference/rcd-configuration-xml-reference.md)

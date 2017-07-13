@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
-ms.lasthandoff: 02/07/2017
-
-
+ms.openlocfilehash: f8de75a0027371b7ff88b90d3097adc63c02d933
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="enroll-smart-cards-for-non-administrators"></a>Регистрация смарт-карт для пользователей, не являющихся администраторами
+# Регистрация смарт-карт для пользователей, не являющихся администраторами
+<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
 Если пользователь не является локальным администратором на компьютере, по умолчанию он не сможет зарегистрировать смарт-карту на своих компьютерах. Представленная ниже процедура позволяет обойти это ограничение.
 
-## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Включение обновления смарт-карты для пользователей без прав администратора в диспетчере сертификатов MIM 2016
+## Включение обновления смарт-карты для пользователей без прав администратора в диспетчере сертификатов MIM 2016
+<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  **Распакуйте APPX-файл**
 
@@ -94,4 +94,3 @@ ms.lasthandoff: 02/07/2017
 7.  **Установите приложение CM в учетной записи без прав администратора**
 
 8.  **Запустите приложение CM и зарегистрируйте виртуальную смарт-карту**
-

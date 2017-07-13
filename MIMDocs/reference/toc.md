@@ -1,84 +1,42 @@
-
 # [Изучение вопроса](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-
 # [Планирование и проектирование](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
-
 # [Развертывание и использование](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
-
 # [Использование управления привилегированным доступом](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
-
 # [Ссылки для разработчиков](microsoft-identity-manager-2016-developer-reference.md)
-
 ## [Справочник разработчика Microsoft Identity Manager 2016](microsoft-identity-manager-2016-developer-reference.md)
-
 ### [Справочник по API REST управления сертификатами](certificate-management-rest-api-reference.md)
-
 #### [Сведения о службе API REST управления сертификатами](certificate-management-rest-api-service-details.md)
-
 #### [Пошаговое руководство по регистрации с примером](sample-enrollment-walkthrough.md)
-
 #### [Получение шаблонов профилей](get-profile-templates.md)
-
 #### [Операции политики](policy-operations.md)
-
 ##### [Получение политики рабочих процессов](get-workflow-policy.md)
-
 ##### [Получение политики смарт-карты](get-smartcard-policy.md)
-
 #### [Операции запроса](request-operations.md)
-
 ##### [Создание запроса](create-request.md)
-
 ##### [Возвращение запроса](get-request.md)
-
 ##### [Отмена, прерывание и завершение запроса](cancel-abandon-complete-request.md)
-
 #### [Операции запроса сертификата](certificate-request-operations.md)
-
 ##### [Получение параметров создания запроса сертификата](get-certificate-request-generation-options.md)
-
 ##### [Получение ответов с сертификатами](get-certificate-responses.md)
-
 #### [Операции смарт-карты](smartcard-operations.md)
-
 ##### [Назначение смарт-карты запросу](assign-smartcard-to-request.md)
-
 ##### [Получение данных смарт-карты](get-smartcard-data.md)
-
 ##### [Получение ответа на проверку подлинности смарт-карты](get-smartcard-authentication-response.md)
-
 ##### [Получение диверсифицированного ключа администратора смарт-карты](get-smartcard-diversified-admin-key.md)
-
 ##### [Получение предложенного ПИН-кода смарт-карты](get-smartcard-proposed-pin.md)
-
 ##### [Обновление состояния смарт-карты](update-smartcard-status.md)
-
 #### [Операции с профилем](profile-operations.md)
-
 ##### [Получение данных профиля](get-profile-data.md)
-
 ##### [Операции по получению состояния профиля](get-profile-state-operations.md)
-
 #### [Операции с сертификатами](certificate-operations.md)
-
 ##### [Получение сертификатов смарт-карты или профиля](get-smartcard-profile-certificates.md)
-
 ##### [Получение сертификатов пользователей](get-user-certificates.md)
-
 ### [Справочник по API REST Privileged Access Management (PAM)](privileged-access-management-rest-api-reference.md)
-
 #### [Сведения о службе API REST PAM](privileged-access-management-rest-api-service-details.md)
-
 #### [Получение ролей PAM](privileged-access-management-get-roles.md)
-
 #### [Создание запроса PAM](privileged-access-management-create-request.md)
-
 #### [Получение запроса PAM](privileged-access-management-get-requests.md)
-
 #### [Закрытие запроса PAM](privileged-access-management-close-request.md)
-
 #### [Получение ожидающего запроса PAM](privileged-access-management-get-pending-requests.md)
-
 #### [Утверждение или отклонение ожидающего запроса PAM](privileged-access-management-approve-reject-pending-request.md)
-
 #### [Получение сведений о сеансе PAM](privileged-access-management-get-session-info.md)

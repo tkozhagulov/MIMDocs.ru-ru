@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="environment-overview" class="xliff"></a>
 # Общие сведения о среде
+<a id="environment-overview" class="xliff"></a>
 
 Для Privileged Access Management используются виртуальные машины с отдельными дисками, подключенными друг к другу в общей сети. Эти виртуальные машины могут работать под управлением Windows 8.1, Windows Server 2012 R2 или платформ на базе других операционных систем.
 
@@ -34,4 +31,3 @@ ms.lasthandoff: 07/10/2017
 
 > [!NOTE]
 > Текущая CTP-версия службы MIM не совместима с содержимым базы данных или каталога из предыдущей CTP-версии. Если вы ранее работали с MIM для PAM или другими сценариями, выполните резервное копирование и архивирование виртуальных машин, используемых для этого теста, и начните развертывание с новыми образами виртуальной машины, которые ранее не применялись для сценариев MIM.
-

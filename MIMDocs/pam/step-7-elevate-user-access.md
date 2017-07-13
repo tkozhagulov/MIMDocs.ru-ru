@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-7--elevate-a-users-access" class="xliff"></a>
 # Шаг 7. Повышение прав доступа пользователя
+<a id="step-7--elevate-a-users-access" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [" Шаг 6 ](step-6-transition-group-to-pam.md)
@@ -30,8 +27,8 @@ ms.lasthandoff: 07/10/2017
 
 На этом шаге показано, как пользователь может запросить доступ к роли с помощью MIM.
 
-<a id="verify-that-jen-cannot-access-the-privileged-resource" class="xliff"></a>
 ## Проверка того, что Jen не может получить доступ к привилегированному ресурсу
+<a id="verify-that-jen-cannot-access-the-privileged-resource" class="xliff"></a>
 Без повышенных прав Jen не может получить доступ к привилегированному ресурсу в лесу CORP.
 
 1. Выйдите из CORPWKSTN, чтобы удалить все открытые кэшированные подключения.
@@ -40,8 +37,8 @@ ms.lasthandoff: 07/10/2017
 4. Введите команду `dir \\corpwkstn\corpfs`. Должно появиться сообщение об ошибке **Доступ запрещен**.
 5. Не закрывайте окно командной строки.
 
-<a id="request-privileged-access-from-mim" class="xliff"></a>
 ## Запросите привилегированный доступ в MIM.
+<a id="request-privileged-access-from-mim" class="xliff"></a>
 1. На компьютере CORPWKSTN также под именем CONTOSO\Jen введите следующую команду.
 
     ```
@@ -70,8 +67,8 @@ ms.lasthandoff: 07/10/2017
 
 6. Введите пароль для учетной записи PRIV.Jen. Появится новое окно командной строки.
 
-<a id="validate-the-elevated-access" class="xliff"></a>
 ## Проверьте повышенные права доступа.
+<a id="validate-the-elevated-access" class="xliff"></a>
 В новом окне введите следующие команды.
 
 ```
@@ -81,8 +78,8 @@ dir \\corpwkstn\corpfs
 
 Если команда dir вызывает ошибку **Доступ запрещен**, проверьте отношения доверия.
 
-<a id="activate-the-privileged-role" class="xliff"></a>
 ## Активация привилегированной роли
+<a id="activate-the-privileged-role" class="xliff"></a>
 Выполните активацию, запросив привилегированный доступ на примере портала PAM.
 
 1. На компьютере CORPWKSTN выполните вход под именем CORP\Jen.
@@ -102,10 +99,9 @@ dir \\corpwkstn\corpfs
 > [!Note]
 > В этой среде также можно попробовать разрабатывать приложения, которые используют API REST PAM, описанный в [Справочнике по API REST системы управления привилегированным доступом (PAM)](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
-<a id="summary" class="xliff"></a>
 ## Сводка
+<a id="summary" class="xliff"></a>
 Выполнив действия, описанные в этом руководстве, вы сможете воспроизвести сценарий управления привилегированным доступом, в котором права пользователя повышаются на ограниченное время, что позволяет пользователю получить доступ к защищенным ресурсам под отдельной привилегированной учетной записью. Сразу после окончания сеанса повышение прав привилегированная учетная запись теряет доступ к защищенному ресурсу. Решение о том, какие группы безопасности представляют привилегированные роли, принимает администратор PAM. После переноса прав доступа в систему управления привилегированным доступом ранее возможный доступ с исходной учетной записью пользователя предоставляется только при входе с помощью специальной привилегированной учетной записи и только по запросу. В результате членства в группах для привилегированных групп действуют ограниченное время.
 
 >[!div class="step-by-step"]
 [" Шаг 6 ](step-6-transition-group-to-pam.md)
-

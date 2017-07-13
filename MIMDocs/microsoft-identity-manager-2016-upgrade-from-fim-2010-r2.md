@@ -12,14 +12,14 @@ ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Обновление с Forefront Identity Manager 2010 R2
+# Обновление с Forefront Identity Manager 2010 R2
+<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
 
 В этой статье содержатся сведения об обновлении Forefront Identity Manager (FIM) 2010 R2 до Microsoft Identity Manager (MIM) 2016. Процесс обновления состоит с трех этапов.
 
@@ -36,7 +36,8 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 - для FIM 2010 R2 настроены все необходимые локальные компоненты и компоненты среды (SQL Server, Exchange Server, SharePoint Services и т. д.).
 
 
-## <a name="preparation"></a>Подготовка
+## Подготовка
+<a id="preparation" class="xliff"></a>
 
 1.  Создайте резервные копии базы данных службы FIM, базы данных FIM Sync, службы FIM Sync, также конфигурации и программного обеспечения служб.
 
@@ -44,7 +45,8 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 3.  Загрузка или распаковка программного обеспечения MIM.
 
-## <a name="upgrade-the-synchronization-service"></a>Обновление службы синхронизации
+## Обновление службы синхронизации
+<a id="upgrade-the-synchronization-service" class="xliff"></a>
 
 1.  Войдите от имени администратора на сервер, где развернута служба синхронизации FIM 2010 R2 (Sync).
 
@@ -82,7 +84,8 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 13. Обратите внимание, что **служба синхронизации** снова запущена.
 
-## <a name="upgrade-the-service-and-portal"></a>Обновление службы и портала
+## Обновление службы и портала
+<a id="upgrade-the-service-and-portal" class="xliff"></a>
 
 1.  Войдите от имени администратора на сервер, где развернуты служба и портал FIM 2010 R2.
 
@@ -138,7 +141,8 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 14. При установке портала MIM Portal укажите URL-адрес семейства веб-сайтов SharePoint, в котором размещается портал FIM. Нажмите кнопку **Далее**.
 
-## <a name="install-the-mim-password-registration-portal"></a>Установка портала регистрации паролей MIM
+## Установка портала регистрации паролей MIM
+<a id="install-the-mim-password-registration-portal" class="xliff"></a>
 
 1. Если устанавливается портал регистрации паролей MIM, укажите запрашиваемый URL-адрес портала регистрации паролей. Нажмите кнопку **Далее**.
 
@@ -168,7 +172,8 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
     2.  Определите, посещали ли портал пользователи экстрасети и интрасети или только пользователи интрасети, как было настроено для сброса пароля FIM.
 
-## <a name="install-the-mim-password-reset-portal"></a>Установка портала сброса паролей MIM
+## Установка портала сброса паролей MIM
+<a id="install-the-mim-password-reset-portal" class="xliff"></a>
 
 1. Если устанавливается портал сброса паролей MIM, укажите данные доступа и учетные данные для сброса паролей MIM.
 
@@ -188,7 +193,8 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
     2.  Укажите, могут ли посещать портал пользователи экстрасети и интрасети или только пользователи интрасети.
 
-## <a name="finish-installation-and-upgrade"></a>Завершение установки и обновления
+## Завершение установки и обновления
+<a id="finish-installation-and-upgrade" class="xliff"></a>
 
 1. После успешной настройки открывается страница установки. Нажмите кнопку **Установить** , чтобы начать установку и обновление службы и портала MIM.
 
@@ -201,9 +207,3 @@ ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 Примечание. Если надстройки и расширения FIM уже развернуты на компьютерах пользователей для SSPR, не следует настраивать новые телефонные шлюзы MFA для сброса паролей, пока все надстройки и расширения FIM не будут обновлены до MIM 2016.  Как для FIM 2010, так и для FIM 2010 R2 надстройки и расширения не распознают новые шлюзы, выдавая ошибку. В результате пользователь не может выполнить сброс пароля.
 
 Руководство по обновлению Microsoft Identity Manager 2016 с пакетом обновления 1 (SP1) см. [здесь](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

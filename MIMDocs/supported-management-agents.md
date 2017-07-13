@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b26fe7bc56ab8229054afb1409c3652e81464a3d
-ms.lasthandoff: 05/02/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="connect-to-your-directories"></a>Подключение к каталогам
+# Подключение к каталогам
+<a id="connect-to-your-directories" class="xliff"></a>
 
 Соединители связывают конкретные источники данных с Microsoft Identity Manager (MIM). Соединитель перемещает данные из подключенного источника данных в MIM. При изменении данных в MIM соединитель может также экспортировать данные в подключенный источник данных для синхронизации с MIM. Обычно для каждого подключенного каталога существует по меньшей мере один соединитель.
 
@@ -28,7 +27,8 @@ ms.lasthandoff: 05/02/2017
 
 В этой статье рассказывается о соединителях, включенных в MIM, однако соединитель для Extensible Connectivity 2.0 позволяет подключиться к еще большему количеству источников данных. Некоторые партнеры таким образом создали собственные соединители; полный список доступен на вики-сайте [FIM 2010: агенты управления от партнеров](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## <a name="supported-connectors-in-mim-2016"></a>Поддерживаемые соединители в MIM 2016
+## Поддерживаемые соединители в MIM 2016
+<a id="supported-connectors-in-mim-2016" class="xliff"></a>
 
 | Название | Поддерживаемые версии подключенного источника данных |
 | ---- | ----------------------------------------------- |
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/02/2017
 | Текстовый файл с фиксированной шириной | Текстовые файлы с фиксированной шириной |
 | Формат обмена данными LDAP (LDIF) | Формат обмена данными LDAP (LDIF) |
 
-## <a name="related-topics"></a>См. также
+## См. также
+<a id="related-topics" class="xliff"></a>
 
 [Агенты управления в FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
-
