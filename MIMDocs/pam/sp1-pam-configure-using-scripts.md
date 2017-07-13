@@ -12,15 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
-ms.lasthandoff: 01/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="configure-pam-using-scripts"></a>Настройка управления привилегированным доступом (PAM) с помощью сценариев
+# Настройка управления привилегированным доступом (PAM) с помощью сценариев
+<a id="configure-pam-using-scripts" class="xliff"></a>
 
 Если вы решили установить SQL и SharePoint на отдельных серверах, необходимо настроить их в соответствии с приведенными ниже инструкциями. Если компоненты SQL, SharePoint и PAM устанавливаются на одном компьютере, указанные ниже действия необходимо выполнить с этого компьютера.
 
@@ -40,11 +39,13 @@ ms.lasthandoff: 01/10/2017
 5. Скопируйте тот же файл PAMDeploymentConfig.xml в папки %SYSTEMDRIVE%\PAM на всех компьютерах, контроллерах доменов CORP и PRIV, серверах PAM Server, SQL Server и SharePoint.
 
 
-## <a name="deployment-worksheet"></a>Журнал развертывания
+## Журнал развертывания
+<a id="deployment-worksheet" class="xliff"></a>
 
 Прежде чем приступить к развертыванию, обновите файл PAMDeploymentConfig.xml и разместите его обновленную копию на всех компьютерах.
 
-### <a name="setup"></a>Настройка
+### Настройка
+<a id="setup" class="xliff"></a>
 
 |Компьютер   | Запуск от имени   |Команды   |
 |---|---|---|
@@ -56,7 +57,8 @@ ms.lasthandoff: 01/10/2017
 | Сервер PAMServer  | Локальный администратор (после присоединения к домену — администратор MIM)  | .\PAMDeployment.ps1. Выберите в меню пункт 5 (Настройка PAM в MIM)   |
 |  Сервер PAMServer |Администратор MIM   | .\PAMDeployment.ps1. Выберите в меню пункт 6 (Настройка доверия в PAM) .\PAMDeployment.ps1. Выберите в меню пункт 6 (Настройка доверия в PAM) |
 
-### <a name="validation"></a>Проверка
+### Проверка
+<a id="validation" class="xliff"></a>
 
 |  Компьютер | Запуск от имени   | Команды   |
 |---|---|---|
@@ -69,4 +71,3 @@ ms.lasthandoff: 01/10/2017
 
 >[!div class="step-by-step"]
 [Начало "](sp1-step1-configuring-priv-domain.md)
-

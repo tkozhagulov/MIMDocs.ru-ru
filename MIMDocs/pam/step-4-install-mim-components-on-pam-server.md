@@ -13,17 +13,14 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
 # Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM
+<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Шаг 3](step-3-prepare-pam-server.md)
@@ -37,8 +34,8 @@ ms.lasthandoff: 07/10/2017
 
 Если вы скачали MIM, распакуйте архив установки MIM в новую папку.
 
-<a id="run-the-service-and-portal-install-program" class="xliff"></a>
-##  Запустите программу установки службы и портала.  
+##  Запустите программу установки службы и портала.
+<a id="run-the-service-and-portal-install-program" class="xliff"></a>  
 
 Следуйте инструкциям и завершите установку.
 
@@ -102,8 +99,8 @@ ms.lasthandoff: 07/10/2017
 
 После завершения установки сервер перезагрузится, затем убедитесь, что портал MIM активен, и разрешите пользователям просматривать собственный ресурс объекта в MIM.
 
-<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
 ## Настройка правил политики управления для портала MIM
+<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
 
 1. После перезагрузки PAMSRV войдите в систему от имени PRIV\Administrator.
 
@@ -119,8 +116,8 @@ ms.lasthandoff: 07/10/2017
 
 7. Выберите это правило политики управления, снимите флажок **Политика отключена**, нажмите кнопку **ОК**, а затем **Отправить**.
 
-<a id="verify-the-firewall-connections" class="xliff"></a>
 ## Проверка подключений брандмауэра
+<a id="verify-the-firewall-connections" class="xliff"></a>
 
 Брандмауэр должен разрешать входящие подключения к TCP-портам 5725, 5726, 8086 и 8090.
 
@@ -137,8 +134,8 @@ ms.lasthandoff: 07/10/2017
 8.  Убедитесь, что в списке присутствует активная сеть priv.contoso.local и доменная сеть.  
 9. Закройте **панель управления**.
 
-<a id="set-up-the-sample-web-application" class="xliff"></a>
 ## Настройка примера веб-приложения
+<a id="set-up-the-sample-web-application" class="xliff"></a>
 
 В этом разделе описывается установка и настройка примера веб-приложения для API REST PAM MIM.
 
@@ -174,8 +171,8 @@ ms.lasthandoff: 07/10/2017
 
 7.  Убедитесь, что пользователь может пройти проверку подлинности REST API (необязательно). Откройте веб-браузер с правами администратора на сервере PAMSRV.  Перейдите на веб-сайт http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, пройдите проверку подлинности (при необходимости) и убедитесь, что началось скачивание.
 
-<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
 ## Установка командлетов запрашивающей стороны MIM PAM
+<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
 
 Установите командлеты запрашивающей стороны MIM PAM на рабочей станции, настроенной на шаге 1.
 
@@ -198,4 +195,3 @@ ms.lasthandoff: 07/10/2017
 >[!div class="step-by-step"]
 [« Шаг 3](step-3-prepare-pam-server.md)
 [Шаг 5 »](step-5-establish-trust-between-priv-corp-forests.md)
-

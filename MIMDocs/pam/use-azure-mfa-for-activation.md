@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b937b30da2dff9bbfeabf7dceb43fcaca99a1b63
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="using-azure-mfa-for-activation" class="xliff"></a>
 # Использование Azure MFA для активации
+<a id="using-azure-mfa-for-activation" class="xliff"></a>
 При настройке роли PAM можно выбрать порядок авторизации пользователей, запрашивающих активизацию роли. Авторизация PAM реализует следующие варианты:
 
 - Утверждение владельца роли
@@ -32,8 +29,8 @@ ms.lasthandoff: 07/10/2017
 
 Многофакторная проверка подлинности Microsoft Azure (MFA) — это служба проверки подлинности, которая требует, чтобы пользователи подтверждали вход с помощью мобильного приложения, звонка с мобильного телефона или текстового сообщения. Она доступна для использования с Microsoft Azure Active Directory, а также как служба для облачных и локальных корпоративных приложений. В сценарии PAM Azure MFA предоставляет дополнительный механизм проверки подлинности, который может быть использован для авторизации, независимо от того, как пользователь-кандидат проходил проверку подлинности в домене Windows PRIV раньше.
 
-<a id="prerequisites" class="xliff"></a>
 ## Предварительные требования
+<a id="prerequisites" class="xliff"></a>
 
 Для использования Azure MFA с MIM потребуется:
 
@@ -42,8 +39,8 @@ ms.lasthandoff: 07/10/2017
 - Лицензии Azure Active Directory Premium для пользователей-кандидатов или альтернативные средства лицензирования Azure MFA
 - Номера телефонов всех пользователей-кандидатов
 
-<a id="creating-an-azure-mfa-provider" class="xliff"></a>
 ## Создание поставщика Azure MFA
+<a id="creating-an-azure-mfa-provider" class="xliff"></a>
 
 В данном разделе вы настроите поставщика Azure MFA в Microsoft Azure Active Directory.  Если Azure MFA (автономная или через Azure Active Directory Premium) уже используется, перейдите к следующему разделу.
 
@@ -55,8 +52,8 @@ ms.lasthandoff: 07/10/2017
 
 4.  В поле **Имя** введите **PAM**, а в поле "Модель использования" выберите "На включенного пользователя". Если у вас уже есть каталог Azure AD, выберите этот каталог. В конце нажмите кнопку **Создать**.
 
-<a id="downloading-the-azure-mfa-service-credentials" class="xliff"></a>
 ## Загрузка учетных данных службы Azure MFA
+<a id="downloading-the-azure-mfa-service-credentials" class="xliff"></a>
 
 Теперь следует создать файл, включающий информацию для проверки подлинности, которая необходима PAM для подключения к серверу Azure MFA.
 
@@ -79,8 +76,8 @@ ms.lasthandoff: 07/10/2017
 >[!NOTE]
 > ZIP-файл содержит важную информацию, которая используется в службе Azure MFA.
 
-<a id="configuring-the-mim-service-for-azure-mfa" class="xliff"></a>
 ## Настройка службы MIM для Azure MFA
+<a id="configuring-the-mim-service-for-azure-mfa" class="xliff"></a>
 
 1.  Войдите на компьютер, где установлена служба MIM, в качестве администратора или пользователя, который установил службу.
 
@@ -109,8 +106,8 @@ ms.lasthandoff: 07/10/2017
 > [!NOTE]
 > В конце процесса убедитесь, что к файлу **MfaSettings.xml**, всем его копиям и используемому ZIP-файлу не предоставлен общий доступ для чтения.
 
-<a id="configure-pam-users-for-azure-mfa" class="xliff"></a>
 ## Настройка пользователей PAM для многофакторной проверки подлинности Azure
+<a id="configure-pam-users-for-azure-mfa" class="xliff"></a>
 
 Чтобы пользователь мог активировать роль, требующую Azure MFA, его номер телефона должен храниться в MIM. Этот атрибут можно задать двумя способами.
 
@@ -123,8 +120,8 @@ Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 ```
 
 
-<a id="configure-pam-roles-for-azure-mfa" class="xliff"></a>
 ## Настройка ролей PAM для многофакторной проверки подлинности Azure
+<a id="configure-pam-roles-for-azure-mfa" class="xliff"></a>
 
 Когда телефонные номера всех пользователей-кандидатов для роли PAM будут сохранены в базе данных службы MIM, появится возможность настроить роли таким образом, чтобы многофакторная проверка подлинности Azure была обязательной. Для этого используются команды `New-PAMRole` и `Set-PAMRole`. Например,
 
@@ -134,8 +131,8 @@ Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 
 Многофакторную проверку подлинности Azure можно отключить с помощью параметра "-MFAEnabled 0" в команде `Set-PAMRole`.
 
-<a id="troubleshooting" class="xliff"></a>
 ## Диагностика
+<a id="troubleshooting" class="xliff"></a>
 
 В журнале событий управления привилегированным доступом можно найти следующие события:
 
@@ -158,4 +155,3 @@ Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 5.  Выберите диапазон времени и установите флажок рядом с полем **Имя** в столбце дополнительных отчетов. Нажмите кнопку **Экспорт в CSV**.
 
 6.  После создания отчета его можно просмотреть на портале или, если отчет MFA слишком большой, загрузить в виде CSV-файла. Значения**SDK** в столбце **AUTH TYPE** обозначают строки, релевантные запросам на активацию PAM: это события, исходящие от MIM или другого локального программного обеспечения. Поле **USERNAME** в идентификаторе GUID объекта-пользователя в базе данных службы MIM. Если вызов был неудачным, в столбце **AUTHD** будет значение**Нет**, а значение в столбце **CALL RESULT** будет содержать подробные сведения о причине сбоя.
-

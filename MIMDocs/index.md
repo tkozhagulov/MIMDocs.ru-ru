@@ -2,15 +2,14 @@
 layout: LandingPage
 title: "Документация по Microsoft Identity Manager | Документация Майкрософт"
 description: "Сведения об использовании Microsoft Identity Manager."
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: c49fbae1892bfa0207a1615d11e600fe21d638c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-<a id="microsoft-identity-manager-documentation" class="xliff"></a>
 # Документация по Microsoft Identity Manager
+<a id="microsoft-identity-manager-documentation" class="xliff"></a>
 
 Microsoft Identity Manager 2016 легко объединяет решения Майкрософт по управлению идентификацией и доступом, выполняя роль моста между различными локальными хранилищами проверки подлинности, такими как Active Directory, LDAP, Oracle, а также другими приложениями и Azure Active Directory. Это обеспечивает согласованную работу с локальными бизнес-приложениями и решениями SaaS.
 
@@ -147,4 +146,3 @@ Microsoft Identity Manager 2016 легко объединяет решения 
         </div>
     </li>
 </ul>
-

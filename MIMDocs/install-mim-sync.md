@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: c6cf0c93679319716c34904ea6239902010e0860
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 396c7066275db6123f15312cb8f0bc50d544275e
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="install-mim-2016-mim-synchronization-service"></a>Установка MIM 2016: служба синхронизации MIM
+# Установка MIM 2016: служба синхронизации MIM
+<a id="install-mim-2016-mim-synchronization-service" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Exchange Server](prepare-server-exchange.md)
@@ -38,7 +37,8 @@ ms.lasthandoff: 01/24/2017
 
 2. Распакуйте пакет установки MIM или подключите образ DVD-диска MIM.
 
-## <a name="install-mim-2016-synchronization-service"></a>Установка службы синхронизации MIM 2016
+## Установка службы синхронизации MIM 2016
+<a id="install-mim-2016-synchronization-service" class="xliff"></a>
 
 1. Перейдите в папку установки MIM и откройте папку **Synchronization Service** .
 
@@ -105,4 +105,3 @@ ms.lasthandoff: 01/24/2017
 >[!div class="step-by-step"]  
 [« Exchange Server](prepare-server-exchange.md)
 [Служба и портал MIM »](install-mim-service-portal.md)
-

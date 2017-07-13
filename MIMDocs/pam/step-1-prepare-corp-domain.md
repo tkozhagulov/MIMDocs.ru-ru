@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-1---prepare-the-host-and-the-corp-domain" class="xliff"></a>
 # Шаг 1. Подготовка узла и домена CORP
+<a id="step-1---prepare-the-host-and-the-corp-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [Шаг 2 "](step-2-prepare-priv-domain-controller.md)
@@ -32,13 +29,13 @@ ms.lasthandoff: 07/10/2017
 
 Если у вас уже есть домен Active Directory (AD) с контроллером домена под управлением Windows Server 2012 R2 или более поздней версии и вы являетесь его администратором, можете использовать этот домен.  
 
-<a id="prepare-the-corp-domain-controller" class="xliff"></a>
 ## Подготовка контроллера домена CORP
+<a id="prepare-the-corp-domain-controller" class="xliff"></a>
 
 В этом разделе описывается настройка контроллера домена для домена CORP. В домене CORP административными пользователями управляет среда бастиона. В данном примере для домена CORP используется имя системы доменных имен (DNS) *contoso.local*.
 
-<a id="install-windows-server" class="xliff"></a>
 ### Установка Windows Server
+<a id="install-windows-server" class="xliff"></a>
 
 Установите Windows Server 2012 R2 либо Windows Server 2016 Technical Preview 4 или более поздней версии на виртуальной машине, чтобы создать компьютер с именем *CORPDC*.
 
@@ -52,8 +49,8 @@ ms.lasthandoff: 07/10/2017
 
 5. После перезагрузки сервера войдите от имени администратора. Перейдите в "Панель управления". Настройте компьютер для проверки обновлений и установите все необходимые обновления. Перезагрузите сервер.
 
-<a id="add-roles-to-establish-a-domain-controller" class="xliff"></a>
 ### Добавление ролей для установки контроллера домена
+<a id="add-roles-to-establish-a-domain-controller" class="xliff"></a>
 
 В этом разделе описывается добавление доменных служб Active Directory (AD DS), DNS-сервера и ролей файлового сервера (часть раздела "Службы файлов и хранения"), а также повышение роли сервера до контроллера домена в новом лесу contoso.local.
 
@@ -78,8 +75,8 @@ ms.lasthandoff: 07/10/2017
 
 4. После перезагрузки сервера войдите в CORPDC как администратор домена. Обычно пароль, созданный при установке Windows в CORPDC, получает пользователь CONTOSO\\Administrator.
 
-<a id="create-a-group" class="xliff"></a>
 ### Создание группы
+<a id="create-a-group" class="xliff"></a>
 
 Создайте группу, которую будет аудировать Active Directory, если такая группа еще не существует. В качестве имени группы должно использоваться доменное имя NetBIOS с тремя знаками доллара, например *CONTOSO$$$*.
 
@@ -97,8 +94,8 @@ ms.lasthandoff: 07/10/2017
 
 В некоторых случаях группа может уже существовать — это нормально, если домен также использовался в сценариях миграции AD.
 
-<a id="create-additional-users-and-groups-for-demonstration-purposes" class="xliff"></a>
 ### Создание дополнительных пользователей и групп для целей демонстрации
+<a id="create-additional-users-and-groups-for-demonstration-purposes" class="xliff"></a>
 
 При создании нового домена CORP необходимо также создать дополнительных пользователей и группы для демонстрации сценария PAM. Пользователь и группы для целей демонстрации не должны быть администраторами домена или управляться параметрами adminSDHolder в AD.
 
@@ -127,8 +124,8 @@ ms.lasthandoff: 07/10/2017
   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
   ```
 
-<a id="configure-auditing" class="xliff"></a>
 ### Настройка аудита
+<a id="configure-auditing" class="xliff"></a>
 
 Необходимо включить аудит в существующих лесах, чтобы установить в них конфигурацию PAM.  
 
@@ -156,8 +153,8 @@ ms.lasthandoff: 07/10/2017
 
 Через пару минут должно появиться сообщение **Обновление политики для компьютера успешно завершено**.
 
-<a id="configure-registry-settings" class="xliff"></a>
 ### Настройте параметры реестра
+<a id="configure-registry-settings" class="xliff"></a>
 
 В этом разделе описывается настройка параметров реестра, которые потребуются для миграции журнала SID, который будет использоваться для создания группы управления привилегированным доступом.
 
@@ -173,16 +170,16 @@ ms.lasthandoff: 07/10/2017
 
 Они перезапустят контроллер домена CORPDC. Дополнительные сведения об этом параметре реестра см. в статье [Устранение неполадок при миграции параметров sIDHistory между лесами с помощью средства ADMTv2](http://support.microsoft.com/kb/322970).
 
-<a id="prepare-a-corp-workstation-and-resource" class="xliff"></a>
 ## Подготовка рабочей станции и ресурсов CORP
+<a id="prepare-a-corp-workstation-and-resource" class="xliff"></a>
 
 Если у вас еще нет компьютера рабочей станции, подключенного к домену, подготовьте его, как описано ниже.  
 
 > [!NOTE]
 > Если у вас уже есть рабочая станция, подключенная к домену, пропустите этот шаг и перейдите к разделу [Создание ресурса для целей демонстрации](#create-a-resource-for-demonstration-purposes).
 
-<a id="install-windows-81-or-windows-10-enterprise-as-a-vm" class="xliff"></a>
 ### Установка Windows 8.1 или Windows 10 Enterprise как виртуальной машины
+<a id="install-windows-81-or-windows-10-enterprise-as-a-vm" class="xliff"></a>
 
 На еще одной виртуальной машине без установленного ПО установите Windows 8.1 Корпоративная или Windows 10 Корпоративная, чтобы создать компьютер *CORPWKSTN*.
 
@@ -194,8 +191,8 @@ ms.lasthandoff: 07/10/2017
 
 4. С помощью панели управления присоедините компьютер CORPWKSTN к домену contoso.local. Для этого потребуется предоставить учетные данные администратора домена Contoso. После завершения этого действия перезагрузите компьютер CORPWKSTN.
 
-<a id="create-a-resource-for-demonstration-purposes" class="xliff"></a>
 ### Создание ресурса для целей демонстрации
+<a id="create-a-resource-for-demonstration-purposes" class="xliff"></a>
 
 Вам потребуется ресурс для демонстрации управления доступом на основе групп безопасности с помощью PAM.  Если у вас еще нет ресурса, можете использовать для демонстрации папку с файлами.  В данном случае будут использоваться объекты AD Jen и CorpAdmins, созданные в вашем домене contoso.local.
 
@@ -225,4 +222,3 @@ ms.lasthandoff: 07/10/2017
 
 >[!div class="step-by-step"]
 [Шаг 2 "](step-2-prepare-priv-domain-controller.md)
-

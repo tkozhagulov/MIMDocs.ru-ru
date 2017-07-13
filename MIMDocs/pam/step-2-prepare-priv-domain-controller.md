@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 # Шаг 2. Подготовка первого контроллера домена PRIV
+<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Шаг 1](step-1-prepare-corp-domain.md)
@@ -30,13 +27,13 @@ ms.lasthandoff: 07/10/2017
 
 На этом шаге вы создадите новый домен, который будет предоставлять среду бастиона для проверки подлинности администратора.  Этому лесу потребуется хотя бы один контроллер домена и хотя бы один рядовой сервер. Рядовой сервер будет настроен на следующем шаге.
 
-<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 ## Создание нового контроллера домена для управления привилегированным доступом
+<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 
 В этом разделе описывается настройка виртуальной машины как контроллера домена для нового леса.
 
-<a id="install-windows-server-2012-r2" class="xliff"></a>
 ### Установка Windows Server 2012 R2
+<a id="install-windows-server-2012-r2" class="xliff"></a>
 На еще одной виртуальной машине без установленного ПО установите Windows Server 2012 R2, чтобы создать компьютер "PRIVDC".
 
 1. Выберите, чтобы выполнить выборочную установку Windows Server (а не обновление). При установке выберите выпуск **Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64**. _Не выбирайте_ **Data Center или Server Core**.
@@ -49,8 +46,8 @@ ms.lasthandoff: 07/10/2017
 
 5. После перезагрузки сервера войдите от имени администратора. С помощью панели управления настройте компьютер для проверки обновлений и установите все необходимые обновления. Для этого может потребоваться перезагрузка сервера.
 
-<a id="add-roles" class="xliff"></a>
 ### Добавление ролей
+<a id="add-roles" class="xliff"></a>
 Выберите роли "Доменные службы Active Directory" и "DNS-сервер".
 
 1. Запустите PowerShell от имени администратора.
@@ -63,8 +60,8 @@ ms.lasthandoff: 07/10/2017
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
   ```
 
-<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 ### Настройка параметров реестра, необходимых для миграции журнала SID
+<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 
 Запустите PowerShell и введите следующие команды, чтобы настроить исходный домен, разрешив в нем удаленный вызов процедур (RPC) для доступа к базе данных диспетчера учетных записей безопасности (SAM).
 
@@ -72,15 +69,15 @@ ms.lasthandoff: 07/10/2017
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
-<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 ## Создание нового леса управления привилегированным доступом
+<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 
 Затем преобразуйте сервер в контроллер домена для нового леса.
 
 В настоящем документе в качестве имени домена в новом лесу используется имя priv.contoso.local.  Имя леса не является критически важным и может не быть подчинено имени существующего леса в организации. Тем не менее имя домена и имя NetBIOS нового леса должны быть уникальными и отличаться от имен других доменов в организации.  
 
-<a id="create-a-domain-and-forest" class="xliff"></a>
 ### Создание домена и леса
+<a id="create-a-domain-and-forest" class="xliff"></a>
 
 1. В окне PowerShell введите указанные ниже команды для создания домена.  При этом на старшем домене (contoso.local), созданном в предыдущем шаге, будет также создано делегирование DNS.  Если вы хотите настроить DNS позже, опустите параметры `CreateDNSDelegation -DNSDelegationCredential $ca`.
 
@@ -96,8 +93,8 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 После создания леса сервер перезагрузится автоматически.
 
-<a id="create-user-and-service-accounts" class="xliff"></a>
 ### Создание учетных записей пользователей и служб
+<a id="create-user-and-service-accounts" class="xliff"></a>
 Создайте учетные записи пользователей и служб для настройки службы и портала MIM. Эти учетные записи перейдут в контейнер "Пользователи" домена priv.contoso.local.
 
 1. После перезагрузки сервера войдите на компьютер PRIVDC как администратор домена (PRIV\\Administrator).
@@ -168,8 +165,8 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
   Add-ADGroupMember "Domain Admins" MIMService
   ```
 
-<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 ### Настройте права аудита и входа в систему.
+<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 
 Для установки конфигурации управления привилегированным доступом в лесах необходимо настроить аудит.  
 
@@ -218,8 +215,8 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
   Через минуту обновление будет завершено с сообщением "Обновление политики для компьютера успешно завершено".
 
 
-<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 ### Настройте направление имен DNS на PRIVDC.
+<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 
 С помощью PowerShell на компьютере PRIVDC настройте направление имен DNS, чтобы домен PRIV мог распознавать другие существующие леса.
 
@@ -236,8 +233,8 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 > [!NOTE]
 > Другие леса также должны направлять в этот контроллер домена запросы DNS, связанные с лесом PRIV.  Если вы используете несколько лесов Active Directory, необходимо также добавить в каждый из них DNS-серверы условной пересылки.
 
-<a id="configure-kerberos" class="xliff"></a>
 ### Настройка Kerberos
+<a id="configure-kerberos" class="xliff"></a>
 
 1. Используя PowerShell, добавьте имена субъектов-служб, чтобы SharePoint, API REST управления привилегированным доступом и служба MIM могли использовать проверку подлинности Kerberos.
 
@@ -251,8 +248,8 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 > [!NOTE]
 > Далее в этом документе описывается, как установить компоненты сервера MIM 2016 на одном компьютере. Если вы планируете добавить еще один сервер для обеспечения высокой доступности, вам потребуется дополнительная настройка Kerberos, описанная в статье [FIM 2010: настройка проверки подлинности Kerberos](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
-<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 ### Настройка делегирования для предоставления доступа к учетным записям службе MIM
+<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 
 Выполните на компьютере PRIVDC описанные ниже действия как администратор домена.
 
@@ -295,13 +292,13 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
   ```
 20. Перезапустите сервер PRIVDC, чтобы эти изменения вступили в силу.
 
-<a id="prepare-a-priv-workstation" class="xliff"></a>
 ## Подготовка рабочей станции PRIV
+<a id="prepare-a-priv-workstation" class="xliff"></a>
 
 Если вы еще не установили компьютер рабочей станции, который будет подключен к домену PRIV для обслуживания ресурсов PRIV (например, MIM), выполните описанные ниже действия для подготовки рабочей станции.  
 
-<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 ### Установка Windows 8.1 или Windows 10 Enterprise
+<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 
 На еще одной виртуальной машине без установленного ПО установите Windows 8.1 Корпоративная или Windows 10 Корпоративная, чтобы создать компьютер *PRIVWKSTN*.
 
@@ -320,4 +317,3 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 >[!div class="step-by-step"]
 [« Шаг 1](step-1-prepare-corp-domain.md)
 [Шаг 3 »](step-3-prepare-pam-server.md)
-

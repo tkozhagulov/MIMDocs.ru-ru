@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 1114be2ce13ca012582676803eb1dc29cadae596
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-sharepoint"></a>Настройка сервера управления удостоверениями: SharePoint
+# Настройка сервера управления удостоверениями: SharePoint
+<a id="set-up-an-identity-management-server-sharepoint" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -33,7 +32,8 @@ ms.lasthandoff: 01/24/2017
 > - Пароль — **Pass@word1**
 
 
-## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
+## Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
+<a id="install-sharepoint-foundation-2013-with-sp1" class="xliff"></a>
 
 > [!NOTE]
 > Чтобы установщик скачал необходимые компоненты, требуется подключение к Интернету. Если компьютер находится в виртуальной сети без доступа к Интернету, добавьте на компьютер дополнительный сетевой интерфейс, который предоставляет доступ к Интернету. Это можно отключить после завершения установки.
@@ -60,7 +60,8 @@ ms.lasthandoff: 01/24/2017
 
 4.  После завершения установки запустите мастер.
 
-## <a name="run-the-wizard-to-configure-sharepoint"></a>Использование мастера для настройки SharePoint
+## Использование мастера для настройки SharePoint
+<a id="run-the-wizard-to-configure-sharepoint" class="xliff"></a>
 
 Выполните действия, указанные в **мастере настройки продуктов SharePoint** , чтобы настроить SharePoint для работы с MIM.
 
@@ -80,7 +81,8 @@ ms.lasthandoff: 01/24/2017
 
 8. В окне **Создание семейства веб-сайтов** нажмите кнопку **Пропустить**.  Затем нажмите кнопку **Готово**.
 
-## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Подготовка SharePoint для размещения портала MIM
+## Подготовка SharePoint для размещения портала MIM
+<a id="prepare-sharepoint-to-host-the-mim-portal" class="xliff"></a>
 
 > [!NOTE]
 > Изначально протокол SSL не будет настроен. Обязательно настройте протокол SSL или его аналог, прежде чем разрешать доступ к порталу.
@@ -134,4 +136,3 @@ ms.lasthandoff: 01/24/2017
 >[!div class="step-by-step"]  
 [« SQL Server 2014](prepare-server-sql2014.md)
 [Exchange Server »](prepare-server-exchange.md)
-

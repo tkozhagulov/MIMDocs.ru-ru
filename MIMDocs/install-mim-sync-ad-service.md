@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: f84fbbdc8de5cfffc8570c52f8298cc69273c3ee
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 4ad41fc9679be702ab17fb5bef5d3efab5ff5adc
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Установка MIM 2016: синхронизация Active Directory и службы MIM
+# Установка MIM 2016: синхронизация Active Directory и службы MIM
+<a id="install-mim-2016-synchronize-active-directory-and-mim-service" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [" Служба и портал MIM](install-mim-service-portal.md)
@@ -33,7 +32,8 @@ ms.lasthandoff: 01/24/2017
 
 По умолчанию в службе синхронизации MIM настроенные соединители отсутствуют.  Обычно первый шаг заключается в использовании службы синхронизации MIM для заполнения базы данных службы MIM существующими учетными записями Active Directory. Для этого используется приложения-служба синхронизации MIM.
 
-## <a name="create-the-mim-management-agent"></a>Создание агента управления MIM
+## Создание агента управления MIM
+<a id="create-the-mim-management-agent" class="xliff"></a>
 Агент управления (MA) MIM — это соединитель службы синхронизации MIM со службой MIM. Чтобы создать его, используется мастер создания агента управления.
 
 При настройке агента управления MIM необходимо указать учетную запись пользователя. В этом документе в качестве имени для этой учетной записи используется **MIMMA**.
@@ -41,7 +41,8 @@ ms.lasthandoff: 01/24/2017
 > [!NOTE]
 > Для агента управления MIM необходимо использовать ту же учетную запись, которая была указана во время установки службы MIM.
 
-###<a name="to-create-the-mim-ma"></a>Создание MIM MA
+###Создание MIM MA
+<a id="to-create-the-mim-ma" class="xliff"></a>
 
 1.  Откройте диспетчер службы синхронизации.
 
@@ -163,7 +164,8 @@ ms.lasthandoff: 01/24/2017
 
 11.  Чтобы создать агент управления, на странице **Настройка расширений** нажмите кнопку **Готово**.
 
-## <a name="create-the-ad-management-agent"></a>Создание агента управления MIM
+## Создание агента управления MIM
+<a id="create-the-ad-management-agent" class="xliff"></a>
 Агент управления Active Directory — это соединитель для доменных служб AD. Чтобы создать его, используется мастер создания агента управления.
 
 1. Чтобы открыть мастер создания агента управления, в меню **Действия** щелкните **Создать**.
@@ -225,11 +227,13 @@ ms.lasthandoff: 01/24/2017
 12. На странице **Настройка расширений** нажмите кнопку **Далее**.
 
 
-## <a name="create-run-profiles"></a>Создание профилей выполнения
+## Создание профилей выполнения
+<a id="create-run-profiles" class="xliff"></a>
 
 Создайте профили выполнения для соединителей ADMA и MIMMA.
 
-### <a name="create-run-profiles-for-the-adma-connector"></a>Создание профилей выполнения для соединителя ADMA
+### Создание профилей выполнения для соединителя ADMA
+<a id="create-run-profiles-for-the-adma-connector" class="xliff"></a>
 
 В этой таблице показаны пять профилей выполнения, создаваемых для соединителя ADMA:
 
@@ -261,7 +265,8 @@ ms.lasthandoff: 01/24/2017
 
 5. Чтобы закрыть диалоговое окно настройки профилей выполнения, нажмите кнопку **ОК**.
 
-### <a name="create-run-profiles-for-the-mimma-connector"></a>Создание профилей выполнения для соединителя MIMMA
+### Создание профилей выполнения для соединителя MIMMA
+<a id="create-run-profiles-for-the-mimma-connector" class="xliff"></a>
 
 В этой таблице показаны пять подходящих профилей выполнения для соединителя ADMA:
 
@@ -293,7 +298,8 @@ ms.lasthandoff: 01/24/2017
 
 5. Чтобы закрыть диалоговое окно настройки профилей выполнения, нажмите кнопку **ОК**.
 
-## <a name="configure-the-mim-service"></a>Настройка службы MIM
+## Настройка службы MIM
+<a id="configure-the-mim-service" class="xliff"></a>
 
 С помощью портала MIM вы создадите правило синхронизации входящих подключений пользователя AD для службы.
 
@@ -347,10 +353,12 @@ ms.lasthandoff: 01/24/2017
 
 8. На вкладке **Сводка** нажмите кнопку **Отправить**.
 
-## <a name="initialize-the-testing-environment"></a>Инициализация среды тестирования
+## Инициализация среды тестирования
+<a id="initialize-the-testing-environment" class="xliff"></a>
 Перед тестированием конфигурации MIM с помощью данных AD необходимо выполнить четыре шага.
 
-### <a name="enable-provisioning"></a>Включение подготовки
+### Включение подготовки
+<a id="enable-provisioning" class="xliff"></a>
 
 1. Откройте диспетчер службы синхронизации.
 
@@ -360,7 +368,8 @@ ms.lasthandoff: 01/24/2017
 
 4. Чтобы закрыть диалоговое окно параметров, нажмите кнопку **ОК**.
 
-### <a name="initialize-the-mimma"></a>Инициализация MIMMA
+### Инициализация MIMMA
+<a id="initialize-the-mimma" class="xliff"></a>
 
 Выполните полный цикл синхронизации для этого соединителя. Полный цикл состоит из следующих профилей выполнения:
 
@@ -385,13 +394,15 @@ ms.lasthandoff: 01/24/2017
 
     - Для запуска профиля выполнения нажмите кнопку **ОК**.
 
-#### <a name="configure-attribute-flow-precedence"></a>Настройка приоритета потока атрибутов
+#### Настройка приоритета потока атрибутов
+<a id="configure-attribute-flow-precedence" class="xliff"></a>
 
 Во время инициализации соединителя MIM настроенные правила синхронизации были добавлены в метавселенную.
 
 Измените приоритет потока для атрибутов, предоставленных этим соединителем, чтобы атрибуты, которые уже есть в AD, могли попадать в метавселенную и, позднее, в базу данных службы MIM.
 
-### <a name="initialize-the-adma"></a>Инициализация ADMA
+### Инициализация ADMA
+<a id="initialize-the-adma" class="xliff"></a>
 
 Для инициализации соединителя Active Directory необходимо запустить для него полный импорт и полную синхронизацию. Для переноса имеющихся объектов из AD в пространство соединителя требуется полный импорт. При полной синхронизации правила синхронизации обновляются в соответствии с такими же правилами соединителя MIM.
 
@@ -409,7 +420,8 @@ ms.lasthandoff: 01/24/2017
 
     - Для запуска профиля выполнения нажмите кнопку **ОК**.
 
-### <a name="populate-the-mim-service-database"></a>Заполнение базы данных службы MIM
+### Заполнение базы данных службы MIM
+<a id="populate-the-mim-service-database" class="xliff"></a>
 
 Чтобы заполнить базу данных службы MIM объектами, необходимо запустить цикл синхронизации для соединителя MIMMA. Цикл состоит из следующих этапов:
 
@@ -433,4 +445,3 @@ ms.lasthandoff: 01/24/2017
 
 >[!div class="step-by-step"]
 [" Служба и портал MIM](install-mim-service-portal.md)
-

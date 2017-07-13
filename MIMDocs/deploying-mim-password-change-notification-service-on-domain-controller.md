@@ -12,17 +12,17 @@ ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: d7f054d8d82dcc0ac71a94f6e44407b0c41a75af
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/13/2017
 ---
+# Развертывание службы уведомлений о смене паролей MIM на контроллере домена
+<a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
 
-# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Развертывание службы уведомлений о смене паролей MIM на контроллере домена
-
-## <a name="install-the-password-change-notification-service"></a>Установка службы уведомлений о смене паролей
+## Установка службы уведомлений о смене паролей
+<a id="install-the-password-change-notification-service" class="xliff"></a>
 Служба уведомлений о смене паролей (PCNS) устанавливается на контроллерах доменов и позволяет синхронизировать пароли из MIM с другими системами, например сервером каталогов от другого поставщика. Для синхронизации паролей установите PCNS на сервере каждого контроллера домена.
 
 1.  От имени администратора домена войдите на сервер под управлением Windows Server с ролью доменных служб Active Directory.
@@ -57,6 +57,6 @@ ms.lasthandoff: 01/24/2017
 
 14. Перезагрузите компьютер, чтобы изменения службы уведомления о смене паролей MIM вступили в силу. Для этого можно нажать кнопку **Да** в появившемся всплывающем окне или перезагрузить компьютер позже.
 
-## <a name="configuring-the-password-change-notification-service"></a>Настройка службы уведомлений о смене паролей
+## Настройка службы уведомлений о смене паролей
+<a id="configuring-the-password-change-notification-service" class="xliff"></a>
 Когда вы заново подключитесь к серверу DC от имени администратора домена, перейдите в папку *C:\Program Files\Microsoft Password Change Notification.* Запустите программу *pcnscfg.exe*.
-
