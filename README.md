@@ -1,8 +1,8 @@
-## Microsoft Open Source Code of Conduct
+## <a name="microsoft-open-source-code-of-conduct"></a>Правила поведения при использовании открытого кода Майкрософт
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+В этом проекте применяются [правила поведения при использовании открытого кода Майкрософт](https://opensource.microsoft.com/codeofconduct/).
+См. дополнительные сведения на странице с [вопросами и ответами по правилам поведения](https://opensource.microsoft.com/codeofconduct/faq/) или отправьте свои дополнительные вопросы и комментарии по адресу [opencode@microsoft.com](mailto:opencode@microsoft.com).
 
-# Docs.microsoft.com Github repository
+# <a name="docsmicrosoftcom-github-repository"></a>docs.microsoft.com в репозитории Github
 
-You've found one of the GitHub repositories that houses the source for content published to [https://docs.microsoft.com](https://docs.microsoft.com/.), home of all technical content for Microsoft's Cloud and Enterprise Division. 
+Вы нашли один из репозиториев GitHub, который служит источником содержимого, публикуемого на сайте [https://docs.microsoft.com](https://docs.microsoft.com/.). На этом сайте размещаются все технические материалы подразделения облачных и корпоративных технологий Майкрософт. 
