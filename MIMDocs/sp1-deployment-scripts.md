@@ -5,21 +5,20 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 12c60e12dc5662ff0313e21bb9180b3709969af6
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: ae8f6a87f57c95e073b40d3cda944c71f1bf7247
+ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
-# Сценарии развертывания PAM в MIM2016 SP1
-<a id="mim2016-sp1-pam-deployment-scripts" class="xliff"></a>
+# <a name="mim2016-sp1-pam-deployment-scripts"></a>Сценарии развертывания PAM в MIM2016 SP1
 
 В этом пакете обновления мы представляем набор сценариев развертывания для упрощения развертывания PAM. Эти сценарии доступны в центре загрузки. Прежде чем пытаться использовать сценарии, важно убедиться, что перечисленные ниже предположения применяются в вашей среде.
 
@@ -31,6 +30,6 @@ ms.lasthandoff: 07/13/2017
 5. В целях проверки для выполнения этого шага предполагается наличие выделенного клиентского компьютера.
 
 >[!NOTE]
->Если возникнут какие-либо проблемы с выполнением сценариев, необходимо просмотреть журналы. Все журналы сценариев сохраняются в расположении %AppData%\MIMPAMInstall. Выполните сжатие папки и полученный ZIP-файл отправьте по адресу электронной почты mim2016@microsoft.com вместе со сведениями об операции и ошибке.
+>Если возникнут какие-либо проблемы с выполнением сценариев, необходимо просмотреть журналы. Все журналы сценариев сохраняются в расположении %AppData%\MIMPAMInstall. Выполните сжатие папки и полученный ZIP-файл приложите к обращению в службу поддержки вместе со сведениями об операции и ошибке.
 
 Готовы начать работу со сценариями развертывания PAM? Начните с [настройки PAM с помощью сценариев](./pam/sp1-pam-configure-using-scripts.md).
