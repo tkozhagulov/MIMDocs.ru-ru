@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 3. Настройка SQL
-<a id="step-3-configuring-sql" class="xliff"></a>
+# <a name="step-3-configuring-sql"></a>Шаг 3. Настройка SQL
 
 >[!div class="step-by-step"]
 [« Шаг 2](sp1-step2-configuring-corp-domain.md)

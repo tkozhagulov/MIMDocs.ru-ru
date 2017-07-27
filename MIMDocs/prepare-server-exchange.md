@@ -18,15 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Set up an identity management server: Exchange
-<a id="set-up-an-identity-management-server-exchange" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-exchange"></a>Set up an identity management server: Exchange
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [Служба синхронизации MIM »](install-mim-sync.md)
 
-## Развертывание Microsoft Exchange Server
-<a id="deploy-microsoft-exchange-server" class="xliff"></a>
+## <a name="deploy-microsoft-exchange-server"></a>Развертывание Microsoft Exchange Server
 Если службу MIM требуется настроить для отправки и получения электронной почты или подготовки почтовых ящиков, то необходимо, чтобы в среде присутствовала служба Exchange. Если служба Exchange еще не развернута, вы можете установить пробную версию в целях ознакомления.
 
 1. Скачайте и установите пакеты фильтров Microsoft Office 2010 версии 2.0 и пакеты фильтров Microsoft Office 2010 версии 2.0 с пакетом обновления 1 (SP1)

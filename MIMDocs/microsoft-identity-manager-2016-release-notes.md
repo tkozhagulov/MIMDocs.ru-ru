@@ -19,6 +19,5 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Заметки о выпуске для MIM 2016
-<a id="release-notes-for-mim-2016" class="xliff"></a>
+# <a name="release-notes-for-mim-2016"></a>Заметки о выпуске для MIM 2016
 Заметки о выпуске на данный момент отсутствуют.

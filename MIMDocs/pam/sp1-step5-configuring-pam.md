@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 5. Установка и настройка PAM
-<a id="step-5-installingconfiguring-pam" class="xliff"></a>
+# <a name="step-5-installingconfiguring-pam"></a>Шаг 5. Установка и настройка PAM
 
 >[!div class="step-by-step"]
 [« Шаг 4](sp1-step4-configuring-sharepoint.md)

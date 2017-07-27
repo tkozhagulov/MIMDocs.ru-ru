@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Общие сведения о среде
-<a id="environment-overview" class="xliff"></a>
+# <a name="environment-overview"></a>Общие сведения о среде
 
 Для Privileged Access Management используются виртуальные машины с отдельными дисками, подключенными друг к другу в общей сети. Эти виртуальные машины могут работать под управлением Windows 8.1, Windows Server 2012 R2 или платформ на базе других операционных систем.
 

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 1. Настройка домена PRIV
-<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
+# <a name="step-1-configuring-the-priv-domain"></a>Шаг 1. Настройка домена PRIV
 
 >[!div class="step-by-step"]
 [Шаг 2 "](sp1-step2-configuring-corp-domain.md)

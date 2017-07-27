@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Настройка сервера управления удостоверениями: SQL Server 2014
-<a id="set-up-an-identity-management-server-sql-server-2014" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-sql-server-2014"></a>Настройка сервера управления удостоверениями: SQL Server 2014
 
 >[!div class="step-by-step"]
 [« Windows Server 2012 R2](prepare-server-ws2012r2.md)
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 > - Имя домена — **contoso**.
 > - Пароль — **Pass@word1**
 
-## Установка **SQL Server 2014 (стандартный выпуск)**
-<a id="install-sql-server-2014-standard-edition" class="xliff"></a>
+## <a name="install-sql-server-2014-standard-edition"></a>Установка **SQL Server 2014 (стандартный выпуск)**
 
 1. Запустите **PowerShell** от имени администратора домена.
 

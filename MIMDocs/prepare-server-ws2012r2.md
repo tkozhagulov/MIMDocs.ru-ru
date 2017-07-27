@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Настройка сервера управления удостоверениями: Windows Server 2012 R2
-<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Настройка сервера управления удостоверениями: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Подготовка домена](preparing-domain.md)
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 > - Имя домена — **contoso**.
 > - Пароль — **Pass@word1**
 
-## Присоединение Windows Server 201  R2 к домену
-<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Присоединение Windows Server 201  R2 к домену
 
 Создайте машину Windows Server 2012 R2 не менее чем с 8 ГБ ОЗУ. При установке выберите редакцию "Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64".
 
@@ -63,8 +61,7 @@ ms.lasthandoff: 07/13/2017
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## Настройка политики безопасности сервера
-<a id="configure-the-server-security-policy" class="xliff"></a>
+## <a name="configure-the-server-security-policy"></a>Настройка политики безопасности сервера
 
 Настройте политику безопасности сервера так, чтобы новые учетные записи могли работать как службы.
 
@@ -95,8 +92,7 @@ ms.lasthandoff: 07/13/2017
 12. Закройте окно "Локальная политика безопасности".
 
 
-## Измените режим проверки подлинности Windows для служб IIS.
-<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
+## <a name="change-the-iis-windows-authentication-mode"></a>Измените режим проверки подлинности Windows для служб IIS.
 
 1.  Откройте окно PowerShell.
 

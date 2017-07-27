@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 6. Перевод группы в управление привилегированных доступом (PAM)
-<a id="step-6--transition-a-group-to-privileged-access-management" class="xliff"></a>
+# <a name="step-6--transition-a-group-to-privileged-access-management"></a>Шаг 6. Перевод группы в управление привилегированных доступом (PAM)
 
 >[!div class="step-by-step"]
 [« Шаг 5 ](step-5-establish-trust-between-priv-corp-forests.md)

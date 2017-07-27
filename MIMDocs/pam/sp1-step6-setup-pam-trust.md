@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 6. Настройка доверия PAM
-<a id="step-6-set-up-the-pam-trust" class="xliff"></a>
+# <a name="step-6-set-up-the-pam-trust"></a>Шаг 6. Настройка доверия PAM
 
 >[!div class="step-by-step"]
 [« Шаг 5](sp1-step5-configuring-pam.md)

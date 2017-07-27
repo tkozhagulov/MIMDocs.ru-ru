@@ -19,8 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM
-<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
+# <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM
 
 >[!div class="step-by-step"]
 [« Шаг 3](step-3-prepare-pam-server.md)
@@ -34,8 +33,7 @@ ms.lasthandoff: 07/13/2017
 
 Если вы скачали MIM, распакуйте архив установки MIM в новую папку.
 
-##  Запустите программу установки службы и портала.
-<a id="run-the-service-and-portal-install-program" class="xliff"></a>  
+##  <a name="run-the-service-and-portal-install-program"></a>Запустите программу установки службы и портала.  
 
 Следуйте инструкциям и завершите установку.
 
@@ -99,8 +97,7 @@ ms.lasthandoff: 07/13/2017
 
 После завершения установки сервер перезагрузится, затем убедитесь, что портал MIM активен, и разрешите пользователям просматривать собственный ресурс объекта в MIM.
 
-## Настройка правил политики управления для портала MIM
-<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
+## <a name="set-up-mim-portal-management-policy-rules"></a>Настройка правил политики управления для портала MIM
 
 1. После перезагрузки PAMSRV войдите в систему от имени PRIV\Administrator.
 
@@ -116,8 +113,7 @@ ms.lasthandoff: 07/13/2017
 
 7. Выберите это правило политики управления, снимите флажок **Политика отключена**, нажмите кнопку **ОК**, а затем **Отправить**.
 
-## Проверка подключений брандмауэра
-<a id="verify-the-firewall-connections" class="xliff"></a>
+## <a name="verify-the-firewall-connections"></a>Проверка подключений брандмауэра
 
 Брандмауэр должен разрешать входящие подключения к TCP-портам 5725, 5726, 8086 и 8090.
 
@@ -134,8 +130,7 @@ ms.lasthandoff: 07/13/2017
 8.  Убедитесь, что в списке присутствует активная сеть priv.contoso.local и доменная сеть.  
 9. Закройте **панель управления**.
 
-## Настройка примера веб-приложения
-<a id="set-up-the-sample-web-application" class="xliff"></a>
+## <a name="set-up-the-sample-web-application"></a>Настройка примера веб-приложения
 
 В этом разделе описывается установка и настройка примера веб-приложения для API REST PAM MIM.
 
@@ -171,8 +166,7 @@ ms.lasthandoff: 07/13/2017
 
 7.  Убедитесь, что пользователь может пройти проверку подлинности REST API (необязательно). Откройте веб-браузер с правами администратора на сервере PAMSRV.  Перейдите на веб-сайт http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, пройдите проверку подлинности (при необходимости) и убедитесь, что началось скачивание.
 
-## Установка командлетов запрашивающей стороны MIM PAM
-<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
+## <a name="install-the-mim-pam-requestor-cmdlets"></a>Установка командлетов запрашивающей стороны MIM PAM
 
 Установите командлеты запрашивающей стороны MIM PAM на рабочей станции, настроенной на шаге 1.
 

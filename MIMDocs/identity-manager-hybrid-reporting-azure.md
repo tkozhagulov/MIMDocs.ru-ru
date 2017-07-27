@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Отчеты аудита управления гибридными удостоверениями в Azure Active Directory — общедоступная предварительная версия (обновление)
-<a id="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh" class="xliff"></a>
+# <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Отчеты аудита управления гибридными удостоверениями в Azure Active Directory — общедоступная предварительная версия (обновление)
 Отчеты о действиях аудита Azure Active Directory (AD) позволяют просматривать единый отчет для мониторинга управления удостоверениями и локально, и в облаке. Эта функция позволяет управлять всеми удостоверениями и просматривать данные в одном месте, что экономит время и сокращает общие затраты.
 
-## Что такое гибридные отчеты Azure Active Directory?
-<a id="what-is-azure-active-directory-hybrid-reporting" class="xliff"></a>
+## <a name="what-is-azure-active-directory-hybrid-reporting"></a>Что такое гибридные отчеты Azure Active Directory?
 Гибридные отчеты аудита помогают ИТ-специалистам устранить распространенные проблемы с отчетами об управлении удостоверениями.
 
 1. **Сбор данных об управлении удостоверениями в разных системах.** Гибридные отчеты предоставляют сведения об управлении удостоверениями в Azure AD и Identity Manager.
@@ -32,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 
 3. **Снижение стоимости инфраструктуры системы отчетности.** Возможность создания гибридных отчетов в облаке позволяет обойтись без локальной инфраструктуры хранилища данных отчетов.
 
-## Как это работает?
-<a id="how-does-it-work" class="xliff"></a>
+## <a name="how-does-it-work"></a>Как это работает?
 
 Чтобы собирать локальные данные, сначала необходимо установить агент создания отчетов на сервере Identity Manager 2016. Агент создания отчетов можно скачать в [Центре загрузки Майкрософт](https://www.microsoft.com/en-us/download/details.aspx?id=55112).
 
@@ -44,7 +41,6 @@ ms.lasthandoff: 07/13/2017
 4. Данные о действиях хранятся в Azure один месяц.
 5. Портал Azure извлекает данные отчетов аудита и отображает их как аудит в колонке отчетов аудита Azure.
 
-## См. также
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>См. также
 - Дополнительные сведения см. в статье [Работа с гибридными отчетами диспетчера удостоверений](working-with-identity-manager-hybrid-reporting.md).
 - Дополнительные сведения см. в статье [Отчеты о действиях аудита на портале Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)

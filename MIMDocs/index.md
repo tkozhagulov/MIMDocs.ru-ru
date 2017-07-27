@@ -8,8 +8,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Документация по Microsoft Identity Manager
-<a id="microsoft-identity-manager-documentation" class="xliff"></a>
+# <a name="microsoft-identity-manager-documentation"></a>Документация по Microsoft Identity Manager
 
 Microsoft Identity Manager 2016 легко объединяет решения Майкрософт по управлению идентификацией и доступом, выполняя роль моста между различными локальными хранилищами проверки подлинности, такими как Active Directory, LDAP, Oracle, а также другими приложениями и Azure Active Directory. Это обеспечивает согласованную работу с локальными бизнес-приложениями и решениями SaaS.
 
