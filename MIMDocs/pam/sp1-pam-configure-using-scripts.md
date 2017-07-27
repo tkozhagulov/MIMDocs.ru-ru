@@ -5,21 +5,20 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 5718ec64fff049cb8717e4cbb36784c8f4ee4db3
+ms.sourcegitcommit: c13f814ce753e1fdacc7d0814087f59542e5098f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/26/2017
 ---
-# Настройка управления привилегированным доступом (PAM) с помощью сценариев
-<a id="configure-pam-using-scripts" class="xliff"></a>
+# <a name="configure-pam-using-scripts"></a>Настройка управления привилегированным доступом (PAM) с помощью сценариев
 
 Если вы решили установить SQL и SharePoint на отдельных серверах, необходимо настроить их в соответствии с приведенными ниже инструкциями. Если компоненты SQL, SharePoint и PAM устанавливаются на одном компьютере, указанные ниже действия необходимо выполнить с этого компьютера.
 
@@ -27,25 +26,24 @@ ms.lasthandoff: 07/13/2017
 
 Пошаговая инструкция
 
-1. Распакуйте сжатый файл PAMDeploymentScripts.zip в папку %SYSTEMDRIVE%\PAM на всех компьютерах.
-2. На одном из компьютеров откройте файл **PAMDeploymentConfig.xml** и обновите сведения с помощью приведенной ниже таблицы или руководства, содержащегося в самом XML-файле. Если леса CORP и PRIV уже установлены, вам нужно только лишь обновить параметры **DNSName** и **NetbiosName.**
-3. В разделе "Роли" обновите **учетную запись службы**, **сведения о компьютере** и **расположение двоичных файлов установки** для ролей SQL, SharePoint и MIM.
+1. Загрузить [Сценарии развертывания PAM](https://www.microsoft.com/download/details.aspx?id=53941)
+2. Распакуйте сжатый файл PAMDeploymentScripts.zip в папку %SYSTEMDRIVE%\PAM на всех компьютерах.
+3. На одном из компьютеров откройте файл **PAMDeploymentConfig.xml** и обновите сведения с помощью приведенной ниже таблицы или руководства, содержащегося в самом XML-файле. Если леса CORP и PRIV уже установлены, вам нужно только лишь обновить параметры **DNSName** и **NetbiosName.**
+4. В разделе "Роли" обновите **учетную запись службы**, **сведения о компьютере** и **расположение двоичных файлов установки** для ролей SQL, SharePoint и MIM.
     1. Расположение двоичных файлов MIM должно указывать на каталог, содержащий папку "Service and Portal" (Служба и портал). Расположение двоичных файлов клиента должно указывать на каталог, содержащий файл с надстройками и расширениями "Add-ins and Extensions.msi".
 
-4. Если используется среда PRIVOnly, для тега PRIVOnly должно быть установлено значение True.
+5. Если используется среда PRIVOnly, для тега PRIVOnly должно быть установлено значение True.
     1. При использовании сред PRIVOnly необходимо обновить параметры **DNSName** и **NetbiosName** домена PRIV, чтобы они совпадали с аналогичными параметрами домена CORP. Проверьте правильность суффиксов всех компьютеров, на которых установлены компоненты SQL, SharePoint и MIM, так как файл шаблона по умолчанию предполагает использование конфигураций CORP и PRIV.
     2. Подробные сведения о средах PRIVOnly см. здесь.
 
-5. Скопируйте тот же файл PAMDeploymentConfig.xml в папки %SYSTEMDRIVE%\PAM на всех компьютерах, контроллерах доменов CORP и PRIV, серверах PAM Server, SQL Server и SharePoint.
+6. Скопируйте тот же файл PAMDeploymentConfig.xml в папки %SYSTEMDRIVE%\PAM на всех компьютерах, контроллерах доменов CORP и PRIV, серверах PAM Server, SQL Server и SharePoint.
 
 
-## Журнал развертывания
-<a id="deployment-worksheet" class="xliff"></a>
+## <a name="deployment-worksheet"></a>Журнал развертывания
 
 Прежде чем приступить к развертыванию, обновите файл PAMDeploymentConfig.xml и разместите его обновленную копию на всех компьютерах.
 
-### Настройка
-<a id="setup" class="xliff"></a>
+### <a name="setup"></a>Настройка
 
 |Компьютер   | Запуск от имени   |Команды   |
 |---|---|---|
@@ -57,8 +55,7 @@ ms.lasthandoff: 07/13/2017
 | Сервер PAMServer  | Локальный администратор (после присоединения к домену — администратор MIM)  | .\PAMDeployment.ps1. Выберите в меню пункт 5 (Настройка PAM в MIM)   |
 |  Сервер PAMServer |Администратор MIM   | .\PAMDeployment.ps1. Выберите в меню пункт 6 (Настройка доверия в PAM) .\PAMDeployment.ps1. Выберите в меню пункт 6 (Настройка доверия в PAM) |
 
-### Проверка
-<a id="validation" class="xliff"></a>
+### <a name="validation"></a>Проверка
 
 |  Компьютер | Запуск от имени   | Команды   |
 |---|---|---|
