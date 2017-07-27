@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Обновление с Forefront Identity Manager 2010 R2
-<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
+# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Обновление с Forefront Identity Manager 2010 R2
 
 В этой статье содержатся сведения об обновлении Forefront Identity Manager (FIM) 2010 R2 до Microsoft Identity Manager (MIM) 2016. Процесс обновления состоит с трех этапов.
 
@@ -36,8 +35,7 @@ ms.lasthandoff: 07/13/2017
 - для FIM 2010 R2 настроены все необходимые локальные компоненты и компоненты среды (SQL Server, Exchange Server, SharePoint Services и т. д.).
 
 
-## Подготовка
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>Подготовка
 
 1.  Создайте резервные копии базы данных службы FIM, базы данных FIM Sync, службы FIM Sync, также конфигурации и программного обеспечения служб.
 
@@ -45,8 +43,7 @@ ms.lasthandoff: 07/13/2017
 
 3.  Загрузка или распаковка программного обеспечения MIM.
 
-## Обновление службы синхронизации
-<a id="upgrade-the-synchronization-service" class="xliff"></a>
+## <a name="upgrade-the-synchronization-service"></a>Обновление службы синхронизации
 
 1.  Войдите от имени администратора на сервер, где развернута служба синхронизации FIM 2010 R2 (Sync).
 
@@ -84,8 +81,7 @@ ms.lasthandoff: 07/13/2017
 
 13. Обратите внимание, что **служба синхронизации** снова запущена.
 
-## Обновление службы и портала
-<a id="upgrade-the-service-and-portal" class="xliff"></a>
+## <a name="upgrade-the-service-and-portal"></a>Обновление службы и портала
 
 1.  Войдите от имени администратора на сервер, где развернуты служба и портал FIM 2010 R2.
 
@@ -141,8 +137,7 @@ ms.lasthandoff: 07/13/2017
 
 14. При установке портала MIM Portal укажите URL-адрес семейства веб-сайтов SharePoint, в котором размещается портал FIM. Нажмите кнопку **Далее**.
 
-## Установка портала регистрации паролей MIM
-<a id="install-the-mim-password-registration-portal" class="xliff"></a>
+## <a name="install-the-mim-password-registration-portal"></a>Установка портала регистрации паролей MIM
 
 1. Если устанавливается портал регистрации паролей MIM, укажите запрашиваемый URL-адрес портала регистрации паролей. Нажмите кнопку **Далее**.
 
@@ -172,8 +167,7 @@ ms.lasthandoff: 07/13/2017
 
     2.  Определите, посещали ли портал пользователи экстрасети и интрасети или только пользователи интрасети, как было настроено для сброса пароля FIM.
 
-## Установка портала сброса паролей MIM
-<a id="install-the-mim-password-reset-portal" class="xliff"></a>
+## <a name="install-the-mim-password-reset-portal"></a>Установка портала сброса паролей MIM
 
 1. Если устанавливается портал сброса паролей MIM, укажите данные доступа и учетные данные для сброса паролей MIM.
 
@@ -193,8 +187,7 @@ ms.lasthandoff: 07/13/2017
 
     2.  Укажите, могут ли посещать портал пользователи экстрасети и интрасети или только пользователи интрасети.
 
-## Завершение установки и обновления
-<a id="finish-installation-and-upgrade" class="xliff"></a>
+## <a name="finish-installation-and-upgrade"></a>Завершение установки и обновления
 
 1. После успешной настройки открывается страница установки. Нажмите кнопку **Установить** , чтобы начать установку и обновление службы и портала MIM.
 

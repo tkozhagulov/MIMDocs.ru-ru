@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 2. Настройка домена CORP
-<a id="step-2-configuring-the-corp-domain" class="xliff"></a>
+# <a name="step-2-configuring-the-corp-domain"></a>Шаг 2. Настройка домена CORP
 
 >[!div class="step-by-step"]
 [Шаг 1](sp1-step1-configuring-priv-domain.md)

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Настройка сервера управления удостоверениями: SharePoint
-<a id="set-up-an-identity-management-server-sharepoint" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Настройка сервера управления удостоверениями: SharePoint
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -32,8 +31,7 @@ ms.lasthandoff: 07/13/2017
 > - Пароль — **Pass@word1**
 
 
-## Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
-<a id="install-sharepoint-foundation-2013-with-sp1" class="xliff"></a>
+## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
 
 > [!NOTE]
 > Чтобы установщик скачал необходимые компоненты, требуется подключение к Интернету. Если компьютер находится в виртуальной сети без доступа к Интернету, добавьте на компьютер дополнительный сетевой интерфейс, который предоставляет доступ к Интернету. Это можно отключить после завершения установки.
@@ -60,8 +58,7 @@ ms.lasthandoff: 07/13/2017
 
 4.  После завершения установки запустите мастер.
 
-## Использование мастера для настройки SharePoint
-<a id="run-the-wizard-to-configure-sharepoint" class="xliff"></a>
+## <a name="run-the-wizard-to-configure-sharepoint"></a>Использование мастера для настройки SharePoint
 
 Выполните действия, указанные в **мастере настройки продуктов SharePoint** , чтобы настроить SharePoint для работы с MIM.
 
@@ -81,8 +78,7 @@ ms.lasthandoff: 07/13/2017
 
 8. В окне **Создание семейства веб-сайтов** нажмите кнопку **Пропустить**.  Затем нажмите кнопку **Готово**.
 
-## Подготовка SharePoint для размещения портала MIM
-<a id="prepare-sharepoint-to-host-the-mim-portal" class="xliff"></a>
+## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Подготовка SharePoint для размещения портала MIM
 
 > [!NOTE]
 > Изначально протокол SSL не будет настроен. Обязательно настройте протокол SSL или его аналог, прежде чем разрешать доступ к порталу.

@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Развертывание PAM диспетчера удостоверений (Майкрософт) (MIM) с помощью Windows Server 2016
-<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
+# <a name="deploy-mim-pam-with-windows-server-2016"></a>Развертывание PAM диспетчера удостоверений (Майкрософт) (MIM) с помощью Windows Server 2016
 
 
 В этом сценарии диспетчер удостоверений (Майкрософт) 2016 SP1 может использовать функции Windows Server 2016 в качестве контроллера домена для леса PRIV.  После настройки этого сценария билет Kerberos пользователя будет действителен, пока будет активна его роль. 
@@ -25,8 +24,7 @@ ms.lasthandoff: 07/13/2017
 >[!Note]
 Ознакомительные технические версии Windows Server 2016 до версии 5 нельзя использовать с этим диспетчером удостоверений (Майкрософт).
 
-## Подготовка
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>Подготовка
 
 Для лабораторной среды требуются как минимум две виртуальные машины:
 
@@ -143,8 +141,7 @@ ms.lasthandoff: 07/13/2017
 
 -   Пункт 5 (проверка доверия) **не обязателен, если оба контроллера домена (CORP и PRIV) находятся в режиме работы домена Windows Server 2016**.
 
-## Дополнительные сведения
-<a id="more-information" class="xliff"></a>
+## <a name="more-information"></a>Дополнительные сведения
 
 - [Управление привилегированным доступом для доменных служб Active Directory](privileged-identity-management-for-active-directory-domain-services.md)
 - [Настройка среды MIM для Privileged Access Management](configuring-mim-environment-for-pam.md)

@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Регистрация смарт-карт для пользователей, не являющихся администраторами
-<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
+# <a name="enroll-smart-cards-for-non-administrators"></a>Регистрация смарт-карт для пользователей, не являющихся администраторами
 Если пользователь не является локальным администратором на компьютере, по умолчанию он не сможет зарегистрировать смарт-карту на своих компьютерах. Представленная ниже процедура позволяет обойти это ограничение.
 
-## Включение обновления смарт-карты для пользователей без прав администратора в диспетчере сертификатов MIM 2016
-<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Включение обновления смарт-карты для пользователей без прав администратора в диспетчере сертификатов MIM 2016
 
 1.  **Распакуйте APPX-файл**
 

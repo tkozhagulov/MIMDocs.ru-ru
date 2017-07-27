@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Настройка домена
-<a id="set-up-a-domain" class="xliff"></a>
+# <a name="set-up-a-domain"></a>Настройка домена
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 "](prepare-server-ws2012r2.md)
@@ -28,8 +27,7 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
 
 В этой статье рассматриваются действия по подготовке домена для работы с MIM.
 
-## Создание учетных записей пользователей и групп
-<a id="create-user-accounts-and-groups" class="xliff"></a>
+## <a name="create-user-accounts-and-groups"></a>Создание учетных записей пользователей и групп
 
 Всем компонентам развертывания MIM требуются собственные удостоверения в домене. Сюда входят такие компоненты MIM, как служба и модуль синхронизации, а также SharePoint и SQL.
 

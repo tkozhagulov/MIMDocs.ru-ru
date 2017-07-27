@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 8. Проверка развертывания PAM
-<a id="step-8-pam-deployment-verification" class="xliff"></a>
+# <a name="step-8-pam-deployment-verification"></a>Шаг 8. Проверка развертывания PAM
 
 >[!div class="step-by-step"]
 [« Шаг 7](sp1-step7-setup-sidhistory-sidfiltering.md)

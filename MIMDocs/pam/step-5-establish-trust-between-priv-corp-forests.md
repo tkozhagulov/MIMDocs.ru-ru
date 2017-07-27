@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 5. Установка отношений доверия между лесами PRIV и CORP
-<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
+# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Шаг 5. Установка отношений доверия между лесами PRIV и CORP
 
 >[!div class="step-by-step"]
 [« Шаг 4](step-4-install-mim-components-on-pam-server.md)
@@ -28,8 +27,7 @@ ms.lasthandoff: 07/13/2017
 
 Контроллеры доменов PRIV и CONTOSO должны быть связаны отношением доверия с каждым доменом CORP (например, contoso.local). Это позволит пользователям в домене PRIV получить доступ к ресурсам в домене CORP.
 
-## Подключение каждого контроллера домена к соответствующему элементу
-<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>Подключение каждого контроллера домена к соответствующему элементу
 
 До установки отношений доверия в каждом контроллере домена необходимо настроить разрешение DNS-имен другого домена на основе IP-адреса другого контроллера домена или DNS-сервера.
 
@@ -47,8 +45,7 @@ ms.lasthandoff: 07/13/2017
 
     ![Структура файла для ключа priv — снимок экрана](./media/PAM_GS_DNS_Manager.png)
 
-## Установление доверия в PAMSRV
-<a id="establish-trust-on-pamsrv" class="xliff"></a>
+## <a name="establish-trust-on-pamsrv"></a>Установление доверия в PAMSRV
 
 В PAMSRV установите одностороннее отношение доверия с каждым доменом, таким как CORPDC, чтобы контроллер домена CORP доверял лесу PRIV.
 
@@ -70,8 +67,7 @@ ms.lasthandoff: 07/13/2017
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## Предоставление лесам доступа для чтения в Active Directory
-<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
+## <a name="give-forests-read-access-to-active-directory"></a>Предоставление лесам доступа для чтения в Active Directory
 
 Для каждого существующего леса разрешите администраторам PRIV и службе мониторинга доступ на чтение в Active Directory.
 
@@ -94,8 +90,7 @@ ms.lasthandoff: 07/13/2017
 
     На выходе также должно быть указано, что **фильтрация SID не включена для этого доверия**. Дополнительные сведения см. в статье [Отключение карантина фильтров SID](http://technet.microsoft.com/library/cc772816.aspx).
 
-## Запуск мониторинга и службы компонентов
-<a id="start-the-monitoring-and-component-services" class="xliff"></a>
+## <a name="start-the-monitoring-and-component-services"></a>Запуск мониторинга и службы компонентов
 
 1.  Войдите в PAMSRV как администратор домена PRIV (PRIV\Administrator).
 

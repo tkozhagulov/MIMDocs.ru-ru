@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 4. Настройка SharePoint
-<a id="step-4-configuring-sharepoint" class="xliff"></a>
+# <a name="step-4-configuring-sharepoint"></a>Шаг 4. Настройка SharePoint
 
 >[!div class="step-by-step"]
 [« Шаг 3](sp1-step3-installing-configuring-sql.md)

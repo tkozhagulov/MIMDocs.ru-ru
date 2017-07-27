@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Развертывание службы уведомлений о смене паролей MIM на контроллере домена
-<a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Развертывание службы уведомлений о смене паролей MIM на контроллере домена
 
-## Установка службы уведомлений о смене паролей
-<a id="install-the-password-change-notification-service" class="xliff"></a>
+## <a name="install-the-password-change-notification-service"></a>Установка службы уведомлений о смене паролей
 Служба уведомлений о смене паролей (PCNS) устанавливается на контроллерах доменов и позволяет синхронизировать пароли из MIM с другими системами, например сервером каталогов от другого поставщика. Для синхронизации паролей установите PCNS на сервере каждого контроллера домена.
 
 1.  От имени администратора домена войдите на сервер под управлением Windows Server с ролью доменных служб Active Directory.
@@ -57,6 +55,5 @@ ms.lasthandoff: 07/13/2017
 
 14. Перезагрузите компьютер, чтобы изменения службы уведомления о смене паролей MIM вступили в силу. Для этого можно нажать кнопку **Да** в появившемся всплывающем окне или перезагрузить компьютер позже.
 
-## Настройка службы уведомлений о смене паролей
-<a id="configuring-the-password-change-notification-service" class="xliff"></a>
+## <a name="configuring-the-password-change-notification-service"></a>Настройка службы уведомлений о смене паролей
 Когда вы заново подключитесь к серверу DC от имени администратора домена, перейдите в папку *C:\Program Files\Microsoft Password Change Notification.* Запустите программу *pcnscfg.exe*.

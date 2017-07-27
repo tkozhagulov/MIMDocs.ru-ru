@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Работа с гибридными отчетами в Microsoft Identity Manager — общедоступная предварительная версия (обновление)
-<a id="working-with-identity-manager-hybrid-reporting---public-preview-refresh" class="xliff"></a>
+# <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Работа с гибридными отчетами в Microsoft Identity Manager — общедоступная предварительная версия (обновление)
 
-## Доступные гибридные отчеты
-<a id="available-hybrid-reports" class="xliff"></a>
+## <a name="available-hybrid-reports"></a>Доступные гибридные отчеты
 Первые три отчета Microsoft Identity Manager (MIM) в Azure AD — это **Действие сброса пароля**, **Регистрации для сброса пароля** и **Действия самообслуживания с группами**.
 
 -   В отчете "Действие сброса пароля" отображаются все сбросы пароля пользователями с помощью SSPR и предоставляются шлюзы или **методы** , используемые для проверки подлинности.
@@ -39,8 +37,7 @@ ms.lasthandoff: 07/13/2017
 > Необходимо удалить предыдущую версию гибридного агента.</br>
 > Если вы хотите удалить гибридное отчеты, удалите агент MIMreportingAgent.msi.
 
-## Необходимые компоненты
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Необходимые компоненты
 
 1.  Установите Microsoft Identity Manager 2016 RTM или службу MIM с пакетом обновления 1 (SP1).
 
@@ -48,8 +45,7 @@ ms.lasthandoff: 07/13/2017
 
 3.  Убедитесь, что у вас есть исходящее подключение к Интернету от сервера диспетчера удостоверений к Azure.
 
-## Requirements (Требования)
-<a id="requirements" class="xliff"></a>
+## <a name="requirements"></a>Requirements (Требования)
 Ниже приведен список предварительных требований для использования гибридных отчетов Microsoft Identity Manager.
 
 | Требование | Описание |
@@ -64,8 +60,7 @@ ms.lasthandoff: 07/13/2017
 | Внесите следующие веб-сайты в список разрешенных, если включена политика усиленной безопасности IE. |Если на сервере, на котором планируется установить агент, включена политика усиленной безопасности IE, следующие веб-сайты нужно внести в список разрешенных.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Сервер федерации вашей организации, для которого установлены отношения доверия с Azure Active Directory. Например, https://sts.contoso.com</li> |
 </BR>
 
-## Установка агента создания отчетов Microsoft Identity Manager в Azure AD
-<a id="install-microsoft-identity-manager-reporting-agent-in-azure-ad" class="xliff"></a>
+## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Установка агента создания отчетов Microsoft Identity Manager в Azure AD
 После установки агента отчетов данные из действия Microsoft Identity экспортируются из MIM в журнал событий Windows. Агент отчетов MIM обрабатывает события и отправляет их в Azure. Там события анализируются, расшифровываются и фильтруются для требуемых отчетов.
 
 1.  Установите диспетчер удостоверений Майкрософт 2016.
@@ -92,8 +87,7 @@ ms.lasthandoff: 07/13/2017
 
     Данные отчета можно создать, сбросив пароль пользователя с помощью портала сброса паролей диспетчера удостоверений Майкрософт. Убедитесь, что пароль успешно сброшен и что данные отображаются на портале управления Azure AD.
 
-## Просмотр гибридных отчетов на портале Azure
-<a id="view-hybrid-reports-in-the-azure-portal" class="xliff"></a>
+## <a name="view-hybrid-reports-in-the-azure-portal"></a>Просмотр гибридных отчетов на портале Azure
 
 1.  Войдите на [портал Azure](https://portal.azure.com/) по учетной записи глобального администратора для клиента.
 
@@ -108,12 +102,10 @@ ms.lasthandoff: 07/13/2017
 > [!WARNING]
 > Отображение данных аудита Microsoft Identity Manager на портале может занять некоторое время.
 
-## Остановка создания гибридных отчетов
-<a id="stop-creating-hybrid-reports" class="xliff"></a>
+## <a name="stop-creating-hybrid-reports"></a>Остановка создания гибридных отчетов
 Если вы хотите остановить передачу данных аудита отчетов из Microsoft Identity Manager в Azure Active Directory, удалите агент гибридных отчетов. С помощью средства **Установка и удаление программ** Windows удалите гибридные отчеты Microsoft Identity Manager.
 
-## События Windows, используемые для гибридных отчетов
-<a id="windows-events-used-for-hybrid-reporting" class="xliff"></a>
+## <a name="windows-events-used-for-hybrid-reporting"></a>События Windows, используемые для гибридных отчетов
 События, создаваемые Microsoft Identity Manager, заносятся в журнал событий Windows и отображаются в средстве просмотра событий в следующем разделе: "Журналы приложения и служб" &gt;**Журнала запросов диспетчера удостоверений**. Каждый запрос MIM экспортируется как событие в журнал событий Windows в структуре JSON. Эти данные можно экспортировать в систему SIEM.
 
 |Тип события|ID|Сведения о событии|

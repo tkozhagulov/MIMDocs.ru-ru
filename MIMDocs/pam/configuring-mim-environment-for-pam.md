@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Настройка среды MIM для Privileged Access Management
-<a id="configure-the-mim-environment-for-privileged-access-management" class="xliff"></a>
+# <a name="configure-the-mim-environment-for-privileged-access-management"></a>Настройка среды MIM для Privileged Access Management
 При настройке среды для доступа между лесами, установки и настройки Active Directory и Microsoft Identity Manager, а также демонстрации своевременного запроса доступа необходимо пройти семь этапов.
 
 Эти этапы описаны таким образом, чтобы вы могли построить тестовую среду с нуля. Если вы применяете PAM к существующей среде, вместо создания новых контроллеров доменов, соответствующих примерам, можете использовать собственные контроллеры доменов или учетные записи пользователей.

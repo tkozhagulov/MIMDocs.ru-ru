@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Приложение. Сценарии развертывания PAM.
-<a id="pam-deployment-scripts-addendum" class="xliff"></a>
+# <a name="pam-deployment-scripts-addendum"></a>Приложение. Сценарии развертывания PAM.
 
-## Приложение 1. Настройка домена PRIV
-<a id="addendum-1-setting-up-the-priv-domain" class="xliff"></a>
+## <a name="addendum-1-setting-up-the-priv-domain"></a>Приложение 1. Настройка домена PRIV
 
 После распаковки сжатого файла PAMDeploymentConfig.xml в папку $env:SYSTEMDRIVE\PAM внесите в него сведения о лесе PRIV. Обновите параметры DNSName, NetbiosName, имя контроллера домена, а также путь к базе данных, журналу и каталогу Sysvol. Кроме того, обновите режимы работы домена и леса. Если вы тестируете систему Windows Server Technical Preview 5, задайте для параметров DomainMode и ForestMode значение WinThreshold.
 
@@ -40,8 +38,7 @@ ms.lasthandoff: 07/13/2017
   * Пароль содержит как минимум один символ ВЕРХНЕГО регистра.
   * Пароль содержит как минимум один цифровой или специальный символ.
 
-## Приложение 2. Настройка домена CORP
-<a id="addendum-2-setting-up-the-corp-domain" class="xliff"></a>
+## <a name="addendum-2-setting-up-the-corp-domain"></a>Приложение 2. Настройка домена CORP
 
 Если вы только начинаете работать с PAM и вам требуется настроить тестовую среду, указанный сценарий также позволяет настраивать домен CORP. После распаковки сжатого файла PAMDeploymentConfig.xml в папку $env:SYSTEMDRIVE\PAM добавьте в него сведения о лесе CORP. Обновите параметры DNSName, NetbiosName, имя контроллера домена, путь к базе данных, журналу и каталогу Sysvol. Используйте операционную систему не старше Windows Server 2012 R2.
 
@@ -53,8 +50,7 @@ ms.lasthandoff: 07/13/2017
 
 Контроллер домена автоматически перезагрузится после завершения процедуры.
 
-## Приложение 3. Настройка клиента CORP для выполнения проверки
-<a id="addendum-3-setting-up-a-corp-client-to-do-the-validation" class="xliff"></a>
+## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>Приложение 3. Настройка клиента CORP для выполнения проверки
 
 Параметр ClientBinaryLocation в файле конфигурации должен указывать на расположение файла setup.exe.
 Войдите в клиент в качестве локального администратора и выполните следующие команды в окне PowerShell с повышенными правами.
@@ -72,7 +68,6 @@ ms.lasthandoff: 07/13/2017
 
 Перейдите к шагу 8 (см. выше в документе).
 
-## Приложение 4. Действия в случае возникновения ошибок
-<a id="addendum-4-if-something-goes-wrong" class="xliff"></a>
+## <a name="addendum-4-if-something-goes-wrong"></a>Приложение 4. Действия в случае возникновения ошибок
 
 Все журналы сценариев сохраняются в расположении %AppData%\MIMPAMInstall. Выполните сжатие папки и полученный ZIP-файл отправьте по адресу электронной почты [mim2016@microsoft.com](mailto:mim2016@microsoft.com) вместе со сведениями об операции и ошибке.

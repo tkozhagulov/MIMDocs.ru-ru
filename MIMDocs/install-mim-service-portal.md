@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Установка MIM 2016: служба и портал MIM
-<a id="install-mim-2016-mim-service-and-portal" class="xliff"></a>
+# <a name="install-mim-2016-mim-service-and-portal"></a>Установка MIM 2016: служба и портал MIM
 
 >[!div class="step-by-step"]
 [« Служба синхронизации MIM](install-mim-sync.md)
@@ -35,8 +34,7 @@ ms.lasthandoff: 07/13/2017
 Если вы не настроили пакет установки MIM на предыдущем шаге, прежде чем продолжить, установите компоненты Microsoft Identity Manager 2016.
 
 
-## Настройка службы и портала MIM для установки
-<a id="configure-mim-service-and-portal-for-installation" class="xliff"></a>
+## <a name="configure-mim-service-and-portal-for-installation"></a>Настройка службы и портала MIM для установки
 
 1. Запустите **установщик службы и портала MIM** из распакованной вложенной папки **Service and Portal**.
 
@@ -78,8 +76,7 @@ ms.lasthandoff: 07/13/2017
 
 16. Установите флажки, чтобы открыть порты 5725 и 5726 в брандмауэре и предоставлять всем вошедшим пользователям доступ к порталу MIM.
 
-## Настройка портала регистрации паролей MIM
-<a id="configure-mim-password-registration-portal" class="xliff"></a>
+## <a name="configure-mim-password-registration-portal"></a>Настройка портала регистрации паролей MIM
 
 1.  В качестве имени учетной записи службы для регистрации SSPR укажите *contoso\MIMSSPR* и введите пароль *Pass@word1*.
 
@@ -91,8 +88,7 @@ ms.lasthandoff: 07/13/2017
 
 4. На следующем экране настройки портала регистрации паролей MIM введите *http://CorpIDM.contoso.local* в качестве адреса сервера службы MIM для портала регистрации паролей.
 
-## Настройка портала сброса паролей MIM
-<a id="configure-mim-password-reset-portal" class="xliff"></a>
+## <a name="configure-mim-password-reset-portal"></a>Настройка портала сброса паролей MIM
 
 1.  В качестве имени учетной записи службы для регистрации SSPR укажите *Contoso\MIMSSPRService* и введите пароль *Pass@word1*.
 
@@ -104,8 +100,7 @@ ms.lasthandoff: 07/13/2017
 
 4. На следующем экране настройки портала регистрации паролей MIM введите *CorpIDname http://CorpIDname.domain.local* в качестве адреса сервера службы MIM для портала сброса паролей.
 
-## Установка службы и портала MIM
-<a id="install-mim-service-and-portal" class="xliff"></a>
+## <a name="install-mim-service-and-portal"></a>Установка службы и портала MIM
 
 Когда все предварительные настройки будут завершены, нажмите кнопку **Установить**, чтобы начать установку выбранных компонентов **службы и портала**.
 

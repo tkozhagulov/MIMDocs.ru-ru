@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/13/2017
 ---
-# Шаг 7. Настройка ведения журнала и фильтрации идентификаторов безопасности
-<a id="step-7-set-up-sid-historysid-filtering" class="xliff"></a>
+# <a name="step-7-set-up-sid-historysid-filtering"></a>Шаг 7. Настройка ведения журнала и фильтрации идентификаторов безопасности
 
 >[!div class="step-by-step"]
 [« Шаг 6](sp1-step6-setup-pam-trust.md)
