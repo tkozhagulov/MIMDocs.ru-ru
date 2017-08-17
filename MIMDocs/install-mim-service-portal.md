@@ -5,18 +5,18 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/16/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 974015bbba3a36e1107da33655eedf94e2938582
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 03a0e6e90c1d0059872c4d37c88cb6f4f4095bac
+ms.sourcegitcommit: 451c3ddda84758c87b8eb0359dac4043af52865f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Установка MIM 2016: служба и портал MIM
 
@@ -62,13 +62,13 @@ ms.lasthandoff: 07/13/2017
 
 10. Обратите внимание, что может появиться предупреждение о небезопасности учетной записи службы в текущей конфигурации.
 
-11. Примите значения по умолчанию для расположения сервера синхронизации и укажите учетную запись агента управления MIM *contoso\MIMsync*.
+11. Примите значения по умолчанию для расположения сервера синхронизации и укажите учетную запись агента управления MIM *contoso\MIMMA*.
 
     ![Изображение для настройки службы и портала MIM](media/MIM-Install13.png)
 
 12. Укажите *CorpIDM* (имя этого компьютера) в качестве адреса сервера службы MIM для портала MIM.
 
-13. Укажите *http://CorpIDM.contoso.local:82* в качестве URL-адреса семейства веб-сайтов SharePoint.
+13. Укажите *http://CorpIDM.contoso.local* в качестве URL-адреса семейства веб-сайтов SharePoint.
 
 14. Укажите *http://CorpIDM.contoso.local:8080* в качестве URL-адреса регистрации паролей.
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 07/13/2017
 
 После завершения установки убедитесь, что портал MIM работает.
 
-1. Запустите Internet Explorer и подключитесь к порталу MIM по адресу *http://corpidm.contoso.local:82/identitymanagement*. Обратите внимание, что возможна небольшая задержка при первом посещении этой страницы.
+1. Запустите Internet Explorer и подключитесь к порталу MIM по адресу *http://corpidm.contoso.local/identitymanagement*. Обратите внимание, что возможна небольшая задержка при первом посещении этой страницы.
 
     - При необходимости войдите в Internet Explorer как *contoso\Administrator*.
 
