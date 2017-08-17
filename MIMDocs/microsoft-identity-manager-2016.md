@@ -5,18 +5,18 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ca5dafb78899e286aff6d2e767ad1509a6439e65
-ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
+ms.openlocfilehash: b3cdc1a71b6e9eb14a132429ea66bb4ab33fe3c4
+ms.sourcegitcommit: 0a78e39976cd03225a8e24a508e9ee23585e67cc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 Microsoft Identity Manager (MIM) 2016 основан на возможностях управления удостоверениями и доступом [FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx). Как и его предшественник, MIM позволяет управлять пользователями, учетными данными, политиками и доступом в организации.  Кроме того, в MIM 2016 добавлены функции гибридной среды и возможности управления привилегированным доступом, а также поддержка новых платформ.
@@ -32,4 +32,7 @@ Microsoft Identity Manager 2016 можно использовать с Azure AD,
 MIM поддерживает локальное решение управления привилегированными пользователями для управления Active Directory. Для начала обратитесь к статье [Использование управления привилегированным доступом](./pam/privileged-identity-management-for-active-directory-domain-services.md).
 
 ## <a name="related-topics"></a>См. также
-Microsoft Identity Manager по-прежнему тесно связан со своим предшественником, Forefront Identity Manager. Если по-прежнему используется FIM или требуется дополнительная документация, ознакомьтесь с [списком документации по FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx).
+
+- Microsoft Identity Manager по-прежнему тесно связан со своим предшественником, Forefront Identity Manager. Если по-прежнему используется FIM или требуется дополнительная документация, ознакомьтесь с [списком документации по FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx).
+- [Вопросы по топологии для развертывания MIM](topology-considerations.md)
+- [Руководство по планированию ресурсов](capacity-planning-guide.md)
