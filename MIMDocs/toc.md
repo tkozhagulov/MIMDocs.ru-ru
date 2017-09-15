@@ -21,6 +21,15 @@
 ### [Установка службы и портала MIM](install-mim-service-portal.md)
 ### [Установка MIM: базы данных синхронизации](install-mim-sync-ad-service.md)
 ## [Обновление с Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
+## [Установка управления сертификатами MIM](./deploy-use/mim-cm-deploy.md)
+## [Разделы, посвященные установке BHOLD](./deploy-use/bhold-installation-guide.md)
+### [Установка основных компонентов BHOLD](./deploy-use/bhold-core-installation.md)
+### [Установка интеграции BHOLD](./deploy-use/bhold-integration-installation.md)
+### [Установка аттестации BHOLD](./deploy-use/bhold-attestation-installation.md)
+### [Установка генератора моделей BHOLD](./deploy-use/bhold-model-generator-installation.md)
+### [Установка отчетов BHOLD](./deploy-use/bhold-reporting-installation.md)
+### [Установка аналитики BHOLD](./deploy-use/bhold-analytics-installation.md)
+### [Установка соединителя управления доступом BHOLD](./deploy-use/bhold-access-management-connector-install.md)
 ## [Служба уведомлений о смене паролей](deploying-mim-password-change-notification-service-on-domain-controller.md)
 ## [Гибридные отчеты Identity Manager](working-with-identity-manager-hybrid-reporting.md)
 ## [Самостоятельный сброс пароля](working-with-self-service-password-reset.md)
@@ -75,7 +84,10 @@
 ### [Предоставление данных о пользовательских отчетах и расширяемости](https://technet.microsoft.com/library/jj133861)
 ## [Программное обеспечение Microsoft Identity: версии сборок общедоступных выпусков](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Справочник](./reference/microsoft-identity-manager-2016-developer-reference.md)
-## [Справочник разработчика Microsoft Identity Manager 2016](./reference/microsoft-identity-manager-2016-developer-reference.md)
+## Ссылки для разработчиков
+### [Справочник разработчика MIM 2016](./reference/microsoft-identity-manager-2016-developer-reference.md)
+### BHOLD
+#### [Справочник разработчика BHOLD](./reference/mim2016-bhold-developer-reference.md) 
 ### [Справочник по API REST управления сертификатами](./reference/certificate-management-rest-api-reference.md)
 #### [Сведения о службе API REST управления сертификатами](./reference/certificate-management-rest-api-service-details.md)
 #### [Пошаговое руководство по регистрации с примером](./reference/sample-enrollment-walkthrough.md)
@@ -117,4 +129,8 @@
 ### [Коды ошибок запуска агента управления](./reference/maerrorcodes.md)
 ### [Справочник по функциям для Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
 ### [Справочник по управлению паролями в Microsoft Identity Manager 2016](./infrastructure/mim2016-password-management.md)
-## [Журнал версий](./reference/version-history.md)
+### BHOLD
+#### [Руководство по основным понятиям BHOLD](./understand-explore/bhold-concepts-guide.md)
+## Журнал версий
+### [Журнал версий MIM](./reference/version-history.md)
+### [Журнал версий BHOLD](./reference/version-bhold-history.md)
