@@ -2,10 +2,10 @@
 title: "Развертывание PAM. Шаг 4 — установка MIM | Документация Майкрософт"
 description: "Установите и настройте службу и портал MIM на сервере и рабочих станциях Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: barclayn
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,18 +13,17 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: b69dfc39da63ec523fb09a58661b5f8367e6042c
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM
 
 >[!div class="step-by-step"]
 [« Шаг 3](step-3-prepare-pam-server.md)
 [Шаг 5 »](step-5-establish-trust-between-priv-corp-forests.md)
-
 
 Войдите в PAMSRV от имени PRIV\Administrator, чтобы установить службу и портал MIM и пример веб-приложения портала.
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 07/13/2017
 
 Если вы скачали MIM, распакуйте архив установки MIM в новую папку.
 
-##  <a name="run-the-service-and-portal-install-program"></a>Запустите программу установки службы и портала.  
+## <a name="run-the-service-and-portal-install-program"></a>Запустите программу установки службы и портала.
 
 Следуйте инструкциям и завершите установку.
 
@@ -140,13 +139,13 @@ ms.lasthandoff: 07/13/2017
 
 3.  Создайте в IIS новый веб-сайт с именем "Пример портала MIM Privileged Access Management", физическим путем C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal и портом 8090.  Это можно сделать с помощью следующей команды PowerShell:
 
-  ```
+  ```PowerShell
   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
   ```
 
 4.  Настройте пример веб-приложения, включив перенаправление пользователей в API REST PAM MIM. В текстовом редакторе, например в Блокноте, измените файл **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. В разделе **<system.webServer>** добавьте следующие строки:
 
-  ```
+  ```XML
   <httpProtocol>
     <customHeaders>
       <add name="Access-Control-Allow-Credentials" value="true"  />
@@ -160,7 +159,7 @@ ms.lasthandoff: 07/13/2017
 
 6.  Чтобы изменения вступили в силу, перезапустите IIS, выполните следующую команду:
 
-  ```
+  ```cmd
   iisreset
   ```
 

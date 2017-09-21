@@ -5,15 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/06/2017
+ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 0db8c2ebaee204c929dc7345ac6858fff6b0993b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 45054799cdc8bbe6d39fa2beb28e69d13cace031
+ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Руководство по основным понятиям Microsoft BHOLD Suite
 
@@ -341,3 +341,7 @@ BHOLD Suite включает средства, которые можно исп�
 Важно отметить, что расширения BHOLD для портала MIM поддерживают самостоятельное управление ролями и рабочими процессами, а также создание отчетов. Другие функции администрирования BHOLD, а также аттестация, предоставляются веб-порталами модулей BHOLD, размещаемыми отдельно от портала MIM.
 
 ## <a name="next-steps"></a>Дальнейшие действия
+
+- [Руководство по установке BHOLD](../deploy-use/bhold-installation-guide.md)
+- [Справочник разработчика BHOLD](../reference/mim2016-bhold-developer-reference.md)
+- [Журнал версий BHOLD](../reference/version-bhold-history.md)

@@ -2,21 +2,21 @@
 title: "Основные сведения о компонентах PAM | Документация Майкрософт"
 description: "Privileged Access Management имеет некоторые общие с MIM компоненты, а также свои собственные. Подробнее о том, как они работают вместе."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="understand-the-components-of-pam"></a>Основные сведения о компонентах управления привилегированным доступом
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 07/13/2017
 
 Решение MIM, настроенное для PAM, содержит следующие компоненты:  
 
-- **Служба MIM** — реализует бизнес-логику для управления удостоверениями и доступом, в том числе для управления привилегированными учетными записями и обработки запросов на повышение доступа.   
+- **Служба MIM** — реализует бизнес-логику для управления удостоверениями и доступом, в том числе для управления привилегированными учетными записями и обработки запросов на повышение доступа.
 - **Портал MIM** — портал на основе SharePoint, размещенный в SharePoint 2013. Он предоставляет возможности управления администраторами и пользовательский интерфейс для настройки.
 - **База данных службы MIM** (хранится в SQL Server 2012 и 2014) — содержит данные удостоверений и метаданные, необходимые для службы MIM.
 - **Служба мониторинга PAM и служба компонента PAM** — две службы, которые управляют жизненным циклом привилегированных учетных записей и помогают **PRIV AD** в течение жизненного цикла членства в группах.

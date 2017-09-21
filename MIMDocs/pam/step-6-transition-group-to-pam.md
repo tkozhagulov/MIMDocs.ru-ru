@@ -2,21 +2,21 @@
 title: "Развертывание PAM. Шаг 6 — перемещение группы | Документация Майкрософт"
 description: "Перенесите группу в лес PRIV, чтобы применить к ней Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: aeffca2c4e5467ec039c2077a88f36a652493e90
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 550ad1e68ed8464dc7361e7a35ef35ee97753a9a
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Шаг 6. Перевод группы в управление привилегированных доступом (PAM)
 
@@ -37,38 +37,38 @@ ms.lasthandoff: 07/13/2017
 
 2.  Запустите PowerShell и введите следующие команды:
 
-    ```
-    Import-Module MIMPAM
-    Import-Module ActiveDirectory
-    ```
+```PowerShell
+   Import-Module MIMPAM
+   Import-Module ActiveDirectory
+```
 
 3.  В PRIV создайте соответствующую учетную запись для пользователя в существующем лесу в целях демонстрации.
 
     В PowerShell введите следующие команды:  Если вы не использовали имя *Jen* для создания пользователя в contoso.local ранее, измените параметры команды соответствующим образом. Пароль 'Pass@word1' указан для примера. Его необходимо заменить уникальным значением.
 
-    ```
-    $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
-    $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-    Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-    Set-ADUser –identity priv.Jen –Enabled 1
-    ```
+ ```PowerShell
+        $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+        $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+        Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+        Set-ADUser –identity priv.Jen –Enabled 1
+  ```
 
 4. Для целей демонстрации скопируйте группу и ее члена Jen из CONTOSO в домен PRIV.
 
     Выполните следующие команды, указав пароль администратора домена CORP (CONTOSO\Administrator) при появлении запроса:
 
-        ```
+ ```PowerShell
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
         $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
         $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
-        ```
+ ```
 
     Команду **New-PAMGroup** можно использовать со следующими параметрами:
 
-        -   The CORP forest domain name in NetBIOS form  
-        -   The name of the group to copy from that domain  
-        -   The CORP forest Domain Controller NetBIOS name  
-        -   The credentials of an domain admin user in the CORP forest  
+     -   имя леса домена CORP в формате NetBIOS;  
+     -   имя группы, которая будет скопирована из этого домена;  
+     -   NetBIOS-имя контроллера домена леса COPR;  
+     -   учетные данные администратора домена в лесу CORP.  
 
 5.  На компьютере CORPDC удалите учетную запись Jen из группы **CONTOSO CorpAdmins**, если она все еще присутствует (по желанию).  Она нужна только для демонстрации, чтобы показать, как сопоставить разрешения с учетными записями, созданными в лесу PRIV.
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 07/13/2017
 
     2.  Запустите PowerShell, выполните следующую команду и подтвердите изменение.
 
-        ```
+        ```PowerShell
         Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
         ```
 

@@ -2,27 +2,26 @@
 title: "Развертывание PAM. Шаг 1 — домен CORP | Документация Майкрософт"
 description: "Подготовьте домен CORP при помощи существующего или нового удостоверения для управления диспетчером привилегированных удостоверений"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Шаг 1. Подготовка узла и домена CORP
 
 >[!div class="step-by-step"]
 [Шаг 2 "](step-2-prepare-priv-domain-controller.md)
-
 
 В этом шаге описывается подготовка к размещению среды бастиона. При необходимости в новом домене и лесу (в лесу *CORP*) также создаются контроллер домена и участвующая рабочая станция с удостоверениями для управления средой бастиона. Этот лес CORP имитирует существующий лес, содержащий ресурсы, которыми нужно управлять. Этот документ содержит пример ресурсов для защиты — общую папку.
 
@@ -57,7 +56,7 @@ ms.lasthandoff: 07/13/2017
 
 2. Введите следующие команды:
 
-  ```
+  ```PowoerShell
   import-module ServerManager
 
   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -81,7 +80,7 @@ ms.lasthandoff: 07/13/2017
 
 2. Введите следующие команды, но вместо CONTOSO укажите имя NetBIOS домена.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -102,7 +101,7 @@ ms.lasthandoff: 07/13/2017
 
 2. Введите следующие команды: Замените пароль Pass@word1 другим паролем.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -140,7 +139,7 @@ ms.lasthandoff: 07/13/2017
 
 8. Примените параметры аудита, открыв окно PowerShell и выполнив следующую команду:
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -154,7 +153,7 @@ ms.lasthandoff: 07/13/2017
 
 2. Введите следующие команды, которые настроят исходный домен, чтобы в нем разрешался удаленный вызов процедур (RPC) для доступа к базе данных диспетчера учетных записей служб (SAM).
 
-  ```
+  ```PowerShell
   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
   Restart-Computer
@@ -193,7 +192,7 @@ ms.lasthandoff: 07/13/2017
 
 4. Введите следующие команды:
 
-  ```
+  ```PowerShell
   mkdir c:\corpfs
 
   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
