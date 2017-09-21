@@ -5,16 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/16/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 61987d5b259830be0cf0bc12832a853e24e9c282
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 2473ef1c3d6fc5350d60d81bd508296a33343f01
+ms.sourcegitcommit: 58d6c628d3bb770669348b987cf8f52ec0576132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Развертывание диспетчера сертификатов Microsoft Identity Manager 2016 (MIM CM)
 
@@ -54,8 +54,7 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="pre-deployment-steps"></a>Предварительные действия
 
-Мастеру настройки диспетчера сертификатов MIM для успешной работы требуются определенные данные, предоставляемые по мере выполнения. Шаги подготовки к развертыванию будут (НЕЗАВЕРШЕННОЕ ПРЕДЛОЖЕНИЕ)
-
+Мастеру настройки диспетчера сертификатов MIM для успешной работы требуются определенные данные, предоставляемые по мере выполнения. 
 ![](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>Расширение схемы
@@ -423,7 +422,7 @@ exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'securityadmin';
 
 ### <a name="configuration-wizard-of-microsoft-identity-manager-2016-certificate-management"></a>Мастер настройки компонента управления сертификатами Microsoft Identity Manager 2016
 
-Прежде чем войти в систему CORPCM, добавьте учетную запись MIMINSTALL в группу  **администраторов домена, администраторов схемы и локальных администраторов** для мастера настройки. Ее можно удалить из этих групп после завершения настройки.      
+Прежде чем войти в систему CORPCM, добавьте учетную запись MIMINSTALL в группу ** администраторов домена, администраторов схемы и локальных администраторов** для мастера настройки. Ее можно удалить из этих групп после завершения настройки.      
     
 ![Сообщение об ошибке](media/mim-cm-deploy/image028.png)
 

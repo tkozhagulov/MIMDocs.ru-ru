@@ -2,21 +2,21 @@
 title: "Планирование среды бастиона | Документация Майкрософт"
 description: 
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/16/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
-ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
+ms.openlocfilehash: 16ad83ab9a0fbe2b93428cf318b5ef138e2f3783
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="planning-a-bastion-environment"></a>Планирование среды бастиона
 
@@ -166,7 +166,7 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 В существующем домене должна быть группа, имя которой представляет собой имя NetBIOS домена с тремя знаками доллара, например *CONTOSO$$$*. Область этой группы должна быть задана как *локальная группа домена*, а ее тип — как *безопасность*. Это потребуется для того, чтобы группы в выделенном административном лесу создавались с тем же идентификатором безопасности, что и группы в этом домене. Такая группа создается с помощью следующей команды PowerShell, выполняемой администратором существующего домена на рабочей станции, присоединенной к существующему домену:
 
-```
+```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
@@ -194,7 +194,7 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 7. Закройте окно редактора управления групповыми политиками и окно управления групповыми политиками. Затем примените параметры аудита, открыв окно PowerShell и выполнив следующую команду:
 
-    ```
+    ```cmd
     gpupdate /force /target:computer
     ```
 
@@ -204,7 +204,7 @@ New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -
 
 Контроллеры домена должны разрешать RPC через соединения TCP/IP для локальной системы безопасности (LSA) из среды бастиона. В предыдущих версиях Windows Server поддержку TCP/IP в LSA следует включить в реестре.
 
-```
+```PowerShell
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
@@ -212,7 +212,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 Командлет `New-PAMDomainConfiguration` необходимо запускать на компьютере службы MIM в административном домене. Параметры этой команды — имя существующего домена и учетные данные администратора этого домена.
 
-```
+```PowerShell
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 

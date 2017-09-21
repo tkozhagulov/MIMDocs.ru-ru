@@ -2,28 +2,27 @@
 title: "Развертывание PAM. Шаг 5 — ссылка на лес | Документация Майкрософт"
 description: "Установите отношение доверия между лесами PRIV и CORP таким образом, чтобы привилегированные пользователи в PRIV могли обращаться к ресурсам в CORP."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 6d57b09508d4c0834619be0281fb373d9d3d361e
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Шаг 5. Установка отношений доверия между лесами PRIV и CORP
 
 >[!div class="step-by-step"]
 [« Шаг 4](step-4-install-mim-components-on-pam-server.md)
 [Шаг 6 »](step-6-transition-group-to-pam.md)
-
 
 Контроллеры доменов PRIV и CONTOSO должны быть связаны отношением доверия с каждым доменом CORP (например, contoso.local). Это позволит пользователям в домене PRIV получить доступ к ресурсам в домене CORP.
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 07/13/2017
 
 2.  Убедитесь, что каждый существующий контроллер домена CORP способен маршрутизировать имена до леса PRIV. На каждом контроллере домена за пределами леса PRIV, например CORPDC, запустите PowerShell и введите следующую команду:
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     Убедитесь, что результат выполнения этой команды содержит запись nameserver для домена PRIV с правильным IP-адресом.
@@ -55,14 +54,14 @@ ms.lasthandoff: 07/13/2017
 
 3.  Введите следующие команды PowerShell для каждого существующего леса. По запросу введите учетные данные администратора домена CORP (CONTOSO\Administrator).
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
 4.  Введите следующие команды PowerShell для каждого домена в существующем лесу. По запросу введите учетные данные администратора домена CORP (CONTOSO\Administrator).
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
@@ -80,9 +79,9 @@ ms.lasthandoff: 07/13/2017
 7.  В списке типичных задач выберите **Чтение информации обо всех пользователях**, нажмите кнопку **Далее**, а затем **Готово**.  
 8.  Закройте окно "Пользователи и компьютеры Active Directory".
 
-9.  Откройте окно PowerShell.  
-10.  Используйте команду `netdom`, чтобы включить журнал идентификаторов безопасности и отключить фильтрацию SID. Введите команду:  
-    ```
+9.  Откройте окно PowerShell.
+10.  Используйте команду `netdom`, чтобы включить журнал идентификаторов безопасности и отключить фильтрацию SID. Введите команду:
+    ```cmd
     netdom trust contoso.local /quarantine /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
@@ -98,7 +97,7 @@ ms.lasthandoff: 07/13/2017
 
 3.  Введите следующие команды PowerShell.
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```

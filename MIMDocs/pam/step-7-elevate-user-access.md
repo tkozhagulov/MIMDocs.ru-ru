@@ -2,21 +2,21 @@
 title: "Развертывание PAM. Шаг 7 — пользовательский доступ | Документация Майкрософт"
 description: "На завершающем этапе предоставьте временный доступ привилегированному пользователю, чтобы продемонстрировать успешное развертывание Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-7--elevate-a-users-access"></a>Шаг 7. Повышение прав доступа пользователя
 
@@ -27,6 +27,7 @@ ms.lasthandoff: 07/13/2017
 На этом шаге показано, как пользователь может запросить доступ к роли с помощью MIM.
 
 ## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Проверка того, что Jen не может получить доступ к привилегированному ресурсу
+
 Без повышенных прав Jen не может получить доступ к привилегированному ресурсу в лесу CORP.
 
 1. Выйдите из CORPWKSTN, чтобы удалить все открытые кэшированные подключения.
@@ -36,9 +37,10 @@ ms.lasthandoff: 07/13/2017
 5. Не закрывайте окно командной строки.
 
 ## <a name="request-privileged-access-from-mim"></a>Запросите привилегированный доступ в MIM.
+
 1. На компьютере CORPWKSTN также под именем CONTOSO\Jen введите следующую команду.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -48,7 +50,7 @@ ms.lasthandoff: 07/13/2017
     > [!NOTE]
     > После выполнения этих команд все перечисленные ниже действия имеют ограничения по времени.
 
-    ```
+    ```PowerShell
     Import-module MIMPAM
     $r = Get-PAMRoleForRequest | ? { $_.DisplayName –eq "CorpAdmins" }
     New-PAMRequest –role $r
@@ -58,7 +60,7 @@ ms.lasthandoff: 07/13/2017
 4. Затем закройте окно PowerShell.
 5. В окне командной строки DOS введите следующую команду:
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 07/13/2017
 ## <a name="validate-the-elevated-access"></a>Проверьте повышенные права доступа.
 В новом окне введите следующие команды.
 
-```
+```cmd
 whoami /groups
 dir \\corpwkstn\corpfs
 ```
@@ -75,12 +77,13 @@ dir \\corpwkstn\corpfs
 Если команда dir вызывает ошибку **Доступ запрещен**, проверьте отношения доверия.
 
 ## <a name="activate-the-privileged-role"></a>Активация привилегированной роли
+
 Выполните активацию, запросив привилегированный доступ на примере портала PAM.
 
 1. На компьютере CORPWKSTN выполните вход под именем CORP\Jen.
 2. В окне командной строки DOS введите следующую команду:
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local "c:\program files\Internet Explorer\iexplore.exe"
     ```
 
@@ -95,6 +98,7 @@ dir \\corpwkstn\corpfs
 > В этой среде также можно попробовать разрабатывать приложения, которые используют API REST PAM, описанный в [Справочнике по API REST системы управления привилегированным доступом (PAM)](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference).
 
 ## <a name="summary"></a>Сводка
+
 Выполнив действия, описанные в этом руководстве, вы сможете воспроизвести сценарий управления привилегированным доступом, в котором права пользователя повышаются на ограниченное время, что позволяет пользователю получить доступ к защищенным ресурсам под отдельной привилегированной учетной записью. Сразу после окончания сеанса повышение прав привилегированная учетная запись теряет доступ к защищенному ресурсу. Решение о том, какие группы безопасности представляют привилегированные роли, принимает администратор PAM. После переноса прав доступа в систему управления привилегированным доступом ранее возможный доступ с исходной учетной записью пользователя предоставляется только при входе с помощью специальной привилегированной учетной записи и только по запросу. В результате членства в группах для привилегированных групп действуют ограниченное время.
 
 >[!div class="step-by-step"]

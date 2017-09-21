@@ -2,10 +2,10 @@
 title: "Развертывание PAM. Шаг 3 — сервер PAM | Документация Майкрософт"
 description: "Подготовьте сервер PAM, где будет размещаться SQL и SharePoint для развертывания Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,11 +13,11 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: fd52a191a0592441131249451011c4e2f026ea48
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Шаг 3. Подготовка сервера PAM
 
@@ -26,6 +26,7 @@ ms.lasthandoff: 07/13/2017
 [Шаг 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Установка Windows Server 2012 R2
+
 Установите Windows Server 2012 R2, а именно Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64, на третьей виртуальной машине, чтобы создать компьютер *PAMSRV*. Поскольку на этом компьютере будут установлены SQL Server и SharePoint 2013, требуется как минимум 8 ГБ ОЗУ.
 
 1. Выберите редакцию **Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64**.
@@ -46,13 +47,14 @@ ms.lasthandoff: 07/13/2017
 
 
 ### <a name="add-the-web-server-iis-and-application-server-roles"></a>Добавление ролей веб-сервера (IIS) и сервера приложений
+
 Добавьте роли Web Server (IIS) и Application Server, компоненты .NET Framework 3.5, модуль Active Directory для Windows PowerShell и другие компоненты, необходимые SharePoint.
 
 1.  Выполните вход как администратор домена PRIV (PRIV\Administrator) и запустите PowerShell.
 
 2.  Введите следующие команды: Обратите внимание, что может потребоваться указать другое расположение исходных файлов для компонентов .NET Framework 3.5. Эти компоненты обычно отсутствуют при установке Windows Server, но доступны в папке параллельного размещения (SxS), находящейся в папке sources на установочном диске ОС, например "d:\Sources\SxS\".
 
-    ```
+    ```PowerShell
     import-module ServerManager
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,
     rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,
@@ -61,6 +63,7 @@ ms.lasthandoff: 07/13/2017
     ```
 
 ### <a name="configure-the-server-security-policy"></a>Настройка политики безопасности сервера
+
 Настройте политику безопасности сервера так, чтобы новые учетные записи могли работать как службы.
 
 1.  Запустите программу **локальной политики безопасности** .   
@@ -68,45 +71,49 @@ ms.lasthandoff: 07/13/2017
 3.  В области сведений щелкните правой кнопкой мыши команду **Вход в качестве службы**и выберите пункт **Свойства**.  
 4.  Нажмите кнопку **Добавить пользователя или группу** и введите в разделе "Имена пользователей и групп" *priv\mimmonitor; priv\MIMService; priv\SharePoint; priv\mimcomponent; priv\SqlServer*. Щелкните **Проверить имена** и нажмите кнопку **ОК**.  
 
-5.  Нажмите кнопку **ОК**, чтобы закрыть окно "Свойства".  
+5.  Нажмите кнопку **ОК**, чтобы закрыть окно "Свойства".
 6.  В области сведений щелкните правой кнопкой мыши команду **Отказать в доступе к этому компьютеру из сети** и выберите пункт **Свойства**.  
 7.  Нажмите кнопку **Добавить пользователя или группу**, введите в разделе "Имена пользователей и групп" *priv\mimmonitor; priv\MIMService; priv\mimcomponent* и нажмите кнопку **ОК**.  
-8.  Нажмите кнопку **ОК**, чтобы закрыть окно "Свойства".  
+8.  Нажмите кнопку **ОК**, чтобы закрыть окно "Свойства".
 
 9. В области сведений щелкните правой кнопкой мыши команду **Запретить локальный вход** и выберите пункт **Свойства**.  
 10. Нажмите кнопку **Добавить пользователя или группу**, введите в разделе "Имена пользователей и групп" *priv\mimmonitor; priv\MIMService; priv\mimcomponent* и нажмите кнопку **ОК**.  
 11. Нажмите кнопку **ОК**, чтобы закрыть окно "Свойства".  
 12. Закройте окно "Локальная политика безопасности".  
 
-13. Откройте панель управления и выберите пункт **Учетные записи пользователей**.  
-14. Щелкните **Предоставить общий доступ к этому компьютеру**.  
+13. Откройте панель управления и выберите пункт **Учетные записи пользователей**.
+14. Щелкните **Предоставить общий доступ к этому компьютеру**.
 15. Нажмите кнопку **Добавить**, введите имя пользователя *MIMADMIN* в домене *PRIV*, а на следующем экране мастера нажмите кнопку **Добавить этого пользователя с правами администратора**.  
 16. Нажмите кнопку **Добавить**, введите имя пользователя *SharePoint* в домене *PRIV*, а на следующем экране мастера нажмите кнопку **Добавить этого пользователя с правами администратора**.  
-17. Закройте панель управления.  
+17. Закройте панель управления.
 
 ### <a name="change-the-iis-configuration"></a>Изменение конфигурации IIS
+
 Изменить конфигурацию IIS для того, чтобы приложения могли использовать режим проверки подлинности Windows, можно двумя способами. Войдите в систему как MIMAdmin, а затем выберите один из следующих вариантов.
 
 Если вы хотите использовать PowerShell:
-1.  Щелкните PowerShell правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.  
-2.  Остановите службы IIS и разблокируйте параметры узла приложения с помощью этих команд:  
-    ```
+
+1.  Щелкните PowerShell правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.
+2.  Остановите службы IIS и разблокируйте параметры узла приложения с помощью этих команд:
+    ```CMD
     iisreset /STOP
     C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
     iisreset /START
     ```
 
-Если вы хотите использовать текстовый редактор, например Блокнот:   
-1. Откройте файл **C:\Windows\System32\inetsrv\config\applicationHost.config**   
+Если вы хотите использовать текстовый редактор, например Блокнот:
+
+1. Откройте файл **C:\Windows\System32\inetsrv\config\applicationHost.config**
 2. Прокрутите файл вниз до строки 82. Тег **overrideModeDefault** должен иметь значение **<section name="windowsAuthentication" overrideModeDefault="Deny" />**  
 3. Измените значение **overrideModeDefault** на *Разрешить*  
 4. Сохраните этот файл и перезапустите IIS с помощью команды PowerShell `iisreset /START`
 
 ## <a name="install-sql-server"></a>Установите SQL Server
+
 Если в среде бастиона еще не присутствует SQL Server, установите SQL Server 2012 (пакет обновления 1 или более поздней версии) или SQL Server 2014. Ниже предполагается, что используется SQL 2014.
 
 1. Выполните вход как MIMAdmin.
-2. Щелкните PowerShell правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.   
+2. Щелкните PowerShell правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.
 3. Перейдите в каталог, где находится программа установки SQL Server.  
 4. Введите следующую команду:  
     ```
@@ -133,6 +140,7 @@ ms.lasthandoff: 07/13/2017
 5.  После завершения установки запустите мастер.  
 
 ### <a name="configure-sharepoint"></a>Настройка SharePoint
+
 Запустите мастер настройки продуктов SharePoint, чтобы настроить SharePoint.
 
 1.  На вкладке "Подключение к ферме серверов" выберите пункт **Создать ферму серверов**.  
@@ -146,13 +154,14 @@ ms.lasthandoff: 07/13/2017
 9. В окне создания семейства веб-сайтов нажмите кнопку **Пропустить**, а затем **Готово**.  
 
 ## <a name="create-a-sharepoint-foundation-2013-web-application"></a>Создание веб-приложения SharePoint Foundation 2013
+
 После завершения работы мастера создайте с помощью PowerShell веб-приложение SharePoint Foundation 2013 для размещения портала MIM. Поскольку это пошаговое руководство предназначено для демонстрации, SSL не включается.
 
 1.  Щелкните консоль управления SharePoint 2013 правой кнопкой мыши, выберите пункт **Запуск от имени администратора** и запустите следующий сценарий PowerShell:
 
-    ```
+    ```PowerShell
     $dbManagedAccount = Get-SPManagedAccount -Identity PRIV\SharePoint
-    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"            -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://PAMSRV.priv.contoso.local
     ```
 
 2. Появится предупреждение о том, что используется классический метод проверки подлинности Windows, и для выполнения завершающей команды может потребоваться несколько минут.  По завершении в выходных данных будет указан URL-адрес нового портала.
@@ -161,11 +170,12 @@ ms.lasthandoff: 07/13/2017
 > Не закрывайте окно командной консоли SharePoint 2013 — оно вам потребуется на следующем шаге.
 
 ## <a name="create-a-sharepoint-site-collection"></a>Создание семейства веб-сайтов SharePoint
+
 Создайте семейство веб-сайтов SharePoint, связанное с этим веб-приложением, для размещения портала MIM.
 
 1.  Запустите **командную консоль SharePoint 2013**, если она еще не открыта, и выполните следующий сценарий PowerShell:
 
-    ```
+    ```PowerShell
     $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
     $w = Get-SPWebApplication http://pamsrv.priv.contoso.local:82
     New-SPSite -Url $w.Url -Template $t -OwnerAlias PRIV\MIMAdmin                -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias PRIV\BackupAdmin
@@ -178,7 +188,7 @@ ms.lasthandoff: 07/13/2017
 
 2.  В **командной консоли SharePoint 2013** выполните следующие команды PowerShell: Это приведет к отключению состояния просмотра на стороне сервера SharePoint Server и задачам SharePoint **Задание анализа работоспособности (каждый час, Microsoft SharePoint Foundation Timer, все серверы)**.
 
-    ```
+    ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
     $contentService.ViewStateOnServer = $false;
     $contentService.Update();
