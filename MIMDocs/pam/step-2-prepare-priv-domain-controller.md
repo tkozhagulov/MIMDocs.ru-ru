@@ -2,21 +2,21 @@
 title: "Развертывание PAM. Шаг 2 — PRIV DC | Документация Майкрософт"
 description: "Подготовьте контроллер домена PRIV, предоставляющий среду бастиона, где изолировано Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/14/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: de3392648f187ce6007bba332c0f191d32980c94
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Шаг 2. Подготовка первого контроллера домена PRIV
 
@@ -31,6 +31,7 @@ ms.lasthandoff: 07/13/2017
 В этом разделе описывается настройка виртуальной машины как контроллера домена для нового леса.
 
 ### <a name="install-windows-server-2012-r2"></a>Установка Windows Server 2012 R2
+
 На еще одной виртуальной машине без установленного ПО установите Windows Server 2012 R2, чтобы создать компьютер "PRIVDC".
 
 1. Выберите, чтобы выполнить выборочную установку Windows Server (а не обновление). При установке выберите выпуск **Windows Server 2012 R2 Standard (сервер с графическим интерфейсом пользователя) x64**. _Не выбирайте_ **Data Center или Server Core**.
@@ -44,13 +45,14 @@ ms.lasthandoff: 07/13/2017
 5. После перезагрузки сервера войдите от имени администратора. С помощью панели управления настройте компьютер для проверки обновлений и установите все необходимые обновления. Для этого может потребоваться перезагрузка сервера.
 
 ### <a name="add-roles"></a>Добавление ролей
+
 Выберите роли "Доменные службы Active Directory" и "DNS-сервер".
 
 1. Запустите PowerShell от имени администратора.
 
 2. Введите указанные ниже команды, чтобы подготовить среду к установке Windows Server Active Directory.
 
-  ```
+  ```PowerShell
   import-module ServerManager
 
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -60,7 +62,7 @@ ms.lasthandoff: 07/13/2017
 
 Запустите PowerShell и введите следующие команды, чтобы настроить исходный домен, разрешив в нем удаленный вызов процедур (RPC) для доступа к базе данных диспетчера учетных записей безопасности (SAM).
 
-```
+```PowerShell
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
@@ -74,9 +76,8 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 1. В окне PowerShell введите указанные ниже команды для создания домена.  При этом на старшем домене (contoso.local), созданном в предыдущем шаге, будет также создано делегирование DNS.  Если вы хотите настроить DNS позже, опустите параметры `CreateDNSDelegation -DNSDelegationCredential $ca`.
 
-  ```
+  ```PowerShell
   $ca= get-credential
-
   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
   ```
 
@@ -87,13 +88,14 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 После создания леса сервер перезагрузится автоматически.
 
 ### <a name="create-user-and-service-accounts"></a>Создание учетных записей пользователей и служб
+
 Создайте учетные записи пользователей и служб для настройки службы и портала MIM. Эти учетные записи перейдут в контейнер "Пользователи" домена priv.contoso.local.
 
 1. После перезагрузки сервера войдите на компьютер PRIVDC как администратор домена (PRIV\\Administrator).
 
 2. Запустите PowerShell и введите следующие команды: Пароль 'Pass@word1' указан для примера. Используйте другой пароль для учетных записей.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
@@ -159,7 +161,7 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 ### <a name="configure-auditing-and-logon-rights"></a>Настройте права аудита и входа в систему.
 
-Для установки конфигурации управления привилегированным доступом в лесах необходимо настроить аудит.  
+Для установки конфигурации управления привилегированным доступом в лесах необходимо настроить аудит.
 
 1. Войдите в систему как администратор домена (PRIV\\Администратор).
 
@@ -199,7 +201,7 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 19. Откройте окно PowerShell от имени администратора и введите следующую команду, чтобы обновить контроллер домена согласно параметрам групповой политики.
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -216,7 +218,7 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
   Если на предыдущем шаге вы создали один домен contoso.local, укажите в качестве IP-адреса виртуальной сети компьютера CORPDC значение *10.1.1.31*.
 
-  ```
+  ```PowerShell
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
@@ -227,7 +229,7 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 1. Используя PowerShell, добавьте имена субъектов-служб, чтобы SharePoint, API REST управления привилегированным доступом и служба MIM могли использовать проверку подлинности Kerberos.
 
-  ```
+  ```cmd
   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
   setspn -S http/pamsrv PRIV\SharePoint
   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
@@ -241,25 +243,24 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 Выполните на компьютере PRIVDC описанные ниже действия как администратор домена.
 
-1. Запустите **Пользователи и компьютеры Active Directory**.  
-2. Щелкните правой кнопкой мыши домен **priv.contoso.local** и выберите **Делегировать управление**.  
-3. На вкладке "Выбранные пользователи и группы" нажмите кнопку **Добавить**.  
-4. В окне "Выбор пользователей, компьютеров или групп" введите *mimcomponent; mimmonitor; mimservice* и нажмите кнопку **Проверить имена**. Когда имена будут подчеркнуты, нажмите кнопки **ОК** и **Далее**.  
+1. Запустите **Пользователи и компьютеры Active Directory**.
+2. Щелкните правой кнопкой мыши домен **priv.contoso.local** и выберите **Делегировать управление**.
+3. На вкладке "Выбранные пользователи и группы" нажмите кнопку **Добавить**.
+4. В окне "Выбор пользователей, компьютеров или групп" введите *mimcomponent; mimmonitor; mimservice* и нажмите кнопку **Проверить имена**. Когда имена будут подчеркнуты, нажмите кнопки **ОК** и **Далее**.
 5. В списке общих задач выберите **Создание, удаление учетных записей пользователей и управление ими** и **Изменить членство в группе**, затем нажмите кнопку **Далее**, а затем **Готово**.
 
-6. Еще раз щелкните правой кнопкой мыши **домен priv.contoso.local** и выберите **Делегирование управления**.  
+6. Еще раз щелкните правой кнопкой мыши **домен priv.contoso.local** и выберите **Делегирование управления**.
 7. На вкладке "Выбранные пользователи и группы" нажмите кнопку **Добавить**.  
-8. В окне "Выбор пользователей, компьютеров или групп" введите *MIMAdmin* и нажмите кнопку **Проверить имена**. Когда имена будут подчеркнуты, нажмите кнопки **ОК** и **Далее**.  
-9. Выберите **пользовательскую задачу**, задайте ее применение **в этой папке**и выберите **Общие разрешения**.    
-10. В списке разрешений выберите следующие пункты:  
-  - **Чтение**  
-  - **Запись**  
-  - **Создание всех дочерних объектов**  
-  - **Удаление всех дочерних объектов**  
-  - **Чтение всех свойств**  
-  - **Запись всех свойств**  
-  - **Миграция журнала SID**  
-  Щелкните **Далее** , затем **Готово**.
+8. В окне "Выбор пользователей, компьютеров или групп" введите *MIMAdmin* и нажмите кнопку **Проверить имена**. Когда имена будут подчеркнуты, нажмите кнопки **ОК** и **Далее**.
+9. Выберите **пользовательскую задачу**, задайте ее применение **в этой папке**и выберите **Общие разрешения**.
+10. В списке разрешений выберите следующие пункты:
+  - **Чтение**
+  - **Запись**
+  - **Создание всех дочерних объектов**
+  - **Удаление всех дочерних объектов**
+  - **Чтение всех свойств**
+  - **Запись всех свойств**
+  - **Миграция журнала SID** Нажмите кнопку **Далее**, затем — **Готово**.
 
 11. Еще раз щелкните правой кнопкой мыши **домен priv.contoso.local** и выберите **Делегирование управления**.  
 12. На вкладке "Выбранные пользователи и группы" нажмите кнопку **Добавить**.  
@@ -269,15 +270,17 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 16. Закройте окно "Пользователи и компьютеры Active Directory".
 
 17. Откройте командную строку.  
-18. Просмотрите список управления доступом в объекте "Владелец SD администратора" в доменах PRIV. Например, если используется домен priv.contoso.local, введите команду  
-  ```
+18. Просмотрите список управления доступом в объекте "Владелец SD администратора" в доменах PRIV. Например, если используется домен priv.contoso.local, введите команду
+  ```cmd
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
-19. При необходимости обновите список управления доступом, чтобы служба MIM и служба компонента MIM могли обновлять членства групп, защищаемых этим списком.  Введите команду:  
-  ```
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
-  ```
+19. При необходимости обновите список управления доступом, чтобы служба MIM и служба компонента MIM могли обновлять членства групп, защищаемых этим списком.  Введите команду:
+
+```cmd
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+```
+
 20. Перезапустите сервер PRIVDC, чтобы эти изменения вступили в силу.
 
 ## <a name="prepare-a-priv-workstation"></a>Подготовка рабочей станции PRIV
