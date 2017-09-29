@@ -125,6 +125,7 @@
 #### [Утверждение или отклонение ожидающего запроса PAM](./reference/privileged-access-management-approve-reject-pending-request.md)
 #### [Получение сведений о сеансе PAM](./reference/privileged-access-management-get-session-info.md)
 ## Техническая справочная информация
+### [Microsoft Identity Manager 2016 (MIM) с пакетом обновления 1 (SP1)](./reference/mim-2016-sp1-terms.md)
 ### [Справочник по XML конфигурации отображения элемента управления ресурса](./reference/rcd-configuration-xml-reference.md)
 ### [Коды ошибок запуска агента управления](./reference/maerrorcodes.md)
 ### [Справочник по функциям для Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
