@@ -4,19 +4,19 @@ description: "Гибридные отчеты о действиях аудита
 keywords: 
 author: fimguy
 ms.author: fimguy
-manager: femila
-ms.date: 04/28/2017
+manager: bhu
+ms.date: 09/28/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
-ms.reviewer: mwahl
+ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: 678626e7c32659570de88d8178c16821cceaf7ee
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 151fbd26011ca76901d181131a88ded8a718a27a
+ms.sourcegitcommit: 0f99de31fe6b52ec692b3886073909f549a451d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Отчеты аудита управления гибридными удостоверениями в Azure Active Directory — общедоступная предварительная версия (обновление)
 Отчеты о действиях аудита Azure Active Directory (AD) позволяют просматривать единый отчет для мониторинга управления удостоверениями и локально, и в облаке. Эта функция позволяет управлять всеми удостоверениями и просматривать данные в одном месте, что экономит время и сокращает общие затраты.
@@ -41,6 +41,9 @@ ms.lasthandoff: 07/13/2017
 4. Данные о действиях хранятся в Azure один месяц.
 5. Портал Azure извлекает данные отчетов аудита и отображает их как аудит в колонке отчетов аудита Azure.
 
-## <a name="see-also"></a>См. также
+## <a name="next-steps"></a>Дальнейшие действия
 - Дополнительные сведения см. в статье [Работа с гибридными отчетами диспетчера удостоверений](working-with-identity-manager-hybrid-reporting.md).
 - Дополнительные сведения см. в статье [Отчеты о действиях аудита на портале Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Дополнительные сведения о [политиках хранения отчетов](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
+- Дополнительные сведения об [интеграции журналов Microsoft Azure (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
+- Дополнительные сведения об [API отчетов Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
