@@ -5,7 +5,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: femila
-ms.date: 08/11/2017
+ms.date: 10/5/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,11 +13,11 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 4c1576d8ee2d3edfe1a522131046b9a3afacf998
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.openlocfilehash: dd93c5bd4439aa6a485e1fcd6eaff970f07249b3
+ms.sourcegitcommit: ce027818d34f170b7bd216337751c646e0eb8ced
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Поддерживаемые платформы для MIM 2016
 
@@ -32,14 +32,15 @@ ms.lasthandoff: 09/15/2017
 | | Exchange для подготовки почтовых ящиков и синхронизации GAL (необязательно)|Exchange Server 2010 с пакетом обновления 3 (SP3)<br/>Exchange Server 2013 с пакетом обновления 1 (SP1)<br/>Exchange Server 2016* |
 | | Среда разработки (необязательно) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017* |
 | | Дополнительная подключенная система (необязательно) | Доменные службы Active Directory<br/>Active Directory<br/>Службы облегченного доступа к каталогам<br/>SQL Server 2008 или более поздней версии<br/>SharePoint Server 2013<br/> SharePoint Server 2016* <br/> Другие продукты сторонних производителей |
-| **Служба и портал MIM** | Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016* |
-| | Active Directory для леса PAM в среде бастиона | Windows Server 2012 R2 <br/> Windows Server 2016* |
-| | Active Directory для существующих лесов PAM | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016* |
-| | База данных службы MIM | SQL Server 2008 R2 с пакетом обновления 3 (SP3)<br/>SQL Server 2012 с пакетом обновления 2 (SP2)<br/>SQL Server 2014 с пакетом обновления 1 (SP1) <br/> SQL Server 2016* |
+| **Служба и портал MIM** | Windows Server | Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016* |
+| |В сценарии PAM: Windows Server | Windows Server 2012 R2 <br/> Windows Server 2016* |
+| |В сценарии PAM: Active Directory для леса PAM в среде бастиона | Windows Server 2012 R2 <br/> Windows Server 2016* |
+| |В сценарии PAM: Active Directory для существующих лесов PAM (CORP) | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016* |
+| | База данных службы MIM | SQL Server 2008 R2 с пакетом обновления 3 (SP3)<br/>SQL Server 2012 с пакетом обновления 2 (SP2)<br/>SQL Server 2014 с пакетом обновления 1 (SP1) <br/> SQL Server 2016 |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 с пакетом обновления 1 (SP1) <br/> SharePoint 2016* |
 | | Почтовый сервер для утверждения службы MIM и сообщений электронной почты для управления группами (необязательно) | Exchange Server 2010 с пакетом обновления 3 (SP3)<br/>Exchange Server 2013 с пакетом обновления 1 (SP1) <br/> Exchange Server 2016 * <br/> Exchange Online * (только уведомления) |
 | | Браузер | Все основные браузеры * (ограничено мобильными устройствами)|
-| **Отчеты службы MIM** | Windows Server | Windows Server 2012 <br/> Windows Server 2016* |
+| **Отчеты службы MIM** | Windows Server |  Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br/>Windows Server 2012 <br/>Windows Server 2012 R2 <br/> Windows Server 2016* |
 | | Хранилище данных | System Center 2012 Service Manager <br/> Диспетчер служб System Center 2012 R2 </br> System Center 2016 Service Manager * (с версией 4.4.1459)<br/> [Совместимость версий SQL Server для System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)
  |
 | **Порталы сброса пароля и регистрации MIM** | Windows Server | Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016* |
