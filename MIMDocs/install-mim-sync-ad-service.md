@@ -63,7 +63,7 @@ ms.lasthandoff: 07/13/2017
 
     -   Имя пользователя: mimma
 
-    -   Пароль: Pass@word
+    -   Пароль: Pass@word 
 
     -   Домен: contoso
 
