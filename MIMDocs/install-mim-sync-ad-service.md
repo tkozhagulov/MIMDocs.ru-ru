@@ -3,20 +3,20 @@ title: "Использование службы синхронизации Micro
 description: "Используйте агенты управления и службу синхронизации MIM, чтобы синхронизировать базы данных Active Directory и MIM."
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4ad41fc9679be702ab17fb5bef5d3efab5ff5adc
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 31cc9a61bbcb309dae4ee4d09654432d08bf1e28
+ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Установка MIM 2016: синхронизация Active Directory и службы MIM
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 07/13/2017
 
     -   Имя пользователя: mimma
 
-    -   Пароль: Pass@word 
+    -   Пароль: Pass@word
 
     -   Домен: contoso
 
