@@ -3,20 +3,20 @@ title: "Запрос сертификатов в диспетчере серти
 description: "Узнайте, как использовать диспетчер сертификатов для создания и обновления сертификатов программного обеспечения с помощью шаблонов профилей."
 keywords: 
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/23/2017
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 10/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: aebf5af709f4f775ce13be49d8f9075a94e864a2
+ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Создание сертификатов программного обеспечения с помощью диспетчера сертификатов
 Для регистрации и обновления сертификатов программного обеспечения права администратора и виртуальная смарт-карта не нужны. Обратите внимание, что на определенном этапе вам будет предложено разрешить операцию с сертификатом — это нормально.
