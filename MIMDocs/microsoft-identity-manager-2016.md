@@ -5,18 +5,18 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 21bb12a70850a5f835ca6715d9683558ac6fad1d
-ms.sourcegitcommit: f2778c5fa5f0cd04e8a74fc15fa340cd118dded5
+ms.openlocfilehash: cd8191e3fdf571f4140bcdd51c54aa25bd663215
+ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 
@@ -24,13 +24,13 @@ Microsoft Identity Manager (MIM) 2016 основан на возможност
 
 В дополнение к существующим функциям управления удостоверениями, включенным в [FIM](https://technet.microsoft.com/library/jj133868), MIM 2016 предоставляет новые возможности и улучшения, например:
 
-- Управление привилегированными пользователями.
+- Управление привилегированными пользователями
 - Новые функции управления сертификатами:
-  - [справочник по API REST управления сертификатами](./reference/certificate-management-rest-api-reference.md);
+  - [Справочник по API REST управления сертификатами](./reference/certificate-management-rest-api-reference.md)
   - поддержка топологий с несколькими лесами;
-  - приложение Windows для виртуальной смарт-карты;
+  - [Приложение Windows для виртуальной смарт-карты](working-with-mim-certificate-manager.md)
   - обновленные события и возможности устранения неполадок. 
-- Теперь сценарии самообслуживания включают разблокирование учетных записей и шлюз Azure MFA (многофакторной проверки подлинности) для сброса пароля.
+- [Сценарии самообслуживания](working-with-self-service-password-reset.md) теперь включают разблокирование учетных записей и шлюз многофакторной проверки подлинности Azure для сброса паролей.
 
 ## <a name="hybrid-experience"></a>Гибридная среда
 
