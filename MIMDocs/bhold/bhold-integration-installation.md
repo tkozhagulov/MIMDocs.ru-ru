@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: ef68de19bd0eabd6d9203469ecc991d496f05846
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Установка модуля BHOLD FIM/MIM Integration
 
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/15/2017
 
 -   *\<полное_доменное_имя_сервера_MIM\>* — полное доменное имя сервера FIM.
 
--   *\<MIM_SSL_Port\> * — другой порт для использования с SSL на сервере FIM.
+-   *\<MIM_SSL_Port\>*  — другой порт для использования с SSL на сервере FIM.
 
 ### <a name="enable-approval-workflows-in-bhold-core"></a>Включение рабочих процессов утверждений в BHOLD Core
 
