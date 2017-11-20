@@ -2,11 +2,11 @@
 layout: LandingPage
 title: "Документация по Microsoft Identity Manager | Документация Майкрософт"
 description: "Сведения об использовании Microsoft Identity Manager."
-ms.openlocfilehash: c49fbae1892bfa0207a1615d11e600fe21d638c8
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 14bfdf808072f236a17431cf4e0634bf287c3a65
+ms.sourcegitcommit: f95369a51ec5edae076505b3b0059f878cdf6e96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Документация по Microsoft Identity Manager
 
@@ -71,7 +71,7 @@ Microsoft Identity Manager 2016 легко объединяет решения 
 ---
 <br>
 >[!Warning]
-Общая поддержка Forefront Identity Manager (FIM) заканчивается 10 октября 2017 г. Проведите [обновление](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) до Microsoft Identity Manager 2016. Дополнительные сведения. </br>  — Сведения о жизненном цикле FIM см. [здесь](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010). </br> — Сведения об общедоступных выпусках продуктов для управления удостоверениями см. в записи [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (ПО Майкрософт для управления удостоверениями: версии сборки общедоступных выпусков).
+Основная фаза поддержки Forefront Identity Manager (FIM) завершилась 10 октября 2017 г. Проведите [обновление](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) до Microsoft Identity Manager 2016. Дополнительные сведения. </br>  — Сведения о жизненном цикле FIM см. [здесь](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010). </br> — Сведения об общедоступных выпусках продуктов для управления удостоверениями см. в записи [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (ПО Майкрософт для управления удостоверениями: версии сборки общедоступных выпусков).
 
 <h2>Справочник</h2>
 <ul class="panelContent cardsFTitle">
