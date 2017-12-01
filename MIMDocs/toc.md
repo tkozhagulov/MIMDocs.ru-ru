@@ -86,6 +86,13 @@
 # [Справочник](./reference/microsoft-identity-manager-2016-developer-reference.md)
 ## Ссылки для разработчиков
 ### [Справочник разработчика MIM 2016](./reference/microsoft-identity-manager-2016-developer-reference.md)
+### Соединитель веб-служб
+#### [Обзор универсального соединителя веб-служб](./reference/microsoft-identity-manager-2016-ma-ws.md)
+#### [Шаги установки для средства веб-настройки](./reference/microsoft-identity-manager-2016-ma-ws-install.md)
+#### [Руководство по рабочему процессу соединителя веб-служб для SOAP](./reference/microsoft-identity-manager-2016-ma-ws-soap.md)
+#### [Руководство по рабочему процессу соединителя веб-служб для примера с REST](./reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
+#### [Пример приложения-службы REST с соединителем веб-служб](./reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
+#### [Параметры конфигурации соединителя веб-служб](./reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
 ### BHOLD
 #### [Справочник разработчика BHOLD](./reference/mim2016-bhold-developer-reference.md) 
 ### [Справочник по API REST управления сертификатами](./reference/certificate-management-rest-api-reference.md)
