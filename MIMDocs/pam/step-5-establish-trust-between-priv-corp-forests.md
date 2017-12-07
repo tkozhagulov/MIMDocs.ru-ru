@@ -5,18 +5,18 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6d57b09508d4c0834619be0281fb373d9d3d361e
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: ba4b94c1f0f0879436e370a7f2f041c720bd1f60
+ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Шаг 5. Установка отношений доверия между лесами PRIV и CORP
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 09/14/2017
 9.  Откройте окно PowerShell.
 10.  Используйте команду `netdom`, чтобы включить журнал идентификаторов безопасности и отключить фильтрацию SID. Введите команду:
     ```cmd
-    netdom trust contoso.local /quarantine /domain priv.contoso.local
+    netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
     На выходе должно быть указано либо **Включение журнала идентификаторов безопасности для этого доверия**, либо **Журнал идентификаторов безопасности для этого доверия уже включен**.
