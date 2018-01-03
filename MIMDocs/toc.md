@@ -93,6 +93,7 @@
 #### [Руководство по рабочему процессу соединителя веб-служб для примера с REST](./reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
 #### [Пример приложения-службы REST с соединителем веб-служб](./reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
 #### [Параметры конфигурации соединителя веб-служб](./reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
+#### [Импортирование соединителя веб-служб](./reference/microsoft-identity-manager-2016-ma-ws-import.md)
 ### BHOLD
 #### [Справочник разработчика BHOLD](./reference/mim2016-bhold-developer-reference.md) 
 ### [Справочник по API REST управления сертификатами](./reference/certificate-management-rest-api-reference.md)
