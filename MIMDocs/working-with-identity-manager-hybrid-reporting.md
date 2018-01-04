@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cf8395583dcfcc2a84237bad80b6a4ca40ce166c
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 17745bfdba831364d32bc2786cc2a38191fe6cc7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Работа с гибридными отчетами в Microsoft Identity Manager — общедоступная предварительная версия (обновление)
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 10/12/2017
 > Необходимо удалить предыдущую версию гибридного агента.</br>
 > Если вы хотите удалить гибридное отчеты, удалите агент MIMreportingAgent.msi.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Предварительные условия
 
 1.  Установите Microsoft Identity Manager 2016 RTM или службу MIM с пакетом обновления 1 (SP1).
 
@@ -50,11 +50,11 @@ ms.lasthandoff: 10/12/2017
 
 | Требование | Описание |
 | --- | --- |
-| Azure AD Premium | Создание гибридных отчетов относится к Azure AD Premium и требует наличия лицензии Azure AD Premium. </br></br>Дополнительные сведения см. в статье [Приступая к работе с Azure Active Directory Premium](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-get-started-premium). </br>Чтобы начать использовать 30-дневную пробную версию, перейдите на [эту страницу](https://azure.microsoft.com/trial/get-started-active-directory/). |
-| Чтобы начать работу, вы должны быть глобальным администратором клиента Azure AD |По умолчанию только глобальные администраторы могут устанавливать и настраивать агенты для начала работы, заходить на портал и выполнять любые операции в Azure. </br></br>**Важно!** Учетная запись, используемая при установке агентов, должна быть рабочей или учебной учетной записью. Учетную запись Майкрософт использовать нельзя. Дополнительные сведения см. в статье [Подпишитесь на Azure как организация](https://docs.microsoft.com/en-us/azure/active-directory/sign-up-organization). |
+| Azure AD Premium | Создание гибридных отчетов относится к Azure AD Premium и требует наличия лицензии Azure AD Premium. </br></br>Дополнительные сведения см. в статье [Приступая к работе с Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium). </br>Чтобы начать использовать 30-дневную пробную версию, перейдите на [эту страницу](https://azure.microsoft.com/trial/get-started-active-directory/). |
+| Чтобы начать работу, вы должны быть глобальным администратором клиента Azure AD |По умолчанию только глобальные администраторы могут устанавливать и настраивать агенты для начала работы, заходить на портал и выполнять любые операции в Azure. </br></br>**Важно!** Учетная запись, используемая при установке агентов, должна быть рабочей или учебной учетной записью. Учетную запись Майкрософт использовать нельзя. Дополнительные сведения см. в статье [Подпишитесь на Azure как организация](https://docs.microsoft.com/azure/active-directory/sign-up-organization). |
 | Гибридный агент Microsoft Identity Manager установлен на каждом целевом сервере службы | Для создания гибридных отчетов необходимо установить агенты на всех целевых серверах, чтобы получать данные и предоставлять функции мониторинга и аналитики. </br>|
 | Исходящие подключения к конечным точкам службы Azure | Во время установки и выполнения агенту требуется подключение к конечным точкам службы Azure. Если исходящее подключение заблокировано с помощью брандмауэров, обязательно добавьте следующие конечные точки в список разрешенных: </br></br><li>*.blob.core.windows.net </li><li>*.servicebus.windows.net — порт: 5671 </li><li>*.adhybridhealth.azure.com/</li><li>https://management.azure.com </li><li>https://policykeyservice.dc.ad.msft.net/</li><li>https://login.windows.net</li><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li> |
-|Исходящее подключение на основе IP-адресов | Сведения о фильтрации в брандмауэрах на основе IP-адресов см. в статье о [диапазонах IP-адресов Azure](https://www.microsoft.com/en-us/download/details.aspx?id=41653).|
+|Исходящее подключение на основе IP-адресов | Сведения о фильтрации в брандмауэрах на основе IP-адресов см. в статье о [диапазонах IP-адресов Azure](https://www.microsoft.com/download/details.aspx?id=41653).|
 | Проверка SSL для исходящего трафика фильтруется или отключена | Операции отправки данных или действия регистрации агента могут завершиться ошибкой в случае проверки SSL или завершения исходящего трафика на уровне сети. |
 | Порты брандмауэра на сервере с работающим агентом |Для работы агента необходимо открыть следующие порты брандмауэра, чтобы агент мог взаимодействовать с конечными точками службы Azure.</br></br><li>TCP-порт 443.</li><li>TCP-порт 5671.</li> |
 | Внесите следующие веб-сайты в список разрешенных, если включена политика усиленной безопасности IE. |Если на сервере, на котором планируется установить агент, включена политика усиленной безопасности IE, следующие веб-сайты нужно внести в список разрешенных.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Сервер федерации вашей организации, для которого установлены отношения доверия с Azure Active Directory. Например, https://sts.contoso.com</li> |
