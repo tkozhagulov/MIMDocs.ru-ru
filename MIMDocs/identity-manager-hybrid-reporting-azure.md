@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: 151fbd26011ca76901d181131a88ded8a718a27a
-ms.sourcegitcommit: 0f99de31fe6b52ec692b3886073909f549a451d6
+ms.openlocfilehash: ffe372c273aae55278f9b18b45b65425734aa6f7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Отчеты аудита управления гибридными удостоверениями в Azure Active Directory — общедоступная предварительная версия (обновление)
 Отчеты о действиях аудита Azure Active Directory (AD) позволяют просматривать единый отчет для мониторинга управления удостоверениями и локально, и в облаке. Эта функция позволяет управлять всеми удостоверениями и просматривать данные в одном месте, что экономит время и сокращает общие затраты.
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/29/2017
 
 ## <a name="how-does-it-work"></a>Как это работает?
 
-Чтобы собирать локальные данные, сначала необходимо установить агент создания отчетов на сервере Identity Manager 2016. Агент создания отчетов можно скачать в [Центре загрузки Майкрософт](https://www.microsoft.com/en-us/download/details.aspx?id=55112).
+Чтобы собирать локальные данные, сначала необходимо установить агент создания отчетов на сервере Identity Manager 2016. Агент создания отчетов можно скачать в [Центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55112).
 
 Процесс создания гибридных отчетов состоит из следующих этапов:
 1. После установки агента создания отчетов данные о действиях Identity Manager отправляются в журнал событий Windows.
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/29/2017
 
 ## <a name="next-steps"></a>Дальнейшие действия
 - Дополнительные сведения см. в статье [Работа с гибридными отчетами диспетчера удостоверений](working-with-identity-manager-hybrid-reporting.md).
-- Дополнительные сведения см. в статье [Отчеты о действиях аудита на портале Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
-- Дополнительные сведения о [политиках хранения отчетов](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
-- Дополнительные сведения об [интеграции журналов Microsoft Azure (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
-- Дополнительные сведения об [API отчетов Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
+- Дополнительные сведения см. в статье [Отчеты о действиях аудита на портале Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Дополнительные сведения о [политиках хранения отчетов](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
+- Дополнительные сведения об [интеграции журналов Microsoft Azure (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
+- Дополнительные сведения об [API отчетов Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)
