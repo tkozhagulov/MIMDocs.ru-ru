@@ -5,18 +5,18 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: bhu
-ms.date: 09/26/2017
+ms.date: 1/24/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 99e98f3f9cb5e68fde0e3018856bf613c082325d
-ms.sourcegitcommit: ba4cd133f7b49752c5470c9fc46e7e302cc99b49
+ms.openlocfilehash: 1e100a686f009d1a2290d7965fe36eea819148be
+ms.sourcegitcommit: fab9f21eea15d2024f11a59fc9e43db15bd215c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="connect-to-your-directories"></a>Подключение к каталогам
 
@@ -28,13 +28,13 @@ ms.lasthandoff: 09/28/2017
 
 ## <a name="supported-connectors-in-mim-2016-sp1"></a>Поддерживаемые соединители в MIM 2016 с пакетом обновления 1 (SP1)
 
-| Имя | Поддерживаемые версии подключенного источника данных |
+| Название | Поддерживаемые версии подключенного источника данных и ссылки на техническую документацию |
 | ---- | ----------------------------------------------- |
 | Доменные службы Active Directory | Active Directory 2012, 2016 |
 | Службы Active Directory облегченного доступа к каталогам (ADLDS) | Службы Active Directory облегченного доступа к каталогам (ADLDS) |
 | Глобальный список адресов Active Directory (GAL) | Глобальный список адресов Active Directory (GAL) — Exchange 2013, 2016 |
 | Extensible Connectivity 2.0 | Любой источник данных на основе вызовов или файлов |
-| Служба FIM | Агент управления службы FIM (служба синхронизации) должен иметь ту же версию, что и установленная "служба Forefront Identity Manager" |
+| Служба FIM | Версия агента управления службы FIM (служба синхронизации) должна совпадать с версией установленной службы Forefront Identity Manager. |
 | Универсальная база данных IBM DB2 | IBM DB2 версии 9.5 или 9.7; IBM DB2 OLEDB версии 9.5 FP5 или версии 9.7 FP1 |
 | Сервер каталогов IBM | Сервер каталогов IBM Tivoli 6.x |
 | Novell eDirectory | Novell eDirectory версии 8.7.3, 8.8.5 и 8.8.6 |
@@ -43,10 +43,11 @@ ms.lasthandoff: 09/28/2017
 | Серверы каталогов Oracle (ранее Sun и Netscape) | Сервер каталогов Sun 6.x, 7.x и Oracle 11 |
 | [Соединитель Windows PowerShell для FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn640417.aspx) | Windows PowerShell 2.0 или более поздней версии |
 | [Соединитель Microsoft Azure Active Directory для FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn511001.aspx) | Microsoft Azure Active Directory |
-| [Универсальный соединитель LDAP для FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | Сервер LDAP v3 (совместимый с RFC 4510) |
+| [Универсальный соединитель LDAP для FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [Сервер LDAP v3 (совместимый с RFC 4510)](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
+| [Универсальный соединитель SQL для FIM 2010 R2 или MIM](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [Все 64-разрядные драйверы ODBC поддерживают соединитель](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
 | [Соединитель для Lotus Domino](https://msdn.microsoft.com/en-us/library/hh859750.aspx) | Заметки о выпуске Lotus 8.5.x |
 | [Соединитель служб SharePoint Services для UPA](https://msdn.microsoft.com/en-us/library/dn511003.aspx) | SharePoint Server 2013 или 2016 с приложением службы профиля пользователя (UPA) |
-| [Соединитель для веб-служб](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | SAP ECC 5.0 или 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 |
+| [Соединитель для веб-служб](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 или 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
 | [Текстовый файл пар "атрибут-значение"](https://technet.microsoft.com/en-us/library/cc708644(v=ws.10).aspx) | Текстовые файлы пары «атрибут-значение» |
 | [Текстовый файл с разделителями](https://technet.microsoft.com/en-us/library/cc720612(v=ws.10).aspx) | Текстовые файлы с разделителями |
 | [Язык разметки службы каталогов (DSML)](https://technet.microsoft.com/en-us/library/cc720660(v=ws.10).aspx) | Язык разметки службы каталогов (DSML) 2.0 |
