@@ -11,6 +11,7 @@
 ## [Топология развертывания](topology-considerations.md)
 ## [Планирование развертывания управления привилегированным доступом](./pam/environment-overview.md)
 # [Развертывание и использование](microsoft-identity-manager-deploy.md)
+## [Устаревшие компоненты](microsoft-identity-manager-2016-deprecated-features.md)
 ## [Первое развертывание](microsoft-identity-manager-deploy.md)
 ### [Настройка домена](preparing-domain.md)
 ### [Настройка сервера: Windows Server](prepare-server-ws2012r2.md)
