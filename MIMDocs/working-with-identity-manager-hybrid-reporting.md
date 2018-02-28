@@ -3,22 +3,21 @@ title: "Работа с гибридными отчетами в Azure с пом
 description: "Узнайте, как объединить локальные и облачные данные с помощью гибридных отчетов в Azure, а также как управлять этими отчетами и просматривать их."
 keywords: 
 author: fimguy
-ms.author: barclayn
+ms.author: davidste
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 2/20/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a96d79d6773a72c813d0cd76de26ea40d28769e1
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: e135cc5066220765d97568b3a1e1b984a876b2a2
+ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="work-with-hybrid-reporting-in-identity-manager-public-preview-refresh"></a>Работа с гибридными отчетами в обновленной общедоступной предварительной версии Identity Manager
+# <a name="work-with-hybrid-reporting-in-identity-manager"></a>Работа с гибридными отчетами в Identity Manager
 
 Из этой статьи вы узнаете, как объединить локальные и облачные данные с помощью гибридных отчетов в Azure, а также как управлять этими отчетами и просматривать их.
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/20/2018
 
 ## <a name="prerequisites"></a>Предварительные условия
 
-* служба Identity Manager 2016 RTM или Identity Manager с пакетом обновления 1 (SP1);
+* Identity Manager 2016 с пакетом обновления 1 (SP1), служба Identity Manager, рекомендуемая сборка [4.4.1749.0](https://support.microsoft.com/en-us/help/4050936/hotfix-rollup-package-build-4-4-1749-0-for-microsoft-identity-manager).
 
 * клиент Azure AD Premium с лицензированным администратором в вашем каталоге;
 
