@@ -2,23 +2,22 @@
 title: "Что такое гибридные отчеты в Azure AD | Документация Майкрософт"
 description: "Гибридные отчеты о действиях аудита в Azure Active Directory позволяют просматривать облачные и локальные события аудита."
 keywords: 
-author: fimguy
-ms.author: fimguy
+author: davidste
+ms.author: davidste
 manager: bhu
-ms.date: 09/28/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
-ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: e2391be3d05f61335c134c104673a31ad7fc3830
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: eb9725df484fb5ac2ee44bd9a0423bdb4fbe7e86
+ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory-public-preview-refresh"></a>Гибридные отчеты аудита управления удостоверениями в Azure Active Directory — обновление общедоступной предварительная версии
+# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Гибридные отчеты об аудите управления удостоверениями в Azure Active Directory
 Отчеты о действиях аудита Azure Active Directory (Azure AD) позволяют отслеживать действия управления удостоверениями и локально, и в облаке. Управляя данными удостоверений и доступа при помощи одного отчета, можно сэкономить время и сократить общие затраты.
 
 ## <a name="what-is-azure-active-directory-hybrid-reporting"></a>Что такое гибридные отчеты Azure Active Directory?
