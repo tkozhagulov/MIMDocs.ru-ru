@@ -144,3 +144,4 @@
 ## Журнал версий
 ### [Журнал версий MIM](./reference/version-history.md)
 ### [Журнал версий BHOLD](./reference/version-bhold-history.md)
+### [Журнал выпуска версий соединителей](./reference/microsoft-identity-manager-2016-connector-version-history.md)
