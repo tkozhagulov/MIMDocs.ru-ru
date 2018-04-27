@@ -145,3 +145,11 @@
 ### [Журнал версий MIM](./reference/version-history.md)
 ### [Журнал версий BHOLD](./reference/version-bhold-history.md)
 ### [Журнал выпуска версий соединителей](./reference/microsoft-identity-manager-2016-connector-version-history.md)
+## Соединители
+### [Graph](microsoft-identity-manager-2016-connector-graph.md)
+### [Lotus Notes](./reference/microsoft-identity-manager-2016-connector-domino.md)
+### [Универсальный соединитель LDAP](./reference/microsoft-identity-manager-2016-connector-genericldap.md)
+### [Универсальный соединитель SQL](./reference/microsoft-identity-manager-2016-connector-genericsql.md)
+### [Веб-службы](./reference/microsoft-identity-manager-2016-ma-ws.md)
+### [PowerShell](./reference/microsoft-identity-manager-2016-connector-powershell.md)
+### [Журнал выпуска версий соединителей](./reference/microsoft-identity-manager-2016-connector-version-history.md)
