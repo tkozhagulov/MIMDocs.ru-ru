@@ -1,7 +1,7 @@
 ---
-title: "Настройка SQL Server для Microsoft Identity Manager 2016 | Документация Майкрософт"
-description: "Установка SQL Server 2014 в рамках подготовки к установке MIM 2016."
-keywords: 
+title: Настройка SQL Server для Microsoft Identity Manager 2016 | Документация Майкрософт
+description: Установка SQL Server 2014 в рамках подготовки к установке MIM 2016.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,10 @@ ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 8a33e09719b8c806de43531d12ea4b65b5cb443a
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="set-up-an-identity-management-server-sql-server-2014"></a>Настройка сервера управления удостоверениями: SQL Server 2014
 
