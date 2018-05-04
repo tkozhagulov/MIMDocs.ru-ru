@@ -1,44 +1,47 @@
 ---
-title: "Настройка SharePoint для Microsoft Identity Manager 2016 | Документация Майкрософт"
-description: "Установите и настройте SharePoint Foundation для размещения страницы портала MIM."
-keywords: 
-author: billmath
-ms.author: barclayn
+title: Настройка SharePoint для Microsoft Identity Manager 2016 | Документация Майкрософт
+description: Установите и настройте SharePoint Foundation для размещения страницы портала MIM.
+keywords: ''
+author: fimguy
+ms.author: davidste
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 8646620f8f0ea8e1bdea3705e3db8593aa5a464e
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: eceb1ed31b0212970d5cf0eae0bc8d96aa087ff5
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Настройка сервера управления удостоверениями: SharePoint
 
 >[!div class="step-by-step"]
-[« SQL Server 2014](prepare-server-sql2014.md)
-[Exchange Server »](prepare-server-exchange.md)
+[" SQL Server 2016](prepare-server-sql2016.md)
+[Exchange Server "](prepare-server-exchange.md)
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
-> - Имя контроллера домена — **mimservername**.
+> - Имя контроллера домена — **corpdc**
 > - Имя домена — **contoso**.
+> - Имя сервера службы MIM — **corpservice**
+> - Имя сервера синхронизации MIM — **corpsync**
+> - Имя SQL Server — **corpsql**
 > - Пароль — **Pass@word1**
 
 
-## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Установка **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)**
+## <a name="install-sharepoint-2016"></a>Установка **SharePoint 2016**
 
 > [!NOTE]
 > Чтобы установщик скачал необходимые компоненты, требуется подключение к Интернету. Если компьютер находится в виртуальной сети без доступа к Интернету, добавьте на компьютер дополнительный сетевой интерфейс, который предоставляет доступ к Интернету. Это можно отключить после завершения установки.
 
-Выполните следующие действия, чтобы установить SharePoint Foundation 2013 с пакетом обновления 1 (SP1). После завершения установки сервер будет перезагружен.
+Выполните следующие действия для установки SharePoint 2016. После завершения установки сервер будет перезагружен.
 
-1.  Запустите **PowerShell** от имени администратора домена.
+1.  Запустите **PowerShell** с использованием доменной учетной записи с правами локального администратора на **corpservice** и **sysadmin** на сервере базы данных SQL, используя **contoso\miminstall**.
 
     -   Перейдите в каталог, в который был извлечен SharePoint.
 
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/12/2017
         .\prerequisiteinstaller.exe
         ```
 
-2.  После установки необходимых для **SharePoint** компонентов установите **SharePoint Foundation 2013 с пакетом обновления 1 (SP1)** , введя следующую команду:
+2.  После предварительной установки необходимых для **SharePoint** компонентов установите **SharePoint 2016**, введя следующую команду:
 
     ```
     .\setup.exe
@@ -64,51 +67,48 @@ ms.lasthandoff: 10/12/2017
 
 1. На вкладке **Подключение к ферме серверов** создайте новую ферму серверов.
 
-2. Укажите этот сервер как сервер баз данных для базы данных конфигурации, а *Contoso\SharePoint* — как учетную запись доступа к базе данных для SharePoint.
-
+2. Обозначьте этот сервер как сервер баз данных **corpsql** для базы данных настроек, а *Contoso\SharePoint* используйте в качестве учетной записи для доступа к базе данных в SharePoint.
+    a. В мастере настройки рекомендуется выбрать тип [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) для **Внешнего интерфейса**
 3. Создайте пароль для парольной фразы фермы.
 
 4. Когда мастер настройки завершит задание конфигурации 10 из 10, нажмите кнопку "Готово", и откроется веб-браузер.
 
-5. Чтобы продолжить, во всплывающем окне Internet Explorer выполните вход с использованием *Contoso\Administrator* (или аналогичной учетной записи администратора домена).
+5. Чтобы продолжить, во всплывающем окне Internet Explorer выполните вход с использованием учетной записи *Contoso\miminstall* (или аналогичной учетной записи администратора).
 
-6. Запустите мастер (в веб-приложении), чтобы настроить ферму SharePoint.
+6. В веб-мастере настройки (в самом веб-приложении) щелкните **Cancel/Skip** (Отмена/Пропустить).
 
-7. Выберите использование имеющейся управляемой учетной записи (*Contoso\SharePoint*) и нажмите кнопку **Далее**.
-
-8. В окне **Создание семейства веб-сайтов** нажмите кнопку **Пропустить**.  Затем нажмите кнопку **Готово**.
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Подготовка SharePoint для размещения портала MIM
 
 > [!NOTE]
 > Изначально протокол SSL не будет настроен. Обязательно настройте протокол SSL или его аналог, прежде чем разрешать доступ к порталу.
 
-1. Запустите **командную консоль SharePoint 2013** и выполните следующий сценарий PowerShell, чтобы создать **веб-приложение SharePoint Foundation 2013**.
+1. Запустите **командную консоль SharePoint 2016** и выполните следующий сценарий PowerShell, чтобы создать **веб-приложение SharePoint 2016**.
 
     ```
-    $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
-    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
+    New-SPManagedAccount ##Will prompt for new account enter contoso\mimpool 
+    $dbManagedAccount = Get-SPManagedAccount -Identity contoso\mimpool
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 80 -URL http://mim.contoso.com
     ```
 
     > [!NOTE]
-    > Появится предупреждение о том, что используется классический метод проверки подлинности Windows, и для выполнения завершающей команды может потребоваться несколько минут. По завершении в выходных данных будет указан URL-адрес нового портала. Не закрывайте окно **командной консоли SharePoint 2013**, чтобы перейти к нему позже.
+    > Появится предупреждение о том, что используется классический метод проверки подлинности Windows, и для выполнения завершающей команды может потребоваться несколько минут. По завершении в выходных данных будет указан URL-адрес нового портала. Не закрывайте окно **командной консоли SharePoint 2016**, чтобы перейти к нему позже.
 
 2. Запустите командную консоль SharePoint 2013 и выполните следующий сценарий PowerShell, чтобы создать **семейство веб-сайтов SharePoint**, связанное с веб-приложением.
 
   ```
-  $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
-  $w = Get-SPWebApplication http://corpidm.contoso.local:82
-  New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator
-  -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin
-  $s = SpSite($w.Url)
-  $s.AllowSelfServiceUpgrade = $false
-  $s.CompatibilityLevel
+    $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
+    $w = Get-SPWebApplication http://mim.contoso.com/
+    New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
+    $s = SpSite($w.Url)
+    $s.AllowSelfServiceUpgrade = $false
+    $s.CompatibilityLevel
   ```
 
   > [!NOTE]
-  > Убедитесь, что в переменной *CompatibilityLevel* содержится результат "14". Если результат равен "15", то семейство веб-сайтов не было создано для версии 2010. Удалите семейство веб-сайтов и создайте его заново.
+  > Убедитесь, что для переменной *CompatibilityLevel* установлено значение 15. Если результат не равен 15, то семейство веб-сайтов не соответствует действующей версии программы, поэтому удалите это семейство веб-сайтов и создайте его еще раз.
 
-3. Отключите **состояние просмотра на стороне сервера SharePoint Server** и задачу SharePoint "Задание анализа работоспособности (каждый час, Microsoft SharePoint Foundation Timer, все серверы)", выполнив следующие команды PowerShell в **командной консоли SharePoint 2013**:
+3. Отключите **SharePoint Server-Side Viewstate** (Просмотр состояния сервера SharePoint на стороне сервера), а также задачу "Анализ работоспособности SharePoint (каждый час, Microsoft SharePoint Foundation Timer, все серверы)", выполнив следующие команды PowerShell в **Консоли управления SharePoint 2016**:
 
   ```
   $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -117,9 +117,9 @@ ms.lasthandoff: 10/12/2017
   Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
   ```
 
-4. На сервере управления удостоверениями откройте новую вкладку веб-браузера, перейдите по адресу http://localhost:82/ и войдите в качестве *contoso\Administrator*.  Откроется пустой сайт SharePoint под названием *Портал MIM* .
+4. На сервере управления идентификаторами откройте новую вкладку веб-браузера, перейдите к http://mim.contoso.com/ и войдите под именем *contoso\miminstall*.  Откроется пустой сайт SharePoint под названием *Портал MIM* .
 
-    ![Изображение для портала MIM по адресу http://localhost:82/](media/MIM-DeploySP1.png)
+    ![Портал MIM показан на рис. http://mim.contoso.com/](media/MIM-DeploySP1.png)
 
 5. Скопируйте URL-адрес, а затем в Internet Explorer откройте **Свойства браузера**, перейдите на вкладку **Безопасность**, выберите **Местная интрасеть** и нажмите кнопку **Сайты**.
 
@@ -130,5 +130,5 @@ ms.lasthandoff: 10/12/2017
 7. Откройте средство **Администрирование**, перейдите в раздел **Службы**, найдите службу администрирования SharePoint и запустите ее, если она еще не запущена.
 
 >[!div class="step-by-step"]  
-[« SQL Server 2014](prepare-server-sql2014.md)
-[Exchange Server »](prepare-server-exchange.md)
+[" SQL Server 2016](prepare-server-sql2016.md)
+[Exchange Server "](prepare-server-exchange.md)

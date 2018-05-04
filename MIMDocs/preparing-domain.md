@@ -1,7 +1,7 @@
 ---
-title: "Настройка домена для Microsoft Identity Manager 2016 | Документация Майкрософт"
-description: "Создание контроллера домена Active Directory перед установкой MIM 2016"
-keywords: 
+title: Настройка домена для Microsoft Identity Manager 2016 | Документация Майкрософт
+description: Создание контроллера домена Active Directory перед установкой MIM 2016
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,16 +12,16 @@ ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 816e816111b27d1cc7dd4f7da2c5a810e7aa22fd
-ms.sourcegitcommit: 9e854a39128a5f81cdbb1379e1fa95ef3a88cdd2
+ms.openlocfilehash: ff8d8a6f66212b006e2c17186dc299a5bcf3f68b
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="set-up-a-domain"></a>Настройка домена
 
 >[!div class="step-by-step"]
-[Windows Server 2012 R2 "](prepare-server-ws2012r2.md)
+[Windows Server 2016 »](prepare-server-ws2016.md)
 
 Microsoft Identity Manger (MIM) работает с доменом Active Directory (AD). Служба AD должна быть уже установлена. Кроме того, в вашей среде должен быть контроллер для домена, которым вы можете управлять.
 
@@ -33,8 +33,11 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
-> - Имя контроллера домена — **mimservername**.
+> - Имя контроллера домена — **corpdc**
 > - Имя домена — **contoso**.
+> - Имя сервера службы MIM — **corpservice**
+> - Имя сервера синхронизации MIM — **corpsync**
+> - Имя SQL Server — **corpsql**
 > - Пароль — **Pass@word1**
 
 1. Войдите в контроллер домена в качестве администратора (*например Contoso\Administrator*).
@@ -44,6 +47,9 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
     ```PowerShell
     import-module activedirectory
     $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+    New-ADUser –SamAccountName MIMINSTALL –name MIMMA
+    Set-ADAccountPassword –identity MIMINSTALL –NewPassword $sp
+    Set-ADUser –identity MIMINSTALL –Enabled 1 –PasswordNeverExpires 1
     New-ADUser –SamAccountName MIMMA –name MIMMA
     Set-ADAccountPassword –identity MIMMA –NewPassword $sp
     Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
@@ -65,6 +71,9 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
     New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
     Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
     Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
+    New-ADUser –SamAccountName MIMpool –name BackupAdmin
+    Set-ADAccountPassword –identity MIMPool –NewPassword $sp
+    Set-ADUser –identity MIMPool –Enabled 1 -PasswordNeverExpires 1
     ```
 
 3.  Создайте группы безопасности во всех группах.
@@ -77,15 +86,24 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
     New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
+    Add-ADGroupmember -identity MIMSyncAdmins -Members MIMInstall
     ```
 
 4.  Добавление имен субъектов-служб для включения проверки подлинности Kerberos для учетных записей служб
 
     ```CMD
-    setspn -S http/mimservername.contoso.local Contoso\SharePoint
-    setspn -S http/mimservername Contoso\SharePoint
-    setspn -S FIMService/mimservername.contoso.local Contoso\MIMService    
+    setspn -S http/mim.contoso.com Contoso\mimpool
+    setspn -S http/mim Contoso\mimpool
+    setspn -S http/passwordreset.contoso.com Contoso\mimsspr
+    setspn -S http/passwordregistration.contoso.com Contoso\mimsspr
+    setspn -S FIMService/mim.contoso.com Contoso\MIMService
+    setspn -S FIMService/corpservice.contoso.com Contoso\MIMService
     ```
+5.  Для должного разрешения имен во время процесса установки, необходимо добавить следующие A-записи DNS
+
+- mim.contoso.com — указывает на физический IP-адрес corpservice
+- passwordreset.contoso.com — указывает на физический IP-адрес corpservice
+- passwordregistration.contoso.com — указывает на физический IP-адрес corpservice
 
 >[!div class="step-by-step"]
-[Windows Server 2012 R2 "](prepare-server-ws2012r2.md)
+[Windows Server 2016 »](prepare-server-ws2016.md)

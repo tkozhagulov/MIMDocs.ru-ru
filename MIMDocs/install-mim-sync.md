@@ -1,22 +1,22 @@
 ---
-title: "Установка службы синхронизации Microsoft Identity Manager | Документация Майкрософт"
-description: "Начните работу с компонентами MIM 2016, установив и настроив службу синхронизации."
-keywords: 
+title: Установка службы синхронизации Microsoft Identity Manager | Документация Майкрософт
+description: Начните работу с компонентами MIM 2016, установив и настроив службу синхронизации.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 836279ecc7fce65912df4a1a34a9d48daf9d1151
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Установка MIM 2016: служба синхронизации MIM
 
@@ -26,17 +26,20 @@ ms.lasthandoff: 10/12/2017
 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
-> - Имя контроллера домена — **mimservername**.
+> - Имя контроллера домена — **corpdc**
 > - Имя домена — **contoso**.
+> - Имя сервера службы MIM — **corpservice**
+> - Имя сервера синхронизации MIM — **corpsync**
+> - Имя SQL Server — **corpsql**
 > - Пароль — **Pass@word1**
 
 Прежде чем устанавливать компоненты Microsoft Identity Manager 2016, необходимо установить пакет установки.
 
-1. Войдите на сервер, используемый для управления удостоверениями, в качестве пользователя *contoso\Administrator*.
+1. Выполните вход с использованием *contoso\miminstall* на сервер, используемый для синхронизации управления идентификацией **corpsync**.
 
 2. Распакуйте пакет установки MIM или подключите образ DVD-диска MIM.
 
-## <a name="install-mim-2016-synchronization-service"></a>Установка службы синхронизации MIM 2016
+## <a name="install-mim-2016-sp1-synchronization-service"></a>Установка MIM 2016 с пакетом обновления 1 (SP1): служба синхронизации
 
 1. Перейдите в папку установки MIM и откройте папку **Synchronization Service** .
 
