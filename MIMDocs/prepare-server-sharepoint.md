@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: eceb1ed31b0212970d5cf0eae0bc8d96aa087ff5
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Настройка сервера управления удостоверениями: SharePoint
 
@@ -68,14 +68,15 @@ ms.lasthandoff: 04/27/2018
 1. На вкладке **Подключение к ферме серверов** создайте новую ферму серверов.
 
 2. Обозначьте этот сервер как сервер баз данных **corpsql** для базы данных настроек, а *Contoso\SharePoint* используйте в качестве учетной записи для доступа к базе данных в SharePoint.
-    a. В мастере настройки рекомендуется выбрать тип [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) для **Внешнего интерфейса**
 3. Создайте пароль для парольной фразы фермы.
 
-4. Когда мастер настройки завершит задание конфигурации 10 из 10, нажмите кнопку "Готово", и откроется веб-браузер.
+4. В мастере настройки рекомендуется выбрать тип [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) для **Внешнего интерфейса**
 
-5. Чтобы продолжить, во всплывающем окне Internet Explorer выполните вход с использованием учетной записи *Contoso\miminstall* (или аналогичной учетной записи администратора).
+5. Когда мастер настройки завершит задание конфигурации 10 из 10, нажмите кнопку "Готово", после чего откроется веб-браузер.
 
-6. В веб-мастере настройки (в самом веб-приложении) щелкните **Cancel/Skip** (Отмена/Пропустить).
+6. Чтобы продолжить, при появлении запроса пройдите проверку подлинности с использованием учетной записи *Contoso\miminstall* (или аналогичной учетной записи администратора) во всплывающем окне Internet Explorer.
+
+7. В веб-мастере настройки (в самом веб-приложении) щелкните **Cancel/Skip** (Отмена/Пропустить).
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Подготовка SharePoint для размещения портала MIM
@@ -94,14 +95,13 @@ ms.lasthandoff: 04/27/2018
     > [!NOTE]
     > Появится предупреждение о том, что используется классический метод проверки подлинности Windows, и для выполнения завершающей команды может потребоваться несколько минут. По завершении в выходных данных будет указан URL-адрес нового портала. Не закрывайте окно **командной консоли SharePoint 2016**, чтобы перейти к нему позже.
 
-2. Запустите командную консоль SharePoint 2013 и выполните следующий сценарий PowerShell, чтобы создать **семейство веб-сайтов SharePoint**, связанное с веб-приложением.
+2. Запустите командную консоль SharePoint 2016 и выполните следующий сценарий PowerShell, чтобы создать **семейство веб-сайтов SharePoint**, связанное с веб-приложением.
 
   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
     $s.CompatibilityLevel
   ```
 
@@ -119,7 +119,7 @@ ms.lasthandoff: 04/27/2018
 
 4. На сервере управления идентификаторами откройте новую вкладку веб-браузера, перейдите к http://mim.contoso.com/ и войдите под именем *contoso\miminstall*.  Откроется пустой сайт SharePoint под названием *Портал MIM* .
 
-    ![Портал MIM показан на рис. http://mim.contoso.com/](media/MIM-DeploySP1.png)
+    ![Портал MIM показан на рис. http://mim.contoso.com/](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Скопируйте URL-адрес, а затем в Internet Explorer откройте **Свойства браузера**, перейдите на вкладку **Безопасность**, выберите **Местная интрасеть** и нажмите кнопку **Сайты**.
 

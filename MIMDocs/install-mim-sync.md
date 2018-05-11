@@ -2,21 +2,21 @@
 title: Установка службы синхронизации Microsoft Identity Manager | Документация Майкрософт
 description: Начните работу с компонентами MIM 2016, установив и настроив службу синхронизации.
 keywords: ''
-author: billmath
+author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Установка MIM 2016: служба синхронизации MIM
 
@@ -47,21 +47,21 @@ ms.lasthandoff: 04/27/2018
 
 3. Нажмите кнопку **Далее**на экране приветствия.
 
-    ![Изображение экрана приветствия для мастера установки MIM](media/MIM-Install1.png)
+    ![Изображение экрана приветствия для мастера установки MIM](media/install-mim-sync/MIM_Install1.png)
 
 4. Изучите условия лицензионного соглашения и нажмите кнопку **Далее**, чтобы принять их.
 
 5. На экране **Выборочная установка** нажмите кнопку **Далее**.
 
-    ![Изображение для выборочной установки](media/MIM-Install2.png)
+    ![Изображение для выборочной установки](media/install-mim-sync/MIM_Install2.png)
 
 6.  На экране настройки базы данных службы синхронизации выберите следующее.
 
-    1.  SQL Server находится на: **Этом компьютере**.
+    1.  SQL Server находится на **удаленном компьютере** с именем **corpsql.contoso.com**.
 
-    2.  Экземпляр SQL Server: **Экземпляр по умолчанию**.
+    2.  Экземпляр SQL Server: **экземпляр по умолчанию**
 
-    ![Изображение для подключения к базе данных](media/MIM-Install3.png)
+    ![Изображение для подключения к базе данных](media/install-mim-sync/MIM_Install3.png)
 
 7.  Сделайте учетную запись, созданную ранее, учетной записью службы синхронизации.
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/27/2018
 
     3.  Домен учетной записи службы или имя локального компьютера: *contoso*
 
-    ![Изображение для учетной записи службы](media/MIM-Install4.png)
+    ![Изображение для учетной записи службы](media/install-mim-sync/MIM_Install4.png)
 
 8.  Укажите в установщике службы синхронизации MIM нужные группы безопасности.
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/27/2018
 
     5. Управление паролями WMI = *contoso\MIMSyncPasswordReset*
 
-    ![Изображение для групп безопасности](media/MIM-Install5.png)
+    ![Изображение для групп безопасности](media/install-mim-sync/MIM_Install5.png)
 
 9. На экране параметров безопасности установите флажок **Enable firewall rules for inbound RPC communications** (Включить правила брандмауэра для входящих подключений RPC) и нажмите кнопку **Далее**.
 
