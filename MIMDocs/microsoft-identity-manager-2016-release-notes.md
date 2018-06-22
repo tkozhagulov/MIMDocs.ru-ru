@@ -1,7 +1,7 @@
 ---
-title: "Заметки о выпуске для Microsoft Identity Manager 2016 | Документация Майкрософт"
-description: "Сведения о последних выпусках MIM."
-keywords: 
+title: Заметки о выпуске для Microsoft Identity Manager 2016 | Документация Майкрософт
+description: Сведения о последних выпусках MIM.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -18,6 +18,7 @@ ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/12/2017
+ms.locfileid: "23137580"
 ---
 # <a name="release-notes-for-mim-2016"></a>Заметки о выпуске для MIM 2016
 Заметки о выпуске на данный момент отсутствуют.

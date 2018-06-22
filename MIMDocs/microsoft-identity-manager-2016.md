@@ -1,7 +1,7 @@
 ---
-title: "Microsoft Identity Manager 2016 | Документация Майкрософт"
-description: "MIM включает возможности управления доступом FIM 2010 и помогает управлять пользователями, учетными данными, политиками и доступом в рамках организации."
-keywords: 
+title: Microsoft Identity Manager 2016 | Документация Майкрософт
+description: MIM включает возможности управления доступом FIM 2010 и помогает управлять пользователями, учетными данными, политиками и доступом в рамках организации.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/17/2017
+ms.locfileid: "23451163"
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 

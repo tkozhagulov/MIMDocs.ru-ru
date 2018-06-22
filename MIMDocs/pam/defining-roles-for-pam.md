@@ -1,7 +1,7 @@
 ---
-title: "Определение привилегированных ролей для PAM | Документация Майкрософт"
-description: "Решите, какие привилегированные роли должны быть управляемыми, и определите для каждой из них политику управления."
-keywords: 
+title: Определение привилегированных ролей для PAM | Документация Майкрософт
+description: Решите, какие привилегированные роли должны быть управляемыми, и определите для каждой из них политику управления.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/01/2017
+ms.locfileid: "21943763"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Определение ролей для управления привилегированным доступом
 

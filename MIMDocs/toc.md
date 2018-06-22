@@ -6,6 +6,7 @@
 ## [Гибридные отчеты в Azure](identity-manager-hybrid-reporting-azure.md)
 # [Планирование и проектирование](microsoft-identity-manager-2016-supported-platforms.md)
 ## [Поддерживаемые платформы](microsoft-identity-manager-2016-supported-platforms.md)
+## [Поддерживаемые языки](microsoft-identity-manager-2016-language-support.md)
 ## [Подключение к каталогам](supported-management-agents.md)
 ## [Планирование загрузки](capacity-planning-guide.md)
 ## [Топология развертывания](topology-considerations.md)

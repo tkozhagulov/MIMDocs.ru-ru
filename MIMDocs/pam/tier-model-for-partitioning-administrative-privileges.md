@@ -1,7 +1,7 @@
 ---
-title: "Многоуровневая модель среды PAM | Документация Майкрософт"
-description: "Сведения о многоуровневой модели, разделяющей вашу систему по уровням уязвимости для рисков."
-keywords: 
+title: Многоуровневая модель среды PAM | Документация Майкрософт
+description: Сведения о многоуровневой модели, разделяющей вашу систему по уровням уязвимости для рисков.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942737"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Модель разделения прав администратора по уровням
 

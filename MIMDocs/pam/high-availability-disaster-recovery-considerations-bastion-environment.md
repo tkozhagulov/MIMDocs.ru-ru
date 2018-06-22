@@ -1,7 +1,7 @@
 ---
-title: "Аварийное восстановление PAM | Документация Майкрософт"
-description: "Сведения о настройке высокой доступности и аварийного восстановления для Privileged Access Management."
-keywords: 
+title: Аварийное восстановление PAM | Документация Майкрософт
+description: Сведения о настройке высокой доступности и аварийного восстановления для Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052320"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Рекомендации по обеспечению высокой доступности и аварийному восстановлению для среды бастиона
 

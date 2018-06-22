@@ -17,6 +17,7 @@ ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33079012"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Развертывание Microsoft Identity Manager 2016 с пакетом обновления 1 (SP1)
 Статьи в этом разделе содержат пошаговые инструкции по развертыванию Microsoft Identity Manager (MIM) 2016 для сценариев самообслуживания пользователей на новом сервере, где FIM и MIM ранее не развертывались.

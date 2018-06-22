@@ -1,7 +1,7 @@
 ---
-title: "Управление привилегированным доступом для доменных служб Active Directory | Документация Майкрософт"
-description: "Сведения о Privileged Access Management и о том, как оно поможет управлять средой Active Directory и защищать ее."
-keywords: 
+title: Управление привилегированным доступом для доменных служб Active Directory | Документация Майкрософт
+description: Сведения о Privileged Access Management и о том, как оно поможет управлять средой Active Directory и защищать ее.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942720"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Управление привилегированным доступом для доменных служб Active Directory
 

@@ -1,7 +1,7 @@
 ---
-title: "Основные сведения о компонентах PAM | Документация Майкрософт"
-description: "Privileged Access Management имеет некоторые общие с MIM компоненты, а также свои собственные. Подробнее о том, как они работают вместе."
-keywords: 
+title: Основные сведения о компонентах PAM | Документация Майкрософт
+description: Privileged Access Management имеет некоторые общие с MIM компоненты, а также свои собственные. Подробнее о том, как они работают вместе.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052371"
 ---
 # <a name="understand-the-components-of-pam"></a>Основные сведения о компонентах управления привилегированным доступом
 

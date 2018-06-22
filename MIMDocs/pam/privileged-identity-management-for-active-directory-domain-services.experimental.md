@@ -1,7 +1,7 @@
 ---
-title: "Что такое PAM для ADDS? | Документация Майкрософт"
-description: "Система управление привилегированным доступом (PAM) помогает организациям контролировать привилегированный доступ в существующей среде Active Directory."
-keywords: 
+title: Что такое PAM для ADDS? | Документация Майкрософт
+description: Система управление привилегированным доступом (PAM) помогает организациям контролировать привилегированный доступ в существующей среде Active Directory.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052405"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Управление привилегированным доступом для доменных служб Active Directory
 
