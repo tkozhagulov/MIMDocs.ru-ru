@@ -3,11 +3,12 @@ layout: LandingPage
 ms.topic: landing-page
 title: Документация по Microsoft Identity Manager | Документация Майкрософт
 description: Сведения об использовании Microsoft Identity Manager.
-ms.openlocfilehash: 99fdb07edc7bd8996e620f27de9f5906aa6a15ed
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: 46aaf8fffc6cf4629c2d2768979ba6a5a68c2f54
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288893"
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Документация по Microsoft Identity Manager
 
@@ -71,8 +72,8 @@ Microsoft Identity Manager 2016 легко объединяет решения 
 
 ---
 <br>
->[!Warning]
-Основная фаза поддержки Forefront Identity Manager (FIM) завершилась 10 октября 2017 г. Проведите [обновление](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) до Microsoft Identity Manager 2016. Дополнительные сведения. </br>  — Сведения о жизненном цикле FIM см. [здесь](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010). </br> — Сведения об общедоступных выпусках продуктов для управления удостоверениями см. в записи [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (ПО Майкрософт для управления удостоверениями: версии сборки общедоступных выпусков).
+&gt;[!Warning]
+Основная фаза поддержки Forefront Identity Manager (FIM) завершилась 10 октября 2017 г. Проведите <a href="microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md" data-raw-source="[upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)">обновление</a> до Microsoft Identity Manager 2016. Дополнительные сведения. </br>  — Сведения о жизненном цикле FIM см. <a href="https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010" data-raw-source="[here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)">здесь</a>. </br> — Сведения об общедоступных выпусках продуктов для управления удостоверениями см. в записи <a href="https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/" data-raw-source="[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)">Microsoft Identity Software: Public Release Build Versions</a> (ПО Майкрософт для управления удостоверениями: версии сборки общедоступных выпусков).
 
 <h2>Справочник</h2>
 <ul class="panelContent cardsFTitle">
