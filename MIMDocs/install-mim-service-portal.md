@@ -12,23 +12,24 @@ ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fcc137527d8326c82bf3b201039926699bd4e342
-ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
+ms.openlocfilehash: 562ca6a977509cad7c3423ef42d4b6f6705494d3
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289522"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Установка MIM 2016: служба и портал MIM
 
->[!div class="step-by-step"]
-[« Служба синхронизации MIM](install-mim-sync.md)
-[Синхронизации баз данных »](install-mim-sync-ad-service.md)
-
+> [!div class="step-by-step"]
+> [« Служба синхронизации MIM](install-mim-sync.md)
+> [Синхронизации баз данных »](install-mim-sync-ad-service.md)
+> 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
 > - Имя контроллера домена — **mimservername**.
 > - Имя домена — **contoso**.
-> - Пароль — **Pass@word1**
+> - Пароль — <strong>Pass@word1</strong>
 > - Имя учетной записи службы — **MIMService**.
 
 Если вы не настроили пакет установки MIM на предыдущем шаге, прежде чем продолжить, установите компоненты Microsoft Identity Manager 2016.
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 
 8. Укажите, что вы хотите создать самозаверяющий сертификат, или выберите соответствующий сертификат.
 
-9. Введите имя учетной записи службы, например *MIMService*, и пароль учетной записи службы, например *Pass@word1*, домен учетной записи службы, например *contoso*, и учетную запись службы электронной почты, например *contoso*.
+9. Введите имя учетной записи службы, например *MIMService*, и пароль учетной записи службы, например <em>Pass@word1</em>, домен учетной записи службы, например *contoso*, и учетную запись службы электронной почты, например *contoso*.
 
     ![Изображение для настройки учетной записи службы MIM](media/install-mim-service-portal/MIM_Install12.png)
 
@@ -78,25 +79,25 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="configure-mim-password-registration-portal"></a>Настройка портала регистрации паролей MIM
 
-1.  В качестве имени учетной записи службы для регистрации SSPR укажите *contoso\MIMSSPR* и введите пароль *Pass@word1*.
+1. В качестве имени учетной записи службы для регистрации SSPR укажите *contoso\MIMSSPR* и введите пароль <em>Pass@word1</em>.
 
-2.  Укажите *passwordregistration.contoso.com* в качестве имени узла для регистрации паролей MIM и в качестве значения порта установите **80**. Включите параметр **Open port in firewall** (Открыть порт в брандмауэре).
+2. Укажите *passwordregistration.contoso.com* в качестве имени узла для регистрации паролей MIM и в качестве значения порта установите **80**. Включите параметр **Open port in firewall** (Открыть порт в брандмауэре).
 
-    ![Изображение для ввода сведений о конфигурации, используемых службами IIS](media/install-mim-service-portal/MIM_Install14.png)
+   ![Изображение для ввода сведений о конфигурации, используемых службами IIS](media/install-mim-service-portal/MIM_Install14.png)
 
-3.  Появится предупреждение — прочитайте его и нажмите кнопку **Далее**.
+3. Появится предупреждение — прочитайте его и нажмите кнопку **Далее**.
 
 4. На следующем экране настройки портала регистрации паролей MIM введите *mim.contoso.com* в качестве адреса сервера службы MIM для портала регистрации паролей.
 
 ## <a name="configure-mim-password-reset-portal"></a>Настройка портала сброса паролей MIM
 
-1.  В качестве имени учетной записи службы для регистрации SSPR укажите *Contoso\MIMSSPR* и введите пароль *Pass@word1*.
+1. В качестве имени учетной записи службы для регистрации SSPR укажите *Contoso\MIMSSPR* и введите пароль <em>Pass@word1</em>.
 
-2.  Укажите *passwordreset.contoso.com* в качестве имени узла для портала сброса паролей MIM и введите **80** в качестве значения порта. Включите параметр **Open port in firewall** (Открыть порт в брандмауэре).
+2. Укажите *passwordreset.contoso.com* в качестве имени узла для портала сброса паролей MIM и введите **80** в качестве значения порта. Включите параметр **Open port in firewall** (Открыть порт в брандмауэре).
 
-    ![Изображение для ввода сведений о конфигурации, используемых службами IIS](media/install-mim-service-portal/MIM_Install15.png)
+   ![Изображение для ввода сведений о конфигурации, используемых службами IIS](media/install-mim-service-portal/MIM_Install15.png)
 
-3.  Появится предупреждение — прочитайте его и нажмите кнопку **Далее**.
+3. Появится предупреждение — прочитайте его и нажмите кнопку **Далее**.
 
 4. На следующем экране настройки портала регистрации паролей MIM введите *mim.contoso.com* в качестве адреса сервера службы MIM для портала смены паролей.
 
@@ -144,7 +145,7 @@ ms.lasthandoff: 05/03/2018
 
 > [!NOTE]
 > Дополнительно. На этом этапе можно установить надстройки и расширения MIM.
-
->[!div class="step-by-step"]  
-[« Служба синхронизации MIM](install-mim-sync.md)
-[Синхронизации баз данных »](install-mim-sync-ad-service.md)
+> 
+> [!div class="step-by-step"]  
+> [« Служба синхронизации MIM](install-mim-sync.md)
+> [Синхронизации баз данных »](install-mim-sync-ad-service.md)

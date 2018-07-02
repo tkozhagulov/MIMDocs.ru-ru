@@ -1,7 +1,7 @@
 ---
-title: "Шаг 1. Настройка домена PRIV"
-description: "Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов"
-keywords: 
+title: Шаг 1. Настройка домена PRIV
+description: Подготовка домена CORP с существующими или новыми удостоверениями, которыми будет управлять диспетчер привилегированных удостоверений, с использованием скриптов
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,21 +10,22 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40822bb7702cf3d7ac23ecd6e98ac392f2d3a480
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e5be140e7ffea7b0c7cacbc1c82d3b2883804203
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290311"
 ---
 # <a name="step-1-configuring-the-priv-domain"></a>Шаг 1. Настройка домена PRIV
 
->[!div class="step-by-step"]
-[Шаг 2 "](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Шаг 2 "](sp1-step2-configuring-corp-domain.md)
 
 1. Войдите в систему PRIVDC от имени администратора.
-  * Если в этой среде только PRIV, войдите в систему CORPDC.
+   * Если в этой среде только PRIV, войдите в систему CORPDC.
 2. Запустите PowerShell от имени администратора.
 3. cd $env:SYSTEMDRIVE\PAM.
 4. .\PAMDeployment.ps1.
@@ -41,5 +42,5 @@ ms.lasthandoff: 08/19/2017
 Скопируйте файл SIDs.txt, созданный в $env: SYSTEMDRIVE\PAM, в аналогичную папку на CORPDC. Это требуется для CORPDC, чтобы настроить разрешения на чтение свойств пользователей CORP для пользователей PRIV.
 После выполнения сценария вам будет предложено перезагрузить компьютер, чтобы изменения вступили в силу.
 
->[!div class="step-by-step"]
-[Шаг 2 "](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Шаг 2 "](sp1-step2-configuring-corp-domain.md)

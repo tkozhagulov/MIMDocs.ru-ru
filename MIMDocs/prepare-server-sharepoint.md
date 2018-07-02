@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
-ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
+ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289539"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Настройка сервера управления удостоверениями: SharePoint
 
->[!div class="step-by-step"]
-[" SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server "](prepare-server-exchange.md)
-
+> [!div class="step-by-step"]
+> [" SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server "](prepare-server-exchange.md)
+> 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
 > - Имя контроллера домена — **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 > - Имя сервера службы MIM — **corpservice**
 > - Имя сервера синхронизации MIM — **corpsync**
 > - Имя SQL Server — **corpsql**
-> - Пароль — **Pass@word1**
+> - Пароль — <strong>Pass@word1</strong>
 
 
 ## <a name="install-sharepoint-2016"></a>Установка **SharePoint 2016**
@@ -97,25 +98,25 @@ ms.lasthandoff: 05/04/2018
 
 2. Запустите командную консоль SharePoint 2016 и выполните следующий сценарий PowerShell, чтобы создать **семейство веб-сайтов SharePoint**, связанное с веб-приложением.
 
-  ```
+   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
-  ```
+   ```
 
-  > [!NOTE]
-  > Убедитесь, что для переменной *CompatibilityLevel* установлено значение 15. Если результат не равен 15, то семейство веб-сайтов не соответствует действующей версии программы, поэтому удалите это семейство веб-сайтов и создайте его еще раз.
+   > [!NOTE]
+   > Убедитесь, что для переменной *CompatibilityLevel* установлено значение 15. Если результат не равен 15, то семейство веб-сайтов не соответствует действующей версии программы, поэтому удалите это семейство веб-сайтов и создайте его еще раз.
 
 3. Отключите **SharePoint Server-Side Viewstate** (Просмотр состояния сервера SharePoint на стороне сервера), а также задачу "Анализ работоспособности SharePoint (каждый час, Microsoft SharePoint Foundation Timer, все серверы)", выполнив следующие команды PowerShell в **Консоли управления SharePoint 2016**:
 
-  ```
-  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-  $contentService.ViewStateOnServer = $false;
-  $contentService.Update();
-  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-  ```
+   ```
+   $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+   $contentService.ViewStateOnServer = $false;
+   $contentService.Update();
+   Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+   ```
 
 4. На сервере управления идентификаторами откройте новую вкладку веб-браузера, перейдите к http://mim.contoso.com/ и войдите под именем *contoso\miminstall*.  Откроется пустой сайт SharePoint под названием *Портал MIM* .
 
@@ -129,6 +130,6 @@ ms.lasthandoff: 05/04/2018
 
 7. Откройте средство **Администрирование**, перейдите в раздел **Службы**, найдите службу администрирования SharePoint и запустите ее, если она еще не запущена.
 
->[!div class="step-by-step"]  
-[" SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server "](prepare-server-exchange.md)
+> [!div class="step-by-step"]  
+> [" SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server "](prepare-server-exchange.md)

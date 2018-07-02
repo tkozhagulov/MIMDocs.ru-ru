@@ -1,7 +1,7 @@
 ---
-title: "Самостоятельное обновление смарт-карты в Microsoft Identity Manager без прав администратора | Документация Майкрософт"
-description: "Узнайте, как зарегистрировать смарт-карты на компьютерах пользователей без прав администратора, чтобы они могли использовать диспетчер сертификатов."
-keywords: 
+title: Самостоятельное обновление смарт-карты в Microsoft Identity Manager без прав администратора | Документация Майкрософт
+description: Узнайте, как зарегистрировать смарт-карты на компьютерах пользователей без прав администратора, чтобы они могли использовать диспетчер сертификатов.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 39becb555d2efe17e60789453dbaf448c90a8b60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289168"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Регистрация смарт-карт для пользователей, не являющихся администраторами
 Если пользователь не является локальным администратором на компьютере, по умолчанию он не сможет зарегистрировать смарт-карту на своих компьютерах. Представленная ниже процедура позволяет обойти это ограничение.

@@ -12,22 +12,23 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
-ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
+ms.openlocfilehash: 119dca043ec478e68317c14103204da2482eb001
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290158"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Установка MIM 2016: синхронизация Active Directory и службы MIM
 
->[!div class="step-by-step"]
-[" Служба и портал MIM](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [" Служба и портал MIM](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
 > - Имя контроллера домена — **mimservername**.
 > - Имя домена — **contoso**.
-> - Пароль — **Pass@word1**
+> - Пароль — <strong>Pass@word1</strong>
 
 По умолчанию в службе синхронизации MIM настроенные соединители отсутствуют.  Обычно первый шаг заключается в использовании службы синхронизации MIM для заполнения базы данных службы MIM существующими учетными записями Active Directory. Для этого используется приложения-служба синхронизации MIM.
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/23/2018
 > [!NOTE]
 > Для агента управления MIM необходимо использовать ту же учетную запись, которая была указана во время установки службы MIM.
 
-###<a name="to-create-the-mim-ma"></a>Создание MIM MA
+### <a name="to-create-the-mim-ma"></a>Создание MIM MA
 
 1.  Откройте диспетчер службы синхронизации.
 
@@ -429,5 +430,5 @@ ms.lasthandoff: 04/23/2018
     - В списке **Run profiles** (Профили выполнения) выберите профиль выполнения, который требуется запустить.
     - Чтобы запустить профиль выполнения, нажмите кнопку **ОК**.
 
->[!div class="step-by-step"]
-[" Служба и портал MIM](install-mim-service-portal.md)
+> [!div class="step-by-step"]
+> [" Служба и портал MIM](install-mim-service-portal.md)

@@ -10,12 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 101f4110d6439cfc17f25c8880531e18f51920da
-ms.sourcegitcommit: 19ed53fa6af61086774a0429fd1520067caf4e93
+ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34462901"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288876"
 ---
 # <a name="supported-languages"></a>Поддерживаемые языки
 
@@ -31,41 +31,41 @@ ms.locfileid: "34462901"
 > [!IMPORTANT]
 > Текст в надстройке и на портале SSPR будет локализован, но для локализации вопросов потребуются дополнительные действия. Вам нужно будет создать рабочие процессы AuthN (и сопутствующие наборы и правила политики управления для целевой направленности), чтобы привязывать вопросы на каждом языке с целевым расположением.
 
-|Language|FIM (4.3.x.x)/MIM (4.4.xx)|MIM(4.5.x.x)
-|-----|-----|-----|
-|Болгарский|bg-BG|bg|
-|Китайский (упрощенное письмо)|zh-CN|zh-Hans|
-|Китайский (Тайвань)|zh-TW|zh-Hant|
-|Хорватский|hr-HR|ч.|
-|Чешский|cs-CZ|CS|
-|Датский|da-DK|da|
-|Нидерландский|nl-NL|nl|
-|Эстонский|et-EE|et|
-|Французский|fr-FR|fr|
-|Финский|fi-FI|fi|
-|Немецкий|de-DE|de|
-|Греческий|el-GR|el|
-|хинди;|hi-IN|hi|
-|Венгерский|hu-HU|hu|
-|Итальянский|it-IT|it|
-|Японский|ja-JP|ja|
-|Корейский|ko-KR|ko|
-|Литовский|lt-LT|lt|
-|Латышский|lv-LV|lv|
-|Норвежский|nb-NO|nb-NO|
-|Польский|pl-PL|pl|
-|Португальский (Португалия)|pt-PT|pt|
-|Португальский (Бразилия)|pt-BR|pt-BR|
-|Русский|ru-RU|ru||sv|
-|Румынский|ro-RO|ro|
-|Испанский|es-ES|Да|
-|Словацкий|sk-SK|sk|
-|Шведский|sv-SE|sv|
-|Словенский|sl-SI|sl|
-|Сербский — Сербия |sr-latn-CS (нерекомендуемый)|sr-Latn-RS|
-|Тайский|th-TH|th|
-|Турецкий|tr-TR|tr|
-|Украинский|uk-UA|uk|
+|       Language        | FIM (4.3.x.x)/MIM (4.4.xx) | MIM(4.5.x.x) |
+|-----------------------|--------------------------|--------------|
+|       Болгарский       |          bg-BG           |      bg      |
+| Китайский (упрощенное письмо)  |          zh-CN           |   zh-Hans    |
+|   Китайский (Тайвань)    |          zh-TW           |   zh-Hant    |
+|       Хорватский        |          hr-HR           |      ч.      |
+|         Чешский         |          cs-CZ           |      CS      |
+|        Датский         |          da-DK           |      da      |
+|         Нидерландский         |          nl-NL           |      nl      |
+|       Эстонский        |          et-EE           |      et      |
+|        Французский         |          fr-FR           |      fr      |
+|        Финский        |          fi-FI           |      fi      |
+|        Немецкий         |          de-DE           |      de      |
+|         Греческий         |          el-GR           |      el      |
+|         хинди;         |          hi-IN           |      hi      |
+|       Венгерский       |          hu-HU           |      hu      |
+|        Итальянский        |          it-IT           |      it      |
+|       Японский        |          ja-JP           |      ja      |
+|        Корейский         |          ko-KR           |      ko      |
+|      Литовский       |          lt-LT           |      lt      |
+|        Латышский        |          lv-LV           |      lv      |
+|       Норвежский       |          nb-NO           |    nb-NO     |
+|        Польский         |          pl-PL           |      pl      |
+| Португальский (Португалия) |          pt-PT           |      pt      |
+|  Португальский (Бразилия)  |          pt-BR           |    pt-BR     |
+|        Русский        |          ru-RU           |      ru      |
+|       Румынский        |          ro-RO           |      ro      |
+|        Испанский        |          es-ES           |      Да      |
+|        Словацкий         |          sk-SK           |      sk      |
+|        Шведский        |          sv-SE           |      sv      |
+|       Словенский       |          sl-SI           |      sl      |
+|   Сербский — Сербия    |  sr-latn-CS (нерекомендуемый)  |  sr-Latn-RS  |
+|         Тайский          |          th-TH           |      th      |
+|        Турецкий        |          tr-TR           |      tr      |
+|       Украинский       |          uk-UA           |      uk      |
 
 ## <a name="certificate-management"></a>Управление сертификатами 
 Служба управления сертификатами Microsoft поддерживает следующие 9 языков. 

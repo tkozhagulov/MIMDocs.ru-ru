@@ -1,7 +1,7 @@
 ---
-title: "Шаг 7. Настройка ведения журнала и фильтрации идентификаторов безопасности"
-description: "В этой статье описывается шаг 7 настройки диспетчера привилегированных удостоверений с помощью скриптов. Этот шаг включает настройку журнала и фильтрации идентификаторов безопасности."
-keywords: 
+title: Шаг 7. Настройка ведения журнала и фильтрации идентификаторов безопасности
+description: В этой статье описывается шаг 7 настройки диспетчера привилегированных удостоверений с помощью скриптов. Этот шаг включает настройку журнала и фильтрации идентификаторов безопасности.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: e3d8578e9d58ccc2f3dc3bb4ff437d124bf15291
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: d2512690ce648767157a7417e5b41095c970b8eb
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289114"
 ---
 # <a name="step-7-set-up-sid-historysid-filtering"></a>Шаг 7. Настройка ведения журнала и фильтрации идентификаторов безопасности
 
->[!div class="step-by-step"]
-[« Шаг 6](sp1-step6-setup-pam-trust.md)
-[Шаг 8 »](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [« Шаг 6](sp1-step6-setup-pam-trust.md)
+> [Шаг 8 »](sp1-step8-pam-deployment-verification.md)
 
 **Описанные действия можно не выполнять в среде, в которой есть только домен PRIV.** Войдите на сервер PAMServer с учетной записью MIMAdmin.
 
@@ -38,6 +39,6 @@ ms.lasthandoff: 08/19/2017
 Для ведения журнала идентификаторов безопасности: </br></br>
 "Включение журнала идентификаторов безопасности для этого доверия" или "Журнал идентификаторов безопасности для этого доверия уже включен".
 
->[!div class="step-by-step"]
-[« Шаг 6](sp1-step6-setup-pam-trust.md)
-[Шаг 8 »](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [« Шаг 6](sp1-step6-setup-pam-trust.md)
+> [Шаг 8 »](sp1-step8-pam-deployment-verification.md)

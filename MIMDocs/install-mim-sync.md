@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
-ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
+ms.openlocfilehash: c68b33b2ff28d75b6f4e63fa8caf0c87727a5927
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289403"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Установка MIM 2016: служба синхронизации MIM
 
->[!div class="step-by-step"]
-[« Exchange Server](prepare-server-exchange.md)
-[Служба и портал MIM »](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« Exchange Server](prepare-server-exchange.md)
+> [Служба и портал MIM »](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > В этом пошаговом руководстве используются примеры имен и значений для компании Contoso. Замените их своими значениями. Пример.
 > - Имя контроллера домена — **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 > - Имя сервера службы MIM — **corpservice**
 > - Имя сервера синхронизации MIM — **corpsync**
 > - Имя SQL Server — **corpsql**
-> - Пароль — **Pass@word1**
+> - Пароль — <strong>Pass@word1</strong>
 
 Прежде чем устанавливать компоненты Microsoft Identity Manager 2016, необходимо установить пакет установки.
 
@@ -55,37 +56,37 @@ ms.lasthandoff: 05/03/2018
 
     ![Изображение для выборочной установки](media/install-mim-sync/MIM_Install2.png)
 
-6.  На экране настройки базы данных службы синхронизации выберите следующее.
+6. На экране настройки базы данных службы синхронизации выберите следующее.
 
-    1.  SQL Server находится на **удаленном компьютере** с именем **corpsql.contoso.com**.
+   1.  SQL Server находится на **удаленном компьютере** с именем **corpsql.contoso.com**.
 
-    2.  Экземпляр SQL Server: **экземпляр по умолчанию**
+   2.  Экземпляр SQL Server: **экземпляр по умолчанию**
 
-    ![Изображение для подключения к базе данных](media/install-mim-sync/MIM_Install3.png)
+   ![Изображение для подключения к базе данных](media/install-mim-sync/MIM_Install3.png)
 
-7.  Сделайте учетную запись, созданную ранее, учетной записью службы синхронизации.
+7. Сделайте учетную запись, созданную ранее, учетной записью службы синхронизации.
 
-    1.  Учетная запись службы: *MIMSync*
+   1. Учетная запись службы: *MIMSync*
 
-    2.  Пароль: *Pass@word1*
+   2. Пароль: <em>Pass@word1</em>
 
-    3.  Домен учетной записи службы или имя локального компьютера: *contoso*
+   3. Домен учетной записи службы или имя локального компьютера: *contoso*
 
-    ![Изображение для учетной записи службы](media/install-mim-sync/MIM_Install4.png)
+   ![Изображение для учетной записи службы](media/install-mim-sync/MIM_Install4.png)
 
-8.  Укажите в установщике службы синхронизации MIM нужные группы безопасности.
+8. Укажите в установщике службы синхронизации MIM нужные группы безопасности.
 
-    1. Администратор = *contoso\MIMSyncAdmins*
+   1. Администратор = *contoso\MIMSyncAdmins*
 
-    2. Оператор = *contoso\MIMSyncOperators*
+   2. Оператор = *contoso\MIMSyncOperators*
 
-    3. Соединитель = *contoso\MIMSyncJoiners*
+   3. Соединитель = *contoso\MIMSyncJoiners*
 
-    4. Обзор соединителя = *contoso\MIMSyncBrowse*
+   4. Обзор соединителя = *contoso\MIMSyncBrowse*
 
-    5. Управление паролями WMI = *contoso\MIMSyncPasswordReset*
+   5. Управление паролями WMI = *contoso\MIMSyncPasswordReset*
 
-    ![Изображение для групп безопасности](media/install-mim-sync/MIM_Install5.png)
+   ![Изображение для групп безопасности](media/install-mim-sync/MIM_Install5.png)
 
 9. На экране параметров безопасности установите флажок **Enable firewall rules for inbound RPC communications** (Включить правила брандмауэра для входящих подключений RPC) и нажмите кнопку **Далее**.
 
@@ -103,6 +104,6 @@ ms.lasthandoff: 05/03/2018
 
     5. Необходимо выйти из системы и снова войти в нее, чтобы изменения членства в группе вступили в силу. Нажмите **Да** для выхода.
 
->[!div class="step-by-step"]  
-[« Exchange Server](prepare-server-exchange.md)
-[Служба и портал MIM »](install-mim-service-portal.md)
+> [!div class="step-by-step"]  
+> [« Exchange Server](prepare-server-exchange.md)
+> [Служба и портал MIM »](install-mim-service-portal.md)

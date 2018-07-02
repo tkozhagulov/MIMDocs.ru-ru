@@ -1,7 +1,7 @@
 ---
-title: "Развертывание PAM. Шаг 2 — PRIV DC | Документация Майкрософт"
-description: "Подготовьте контроллер домена PRIV, предоставляющий среду бастиона, где изолировано Privileged Access Management."
-keywords: 
+title: Развертывание PAM. Шаг 2 — PRIV DC | Документация Майкрософт
+description: Подготовьте контроллер домена PRIV, предоставляющий среду бастиона, где изолировано Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: de3392648f187ce6007bba332c0f191d32980c94
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 960ec81d822e02a848c3ef9ac1b65f5fa0d9e61a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289461"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Шаг 2. Подготовка первого контроллера домена PRIV
 
->[!div class="step-by-step"]
-[« Шаг 1](step-1-prepare-corp-domain.md)
-[Шаг 3 »](step-3-prepare-pam-server.md)
+> [!div class="step-by-step"]
+> [« Шаг 1](step-1-prepare-corp-domain.md)
+> [Шаг 3 »](step-3-prepare-pam-server.md)
 
 На этом шаге вы создадите новый домен, который будет предоставлять среду бастиона для проверки подлинности администратора.  Этому лесу потребуется хотя бы один контроллер домена и хотя бы один рядовой сервер. Рядовой сервер будет настроен на следующем шаге.
 
@@ -52,11 +53,11 @@ ms.lasthandoff: 09/14/2017
 
 2. Введите указанные ниже команды, чтобы подготовить среду к установке Windows Server Active Directory.
 
-  ```PowerShell
-  import-module ServerManager
+   ```PowerShell
+   import-module ServerManager
 
-  Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
-  ```
+   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
+   ```
 
 ### <a name="configure-registry-settings-for-sid-history-migration"></a>Настройка параметров реестра, необходимых для миграции журнала SID
 
@@ -76,10 +77,10 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 1. В окне PowerShell введите указанные ниже команды для создания домена.  При этом на старшем домене (contoso.local), созданном в предыдущем шаге, будет также создано делегирование DNS.  Если вы хотите настроить DNS позже, опустите параметры `CreateDNSDelegation -DNSDelegationCredential $ca`.
 
-  ```PowerShell
-  $ca= get-credential
-  Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
-  ```
+   ```PowerShell
+   $ca= get-credential
+   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
+   ```
 
 2. Когда появится всплывающее окно, введите учетные данные администратора леса CORP (например, имя пользователя CONTOSO\\Administrator и соответствующий пароль из шага 1).
 
@@ -95,69 +96,69 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 2. Запустите PowerShell и введите следующие команды: Пароль 'Pass@word1' указан для примера. Используйте другой пароль для учетных записей.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  New-ADUser –SamAccountName MIMMA –name MIMMA
+   New-ADUser –SamAccountName MIMMA –name MIMMA
 
-  Set-ADAccountPassword –identity MIMMA –NewPassword $sp
+   Set-ADAccountPassword –identity MIMMA –NewPassword $sp
 
-  Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
+   New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
 
-  Set-ADAccountPassword –identity MIMMonitor –NewPassword $sp
+   Set-ADAccountPassword –identity MIMMonitor –NewPassword $sp
 
-  Set-ADUser –identity MIMMonitor –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMMonitor –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
+   New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
 
-  Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
+   Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
 
-  Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMSync –name MIMSync
+   New-ADUser –SamAccountName MIMSync –name MIMSync
 
-  Set-ADAccountPassword –identity MIMSync –NewPassword $sp
+   Set-ADAccountPassword –identity MIMSync –NewPassword $sp
 
-  Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMService –name MIMService
+   New-ADUser –SamAccountName MIMService –name MIMService
 
-  Set-ADAccountPassword –identity MIMService –NewPassword $sp
+   Set-ADAccountPassword –identity MIMService –NewPassword $sp
 
-  Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName SharePoint –name SharePoint
+   New-ADUser –SamAccountName SharePoint –name SharePoint
 
-  Set-ADAccountPassword –identity SharePoint –NewPassword $sp
+   Set-ADAccountPassword –identity SharePoint –NewPassword $sp
 
-  Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName SqlServer –name SqlServer
+   New-ADUser –SamAccountName SqlServer –name SqlServer
 
-  Set-ADAccountPassword –identity SqlServer –NewPassword $sp
+   Set-ADAccountPassword –identity SqlServer –NewPassword $sp
 
-  Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
+   New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
 
-  Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
+   Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
 
-  Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
+   Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
 
-  New-ADUser -SamAccountName MIMAdmin -name MIMAdmin
+   New-ADUser -SamAccountName MIMAdmin -name MIMAdmin
 
-  Set-ADAccountPassword –identity MIMAdmin  -NewPassword $sp
+   Set-ADAccountPassword –identity MIMAdmin  -NewPassword $sp
 
-  Set-ADUser -identity MIMAdmin -Enabled 1 -PasswordNeverExpires 1
+   Set-ADUser -identity MIMAdmin -Enabled 1 -PasswordNeverExpires 1
 
-  Add-ADGroupMember "Domain Admins" SharePoint
+   Add-ADGroupMember "Domain Admins" SharePoint
 
-  Add-ADGroupMember "Domain Admins" MIMService
-  ```
+   Add-ADGroupMember "Domain Admins" MIMService
+   ```
 
 ### <a name="configure-auditing-and-logon-rights"></a>Настройте права аудита и входа в систему.
 
@@ -201,11 +202,11 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 19. Откройте окно PowerShell от имени администратора и введите следующую команду, чтобы обновить контроллер домена согласно параметрам групповой политики.
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+    ```cmd
+    gpupdate /force /target:computer
+    ```
 
-  Через минуту обновление будет завершено с сообщением "Обновление политики для компьютера успешно завершено".
+    Через минуту обновление будет завершено с сообщением "Обновление политики для компьютера успешно завершено".
 
 
 ### <a name="configure-dns-name-forwarding-on-privdc"></a>Настройте направление имен DNS на PRIVDC.
@@ -216,11 +217,11 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 2. Для каждого домена в верхней части каждого существующего леса введите следующую команду, указав существующий домен DNS (например, contoso.local) и IP-адрес главного сервера этого домена.  
 
-  Если на предыдущем шаге вы создали один домен contoso.local, укажите в качестве IP-адреса виртуальной сети компьютера CORPDC значение *10.1.1.31*.
+   Если на предыдущем шаге вы создали один домен contoso.local, укажите в качестве IP-адреса виртуальной сети компьютера CORPDC значение *10.1.1.31*.
 
-  ```PowerShell
-  Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
-  ```
+   ```PowerShell
+   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
+   ```
 
 > [!NOTE]
 > Другие леса также должны направлять в этот контроллер домена запросы DNS, связанные с лесом PRIV.  Если вы используете несколько лесов Active Directory, необходимо также добавить в каждый из них DNS-серверы условной пересылки.
@@ -229,12 +230,12 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 1. Используя PowerShell, добавьте имена субъектов-служб, чтобы SharePoint, API REST управления привилегированным доступом и служба MIM могли использовать проверку подлинности Kerberos.
 
-  ```cmd
-  setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
-  setspn -S http/pamsrv PRIV\SharePoint
-  setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
-  setspn -S FIMService/pamsrv PRIV\MIMService
-  ```
+   ```cmd
+   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
+   setspn -S http/pamsrv PRIV\SharePoint
+   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
+   setspn -S FIMService/pamsrv PRIV\MIMService
+   ```
 
 > [!NOTE]
 > Далее в этом документе описывается, как установить компоненты сервера MIM 2016 на одном компьютере. Если вы планируете добавить еще один сервер для обеспечения высокой доступности, вам потребуется дополнительная настройка Kerberos, описанная в статье [FIM 2010: настройка проверки подлинности Kerberos](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
@@ -254,13 +255,13 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 8. В окне "Выбор пользователей, компьютеров или групп" введите *MIMAdmin* и нажмите кнопку **Проверить имена**. Когда имена будут подчеркнуты, нажмите кнопки **ОК** и **Далее**.
 9. Выберите **пользовательскую задачу**, задайте ее применение **в этой папке**и выберите **Общие разрешения**.
 10. В списке разрешений выберите следующие пункты:
-  - **Чтение**
-  - **Запись**
-  - **Создание всех дочерних объектов**
-  - **Удаление всех дочерних объектов**
-  - **Чтение всех свойств**
-  - **Запись всех свойств**
-  - **Миграция журнала SID** Нажмите кнопку **Далее**, затем — **Готово**.
+    - **Чтение**
+    - **Запись**
+    - **Создание всех дочерних объектов**
+    - **Удаление всех дочерних объектов**
+    - **Чтение всех свойств**
+    - **Запись всех свойств**
+    - **Миграция журнала SID** Нажмите кнопку **Далее**, затем — **Готово**.
 
 11. Еще раз щелкните правой кнопкой мыши **домен priv.contoso.local** и выберите **Делегирование управления**.  
 12. На вкладке "Выбранные пользователи и группы" нажмите кнопку **Добавить**.  
@@ -271,9 +272,9 @@ New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name Tcpip
 
 17. Откройте командную строку.  
 18. Просмотрите список управления доступом в объекте "Владелец SD администратора" в доменах PRIV. Например, если используется домен priv.contoso.local, введите команду
-  ```cmd
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
-  ```
+    ```cmd
+    dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
+    ```
 19. При необходимости обновите список управления доступом, чтобы служба MIM и служба компонента MIM могли обновлять членства групп, защищаемых этим списком.  Введите команду:
 
 ```cmd
@@ -299,10 +300,10 @@ dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcompo
 
 4. С помощью панели управления присоедините компьютер PRIVWKSTN к домену priv.contoso.local. Для этого потребуется предоставить учетные данные администратора домена PRIV. После завершения этого действия перезагрузите компьютер PRIVWKSTN.
 
-Дополнительные сведения см. в статье о [защите рабочих станций с привилегированным доступом](https://technet.microsoft.com/en-us/library/mt634654.aspx).
+Дополнительные сведения см. в статье о [защите рабочих станций с привилегированным доступом](https://technet.microsoft.com/library/mt634654.aspx).
 
 На следующем шаге описывается подготовка сервера управления привилегированным доступом.
 
->[!div class="step-by-step"]
-[« Шаг 1](step-1-prepare-corp-domain.md)
-[Шаг 3 »](step-3-prepare-pam-server.md)
+> [!div class="step-by-step"]
+> [« Шаг 1](step-1-prepare-corp-domain.md)
+> [Шаг 3 »](step-3-prepare-pam-server.md)

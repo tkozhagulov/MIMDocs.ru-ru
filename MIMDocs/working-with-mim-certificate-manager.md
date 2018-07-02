@@ -1,7 +1,7 @@
 ---
-title: "Развертывание приложения диспетчера сертификатов MIM для Windows | Документация Microsoft"
-description: "Узнайте, как развернуть приложение диспетчера сертификатов, чтобы позволить пользователям управлять своими правами доступа."
-keywords: 
+title: Развертывание приложения диспетчера сертификатов MIM для Windows | Документация Microsoft
+description: Узнайте, как развернуть приложение диспетчера сертификатов, чтобы позволить пользователям управлять своими правами доступа.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e472d7cdc07aa19464aa1f18447d8c5dc7d0f0ba
-ms.sourcegitcommit: 1e0626a366a41d610e6a117cdf684241eb65ec63
+ms.openlocfilehash: bf655d451e86261ffd3043117a56f4daccb4b460
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289879"
 ---
 # <a name="mim-certificate-manager-windows-store-application-deployment"></a>Развертывание приложения диспетчера сертификатов MIM из магазина Windows
 
@@ -48,10 +49,10 @@ ms.lasthandoff: 10/17/2017
 
 7. На вкладке "Совместимость" в поле "Центр сертификации" выберите "Windows Server 2008". В поле "Получатель сертификата" выберите "Windows 8.1/Windows Server 2012 R2". Версия шаблона устанавливается при первом создании и сохранении шаблона сертификата. Если вы не создавали шаблон сертификата таким образом, изменить эту версию на правильную невозможно.
 
-    >[!NOTE]
-    Этот шаг очень важен, так как на нем проверяется версия шаблона сертификата. Необходима версия 3 или более поздняя версия. С приложением диспетчера сертификатов работают только шаблоны версии 3.
-    
-8.  На вкладке **Общие** в поле **Отображаемое имя** введите имя, которое будет отображаться в пользовательском интерфейсе приложения, например **Вход с виртуальной смарт-картой**.
+   > [!NOTE]
+   >  Этот шаг очень важен, так как на нем проверяется версия шаблона сертификата. Необходима версия 3 или более поздняя версия. С приложением диспетчера сертификатов работают только шаблоны версии 3.
+
+8. На вкладке **Общие** в поле **Отображаемое имя** введите имя, которое будет отображаться в пользовательском интерфейсе приложения, например **Вход с виртуальной смарт-картой**.
 
 9. На вкладке **Обработка запроса** задайте для параметра **Цель** значение **Подпись и шифрование**, а для параметра **Выполнить следующие действия...** выберите **Запрашивать пользователя во время регистрации**.
 
@@ -112,26 +113,28 @@ ms.lasthandoff: 10/17/2017
 
 3. Откройте файл Custom.data и при необходимости измените параметры.
 
-    |||
-    |-|-|
-    |URL-адрес MIM CM|Полное доменное имя портала, которое использовалось для настройки CM. Например: https://mimcmServerAddress/certificatemanagement|
-    |URL-адрес ADFS|Если вы используете службы AD FS, укажите URL-адрес AD FS. Например: https://adfsServerSame/adfs </br> Если службы федерации Active Directory не используются, укажите пустую строку в качестве значения параметра.  Например: ```<ADFS URL=""/>``` |
-    |PrivacyUrl|Вы можете указать URL-адрес веб-страницы, на которой описывается, что вы будете делать с данными пользователя, полученными для регистрации сертификата.|
-    |SupportMail|Можно указать электронный адрес службы поддержки.|
-    |LobComplianceEnable|Этому параметру можно задать значение true или false. Значение по умолчанию — true.|
-    |MinimumPinLength|Значение по умолчанию — 6.|
-    |NonAdmin|Этому параметру можно задать значение true или false. Значение по умолчанию — false. Это значение следует изменить, только чтобы пользователи, не являющиеся администраторами на своих компьютерах, могли регистрировать и обновлять сертификаты.|
->[!IMPORTANT]
-Необходимо указать значение URL-адреса служб федерации Active Directory. Если значение не указано, современное приложение выдаст ошибку при первом использовании.
-4.  Сохраните файл и закройте редактор.
 
-5.  После подписи пакета создается файл подписи, поэтому нужно удалить исходный файл с именем AppxSignature.p7x.
+   |                     |                                                                                                                                                                                                          |
+   |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |      URL-адрес MIM CM      |                                              Полное доменное имя портала, которое использовалось для настройки CM. Например, https://mimcmServerAddress/certificatemanagement                                              |
+   |      URL-адрес ADFS       | Если вы используете службы AD FS, укажите URL-адрес AD FS. Например, <https://adfsServerSame/adfs> </br> Если службы федерации Active Directory не используются, укажите пустую строку в качестве значения параметра.  Например: ```<ADFS URL=""/>``` |
+   |     PrivacyUrl      |                                         Вы можете указать URL-адрес веб-страницы, на которой описывается, что вы будете делать с данными пользователя, полученными для регистрации сертификата.                                          |
+   |     SupportMail     |                                                                           Можно указать электронный адрес службы поддержки.                                                                           |
+   | LobComplianceEnable |                                                                     Этому параметру можно задать значение true или false. Значение по умолчанию — true.                                                                      |
+   |  MinimumPinLength   |                                                                                        Значение по умолчанию — 6.                                                                                         |
+   |      NonAdmin       |           Этому параметру можно задать значение true или false. Значение по умолчанию — false. Это значение следует изменить, только чтобы пользователи, не являющиеся администраторами на своих компьютерах, могли регистрировать и обновлять сертификаты.            |
 
-6.  Файл AppxManifest.xml задает имя субъекта сертификата подписи. Откройте его для редактирования.
+   > [!IMPORTANT]
+   > Необходимо указать значение URL-адреса служб федерации Active Directory. Если значение не указано, современное приложение выдаст ошибку при первом использовании.
+4. Сохраните файл и закройте редактор.
 
-7.  Перед началом изучения этого раздела вам необходимо получить сертификат подписи. См. раздел "Включение обновления смарт-карты для администраторов в диспетчере сертификатов MIM 2016", шаг 1 ниже.
+5. После подписи пакета создается файл подписи, поэтому нужно удалить исходный файл с именем AppxSignature.p7x.
 
-8.  В элементе &lt;Identity&gt; присвойте атрибуту Publisher значение, совпадающее с субъектом, указанным в сертификате подписи, например "CN=SUBJECT".
+6. Файл AppxManifest.xml задает имя субъекта сертификата подписи. Откройте его для редактирования.
+
+7. Перед началом изучения этого раздела вам необходимо получить сертификат подписи. См. раздел "Включение обновления смарт-карты для администраторов в диспетчере сертификатов MIM 2016", шаг 1 ниже.
+
+8. В элементе &lt;Identity&gt; присвойте атрибуту Publisher значение, совпадающее с субъектом, указанным в сертификате подписи, например "CN=SUBJECT".
 
 9. Сохраните файл и закройте редактор.
 
@@ -151,102 +154,102 @@ ms.lasthandoff: 10/17/2017
 
 11. Для работы с проверкой подлинности AD FS:
 
-    -  Откройте приложение Virtual Smart Card. Это упрощает поиск значений, необходимых для следующего шага.
+    - Откройте приложение Virtual Smart Card. Это упрощает поиск значений, необходимых для следующего шага.
 
-    -  На сервере AD FS откройте Windows PowerShell и выполните команду `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`, чтобы добавить приложение в качестве клиента на сервер AD FS и настроить CM на сервере.
+    - На сервере AD FS откройте Windows PowerShell и выполните команду `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`, чтобы добавить приложение в качестве клиента на сервер AD FS и настроить CM на сервере.
 
-        Ниже приведен скрипт ConfigureMimCMClientAndRelyingParty.ps1:
+       Ниже приведен скрипт ConfigureMimCMClientAndRelyingParty.ps1:
 
-       ```PowerShell
-        # HELP
+      ```PowerShell
+       # HELP
 
-        <#
-        .SYNOPSIS
-                        Configure ADFS for CM client app and server.
-        .DESCRIPTION
-           What the Script does:
-                                        a. Registers the MIM CM client app on the ADFS server.
-                                        b. Registers the MIM CM server relying party (Tells the ADFS server that it issues tokens for the CM server).
-                        For parameter information, see 'get-help -detailed'
-        .PARAMETER redirectUri
-                        The redirectUri for CM client app. Will be added to ADFS server.
-                        It can be found as follows:
-                        1. Open the settings panel. Under settings, there is a "Redirect Uri" text box (an ADFS server address must be configured in order for the text to display).
-                        2. Open MIM CM client app. Navigate to 'C:\Users\<your_username>\AppData\Local\Packages\CmModernAppv.<version>\LocalState', and open 'Logs_Virtual Smart Card Certificate Manager_<version>'. Search for "Redirect URI".
-        .PARAMETER serverFqdn
-                        Your deployed MIM CM server’s FQDN.
-        .EXAMPLE
-           .\ConfigureMimCMClientAndRelyingParty.ps1 -redirectUri ms-app://s-1-15-2-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789/ -serverFqdn WIN-TRUR24L4CFS.corp.cmteam.com
-        #>
+       <#
+       .SYNOPSIS
+                       Configure ADFS for CM client app and server.
+       .DESCRIPTION
+          What the Script does:
+                                       a. Registers the MIM CM client app on the ADFS server.
+                                       b. Registers the MIM CM server relying party (Tells the ADFS server that it issues tokens for the CM server).
+                       For parameter information, see 'get-help -detailed'
+       .PARAMETER redirectUri
+                       The redirectUri for CM client app. Will be added to ADFS server.
+                       It can be found as follows:
+                       1. Open the settings panel. Under settings, there is a "Redirect Uri" text box (an ADFS server address must be configured in order for the text to display).
+                       2. Open MIM CM client app. Navigate to 'C:\Users\<your_username>\AppData\Local\Packages\CmModernAppv.<version>\LocalState', and open 'Logs_Virtual Smart Card Certificate Manager_<version>'. Search for "Redirect URI".
+       .PARAMETER serverFqdn
+                       Your deployed MIM CM server’s FQDN.
+       .EXAMPLE
+          .\ConfigureMimCMClientAndRelyingParty.ps1 -redirectUri ms-app://s-1-15-2-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789/ -serverFqdn WIN-TRUR24L4CFS.corp.cmteam.com
+       #>
 
-        # Parameter declaration
-        [CmdletBinding()]
-        Param(
+       # Parameter declaration
+       [CmdletBinding()]
+       Param(
+         [Parameter(Mandatory=$True)]
+          [string]$redirectUri,
+
           [Parameter(Mandatory=$True)]
-           [string]$redirectUri,
+          [string]$serverFqdn
+       )
 
-           [Parameter(Mandatory=$True)]
-           [string]$serverFqdn
-        )
+       Write-Host "Configuring ADFS Objects for OAuth.."
 
-        Write-Host "Configuring ADFS Objects for OAuth.."
+       #Configure SSO to get persistent sign on cookie
+       Set-ADFSProperties -SsoLifetime 2880
 
-        #Configure SSO to get persistent sign on cookie
-        Set-ADFSProperties -SsoLifetime 2880
+       #Configure Authentication Policy
+       #Intranet to use Kerberos
+       #Extranet to use U/P
 
-        #Configure Authentication Policy
-        #Intranet to use Kerberos
-        #Extranet to use U/P
+       #Create Client Objects
 
-        #Create Client Objects
+       Write-Host "Creating Client Objects..."
 
-        Write-Host "Creating Client Objects..."
+       $existingClient = Get-ADFSClient -Name "MIM CM Modern App"
 
-        $existingClient = Get-ADFSClient -Name "MIM CM Modern App"
+       if ($existingClient -ne $null)
+       {
+           Write-Host "Found existing instance of the MIM CM Modern App, removing"
+           Remove-ADFSClient -TargetName "MIM CM Modern App"
+           Write-Host "Client object removed"
+       }
 
-        if ($existingClient -ne $null)
-        {
-            Write-Host "Found existing instance of the MIM CM Modern App, removing"
-            Remove-ADFSClient -TargetName "MIM CM Modern App"
-            Write-Host "Client object removed"
-        }
+       Write-Host "Adding Client Object for MIM CM Modern App client"
+       Add-ADFSClient -Name "MIM CM Modern App" -ClientId "70A8B8B1-862C-4473-80AB-4E55BAE45B4F" -RedirectUri $redirectUri
+       Write-Host "Client Object for MIM CM Modern App client Created"
 
-        Write-Host "Adding Client Object for MIM CM Modern App client"
-        Add-ADFSClient -Name "MIM CM Modern App" -ClientId "70A8B8B1-862C-4473-80AB-4E55BAE45B4F" -RedirectUri $redirectUri
-        Write-Host "Client Object for MIM CM Modern App client Created"
+       #Create Relying Parties
+       Write-Host "Creating Relying Party Objects"
 
-        #Create Relying Parties
-        Write-Host "Creating Relying Party Objects"
+       $existingRp = Get-ADFSRelyingPartyTrust -Name "MIM CM Service"
+       if ($existingRp -ne $null)
+       {
+           Write-Host "Found existing instance of the MIM CM Service RP, removing"
+           Remove-ADFSRelyingPartyTrust -TargetName "MIM CM Service"
+           Write-Host "RP object Removed"
+       }
 
-        $existingRp = Get-ADFSRelyingPartyTrust -Name "MIM CM Service"
-        if ($existingRp -ne $null)
-        {
-            Write-Host "Found existing instance of the MIM CM Service RP, removing"
-            Remove-ADFSRelyingPartyTrust -TargetName "MIM CM Service"
-            Write-Host "RP object Removed"
-        }
+       $authorizationRules =
+       "@RuleTemplate = `"AllowAllAuthzRule`"
+       => issue(Type = `"http://schemas.microsoft.com/authorization/claims/permit`", Value = `"true`");"
 
-        $authorizationRules =
-        "@RuleTemplate = `"AllowAllAuthzRule`"
-        => issue(Type = `"http://schemas.microsoft.com/authorization/claims/permit`", Value = `"true`");"
+       $issuanceRules =
+       "@RuleTemplate = `"LdapClaims`"
+       @RuleName = `"Emit UPN and common name`"
+       c:[Type == `"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`", Issuer == `"AD AUTHORITY`"]
+       => issue(store = `"Active Directory`", types =
+       (`"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`",
+       `"http://schemas.xmlsoap.org/claims/CommonName`"), query =
+       `";userPrincipalName,cn;{0}`", param = c.Value);
 
-        $issuanceRules =
-        "@RuleTemplate = `"LdapClaims`"
-        @RuleName = `"Emit UPN and common name`"
-        c:[Type == `"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`", Issuer == `"AD AUTHORITY`"]
-        => issue(store = `"Active Directory`", types =
-        (`"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`",
-        `"http://schemas.xmlsoap.org/claims/CommonName`"), query =
-        `";userPrincipalName,cn;{0}`", param = c.Value);
+       @RuleTemplate = `"PassThroughClaims`"
+       @RuleName = `"Pass through Windows Account Name`"
+       c:[Type ==`"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`"] => issue(claim = c);"
 
-        @RuleTemplate = `"PassThroughClaims`"
-        @RuleName = `"Pass through Windows Account Name`"
-        c:[Type ==`"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`"] => issue(claim = c);"
-
-        Write-Host "Creating RP Trust for MIM CM Service"
-        Add-ADFSRelyingPartyTrust -Name "MIM CM Service" -Identifier ("https://"+$serverFqdn+"/certificatemanagement") -IssuanceAuthorizationRules $authorizationRules -IssuanceTransformRules $issuanceRules
-        Write-Host "RP Trust for MIM CM Service has been created"
-        ```
+       Write-Host "Creating RP Trust for MIM CM Service"
+       Add-ADFSRelyingPartyTrust -Name "MIM CM Service" -Identifier ("https://"+$serverFqdn+"/certificatemanagement") -IssuanceAuthorizationRules $authorizationRules -IssuanceTransformRules $issuanceRules
+       Write-Host "RP Trust for MIM CM Service has been created"
+       ```
 
     - Обновите значения параметров redirectUri и serverFQDN.
 
@@ -255,15 +258,15 @@ ms.lasthandoff: 10/17/2017
     - serverFQDN — это полное имя компьютера сервера MIMCM.
 
     - Чтобы получить справку по скрипту **ConfigureMIimCMClientAndRelyingParty.ps1**, выполните следующую команду. </br> 
-    ```Powershell
-     get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
-    ```
+      ```Powershell
+      get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
+      ```
 
 ## <a name="deploy-the-app"></a>Развертывание приложения
 
 При настройке приложения CM в центре загрузки скачайте файл MIMDMModernApp_&lt;версия&gt;_AnyCPU_Test.zip и извлеките его содержимое. APPX-файл — это установщик. Его можно развернуть так же, как и любое приложение Магазина Windows, используя [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)или [Intune](https://technet.microsoft.com/library/dn613839.aspx) для загрузки неопубликованного приложения, чтобы пользователи имели доступ к нему через корпоративный портал либо оно устанавливалось непосредственно на их компьютеры.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Шаблоны профиля конфигурации](https://technet.microsoft.com/library/cc708656)
 - [Управление приложениями смарт-карты](https://technet.microsoft.com/library/cc708681)

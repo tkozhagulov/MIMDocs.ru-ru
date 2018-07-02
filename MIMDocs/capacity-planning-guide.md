@@ -1,7 +1,7 @@
 ---
-title: "Руководство по планированию ресурсов | Документация Майкрософт"
-description: "В этом руководстве описаны аспекты, которые нужно принять во внимание перед развертыванием MIM 2016, включая уровни нагрузки и принятие решений по политике."
-keywords: 
+title: Руководство по планированию ресурсов | Документация Майкрософт
+description: В этом руководстве описаны аспекты, которые нужно принять во внимание перед развертыванием MIM 2016, включая уровни нагрузки и принятие решений по политике.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 32cdf03ffa0d0d282a6277af766f97e93e3a3f3a
-ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289019"
 ---
 # <a name="capacity-planning-guide"></a>Руководство по планированию ресурсов
 
@@ -93,7 +94,7 @@ Microsoft Identity Manager (MIM) позволяет создавать, обно
 
 - Будет ли использоваться подготовка без программирования? Если будет, это повлияет на число ожидаемых записей правил, а также на соответствующие запросы и рабочие процессы в системе.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Вопросы по топологии для развертывания MIM](topology-considerations.md)
 - Скачиваемое [руководство по планированию ресурсов для Forefront Identity Manager (FIM) 2010](http://go.microsoft.com/fwlink/?LinkId=200180) содержит более подробные сведения о тестовой сборке и результатах тестирования производительности.

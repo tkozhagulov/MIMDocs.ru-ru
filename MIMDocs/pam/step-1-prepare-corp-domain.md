@@ -1,7 +1,7 @@
 ---
-title: "Развертывание PAM. Шаг 1 — домен CORP | Документация Майкрософт"
-description: "Подготовьте домен CORP при помощи существующего или нового удостоверения для управления диспетчером привилегированных удостоверений"
-keywords: 
+title: Развертывание PAM. Шаг 1 — домен CORP | Документация Майкрософт
+description: Подготовьте домен CORP при помощи существующего или нового удостоверения для управления диспетчером привилегированных удостоверений
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,16 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: f0d2ebd198ad6aee2b2b6ba07c83f5147243f598
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289607"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Шаг 1. Подготовка узла и домена CORP
 
->[!div class="step-by-step"]
-[Шаг 2 "](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Шаг 2 "](step-2-prepare-priv-domain-controller.md)
 
 В этом шаге описывается подготовка к размещению среды бастиона. При необходимости в новом домене и лесу (в лесу *CORP*) также создаются контроллер домена и участвующая рабочая станция с удостоверениями для управления средой бастиона. Этот лес CORP имитирует существующий лес, содержащий ресурсы, которыми нужно управлять. Этот документ содержит пример ресурсов для защиты — общую папку.
 
@@ -56,15 +57,15 @@ ms.lasthandoff: 09/14/2017
 
 2. Введите следующие команды:
 
-  ```PowoerShell
-  import-module ServerManager
+   ```PowoerShell
+   import-module ServerManager
 
-  Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
+   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
 
-  Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
-  ```
+   Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
+   ```
 
-  Вам будет предложено ввести пароль администратора для безопасного режима. Обратит внимание, что появятся сообщения с предупреждениями для параметров делегирования DNS и криптографии. Это нормально.
+   Вам будет предложено ввести пароль администратора для безопасного режима. Обратит внимание, что появятся сообщения с предупреждениями для параметров делегирования DNS и криптографии. Это нормально.
 
 3. После создания леса выйдите из системы. Сервер автоматически перезагрузится.
 
@@ -80,11 +81,11 @@ ms.lasthandoff: 09/14/2017
 
 2. Введите следующие команды, но вместо CONTOSO укажите имя NetBIOS домена.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
-  ```
+   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
+   ```
 
 В некоторых случаях группа может уже существовать — это нормально, если домен также использовался в сценариях миграции AD.
 
@@ -101,21 +102,21 @@ ms.lasthandoff: 09/14/2017
 
 2. Введите следующие команды: Замените пароль Pass@word1 другим паролем.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
+   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
 
-  New-ADUser –SamAccountName Jen –name Jen
+   New-ADUser –SamAccountName Jen –name Jen
 
-  Add-ADGroupMember –identity CorpAdmins –Members Jen
+   Add-ADGroupMember –identity CorpAdmins –Members Jen
 
-  $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  Set-ADAccountPassword –identity Jen –NewPassword $jp
+   Set-ADAccountPassword –identity Jen –NewPassword $jp
 
-  Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
-  ```
+   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
+   ```
 
 ### <a name="configure-auditing"></a>Настройка аудита
 
@@ -139,9 +140,9 @@ ms.lasthandoff: 09/14/2017
 
 8. Примените параметры аудита, открыв окно PowerShell и выполнив следующую команду:
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+   ```cmd
+   gpupdate /force /target:computer
+   ```
 
 Через пару минут должно появиться сообщение **Обновление политики для компьютера успешно завершено**.
 
@@ -153,11 +154,11 @@ ms.lasthandoff: 09/14/2017
 
 2. Введите следующие команды, которые настроят исходный домен, чтобы в нем разрешался удаленный вызов процедур (RPC) для доступа к базе данных диспетчера учетных записей служб (SAM).
 
-  ```PowerShell
-  New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
+   ```PowerShell
+   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
-  Restart-Computer
-  ```
+   Restart-Computer
+   ```
 
 Они перезапустят контроллер домена CORPDC. Дополнительные сведения об этом параметре реестра см. в статье [Устранение неполадок при миграции параметров sIDHistory между лесами с помощью средства ADMTv2](http://support.microsoft.com/kb/322970).
 
@@ -192,21 +193,21 @@ ms.lasthandoff: 09/14/2017
 
 4. Введите следующие команды:
 
-  ```PowerShell
-  mkdir c:\corpfs
+   ```PowerShell
+   mkdir c:\corpfs
 
-  New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
+   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
 
-  $acl = Get-Acl c:\corpfs
+   $acl = Get-Acl c:\corpfs
 
-  $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
+   $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
 
-  $acl.SetAccessRule($car)
+   $acl.SetAccessRule($car)
 
-  Set-Acl c:\corpfs $acl
-  ```
+   Set-Acl c:\corpfs $acl
+   ```
 
 На следующем шаге описывается подготовка контроллера домена PRIV.
 
->[!div class="step-by-step"]
-[Шаг 2 "](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Шаг 2 "](step-2-prepare-priv-domain-controller.md)

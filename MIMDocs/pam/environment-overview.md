@@ -1,7 +1,7 @@
 ---
-title: "Общие сведения о среде PAM | Документация Майкрософт"
-description: "Необходимый номер и конфигурация виртуальных машин для успешного развертывания Privileged Access Management"
-keywords: 
+title: Общие сведения о среде PAM | Документация Майкрософт
+description: Необходимый номер и конфигурация виртуальных машин для успешного развертывания Privileged Access Management
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
-ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
+ms.openlocfilehash: e83c326d32645ce80541d5c415cd9c0e9d1dae54
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288798"
 ---
 # <a name="environment-overview"></a>Общие сведения о среде
 
@@ -28,10 +29,10 @@ ms.lasthandoff: 09/01/2017
 
 На дисках, где хранятся образы дисков виртуальных машин, должно быть не менее 120 ГБ свободного пространства.  Если вы планируете развертывание высокой доступности, убедитесь в том, что подсистема диска соответствует требованиям к общему хранилищу SQL.  Общее хранилище может иметь форму дисков отказоустойчивой кластеризации Windows Server, дисков в сети хранения данных (SAN) или общих папок на сервере SMB.
 
->[!IMPORTANT]
-Для среды бастиона следует выделить хранилище. Не рекомендуется одновременно использовать это хранилище для других рабочих нагрузок за пределами среды бастиона, так как это может нарушить ее целостность.
+> [!IMPORTANT]
+> Для среды бастиона следует выделить хранилище. Не рекомендуется одновременно использовать это хранилище для других рабочих нагрузок за пределами среды бастиона, так как это может нарушить ее целостность.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Управление привилегированным доступом для доменных служб Active Directory](privileged-identity-management-for-active-directory-domain-services.md) — обзор решения PAM и принципов его работы.
 - [Основные сведения о компонентах управления привилегированным доступом](principles-of-operation.md) — обзор различных компонентов PAM.

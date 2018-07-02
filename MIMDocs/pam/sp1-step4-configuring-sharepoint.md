@@ -1,7 +1,7 @@
 ---
-title: "Шаг 4. Настройка SharePoint"
-description: "В этой статье описывается шаг 4 настройки PAM с помощью скриптов. На этом шаге настраивается среда SharePoint, которая будет использоваться в рамках развертывания PAM."
-keywords: 
+title: Шаг 4. Настройка SharePoint
+description: В этой статье описывается шаг 4 настройки PAM с помощью скриптов. На этом шаге настраивается среда SharePoint, которая будет использоваться в рамках развертывания PAM.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f8d033bec440c6efed26dd959acc713638258dd3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e46b7cf75eb60930441e309448773353668ed454
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289634"
 ---
 # <a name="step-4-configuring-sharepoint"></a>Шаг 4. Настройка SharePoint
 
->[!div class="step-by-step"]
-[« Шаг 3](sp1-step3-installing-configuring-sql.md)
-[Шаг 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Шаг 3](sp1-step3-installing-configuring-sql.md)
+> [Шаг 5 »](sp1-step5-configuring-pam.md)
 
 Версия SharePoint должна быть не ниже SharePoint Foundation 2013 с пакетом обновления 1 (SP1).
 
@@ -51,6 +52,6 @@ ms.lasthandoff: 08/19/2017
 
 Подробные сведения можно найти в разделе **Настройка SharePoint** статьи [Шаг 3. Подготовка сервера PAM](/microsoft-identity-manager/pam/step-3-prepare-pam-server). По завершении запустите повторно сценарий \PAMDeployment.ps1 и выберите вариант 4 (Установка SharePoint) для выполнения этого этапа.
 
->[!div class="step-by-step"]
-[« Шаг 3](sp1-step3-installing-configuring-sql.md)
-[Шаг 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Шаг 3](sp1-step3-installing-configuring-sql.md)
+> [Шаг 5 »](sp1-step5-configuring-pam.md)

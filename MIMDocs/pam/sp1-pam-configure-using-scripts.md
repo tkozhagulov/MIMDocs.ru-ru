@@ -1,7 +1,7 @@
 ---
-title: "Настройка управления привилегированным доступом (PAM) с помощью сценариев"
-description: "Эта статья входит в серию, посвященную настройке PAM с помощью скриптов. Здесь рассматриваются изменения XML-файла, который будет использоваться в скриптах развертывания PAM."
-keywords: 
+title: Настройка управления привилегированным доступом (PAM) с помощью сценариев
+description: Эта статья входит в серию, посвященную настройке PAM с помощью скриптов. Здесь рассматриваются изменения XML-файла, который будет использоваться в скриптах развертывания PAM.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,13 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 5718ec64fff049cb8717e4cbb36784c8f4ee4db3
-ms.sourcegitcommit: c13f814ce753e1fdacc7d0814087f59542e5098f
+ms.openlocfilehash: 741d722ce315b7265278997275d05981f44826e8
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289427"
 ---
 # <a name="configure-pam-using-scripts"></a>Настройка управления привилегированным доступом (PAM) с помощью сценариев
 
@@ -66,5 +67,5 @@ ms.lasthandoff: 07/26/2017
 |  Клиент домена CORP | <PRIV>Пользователь \PRIV.pamRequestor. При использовании PRIVOnly: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
 
 
->[!div class="step-by-step"]
-[Начало "](sp1-step1-configuring-priv-domain.md)
+> [!div class="step-by-step"]
+> [Начало "](sp1-step1-configuring-priv-domain.md)
