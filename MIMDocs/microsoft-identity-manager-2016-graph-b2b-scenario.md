@@ -10,20 +10,21 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 77d322f447546897ad18f0981e5faad12efafef1
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: ac11a4dfb23944d50dbbcf0b0d70c915f186c159
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34479168"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy-public-preview"></a>Совместная работа Azure Active Directory B2B с Microsoft Identity Manager (MIM) 2016 с пакетом обновлений 1 (SP1) и прокси приложения Azure (общедоступная предварительная версия)
 ============================================================================================================================
 
-Основной сценарий применения этой предварительной версии — управление жизненным циклом учетных записей Active Directory для внешних пользователей.   Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos, используя [Azure AD Application Proxy](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) или другие шлюзовые механизмы. Для Azure AD Application Proxy требуется, чтобы каждый пользователь применял собственную учетную запись доменных служб Active Directory для идентификации и делегирования.
+Основной сценарий применения этой предварительной версии — управление жизненным циклом учетных записей Active Directory для внешних пользователей.   Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos, используя [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) или другие шлюзовые механизмы. Для Azure AD Application Proxy требуется, чтобы каждый пользователь применял собственную учетную запись доменных служб Active Directory для идентификации и делегирования.
 
 ## <a name="scenario-specific-supported-guidance"></a>Рекомендации по конкретным поддерживаемым сценариям
 
-Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos, используя [Azure AD Application Proxy](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) или другие шлюзовые механизмы. Для Azure AD Application Proxy требуется, чтобы каждый пользователь применял собственную учетную запись доменных служб Active Directory для идентификации и делегирования.
+Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos, используя [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) или другие шлюзовые механизмы. Для Azure AD Application Proxy требуется, чтобы каждый пользователь применял собственную учетную запись доменных служб Active Directory для идентификации и делегирования.
 
 При настройке B2B с MIM и прокси приложения Azure предполагается следующее:
 
@@ -33,14 +34,14 @@ ms.lasthandoff: 04/26/2018
 
     -   Office Groups управляет доступом к приложениям через [Azure AD Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory).
 
--   Вы уже настроили соединители прокси приложения и группы соединителей. Если это не так, воспользуйтесь [этими инструкциями](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) для их установки и настройки.
+-   Вы уже настроили соединители прокси приложения и группы соединителей. Если это не так, воспользуйтесь [этими инструкциями](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) для их установки и настройки.
 
 -   Опубликованы одно или несколько приложений, использующие встроенную проверку подлинности Windows или индивидуальные учетные записи AD через Azure AD Application Proxy.
 
--   Вы уже пригласили или будете приглашать одного или нескольких гостей, созданных в Azure AD <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-b2b-self-service-portal>.
+-   Вы уже пригласили или будете приглашать одного или нескольких гостей, созданных в Azure AD <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>.
 
 -   Вы установили Microsoft Identity Manager, а также настроили базовые конфигурации службы, портала и агента управления Active Directory.
-    <https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-deploy>
+    <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
 
 ## <a name="b2b-end-to-end-deployment"></a>Комплексное развертывание B2B
 
@@ -188,7 +189,7 @@ Indexed (Индексированный) = **True** (Да).
 
 Для следующих шагов необходимо настроить минимальную конфигурацию агента управления службы FIM и агента управления доменных служб Active Directory.
 
-Дополнительные сведения об этой настройке можно найти в статье <https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx> — How Do I Provision Users to AD DS (Как подготовить пользователей для AD DS).
+Дополнительные сведения об этой настройке можно найти в статье <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> — How Do I Provision Users to AD DS (Как подготовить пользователей для AD DS).
 
 ### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Правило синхронизации. Импорт гостевого пользователя в MV и метавселенную службы синхронизации из Azure Active Directory<br>
 
@@ -292,10 +293,10 @@ Indexed (Индексированный) = **True** (Да).
 <a name="next-steps"></a>Дальнейшие действия
 ----------
 
-[Как подготовить пользователей в AD DS](https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx)
+[Как подготовить пользователей в AD DS](https://technet.microsoft.com/library/ff686263(v=ws.10).aspx)
 
-[Справочник по функциям для FIM 2010](https://technet.microsoft.com/en-us/library/ff800820(v=ws.10).aspx)
+[Справочник по функциям для FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Как обеспечить безопасный удаленный доступ к локальным приложениям](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started)
+[Как обеспечить безопасный удаленный доступ к локальным приложениям](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
 [Страница для скачивания агента управления Microsoft Identity Manager для Microsoft Graph (предварительная версия)](http://go.microsoft.com/fwlink/?LinkId=717495)
