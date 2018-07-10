@@ -1,20 +1,21 @@
 ---
-title: "Динамическое ведение журнала службы MIM | Документация Майкрософт"
-description: "Включение динамического ведения журнала службы MIM без перезапуска службы управления"
-keywords: 
-author: barclayn
-ms.author: barclayn
+title: Динамическое ведение журнала службы MIM | Документация Майкрософт
+description: Включение динамического ведения журнала службы MIM без перезапуска службы управления
+keywords: ''
+author: fimguy
+ms.author: davidste
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 06/25/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
-ms.assetid: 
-ms.openlocfilehash: 96dcd03616a0b63fc7cc9806446ebb36b3c81fa0
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.assetid: ''
+ms.openlocfilehash: 35d210b06a1e58b3b8f4f08677c2a4151f540246
+ms.sourcegitcommit: 88d4e41d8d57f44f4c6c4468fdbd37c2d7e91fd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957545"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Динамическое ведение журнала службы MIM с пакетом обновления 1 (SP1) (4.4.1436.0)
 В версии 4.4.1436.0 мы представили новую возможность ведения журнала. Она позволит администратору и инженерам службы поддержки включать ведение журнала без перезапуска службы управления.
@@ -32,20 +33,32 @@ ms.lasthandoff: 08/19/2017
 - Критические — служба уровня по умолчанию будет записывать только критические события
 - Введите в строке 8 (dynamicLogging mode="true" loggingLevel="Critical") предпочтительное значение для ведения журнала.
 
-Конфигурация динамического ведения журнала, расположенная в строке 266: Microsoft.ResourceManagement.Service.exe.config
+Конфигурация динамического ведения журнала, расположенная в строке 266: Microsoft.ResourceManagement.Service.exe.config
 
 ![В выделенных разделах показаны строки с разными областями ведения журнала.](media/mim-service-dynamic-logging/screen02.png)
 
-По умолчанию расположение для ведения журнала — папка **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**. Учетной записи службы FIM потребуется разрешение на запись, чтобы создать в этом расположении динамический журнал.
+По умолчанию расположение для ведения журнала — папка **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service. Учетной записи службы FIM потребуется разрешение на запись, чтобы создать в этом расположении динамический журнал.
 
 ![Расположение папки журналов](media/mim-service-dynamic-logging/screen03.png)
 
- >[!NOTE]
- В случае непредвиденных ошибок (синтаксических или других ошибок в файле конфигурации Microsoft.ResourceManagement.Service.exe.config) соответствующее сообщение об ошибке будет записано в файл Microsoft.ResourceManagement.Service.exe_Emergency.log с путем %TMP%, %TEMP% или %USERPROFILE% (любой из существующих).  
-1. "%TMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log"
-2. "%TEMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log"
-3. "% USERPROFILE %\Microsoft.ResourceManagement.Service.exe_Emergency.log"
+> [!NOTE]
+>  В случае непредвиденных ошибок (синтаксических или других ошибок в файле конфигурации Microsoft.ResourceManagement.Service.exe.config) соответствующее сообщение об ошибке будет записано в файл Microsoft.ResourceManagement.Service.exe_Emergency.log с путем %TMP%, %TEMP% или %USERPROFILE% (любой из существующих).  
+> 1. "%TMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log"
+> 2. "%TEMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log"
+> 3. "% USERPROFILE %\Microsoft.ResourceManagement.Service.exe_Emergency.log"
 
 Чтобы просмотреть трассировку, используйте [средство просмотра трассировки службы](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx).
 
  ![Снимок экрана средства просмотра трассировки службы](media/mim-service-dynamic-logging/screen04.png)
+
+# <a name="updates-build-45xx-or-greater"></a>Обновления: сборка 4.5.x.x или более поздней версии
+
+В сборке 4.5.x.x мы доработали функцию ведения журнала и теперь по умолчанию используется уровень журнала **Предупреждение**. Служба записывает сообщения в два файла (у которых перед расширением добавляются индексы 00 и 01). Эти файлы размещаются в папке C:\Program Files\Microsoft Forefront Identity Manager\2010\Service. Когда размер файла превышает максимально допустимый, служба начинает запись в другой файл. Если тот файл уже существует, он будет перезаписан. По умолчанию максимальный размер файла составляет 1 ГБ. Чтобы изменить максимальный размер по умолчанию, добавьте для прослушивателя параметр **maxOutputFileSizeKB** со значением максимального размера файла в КБ (см. пример ниже) и перезапустите службу MIM. При запуске служба добавляет журналы в новый файл (а если его размер превышает максимальный, то перезаписывает более старый файл). 
+
+> [!NOTE] Так как служба проверяет размер файла только до записи очередного сообщения, фактический размер файла может оказаться больше, чем максимально допустимый, на размер одного сообщения. По умолчанию размер всех журналов может достигать около 6 ГБ (три прослушивателя, каждый из которых создает два файла размером 1 ГБ).
+
+> [!NOTE] Учетная запись службы должна иметь разрешения на запись в каталог C:\Program Files\Microsoft Forefront Identity Manager\2010\Service. Если учетная запись службы не имеет таких прав, файлы не будут созданы.
+
+Пример настройки максимального размера файлов в 200 МБ (200 * 1024 КБ) для файлов SVCLOG и 100 МБ (100 * 1024 КБ) для файлов TXT.
+
+`<add initializeData="Microsoft.ResourceManagement.Service_tracelog.svclog" type="Microsoft.IdentityManagement.CircularTraceListener.CircularXmlTraceListener, Microsoft.IdentityManagement.CircularTraceListener, PublicKeyToken=31bf3856ad364e35" name="ServiceModelTraceListener" traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" maxOutputFileSizeKB="204800">`

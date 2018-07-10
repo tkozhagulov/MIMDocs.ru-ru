@@ -1,7 +1,7 @@
 ---
-title: "Развертывание PAM. Шаг 4 — установка MIM | Документация Майкрософт"
-description: "Установите и настройте службу и портал MIM на сервере и рабочих станциях Privileged Access Management."
-keywords: 
+title: Развертывание PAM. Шаг 4 — установка MIM | Документация Майкрософт
+description: Установите и настройте службу и портал MIM на сервере и рабочих станциях Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: barclayn
@@ -13,17 +13,18 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b69dfc39da63ec523fb09a58661b5f8367e6042c
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 81fe10b8fbf8ada08983c4bf3c58f85215cf1d66
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290039"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Шаг 4. Установка компонентов MIM на сервере и рабочей станции PAM
 
->[!div class="step-by-step"]
-[« Шаг 3](step-3-prepare-pam-server.md)
-[Шаг 5 »](step-5-establish-trust-between-priv-corp-forests.md)
+> [!div class="step-by-step"]
+> [« Шаг 3](step-3-prepare-pam-server.md)
+> [Шаг 5 »](step-5-establish-trust-between-priv-corp-forests.md)
 
 Войдите в PAMSRV от имени PRIV\Administrator, чтобы установить службу и портал MIM и пример веб-приложения портала.
 
@@ -36,30 +37,30 @@ ms.lasthandoff: 09/14/2017
 
 Следуйте инструкциям и завершите установку.
 
-1.  При выборе компонентов необходимо включить службу MIM (с управлением привилегированным доступом, но без службы отчетов MIM) и портал MIM.  
+1. При выборе компонентов необходимо включить службу MIM (с управлением привилегированным доступом, но без службы отчетов MIM) и портал MIM.  
 
-    ![Выборочная установка — снимок экрана](./media/PAM_GS_MIM_2015_Service_Portal.png)
+   ![Выборочная установка — снимок экрана](./media/PAM_GS_MIM_2015_Service_Portal.png)
 
-2.  При настройке общих служб и подключения к базе данных MIM выберите параметр **Создать новую базу данных**.
+2. При настройке общих служб и подключения к базе данных MIM выберите параметр **Создать новую базу данных**.
 
-    > [!NOTE]
-    > Если для обеспечения высокой доступности служба устанавливается несколько раз, установите флажок **Использовать существующую базу данных** для всех последующих установок.
+   > [!NOTE]
+   > Если для обеспечения высокой доступности служба устанавливается несколько раз, установите флажок **Использовать существующую базу данных** для всех последующих установок.
 
-3.  При настройке подключения к почтовому серверу задайте в качестве почтового сервера имя узла сервера Exchange или SMTP для среды CORP (если у вас нет почтового сервера, используйте значение corpdc.contoso.local) и снимите флажки **Использовать SSL** и **Почтовый сервер — Exchange Server 2007 или Exchange Server 2010**.
+3. При настройке подключения к почтовому серверу задайте в качестве почтового сервера имя узла сервера Exchange или SMTP для среды CORP (если у вас нет почтового сервера, используйте значение corpdc.contoso.local) и снимите флажки **Использовать SSL** и **Почтовый сервер — Exchange Server 2007 или Exchange Server 2010**.
 
-4.  Укажите, что необходимо создать самозаверяющий сертификат.
+4. Укажите, что необходимо создать самозаверяющий сертификат.
 
-5.  Задайте следующие учетные данные:
-    - Имя учетной записи службы: *MIMService*  
-    - Пароль учетной записи службы: *Pass@word1* (или пароль, созданный на шаге 2)  
-    - Домен учетной записи службы: *PRIV*  
-    - Учетная запись электронной почты: *MIMService@priv.contoso.local*  
+5. Задайте следующие учетные данные:
+   - Имя учетной записи службы: *MIMService*  
+   - Пароль учетной записи службы: <em>Pass@word1</em> (или пароль, созданный на шаге 2)  
+   - Домен учетной записи службы: *PRIV*  
+   - Учетная запись электронной почты: <em>MIMService@priv.contoso.local</em>  
 
-6.  Примите значения по умолчанию для имени узла сервера синхронизации и укажите учетную запись агента управления MIM *PRIV\MIMMA*. Появится предупреждение об отсутствии службы синхронизации MIM. Это нормально, поскольку служба синхронизации MIM не используется в этом сценарии.
+6. Примите значения по умолчанию для имени узла сервера синхронизации и укажите учетную запись агента управления MIM *PRIV\MIMMA*. Появится предупреждение об отсутствии службы синхронизации MIM. Это нормально, поскольку служба синхронизации MIM не используется в этом сценарии.
 
-7.  Укажите *PAMSRV* в качестве адреса сервера службы MIM.
+7. Укажите *PAMSRV* в качестве адреса сервера службы MIM.
 
-8.  Укажите *http://pamsrv.priv.contoso.local:82* в качестве URL-адреса семейства веб-сайтов SharePoint.
+8. Задайте *http://pamsrv.priv.contoso.local:82* как URL-адрес коллекции сайтов SharePoint.
 
 9. Оставьте URL-адрес портала регистрации пустым.
 
@@ -67,11 +68,11 @@ ms.lasthandoff: 09/14/2017
 
 11. Оставьте имя узла PAM REST API пустым и укажите *8086* в качестве номера порта.
 
-  ![Сведения о привязке для API REST PAM — снимок экрана](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
+    ![Сведения о привязке для API REST PAM — снимок экрана](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
 
 12. Настройка учетной записи API REST PAM MIM для использования той же учетной записи в качестве SharePoint (поскольку портал MIM также размещается на этом сервере):
     - Имя учетной записи пула приложений: *SharePoint*  
-    - Пароль учетной записи пула приложений: *Pass@word1* (или пароль, созданный на шаге 2)  
+    - Пароль учетной записи пула приложений: <em>Pass@word1</em> (или пароль, созданный на шаге 2)  
     - Домен учетной записи пула приложений: *PRIV*  
 
     ![Учетные данные учетной записи пула приложений — снимок экрана](./media/PAM_GS_Configure_Component_Service.png)
@@ -80,17 +81,17 @@ ms.lasthandoff: 09/14/2017
 
 13. Настройте службу компонента MIM PAM:
     - Имя учетной записи службы — *MIMComponent*
-    - Пароль учетной записи службы: *Pass@word1* (или пароль, созданный на шаге 2)  
+    - Пароль учетной записи службы: <em>Pass@word1</em> (или пароль, созданный на шаге 2)  
     - Домен учетной записи службы: *PRIV*
 
-  ![Учетные данные учетной записи службы компонента PAM — снимок экрана](./media/PAM_GS_Configure_MIM_PAM_component_service.png)
+    ![Учетные данные учетной записи службы компонента PAM — снимок экрана](./media/PAM_GS_Configure_MIM_PAM_component_service.png)
 
 14. Настройте службу мониторинга PAM:
     - Имя учетной записи службы — *MIMMonitor*  
-    - Пароль учетной записи службы: *Pass@word1* (или пароль, созданный на шаге 2)  
+    - Пароль учетной записи службы: <em>Pass@word1</em> (или пароль, созданный на шаге 2)  
     - Домен учетной записи службы: *PRIV*  
 
-  ![Учетные данные учетной записи службы мониторинга PAM — снимок экрана](./media/PAM_GS_Configur_PAM_Monitoring_service.png)
+    ![Учетные данные учетной записи службы мониторинга PAM — снимок экрана](./media/PAM_GS_Configur_PAM_Monitoring_service.png)
 
 15. На странице "Введите данные для порталов паролей MIM" не устанавливайте никаких флажков. Нажмите кнопку **Далее**, чтобы продолжить установку.
 
@@ -100,7 +101,7 @@ ms.lasthandoff: 09/14/2017
 
 1. После перезагрузки PAMSRV войдите в систему от имени PRIV\Administrator.
 
-2. Запустите Internet Explorer и подключитесь к порталу MIM на странице http://pamsrv.priv.contoso.local:82/identitymanagement. Первое обнаружение этой страницы может потребовать некоторого времени.
+2. Запустите Internet Explorer и перейдите на портал MIM по адресу http://pamsrv.priv.contoso.local:82/identitymanagement. Первое обнаружение этой страницы может потребовать некоторого времени.
 
 3. При необходимости войдите в Internet Explorer от имени PRIV\Administrator.
 
@@ -133,37 +134,37 @@ ms.lasthandoff: 09/14/2017
 
 В этом разделе описывается установка и настройка примера веб-приложения для API REST PAM MIM.
 
-1.  Загрузите ZIP-файл [Примеры управления удостоверениями](https://github.com/Azure/identity-management-samples) из архива примеров веб-приложений.
+1. Загрузите ZIP-файл [Примеры управления удостоверениями](https://github.com/Azure/identity-management-samples) из архива примеров веб-приложений.
 
 2. Распакуйте содержимое папки **identity-management-samples-master\Privileged-Access-Management-Portal\src** в новую папку **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal**.
 
-3.  Создайте в IIS новый веб-сайт с именем "Пример портала MIM Privileged Access Management", физическим путем C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal и портом 8090.  Это можно сделать с помощью следующей команды PowerShell:
+3. Создайте в IIS новый веб-сайт с именем "Пример портала MIM Privileged Access Management", физическим путем C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal и портом 8090.  Это можно сделать с помощью следующей команды PowerShell:
 
-  ```PowerShell
-  New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
-  ```
+   ```PowerShell
+   New-WebSite -Name "MIM Privileged Access Management Example Portal" -Port 8090   -PhysicalPath "C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\"
+   ```
 
-4.  Настройте пример веб-приложения, включив перенаправление пользователей в API REST PAM MIM. В текстовом редакторе, например в Блокноте, измените файл **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. В разделе **<system.webServer>** добавьте следующие строки:
+4. Настройте пример веб-приложения, включив перенаправление пользователей в API REST PAM MIM. В текстовом редакторе, например в Блокноте, измените файл **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management REST API\web.config**. В разделе **<system.webServer>** добавьте следующие строки:
 
-  ```XML
-  <httpProtocol>
-    <customHeaders>
-      <add name="Access-Control-Allow-Credentials" value="true"  />
-      <add name="Access-Control-Allow-Headers" value="content-type" />
-      <add name="Access-Control-Allow-Origin" value="http://pamsrv:8090" />  
-    </customHeaders>
-  </httpProtocol>
-  ```
+   ```XML
+   <httpProtocol>
+   <customHeaders>
+     <add name="Access-Control-Allow-Credentials" value="true"  />
+     <add name="Access-Control-Allow-Headers" value="content-type" />
+     <add name="Access-Control-Allow-Origin" value="http://pamsrv:8090" />  
+   </customHeaders>
+   </httpProtocol>
+   ```
 
-5.  Настройте пример веб-приложения. В текстовом редакторе, например в Блокноте, измените файл **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Для параметра **pamRespApiUrl** установите значение *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
+5. Настройте пример веб-приложения. В текстовом редакторе, например в Блокноте, измените файл **C:\Program Files\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Задайте для **pamRespApiUrl** значение *http://pamsrv.priv.contoso.local:8086/api/pamresources/*.
 
-6.  Чтобы изменения вступили в силу, перезапустите IIS, выполните следующую команду:
+6. Чтобы изменения вступили в силу, перезапустите IIS, выполните следующую команду:
 
-  ```cmd
-  iisreset
-  ```
+   ```cmd
+   iisreset
+   ```
 
-7.  Убедитесь, что пользователь может пройти проверку подлинности REST API (необязательно). Откройте веб-браузер с правами администратора на сервере PAMSRV.  Перейдите на веб-сайт http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, пройдите проверку подлинности (при необходимости) и убедитесь, что началось скачивание.
+7. Убедитесь, что пользователь может пройти проверку подлинности REST API (необязательно). Откройте веб-браузер с правами администратора на сервере PAMSRV.  Перейдите по URL-адресу http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/ веб-сайта, при необходимости выполните аутентификацию и убедитесь, что скачивание происходит.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>Установка командлетов запрашивающей стороны MIM PAM
 
@@ -185,6 +186,6 @@ ms.lasthandoff: 09/14/2017
 
 На следующем шаге описывается установка отношений доверия между лесами PRIV и CORP.
 
->[!div class="step-by-step"]
-[« Шаг 3](step-3-prepare-pam-server.md)
-[Шаг 5 »](step-5-establish-trust-between-priv-corp-forests.md)
+> [!div class="step-by-step"]
+> [« Шаг 3](step-3-prepare-pam-server.md)
+> [Шаг 5 »](step-5-establish-trust-between-priv-corp-forests.md)

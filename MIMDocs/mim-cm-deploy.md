@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 241ad68d3f4a692c87d0d2a0069781ad042453c7
-ms.sourcegitcommit: 39f34a38967baa9c0da6ae5b57734b222f5771a5
+ms.openlocfilehash: 25a511dc590b02019c65a688c9b2c8dc821fff50
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290090"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Развертывание диспетчера сертификатов Microsoft Identity Manager 2016 (MIM CM)
 
@@ -80,13 +81,13 @@ ms.lasthandoff: 05/12/2018
     ![Схема](media/mim-cm-deploy/image005.png)
 
 3. Запустите сценарий resourceForestModifySchema.vbs для среды с одним лесом. Для среды с лесом ресурсов выполните следующие сценарии:
-    - DomainA — папка Users (userForestModifySchema.vbs);
-    - ResourceForestB — расположение установки диспетчера сертификатов (resourceForestModifySchema.vbs).
+   - DomainA — папка Users (userForestModifySchema.vbs);
+   - ResourceForestB — расположение установки диспетчера сертификатов (resourceForestModifySchema.vbs).
 
-    >[!NOTE]
-    >Изменение схемы — это односторонняя операция, которую можно обратить, только выполнив восстановление леса: убедитесь, что у вас есть необходимые резервные копии. Сведения об изменениях, вносимых в схему при выполнении этой операции, см. в статье [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx).
+     >[!NOTE]
+     >Изменение схемы — это односторонняя операция, которую можно обратить, только выполнив восстановление леса: убедитесь, что у вас есть необходимые резервные копии. Сведения об изменениях, вносимых в схему при выполнении этой операции, см. в статье [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx).
 
-    ![Схема](media/mim-cm-deploy/image007.png)
+     ![Схема](media/mim-cm-deploy/image007.png)
 
 4. Выполните сценарий. На экран должно быть выведено сообщение об успешном выполнении.
 
@@ -355,7 +356,6 @@ Set-ADUser -Identity $_.Name -Enabled $true
 SETSPN -S http/cm.contoso.com contoso\MIMCMWebAgent
 #Delegation for certificate authority
 Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo"="rpcss/CORPCA","rpcss/CORPCA.contoso.com"}
-
 ```
 
 **Обновление служб IIS на сервере CORPCM**
@@ -368,7 +368,6 @@ add-pssnapin WebAdministration
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name enabled -Value $true
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useKernelMode -Value $false
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useAppPoolCredentials -Value $true
-
 ```
 
 >[!NOTE]
@@ -465,10 +464,10 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 
    - Использовать существующую роль пользователя: **включено**
 
-    >[!NOTE]
-    >Это учетные записи, которые мы создали ранее. Процедуру, описанную в шаге 8, необходимо повторить для вкладок всех шести учетных записей агентов.
+     >[!NOTE]
+     >Это учетные записи, которые мы создали ранее. Процедуру, описанную в шаге 8, необходимо повторить для вкладок всех шести учетных записей агентов.
 
-    ![Учетные записи MIM CM](media/mim-cm-deploy/image030.png)
+     ![Учетные записи MIM CM](media/mim-cm-deploy/image030.png)
 
 10. После заполнения всех сведений об учетной записи агента нажмите кнопку **ОК**.
 
@@ -602,9 +601,9 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 
 6. В диалоговом окне **Свойства contoso-CORPCA-CA** нажмите кнопку **ОК**.
 
-7. Щелкните правой кнопкой мыши **contoso-CORPCA-CA****, наведите указатель на пункт **Все задачи** и щелкните **Остановить службу**. Дождитесь остановки служб сертификатов Active Directory.
+7. Щелкните правой кнопкой мыши **contoso-CORPCA-CA** *,* наведите указатель на пункт **Все задачи** и щелкните **Остановить службу**. Дождитесь остановки служб сертификатов Active Directory.
 
-8. Щелкните правой кнопкой мыши **contoso-CORPCA-CA****, наведите указатель на пункт **Все задачи** и щелкните **Запустить службу**.
+8. Щелкните правой кнопкой мыши **contoso-CORPCA-CA** *,* наведите указатель на пункт **Все задачи** и щелкните **Запустить службу**.
 
 9. Сверните консоль **центра сертификации**.
 
@@ -668,7 +667,7 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
     - В диалоговом окне "Сертификат" щелкните правой кнопкой мыши поле **Укажите значение хэша сертификата в шестнадцатеричной кодировке** и выберите пункт **Вставить**.
 
     - В диалоговом окне **Сертификат** нажмите кнопку **ОК**.
-    
+
         >[!Note]
         >Если кнопка **ОК** недоступна, значит вы случайно включили скрытый символ в строку отпечатка при копировании отпечатка из сертификата clmAgent. Повторите все шаги, начиная с пункта **Шаг 4. Скопируйте отпечаток сертификата MIMCMAgent в буфер обмена Windows** в этом руководстве.
 
@@ -678,11 +677,11 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 
 6. В диалоговом окне **Свойства contoso-CORPCA-CA** нажмите кнопку **ОК**.
 
-7. Щелкните правой кнопкой мыши **contoso-CORPCA-CA****, наведите указатель на пункт **Все задачи** и щелкните **Остановить службу**.
+7. Щелкните правой кнопкой мыши **contoso-CORPCA-CA** *,* наведите указатель на пункт **Все задачи** и щелкните **Остановить службу**.
 
 8. Дождитесь остановки служб сертификатов Active Directory.
 
-9. Щелкните правой кнопкой мыши **contoso-CORPCA-CA****, наведите указатель на пункт **Все задачи** и щелкните **Запустить службу**.
+9. Щелкните правой кнопкой мыши **contoso-CORPCA-CA** *,* наведите указатель на пункт **Все задачи** и щелкните **Запустить службу**.
 
 10. Закройте консоль **центра сертификации**.
 
@@ -736,7 +735,7 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 6. В диалоговом окне **Запись разрешения для Contoso** в списке **Применить к** выберите **Дочерние объекты пользователя**, а затем установите флажок **Разрешить** для следующих **разрешений**.
 
     - **Чтение всех свойств**
-    
+
     - **Разрешения на чтение**
 
     - **Аудит FIM CM**
@@ -904,7 +903,7 @@ $adace.GetEnumerator() | **Foreach-Object** {
 $acl = **Get-Acl** *-Path* $_.Value
 $sid=(**Get-ADGroup** "MIMCM-Managers").SID
 $p = **New-Object** System.Security.Principal.SecurityIdentifier($sid)
-##https://msdn.microsoft.com/en-us/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
+##https://msdn.microsoft.com/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
 $ace = **New-Object** System.DirectoryServices.ActiveDirectoryAccessRule
 ($p,[System.DirectoryServices.ActiveDirectoryRights]"GenericAll",[System.Security.AccessControl.AccessControlType]::Allow,
 [DirectoryServices.ActiveDirectorySecurityInheritance]::All)

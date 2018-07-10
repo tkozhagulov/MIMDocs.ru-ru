@@ -1,7 +1,7 @@
 ---
-title: "Шаг 8. Проверка развертывания PAM"
-description: "Развертывание PAM с помощью скриптов включает скрипты проверки, способные выполнять сценарий PAM для подтверждения того, что развертывание PAM работает так, как ожидалось."
-keywords: 
+title: Шаг 8. Проверка развертывания PAM
+description: Развертывание PAM с помощью скриптов включает скрипты проверки, способные выполнять сценарий PAM для подтверждения того, что развертывание PAM работает так, как ожидалось.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28fcbe10366df749796be76f83f608561b5f39d3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: b01980c020b1027c3b40eaf49b4431631ee041be
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289478"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Шаг 8. Проверка развертывания PAM
 
->[!div class="step-by-step"]
-[« Шаг 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Приложение »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Шаг 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Приложение »](sp1-pam-deployment-addendum.md)
 
 Пакет развертывания поставляется со сценариями проверки, способными выполнять сценарий PAM для подтверждения того, что развертывание PAM работает, как ожидалось.
 Чтобы использовать проверку развертывания, измените раздел PAMDeploymentConfig.xml с названием <PamValidation/>.
@@ -76,6 +77,6 @@ ms.lasthandoff: 08/19/2017
   Изначально у пользователя не будет доступа к ресурсу. После своевременного добавления пользователя к роли ему предоставляется доступ. По истечении срока действия запроса у пользователя снова не будет доступа.
   В сценарии используется срок действия запроса по умолчанию (11 минут).
 
->[!div class="step-by-step"]
-[« Шаг 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Приложение »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Шаг 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Приложение »](sp1-pam-deployment-addendum.md)

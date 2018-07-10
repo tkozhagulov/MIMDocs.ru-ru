@@ -1,7 +1,7 @@
 ---
-title: "Развертывание PAM. Шаг 3 — сервер PAM | Документация Майкрософт"
-description: "Подготовьте сервер PAM, где будет размещаться SQL и SharePoint для развертывания Privileged Access Management."
-keywords: 
+title: Развертывание PAM. Шаг 3 — сервер PAM | Документация Майкрософт
+description: Подготовьте сервер PAM, где будет размещаться SQL и SharePoint для развертывания Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -13,17 +13,18 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fd52a191a0592441131249451011c4e2f026ea48
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 3eb79847baed69ef53a27e09443ff9bf4647b347
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289920"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Шаг 3. Подготовка сервера PAM
 
->[!div class="step-by-step"]
-[« Шаг 2](step-2-prepare-priv-domain-controller.md)
-[Шаг 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Шаг 2](step-2-prepare-priv-domain-controller.md)
+> [Шаг 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Установка Windows Server 2012 R2
 
@@ -93,13 +94,13 @@ ms.lasthandoff: 09/14/2017
 
 Если вы хотите использовать PowerShell:
 
-1.  Щелкните PowerShell правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.
-2.  Остановите службы IIS и разблокируйте параметры узла приложения с помощью этих команд:
-    ```CMD
-    iisreset /STOP
-    C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
-    iisreset /START
-    ```
+1. Щелкните PowerShell правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.
+2. Остановите службы IIS и разблокируйте параметры узла приложения с помощью этих команд:
+   ```CMD
+   iisreset /STOP
+   C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
+   iisreset /START
+   ```
 
 Если вы хотите использовать текстовый редактор, например Блокнот:
 
@@ -204,7 +205,7 @@ ms.lasthandoff: 09/14/2017
 ## <a name="set-the-website-as-the-local-intranet"></a>Настройка веб-сайта для локальной интрасети
 
 1. Запустите Internet Explorer и откройте новую вкладку веб-браузера.
-2. Перейдите по адресу http://pamsrv.priv.contoso.local:82/ и войдите в систему как PRIV\MIMAdmin.  Откроется пустой сайт SharePoint с именем "Портал MIM".  
+2. Перейдите по адресу http://pamsrv.priv.contoso.local:82/ и войдите как PRIV\MIMAdmin.  Откроется пустой сайт SharePoint с именем "Портал MIM".  
 3. В Internet Explorer откройте **Свойства браузера**, перейдите на вкладку **Безопасность**, выберите пункт **Местная интрасеть** и добавьте веб-сайт `http://pamsrv.priv.contoso.local:82/`.
 
 Если войти не удается, может потребоваться обновить имена участников-служб Kerberos, созданных ранее на [шаге 2](step-2-prepare-priv-domain-controller.md).
@@ -215,6 +216,6 @@ ms.lasthandoff: 09/14/2017
 
 На шаге 4 начнется установка компонентов MIM на сервере PAM.
 
->[!div class="step-by-step"]
-[« Шаг 2](step-2-prepare-priv-domain-controller.md)
-[Шаг 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Шаг 2](step-2-prepare-priv-domain-controller.md)
+> [Шаг 4 »](step-4-install-mim-components-on-pam-server.md)
