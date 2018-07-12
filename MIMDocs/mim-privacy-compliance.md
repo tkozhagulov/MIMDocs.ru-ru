@@ -11,12 +11,12 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 6bcf9ab26ba38f3c6eefbdb315d4975320a597b9
-ms.sourcegitcommit: d82c05aa814015fc6bdab37133eafec3366bea3b
+ms.openlocfilehash: e7134e060647153b5d525e9785139eb8c38f8569
+ms.sourcegitcommit: 6b2c77788a69f751fc7f5c18e678aa1fabf23ebb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34449690"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952511"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Обработка данных Microsoft Identity Manager 
 
@@ -59,22 +59,22 @@ ms.locfileid: "34449690"
 
 Если у вас есть только сервер службы (без пользовательского интерфейса портала), вы можете запустить синтаксис поиска на основе [FIMAutomation PSSnapin]. Пример доступен [здесь](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx).
 
-PAM может использовать тот же синтаксис выше, или вы можете использовать [модуль MIMPAM](https://docs.microsoft.com/en-us/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), в частности, командлет get-pamuser, чтобы найти пользователя в среде PAM.
+PAM может использовать тот же синтаксис выше, или вы можете использовать [модуль MIMPAM](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), в частности, командлет get-pamuser, чтобы найти пользователя в среде PAM.
 
 Другие параметры отчетности для поиска доступных данных находятся в службе и на портале.
-- [Гибридные отчеты](https://docs.microsoft.com/en-us/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
-- [Отчеты с помощью SCSM](https://docs.microsoft.com/en-us/previous-versions/mim/jj133853%28v%3dws.10%29)
+- [Гибридные отчеты](https://docs.microsoft.com/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
+- [Отчеты с помощью SCSM](https://docs.microsoft.com/previous-versions/mim/jj133853%28v%3dws.10%29)
 
 ### <a name="bhold"></a>BHOLD
 Служба Bhold Core включает пользовательский интерфейс, который позволяет вам искать пользователей или атрибуты. 
 
 ![поиск bhold](media/mim-privacy-compliance/mim-privacy-compliance-bhold.PNG)
 
-Если для службы синхронизации вы синхронизируете BHOLD с [соединителем управления доступом](https://docs.microsoft.com/en-us/microsoft-identity-manager/bhold/bhold-access-management-connector-install), вы сможете увидеть подключенные объекты пользователя и атрибуты, отправляемые в BHOLD Core.
+Если для службы синхронизации вы синхронизируете BHOLD с [соединителем управления доступом](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-access-management-connector-install), вы сможете увидеть подключенные объекты пользователя и атрибуты, отправляемые в BHOLD Core.
 
 Также вы можете загрузить модуль отчетности BHOLD.
 
-- [Модуль отчетности BHOLD](https://docs.microsoft.com/en-us/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
+- [Модуль отчетности BHOLD](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
 
 ### <a name="certificate-management"></a>Управление сертификатами
 Поиск службы управления сертификатами встроен в пользовательский интерфейс. Администратор должен запустить службу, выбрать поиск пользователя и просмотреть данные о нем или изменить их.  
@@ -89,9 +89,9 @@ PAM может использовать тот же синтаксис выше,
 
 
 ### <a name="service-and-portal--pam"></a>Служба и портал. PAM
-С помощью службы, портала и PAM вы можете экспортировать эти данные, запустив синтаксис поиска на основе [FIMAutomation PSSnapin] (пример можно найти [здесь](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx)) и передав их по конвейеру в файл формата [CSV](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6).
+С помощью службы, портала и PAM вы можете экспортировать эти данные, запустив синтаксис поиска на основе [FIMAutomation PSSnapin] (пример можно найти [здесь](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx)) и передав их по конвейеру в файл формата [CSV](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6).
 
-PAM может использовать тот же синтаксис выше, или вы можете использовать [модуль MIMPAM](https://docs.microsoft.com/en-us/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), в частности, командлет get-pamuser, чтобы найти пользователя в среде PAM и передать данные о нем по конвейеру в файл формата CSV.
+PAM может использовать тот же синтаксис выше, или вы можете использовать [модуль MIMPAM](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), в частности, командлет get-pamuser, чтобы найти пользователя в среде PAM и передать данные о нем по конвейеру в файл формата CSV.
 
 - [Пример запроса службы MIM с помощью PowerShell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3)
 
@@ -107,14 +107,14 @@ PAM может использовать тот же синтаксис выше,
 
 ### <a name="synchronization-service"></a>Служба синхронизации
 
-Для выполнения операций управления администраторы должны быть частью операций синхронизации или администраторами, определенными [здесь](https://docs.microsoft.com/en-us/previous-versions/mim/jj590183(v%3dws.10)).
+Для выполнения операций управления администраторы должны быть частью операций синхронизации или администраторами, определенными [здесь](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10)).
 
 Обновление данных осуществляется путем определения правил в главном источнике. Консоль управления помогает определить в источнике главный источник для обновления. Другой вариант — создать правило синхронизации или расширение правила для управления обновлением данных, если источник, такой как данные HR, все еще нужно использовать. Это доступные поддерживаемые варианты.
 
 Дополнительные сведения о различных способах обновления атрибутов см. ниже. 
 
-- [Использование расширений правил](https://msdn.microsoft.com/en-us/library/windows/desktop/ms698810(v=vs.100).aspx)
-- [Общие сведения о синхронизации данных с внешними системами](https://docs.microsoft.com/en-us/previous-versions/mim/jj133850(v%3dws.10))
+- [Использование расширений правил](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
+- [Общие сведения о синхронизации данных с внешними системами](https://docs.microsoft.com/previous-versions/mim/jj133850(v%3dws.10))
 
 ### <a name="service-and-portal--pam"></a>Служба и портал. PAM
 
@@ -139,8 +139,8 @@ PAM может использовать тот же синтаксис выше,
 Служба синхронизации включает множество способов обработки данных или их удаления в зависимости от бизнес-процессов. Ниже приведены некоторые ресурсы, в которых рассматриваются варианты удаления и обновления атрибутов: 
 
 - [Общие сведения об отмене подготовки](https://social.technet.microsoft.com/wiki/contents/articles/1270.understanding-deprovisioning-in-fim.aspx)
-- [Использование расширений правил](https://msdn.microsoft.com/en-us/library/windows/desktop/ms698810(v=vs.100).aspx)
-- [Рекомендации по MIM](https://docs.microsoft.com/en-us/microsoft-identity-manager/mim-best-practices)
+- [Использование расширений правил](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx)
+- [Рекомендации по MIM](https://docs.microsoft.com/microsoft-identity-manager/mim-best-practices)
 
 ### <a name="service-and-portal--pam"></a>Служба и портал. PAM
 
@@ -177,6 +177,6 @@ Bhold, как и большинство систем, подключенных �
 ![mim-privacy-compliance-ceip2.PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## <a name="next-steps"></a>Дальнейшие действия 
-- [SQL: руководство по конфиденциальности](https://docs.microsoft.com/en-us/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
+- [SQL: руководство по конфиденциальности](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
 - [Раздел о GDPR на портале Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
 - [Архив FIM 2010. Эксплуатация. Использование Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)
