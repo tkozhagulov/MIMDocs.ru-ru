@@ -8,12 +8,12 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: 090e82cac6c734beb9767e2d2e6230320e44c26f
-ms.sourcegitcommit: c6cb2556bb9f2256b959a3c95db7ca5bbfc2b437
+ms.openlocfilehash: ca1dacdd32a025bc08c00bde6088d85d6444be99
+ms.sourcegitcommit: 8b2623f6247621098d386cbe84e10b5b5373abfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065148"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39149919"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Преобразование служб MIM в групповую управляемую учетную запись службы
 
@@ -61,7 +61,7 @@ ms.locfileid: "37065148"
 ## <a name="synchronization-service"></a>Служба синхронизации
 -----------------------
 
-1.  Первый шаг создает группу с именем MIMSync_Servers и добавляет в нее все серверы синхронизации.
+1.  Создайте группу с именем MIMSync_Servers и добавьте в нее все серверы синхронизации.
 
 ![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
