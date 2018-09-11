@@ -10,12 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: bb0287b894786d13398819b04bdb089f0f36b33e
+ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288876"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694645"
 ---
 # <a name="supported-languages"></a>Поддерживаемые языки
 
@@ -26,7 +26,7 @@ ms.locfileid: "36288876"
 Языковой пакет службы и портала Microsoft MIM поддерживает следующие 33 языка.  
 
 > [!NOTE]
-> В версию [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) в языковой пакет надстроек MIM был добавлен раздел реестра с именем "OverrideDefaultUILocale", а в языковом пакете расширений планируется сопоставить все похожие языки с поддерживаемым. Например, если язык отображения Windows — ES-CL (чилийский испанский) или любой другой ES-**, будет предпринята попытка сопоставить этот язык с ES-ES (стандартным испанским).
+> В версию [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) в языковой пакет надстроек MIM был добавлен раздел реестра с именем "OverrideDefaultUILocale", а в языковом пакете расширений планируется сопоставить все похожие языки с поддерживаемым. Например, если язык отображения Windows — ES-CL (чилийский испанский) или любой другой ES-\*, будет предпринята попытка сопоставить этот язык с ES-ES (стандартным испанским).
 
 > [!IMPORTANT]
 > Текст в надстройке и на портале SSPR будет локализован, но для локализации вопросов потребуются дополнительные действия. Вам нужно будет создать рабочие процессы AuthN (и сопутствующие наборы и правила политики управления для целевой направленности), чтобы привязывать вопросы на каждом языке с целевым расположением.
