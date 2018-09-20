@@ -12,12 +12,12 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: a64ee79897ce73242d0f8510842fdcb6758fab2c
+ms.sourcegitcommit: 28834821cbddd6384613d8ba45424c35f4c39ce6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289539"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45538580"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Настройка сервера управления удостоверениями: SharePoint
 
@@ -71,7 +71,7 @@ ms.locfileid: "36289539"
 2. Обозначьте этот сервер как сервер баз данных **corpsql** для базы данных настроек, а *Contoso\SharePoint* используйте в качестве учетной записи для доступа к базе данных в SharePoint.
 3. Создайте пароль для парольной фразы фермы.
 
-4. В мастере настройки рекомендуется выбрать тип [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) для **Внешнего интерфейса**
+4. В мастере настройки рекомендуется выбрать тип [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) для **Внешнего интерфейса**
 
 5. Когда мастер настройки завершит задание конфигурации 10 из 10, нажмите кнопку "Готово", после чего откроется веб-браузер.
 
