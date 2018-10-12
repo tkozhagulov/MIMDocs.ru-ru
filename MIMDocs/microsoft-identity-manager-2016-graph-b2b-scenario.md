@@ -1,91 +1,99 @@
 ---
-title: Агент управления Microsoft Identity Manager для Microsoft Graph | Документация Майкрософт
-author: fimguy
-description: Microsoft Graph (предварительная версия) — это средство, которое позволяет управлять жизненным циклом учетных записей Active Directory для внешних пользователей. Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos.
+title: Настройка соединителя Microsoft Identity Manager для Microsoft Graph для B2B | Документы Майкрософт
+author: billmath
+description: Соединитель Microsoft Graph — это средство, которое позволяет управлять жизненным циклом учетных записей Active Directory для внешних пользователей. Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos.
 keywords: ''
-ms.author: davidste
-manager: bhu
-ms.date: 04/25/2018
+ms.author: billmath
+manager: mtillman
+ms.date: 10/02/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: ac11a4dfb23944d50dbbcf0b0d70c915f186c159
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: b7623da4c210711bd09882a8222377e725162991
+ms.sourcegitcommit: 032b3cdd8a88b1ccfb30c0070f216020feee6293
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34479168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48045672"
 ---
-<a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy-public-preview"></a>Совместная работа Azure Active Directory B2B с Microsoft Identity Manager (MIM) 2016 с пакетом обновлений 1 (SP1) и прокси приложения Azure (общедоступная предварительная версия)
+<a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Совместная работа Azure Active Directory B2B с Microsoft Identity Manager (MIM) 2016 с пакетом обновления 1 (SP1) и Azure Active Directory Application Proxy
 ============================================================================================================================
 
-Основной сценарий применения этой предварительной версии — управление жизненным циклом учетных записей Active Directory для внешних пользователей.   Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos, используя [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) или другие шлюзовые механизмы. Для Azure AD Application Proxy требуется, чтобы каждый пользователь применял собственную учетную запись доменных служб Active Directory для идентификации и делегирования.
+Основной сценарий применения — управление жизненным циклом учетных записей Active Directory для внешних пользователей.   Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos, используя [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) или другие шлюзовые механизмы. Для Azure AD Application Proxy требуется, чтобы каждый пользователь применял собственную учетную запись доменных служб Active Directory для идентификации и делегирования.
 
-## <a name="scenario-specific-supported-guidance"></a>Рекомендации по конкретным поддерживаемым сценариям
+## <a name="scenario-specific-guidance"></a>Указания по сценарию
 
-Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos, используя [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) или другие шлюзовые механизмы. Для Azure AD Application Proxy требуется, чтобы каждый пользователь применял собственную учетную запись доменных служб Active Directory для идентификации и делегирования.
+При настройке B2B с MIM и Azure AD Application Proxy предполагается следующее.
 
-При настройке B2B с MIM и прокси приложения Azure предполагается следующее:
+-   Вы уже развернули локальную среду Active Directory и установили Microsoft Identity Manager. Вы также настроили базовые конфигурации службы MIM, портала MIM, агента управления Active Directory (ADMA) и агента управления FIM (FIM MA).
+    <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
 
--   Вы уже установили [агент управления Graph](microsoft-identity-manager-2016-connector-graph.md).
+-   Вы уже выполнили инструкции в статье о скачивании и установке [соединителя Graph](microsoft-identity-manager-2016-connector-graph.md).
 
--   У вас настроены локальная служба AD и Azure AD с синхронизацией пользователей и групп в Azure AD.
+-   У вас настроено средство Azure AD Connect для синхронизации пользователей и групп с Azure AD.
 
-    -   Office Groups управляет доступом к приложениям через [Azure AD Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory).
+-   У вас настроено средство Azure AD Connect с целью синхронизации Групп Office для управления приложением [с локальными доменными службами Active Directory](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory).
 
 -   Вы уже настроили соединители прокси приложения и группы соединителей. Если это не так, воспользуйтесь [этими инструкциями](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) для их установки и настройки.
 
--   Опубликованы одно или несколько приложений, использующие встроенную проверку подлинности Windows или индивидуальные учетные записи AD через Azure AD Application Proxy.
+-   Вы уже опубликовали одно или несколько приложений, использующих встроенную проверку подлинности Windows или отдельные учетные записи AD через Azure AD App Proxy.
 
--   Вы уже пригласили или будете приглашать одного или нескольких гостей, созданных в Azure AD <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>.
+-   Вы пригласили или приглашаете одного или нескольких гостей, вследствие чего в Azure AD <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal> создаются один или несколько пользователей.
 
--   Вы установили Microsoft Identity Manager, а также настроили базовые конфигурации службы, портала и агента управления Active Directory.
-    <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
 
-## <a name="b2b-end-to-end-deployment"></a>Комплексное развертывание B2B
 
-Сценарий
+## <a name="b2b-end-to-end-deployment-example-scenario"></a>Пример сценария комплексного развертывания B2B
+
+Это руководство основано на описанном ниже сценарии.
 
 Компания Contoso Pharmaceuticals сотрудничает с Trey Research Inc. в области исследований и разработок. Сотрудникам компании Trey Research нужен доступ к приложению для создания отчетов по исследованиям, которое предоставляет Contoso Pharmaceuticals.
 
--   Contoso Pharmaceuticals использует независимый клиент и настроила в нем пользовательский домен.
+-   Компания Contoso Pharmaceuticals использует собственный клиент и настроила в нем личный домен.
 
--   Внешний пользователь приглашен в клиент Contoso Pharmaceuticals.
+-   Кто-то пригласил внешнего пользователя в клиент Contoso Pharmaceuticals.
     Этот пользователь принял приглашение и теперь может обращаться к совместно используемым ресурсам.
 
--   Для этого примера через прокси приложения опубликовано приложение, которое использует службу и портал MIM для организации участия гостевого пользователя в процессе MIM и примерах взаимодействия со службой поддержки.
+-   Компания Contoso Pharmaceuticals опубликовала приложение посредством App Proxy. В этом случае примером приложения является портал MIM. Это дает возможность пользователю-гостю принимать участие в процессах MIM, например в сценариях службы технической поддержки, или запрашивать доступ к группам в MIM.
 
-## <a name="create-the-graph-management-agent"></a>Создание агента управления Graph
 
-Примечание. Прежде, чем создавать соединитель, проверьте наличие [агента управления Graph](microsoft-identity-manager-2016-connector-graph.md).
+## <a name="configure-ad-and-azure-ad-connect-to-exclude-users-added-from-azure-ad"></a>Настройка Active Directory и Azure AD Connect для исключения пользователей, добавленных из Azure AD
+
+По умолчанию средство Azure AD Connect предполагает, что пользователей без прав администратора в Active Directory необходимо синхронизировать с Azure AD.  Если средство Azure AD Connect находит в Azure AD пользователя, который соответствует пользователю в локальной среде Active Directory, оно сопоставляет эти две учетные записи, предполагает, что синхронизация пользователя была выполнена ранее, и делает локальную среду Active Directory заслуживающим доверия источником.  Однако такое поведение по умолчанию не подходит для процессов B2B, в рамках которых источником учетной записи пользователя является Azure AD. 
+
+Поэтому пользователей, которые переносятся в доменные службы Active Directory диспетчером MIM из Azure AD, необходимо сохранять так, чтобы служба Azure AD не пыталась снова синхронизировать их.
+Один из способов добиться этого — создать подразделение в доменных службах Active Directory и исключить его в Azure AD Connect.  
+
+Дополнительные сведения см. в статье [Синхронизация Azure AD Connect: настройка фильтрации](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
+ 
+
+## <a name="create-the-azure-ad-application"></a>Создание приложения Azure AD 
+
+
+Примечание. Прежде чем создавать агент управления синхронизацией MIM для соединителя Graph, ознакомьтесь с руководством по развертыванию [соединителя Graph](microsoft-identity-manager-2016-connector-graph.md) и создайте приложение с идентификатором клиента и секретом.
+Убедитесь в том, что приложению предоставлено по крайней мере одно из следующих разрешений: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` или `Directory.ReadWrite.All`. 
+
+## <a name="create-the-new-management-agent"></a>Создание агента управления
+
 
 В пользовательском интерфейсе Synchronization Service Manager выберите **Соединители** и **Создать**.
-Выберите **Graph (Microsoft)** (Graph (Майкрософт)) и присвойте ему описательное имя.
+Выберите **Graph (Microsoft)** и присвойте описательное имя.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
 ### <a name="connectivity"></a>Подключение
 
-На странице "Подключение" необходимо указать версию API Graph: готовая к использованию в рабочей среде **версия 1.0** или не предназначенная для рабочей среды **бета-версия**.
+На странице "Подключение" необходимо указать версию API Graph. Готовая к использованию в рабочей среде версия — **1.0**; не предназначенная для рабочей среды версия — **бета-версия**.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/6fabfe20af0207f1556f0df18fd16f60.png)
 
-### <a name="capabilities"></a>Характеристики
-
-На странице глобальных параметров следует настроить для DN журнал разностных изменений и дополнительные функции LDAP. Эта страница заполняется сведениями от сервера LDAP.
-
-![](media/microsoft-identity-manager-2016-graph-b2b-scenario/84c4dd62f63b82239cd0cf63d14fc671.png)
-
 ### <a name="global-parameters"></a>Глобальные параметры
-
-На странице глобальных параметров следует настроить для DN журнал разностных изменений и дополнительные функции LDAP. Эта страница заполняется сведениями от сервера LDAP.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/84c4dd62f63b82239cd0cf63d14fc671.png)
 
 ### <a name="configure-provisioning-hierarchy"></a>Настройка иерархии подготовки
 
-Эта страница используется для сопоставления компонента DN, например подразделения, c типом подготавливаемого объекта, например organizationalUnit. Сохраните здесь значение по умолчанию и щелкните "Далее".
+Эта страница используется для сопоставления компонента DN, например подразделения, c типом подготавливаемого объекта, например organizationalUnit. В данном сценарии этого не требуется, поэтому оставьте значение по умолчанию и нажмите кнопку "Далее".
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/80016dc45b50a0b1b08ea51ad8b37977.png)
 
@@ -97,69 +105,66 @@ ms.locfileid: "34479168"
 
 #### <a name="select-object-types"></a>Выбор типов объектов
 
-На странице разделов и иерархий выберите все пространства имен, которые содержат объекты для импорта и экспорта.
+На странице "Типы объектов" выберите типы объектов для импорта. Необходимо выбрать по крайней мере тип "Пользователь".
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/e18921f65a0d0e4acf0775c8a01ac009.png)
 
 #### <a name="select-attributes"></a>Выбор атрибутов
 
-На экране "Выбор атрибутов" выберите необходимые атрибуты для управления пользователями B2B. Атрибут id является обязательным.
+На экране "Выбор атрибутов" выберите атрибуты Azure AD, которые будут необходимы для управления пользователями B2B в Active Directory. Атрибут ID является обязательным.  Атрибуты `userPrincipalName` и `userType` будут использоваться далее в этой конфигурации.  Остальные атрибуты являются необязательными, включая
 
--   id
+-   `displayName`
 
--   displayName
+-   `mail`
 
--   mail
+-   `givenName`
 
--   givenName
+-   `surname`
 
--   surname
+-   `userPrincipalName`
 
--   userPrincipalName
-
--   userType
+-   `userType`
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/58da80f5475cf01a97a6843dd279385c.png)
 
 #### <a name="configure-anchors"></a>Настройка привязок
 
-Если выбрана настройка привязок, далее следует обязательный шаг настройки привязок. По умолчанию для сопоставления используется атрибут id.
+На странице "Настройка привязки" настройка атрибута привязки является обязательным шагом. По умолчанию для сопоставления пользователя используется атрибут ID.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
 #### <a name="configure-connector-filter"></a>Настройка фильтра соединителя
 
-На странице настройки фильтра соединителя вы можете отфильтровать объекты с помощью фильтра по атрибутам. В нашем сценарии работы с B2B нужно добавлять только тех пользователей, у которых userType имеет значение Guest, а не Member.
+На странице настройки фильтра соединителя MIM позволяет отфильтровать объекты с помощью фильтра по атрибутам. В нашем сценарии работы с B2B нужно добавлять только тех пользователей, у которых атрибут `userType` имеет значение `Guest`, а не `member`.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d90691fce652ba41c7a98c9a863ee710.png)
 
 #### <a name="configure-join-and-projection-rules"></a>Настройка правил соединения и проекции
 
-Настройка правил соединения и проекции выполняется правилом синхронизации, а значит вам не нужно определять соединения и проекции для самого соединителя. Сохраните значения по умолчанию и щелкните "ОК".
+В этом руководстве предполагается, что вы создаете правило синхронизации.  Настройка правил соединения и проекции выполняется правилом синхронизации, а значит, вам не нужно определять соединения и проекции для самого соединителя. Сохраните значения по умолчанию и щелкните "ОК".
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/34896440ae6ad404e824eb35d8629986.png)
 
 #### <a name="configure-attribute-flow"></a>Настройка потока атрибута
 
-Так же как для соединений и проекции, вам не нужно определять поток атрибутов, поскольку он обрабатывается правилом синхронизации, которое мы создадим позднее. Сохраните значения по умолчанию и щелкните "ОК".
+В этом руководстве предполагается, что вы создаете правило синхронизации.  Проекция не требуется для определения потока атрибутов, так как он обрабатывается правилом синхронизации, которое мы создадим позднее. Сохраните значения по умолчанию и щелкните "ОК".
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/b7cd0d294d4f361f0551bf2cb774d5f5.png)
 
 #### <a name="configure-deprovision"></a>Настройка отзыва
 
-Настройка отзыва позволит удалять объекты при удалении объекта метавселенной. В этом тестовом примере мы используем разъединители, так как нам нужно сохранить их в Azure. Кроме того, мы используем только операции импорта и ничего не экспортируем в Azure.
+Настройка отзыва позволяет настроить удаление объекта при синхронизации MIM, если удаляется объект метавселенной. В этом сценарии мы используем разъединители, так как нам нужно сохранить их в Azure AD. Кроме того, мы ничего не экспортируем в Azure AD, и соединитель настраивается только для импорта.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/2394ad4d11546c6a5c69a6dad56fe6ca.png)
 
 #### <a name="configure-extensions"></a>Настройка расширений
 
-Настройка расширений для этого агента управления возможна, но не является обязательной, так как мы используем правила синхронизации. Если бы ранее в потоке атрибутов мы выбрали расширенное правило, здесь у нас появилась бы возможность определить его.
+Настройка расширений для этого агента управления возможна, но не является обязательной, так как мы используем правило синхронизации. Если бы ранее в потоке атрибутов мы выбрали расширенное правило, у нас появилась бы возможность определить расширение правила.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/74513d95b10f6ce47b7ac75fe7ab9889.png)
 
-## <a name="creating-mim-service-synchronization-rules"></a>Создание правил синхронизации для службы MIM
+## <a name="extending-the-metaverse-schema"></a>Расширение схемы метавселенной
 
-На следующих шагах мы начнем сопоставлять гостевую учетную запись B2B с потоком атрибутов. Также здесь предполагается, что вы уже настроили агент управления Active Directory и взаимодействие между FIM MA и службой и порталом MIM.
 
 Прежде чем создавать правило синхронизации, нам нужно с помощью конструктора метавселенной создать атрибут userPrincipalName, связанный с объектом пользователя.
 
@@ -175,7 +180,7 @@ ms.locfileid: "34479168"
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/47d0056eb496edd2e7b5da11a2c04718.png)
 
-И наконец, укажите следующие данные.
+Затем укажите следующие данные.
 
 Имя атрибута: **userPrincipalName**.
 
@@ -185,24 +190,31 @@ Indexed (Индексированный) = **True** (Да).
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9fba1ff9feefb17b82478ac7010edbfa.png)
 
+## <a name="creating-mim-service-synchronization-rules"></a>Создание правил синхронизации для службы MIM
+
+На следующих шагах мы начнем сопоставлять гостевую учетную запись B2B с потоком атрибутов. Также здесь предполагается, что вы уже настроили агент управления Active Directory и передачу пользователей агентом FIM MA в службу и на портал MIM.
+
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/e389ee78beac3bf469ddd97bddb5e9d5.png)
 
-Для следующих шагов необходимо настроить минимальную конфигурацию агента управления службы FIM и агента управления доменных служб Active Directory.
+Для следующих шагов необходимо добавить минимальную конфигурацию FIM MA и ADMA.
 
 Дополнительные сведения об этой настройке можно найти в статье <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> — How Do I Provision Users to AD DS (Как подготовить пользователей для AD DS).
 
 ### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Правило синхронизации. Импорт гостевого пользователя в MV и метавселенную службы синхронизации из Azure Active Directory<br>
 
-Перейдите к разделу MIM Service and Portal (Служба и портал MIM), выберите "Правила синхронизации" и щелкните "Создать".
+Перейдите на портал MIM, выберите "Правила синхронизации" и щелкните "Создать".  Создайте правило синхронизации входящего трафика для процесса B2B посредством соединителя Graph.
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/ba39855f54268aa824cd8d484bae83cf.png)
 
-![](media/microsoft-identity-manager-2016-graph-b2b-scenario/de059b93474c39763f0b27874b716e15.png)Выбор действия "Создать ресурс в FIM"![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9bc4a92136be1557d3596fa2eaa63e61.png)
+![](media/microsoft-identity-manager-2016-graph-b2b-scenario/de059b93474c39763f0b27874b716e15.png)
+
+На этапе "Критерии связи" выберите "Создать ресурс в FIM".
+![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9bc4a92136be1557d3596fa2eaa63e61.png)
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0ac7f4d0fd55f4bffd9e6508b494aa74.png)
 
-Правила потока:
+Настройте указанные ниже правила потока атрибутов для входящего трафика.  Обязательно задайте атрибуты `accountName`, `userPrincipalName` и `uid`, так как они будут использоваться позднее в этом сценарии.
 
-| **Только исходный поток** | **Использовать как проверку существования** | **Поток (значение FIM ⇒ атрибут назначения)**                          |
+| **Только исходный поток** | **Использовать как проверку существования** | **Поток (Исходное значение ⇒ Атрибут FIM)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
 |                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
 |                       |                           | [Left(id,20)⇒accountName](javascript:void(0);)                        |
@@ -217,7 +229,7 @@ Indexed (Индексированный) = **True** (Да).
 
 ### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Правило синхронизации. Создание учетной записи для гостевого пользователя в Active Directory 
 
-Это правило синхронизации создает пользователя в Active Directory.
+Это правило синхронизации создает пользователя в Active Directory.  Поток для `dn` должен помещать пользователя в подразделение, которое было исключено из Azure AD Connect.  Кроме того, измените поток для `unicodePwd` в соответствии с политикой паролей Active Directory — пользователю не потребуется знать пароль.  Обратите внимание на то, что в значении `262656` для `userAccountControl` закодированы флаги `SMARTCARD_REQUIRED` и `NORMAL_ACCOUNT`.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/3463e11aeb9fb566685e775d4e1b825c.png)
 
@@ -234,13 +246,17 @@ Indexed (Индексированный) = **True** (Да).
 |                       |                           | [mail⇒mail](javascript:void(0);)                                      |
 |                       |                           | [sn⇒sn](javascript:void(0);)                                          |
 |                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-| **Y**                 |                           | ["CN="+uid+",OU=B2BGuest,DC=scontoso,DC=com"⇒dn](javascript:void(0);) |
+| **Y**                 |                           | ["CN="+uid+",OU=B2BGuest,DC=contoso,DC=com"⇒dn](javascript:void(0);) |
 | **Y**                 |                           | [RandomNum(0,999)+userPrincipalName⇒unicodePwd](javascript:void(0);)  |
 | **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
-### <a name="synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Правило синхронизации. Импорт идентификатора безопасности из объектов гостевых пользователей B2B для поддержки входа в MIM 
+### <a name="optional-synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Необязательное правило синхронизации. Импорт идентификатора безопасности из объектов гостевых пользователей B2B для поддержки входа в MIM 
 
-Это правило синхронизации создает пользователя в Active Directory.
+Это правило синхронизации входящего трафика передает атрибут идентификатора безопасности пользователя из Active Directory обратно в MIM, чтобы пользователь мог получать доступ к порталу MIM.  Портал MIM требует, чтобы в базе данных службы MIM были заполнены атрибуты пользователя `samAccountName`, `domain` и `objectSid`.
+
+Настройте `ADMA` в качестве исходной внешней системы, так как Active Directory будет автоматически задавать атрибут `objectSid` при создании пользователя диспетчером MIM.
+ 
+Обратите внимание на то, что, если вы настраиваете создание пользователей в службе MIM, они не должны входить в наборы, предназначенные для правил политики управления самостоятельным сбросом паролей сотрудниками.  Вам может потребоваться изменить настроенные определения, исключив пользователей, созданных потоком B2B. 
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/263df23fd588c4229b958aee240071f3.png)
 
@@ -251,23 +267,34 @@ Indexed (Индексированный) = **True** (Да).
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/80fb9d563ec088925477a645f19b0373.png)
 
-Теперь нам нужно пригласить пользователя и выполнить действия управления в следующем порядке:
 
--   полный импорт и синхронизация для агента управления MIMMA;
+| **Только исходный поток** | **Использовать как проверку существования** | **Поток (Исходное значение ⇒ Атрибут FIM)**                          |
+|-----------------------|---------------------------|-----------------------------------------------------------------------|
+|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
+|                       |                           | ["CONTOSO"⇒domain](javascript:void(0);)                            |
+|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
 
--   полный импорт и синхронизация для агента управления ADMA_SCONTOSO_B2B;
 
--   полный импорт и синхронизация для агента управления B2B Graph;
+## <a name="run-the-synchronization-rules"></a>Выполнение правил синхронизации
 
--   экспорт, разностный импорт и синхронизация для агента управления ADMA_SCONTOSO_B2B;
+Далее нам нужно пригласить пользователя и выполнить правила синхронизации агента управления в следующем порядке:
 
--   экспорт, разностный импорт и синхронизация для агента управления MIMMA.
+-   полный импорт и синхронизация для агента управления `MIMMA`;  таким образом обеспечивается настройка актуальных правил синхронизации для синхронизации MIM;
+
+-   полный импорт и синхронизация для агента управления `ADMA`;  таким образом обеспечивается согласованность MIM и Active Directory;  на этом этапе еще нет ожидающих выполнения операций экспорта для гостей;
+
+-   полный импорт и синхронизация для агента управления B2B Graph;  в результате пользователи-гости передаются в метавселенную;  на этом этапе ожидается экспорт одной или нескольких учетных записей для `ADMA`;  если ожидающих выполнения операций экспорта нет, проверьте, были ли пользователи-гости импортированы в пространство соединителя и были ли настроены правила для назначения им учетных записей в Active Directory;
+
+-   экспорт, разностный импорт и синхронизация для агента управления `ADMA`;  если операции экспорта выполнить не удалось, проверьте конфигурацию правил и определите, выполнены ли все требования к схеме; 
+
+-   экспорт, разностный импорт и синхронизация для агента управления `MIMMA`;  по завершении этого этапа ожидающих выполнения операций экспорта оставаться не должно.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/506f0a093c8b58cbb62cc4341b251564.png)
 
-## <a name="finally-application-proxy-with-b2b-guest-and-logging-into-mim"></a>Последний шаг: настройка прокси приложения для гостевого пользователя B2B и настройка входа в MIM
 
-Итак, у нас готовы все правила синхронизации в MIM. Теперь определите в конфигурации прокси приложения принцип использования облака, чтобы разрешить KCD для прокси приложения.
+## <a name="optional-application-proxy-for-b2b-guests-logging-into-mim-portal"></a>Необязательный шаг. Настройка Application Proxy для входа пользователей-гостей B2B на портал MIM
+
+Итак, у нас готовы все правила синхронизации в MIM. Теперь определите в конфигурации Application Proxy принцип использования облака, чтобы разрешить KCD для Application Proxy.
 Также вам нужно вручную добавить пользователя для управления пользователями и группами. В MIM добавлена возможность не отображать пользователей до их создания, что позволяет добавлять гостевого пользователя в офисную группу сразу после его подготовки. Но этот вариант требует более сложной настройки и не рассматривается в этом документе.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d0f0b253dbbc5edaf22b22f30f94dd3b.png)
@@ -276,15 +303,8 @@ Indexed (Индексированный) = **True** (Да).
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/0c2361d137f3efcad9139069c0abcb4d.png)
 
-| **Только исходный поток** | **Использовать как проверку существования** | **Поток (значение FIM ⇒ атрибут назначения)**                          |
-|-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [sAMAccountName⇒accountName](javascript:void(0);)                     |
-|                       |                           | ["CONTOSO"⇒domain](javascript:void(0);)                            |
-|                       |                           | [objectSid⇒objectSid](javascript:void(0);)                                      |
 
-После подготовки всех элементов
-
-Попробуйте войти от имени пользователя B2B и обратиться к нужному приложению
+Завершив настройку, попробуйте войти от имени пользователя B2B и обратиться к нужному приложению.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/275fc989d20d2598df55cde4b4524dca.png)
 
@@ -299,4 +319,4 @@ Indexed (Индексированный) = **True** (Да).
 
 [Как обеспечить безопасный удаленный доступ к локальным приложениям](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
-[Страница для скачивания агента управления Microsoft Identity Manager для Microsoft Graph (предварительная версия)](http://go.microsoft.com/fwlink/?LinkId=717495)
+[Страница для скачивания соединителя Microsoft Identity Manager для Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
