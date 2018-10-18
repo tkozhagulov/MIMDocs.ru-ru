@@ -4,18 +4,17 @@ author: fimguy
 description: Соединитель Microsoft Identity Manager для Microsoft Graph позволяет управлять жизненным циклом учетных записей Active Directory для внешних пользователей. Мы рассмотрим сценарий, в котором организация пригласила гостей в каталог Azure AD и намерена предоставить им доступ к локальным приложениям, поддерживающим встроенную проверку подлинности Windows или Kerberos.
 keywords: ''
 ms.author: billmath
-manager: bhu
+manager: mtillman
 ms.date: 10/02/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 09052bc9f5cecd0a599e9a93ee43cc44ce435671
-ms.sourcegitcommit: 032b3cdd8a88b1ccfb30c0070f216020feee6293
+ms.openlocfilehash: 2e376bcc88518b911f93ce9cd4ab920eb428815b
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48045655"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358658"
 ---
 <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Соединитель Microsoft Identity Manager для Microsoft Graph
 =======================================================================================

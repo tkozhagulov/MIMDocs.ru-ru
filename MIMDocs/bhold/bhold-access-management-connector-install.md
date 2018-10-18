@@ -2,20 +2,19 @@
 title: Установка соединителя управления доступом BHOLD | Документация Майкрософт
 description: Модуль соединителя BHOLD поддерживает первоначальную и постоянную синхронизацию данных.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/07/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 6d7f19f470d0c0f82a68652115ab9265a13b3508
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 60886a84c6105e94a2cd3d42f17b86b2d69c8c0a
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2017
-ms.locfileid: "24522334"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358607"
 ---
 # <a name="access-management-connector-installation"></a>Установка соединителя управления
 
@@ -34,7 +33,7 @@ ms.locfileid: "24522334"
 
 Чтобы запустить файл программы от имени администратора, щелкните его правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Установка модуля BHOLD FIM Integration](https://technet.microsoft.com/library/jj134093(v=ws.10).aspx). Чтобы включить самостоятельную работу пользователей с ролями, можно установить модуль BHOLD FIM Integration.
 - [Руководство по установке BHOLD](bhold-installation-guide.md)

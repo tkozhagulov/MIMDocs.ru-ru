@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b6598857d5704accbee461366838bb8efb9b2fc0
-ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
+ms.openlocfilehash: 0d4ae72b897af3c6e737b412b7f8971b249ffa23
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2017
-ms.locfileid: "21942737"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334250"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Модель разделения прав администратора по уровням
 
@@ -58,7 +58,7 @@ ms.locfileid: "21942737"
 - политик и приемников проверки подлинности, если используется Windows Server 2012 или более поздняя версия;
 - выборочной проверки подлинности, если учетная запись находится в выделенном административном лесу.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - В следующей статье [Планирование среды бастиона](planning-bastion-environment.md) описывается, как добавить выделенный административный лес для диспетчера Microsoft Identity Manager и определить учетные записи администраторов.
 - [Рабочие станции с привилегированным доступом](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) предоставляют выделенную операционную систему для конфиденциальных задач, защищенную от атак из Интернета и векторов угроз.

@@ -3,21 +3,20 @@ title: Руководство по планированию ресурсов | �
 description: В этом руководстве описаны аспекты, которые нужно принять во внимание перед развертыванием MIM 2016, включая уровни нагрузки и принятие решений по политике.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 32cdf03ffa0d0d282a6277af766f97e93e3a3f3a
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 7df93a0a24aee886ec4d07ee2894d93a91606fa0
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289019"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358394"
 ---
 # <a name="capacity-planning-guide"></a>Руководство по планированию ресурсов
 

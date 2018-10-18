@@ -3,21 +3,20 @@ title: Руководство по топологии для развертыв�
 description: вы можете ознакомиться с общими сведениями о компонентах MIM 2016, а также рекомендациями по их развертыванию в вашей среде.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f67068709cf9910fa04110fce75623fd2f94ca4a
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 42562e92b3fe0daa63110d33d8952a3a1fc3de17
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289818"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358086"
 ---
 # <a name="topology-considerations"></a>Вопросы по топологии
 Компоненты Microsoft Identity Manager (MIM) можно развернуть на том же сервере или на нескольких серверах с разными конфигурациями. Выбранная вами топология влияет на потенциальную производительность MIM. Эта статья описывает несколько топологий развертывания, которые можно реализовать.

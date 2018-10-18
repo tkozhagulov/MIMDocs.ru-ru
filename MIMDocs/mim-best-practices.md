@@ -2,21 +2,19 @@
 title: Рекомендации по использованию Microsoft Identity Manager 2016 | Документы Майкрософт
 description: ''
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 01/05/2018
 ms.topic: reference
-ms.prod: identity-manager-2016
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 9ef96b88942fd33107d9021ddddb90d0d80dbed1
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 8987bc53af37b32b95b00c3df67d9581d4e47120
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290124"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358862"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Рекомендации по использованию Microsoft Identity Manager 2016
 
@@ -358,7 +356,7 @@ ActivityInformationConfiguration требуют, чтобы номер верс�
 
 28. Выберите элемент "Операции", а затем щелкните "Сопоставления для альтернативного доступа".
 
-29. Нажмите кнопку http://servername.
+29. Щелкните ссылку http://servername.
 
 30. Измените http://servername на https://servername, а затем нажмите кнопку "ОК".
 

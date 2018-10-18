@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 890e0f77219f6871de3fc43e3122fbc829c6adba
-ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
+ms.openlocfilehash: f3c5a74966498264cd60033b2f7751622d111e2e
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2017
-ms.locfileid: "21942720"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333553"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Управление привилегированным доступом для доменных служб Active Directory
 
@@ -107,7 +107,7 @@ PAM предоставляет следующие преимущества.
 
 Такой рабочий процесс специально предназначен для этих административных учетных записей. Администраторы (или даже скрипты), которым иногда требуется доступ к привилегированным группам, могут запрашивать именно такой доступ. MIM записывает запрос и изменения в Active Directory, и вы можете просматривать их в окне просмотра событий или отправлять данные в решения корпоративного мониторинга, такие как System Center 2012 — Operations Manager Audit Collection Services (ACS) или средства других разработчиков.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft, Version 1 and 2](https://www.microsoft.com/download/details.aspx?id=36036) (Предотвращение атак типа pass-the-hash (PtH) и других способов хищения учетных данных, версии 1 и 2)
 - [Командлеты Privileged Access Management](https://docs.microsoft.com/powershell/identitymanager/mimpam/vlatest/mimpam)
