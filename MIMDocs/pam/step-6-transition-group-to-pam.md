@@ -2,22 +2,21 @@
 title: Развертывание PAM. Шаг 6 — перемещение группы | Документация Майкрософт
 description: Перенесите группу в лес PRIV, чтобы применить к ней Privileged Access Management.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f449ca475d8b1fe72203bf4cd3b5dd3c65329d13
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 0473ea9e01a44aeb4acbebe01e6e6f989c8581d0
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379317"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Шаг 6. Перевод группы в управление привилегированных доступом (PAM)
 

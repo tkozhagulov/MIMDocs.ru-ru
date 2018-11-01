@@ -2,22 +2,21 @@
 title: Шаг 5. Установка и настройка PAM
 description: В этой статье описывается шаг 5 настройки диспетчера привилегированных удостоверений с помощью скриптов и рассматриваются действия по развертыванию на сервере PAM.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: e3e0d45f01f651400842b52e275ca4b6939f78c4
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 03c5b1cb52f16090e6b241d588bbded6be4c6687
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333842"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379368"
 ---
 # <a name="step-5-installingconfiguring-pam"></a>Шаг 5. Установка и настройка PAM
 

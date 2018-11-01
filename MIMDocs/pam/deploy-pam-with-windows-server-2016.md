@@ -2,25 +2,24 @@
 title: Развертывание Privileged Access Management для диспетчера удостоверений (Майкрософт) с помощью Windows Server 2016 | Документация Майкрософт
 description: Сведения о развертывании Privileged Access Management с помощью Windows Server 2016
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: ''
-ms.openlocfilehash: fca3ed1b37a1cc3bf9833c2de4d606845867d5d8
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332907"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379756"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Развертывание PAM диспетчера удостоверений (Майкрософт) (MIM) с помощью Windows Server 2016
 
 
-В этом сценарии диспетчер удостоверений (Майкрософт) 2016 SP1 может использовать функции Windows Server 2016 в качестве контроллера домена для леса PRIV.  После настройки этого сценария билет Kerberos пользователя будет действителен, пока будет активна его роль. 
+В этом сценарии диспетчер удостоверений (Майкрософт) 2016 SP1 может использовать функции Windows Server 2016 в качестве контроллера домена для леса PRIV.  После настройки этого сценария билет Kerberos пользователя будет действителен, пока будет активна его роль. 
 
 > [!Note]
 > Ознакомительные технические версии Windows Server 2016 до версии 5 нельзя использовать с этим диспетчером удостоверений (Майкрософт).

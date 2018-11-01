@@ -9,14 +9,13 @@ manager: mtillman
 ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 10c8d4246122daa507d79a3f2e26e945c6ab5709
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333729"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379945"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Использование Azure MFA для активации
 > [!IMPORTANT]
@@ -43,7 +42,7 @@ ms.locfileid: "49333729"
 
 ## <a name="creating-an-azure-mfa-provider"></a>Создание поставщика Azure MFA
 
-В этом разделе вы настроите поставщик Azure MFA в Microsoft Azure Active Directory.  Если Azure MFA (автономная или через Azure Active Directory Premium) уже используется, перейдите к следующему разделу.
+В этом разделе вы настроите поставщик Azure MFA в Microsoft Azure Active Directory.  Если Azure MFA (автономная или через Azure Active Directory Premium) уже используется, перейдите к следующему разделу.
 
 1.  Откройте веб-браузер и подключитесь к [классическому порталу Azure](https://manage.windowsazure.com) как администратор подписки Azure.
 
@@ -71,7 +70,7 @@ ms.locfileid: "49333729"
 
 ![Загрузка пакета SDK Multi-Factor Authentication — снимок экрана](media/PAM-Azure-MFA-Activation-Image-1.png)
 
-7.  Скопируйте полученный ZIP-файл на каждую систему, где установлена служба MIM. 
+7.  Скопируйте полученный ZIP-файл на каждую систему, где установлена служба MIM. 
 
 >[!NOTE]
 > ZIP-файл содержит важную информацию, которая используется в службе Azure MFA.
