@@ -1,4 +1,4 @@
-# [Изучение вопроса](microsoft-identity-manager-2016.md)
+# [Обзор](microsoft-identity-manager-2016.md)
 ## [Основные сведения об MIM 2016](microsoft-identity-manager-2016.md)
 ## [Новые возможности в пакете обновления 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
 ### [Сценарии развертывания PAM в MIM 2016 SP1](sp1-deployment-scripts.md)
@@ -83,7 +83,7 @@
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
 ### [Динамическое ведение журнала](./infrastructure/mim-service-dynamic-logging.md)
 ### [Руководство по экспорту производительности](https://technet.microsoft.com/library/hh322883)
-## Отчеты
+## Отчетов
 ### [Предоставление данных о пользовательских отчетах и расширяемости](https://technet.microsoft.com/library/jj133861)
 ## [Программное обеспечение Microsoft Identity: версии сборок общедоступных выпусков](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Справочник](./reference/microsoft-identity-manager-2016-developer-reference.md)
