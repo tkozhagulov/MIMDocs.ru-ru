@@ -1,6 +1,6 @@
 # [Изучение вопроса](../microsoft-identity-manager-2016.md)
 ## [Основные сведения об MIM 2016](../microsoft-identity-manager-2016.md)
-## [Новые возможности в пакете обновления 1](../Microsoft-identity-manager-2016-sp1-release-notes.md)
+
 ### [Сценарии развертывания PAM в MIM 2016 SP1](../sp1-deployment-scripts.md)
 ## [Дополнительные сведения об управлении привилегированным доступом](../pam/privileged-identity-management-for-active-directory-domain-services.md)
 ## [Гибридные отчеты в Azure](../identity-manager-hybrid-reporting-azure.md)
