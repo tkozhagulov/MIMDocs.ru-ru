@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 16dba460d9b5f9ce81076f8f883c352b1e8f4a81
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 4c39b5e3ba651464989bd0bc1f600629c7e89a0f
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358432"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718250"
 ---
 # <a name="connect-to-your-directories"></a>Подключение к каталогам
 
@@ -44,7 +44,7 @@ ms.locfileid: "49358432"
 | [Соединитель Windows PowerShell для FIM 2010 R2](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 или более поздней версии |
 | [Соединитель Microsoft Azure Active Directory для FIM 2010 R2](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory |
 | [Универсальный соединитель LDAP для FIM 2010 R2](https://msdn.microsoft.com/library/dn510997.aspx) | [Сервер LDAP v3 (совместимый с RFC 4510)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
-| [Универсальный соединитель SQL для FIM 2010 R2 или MIM](https://msdn.microsoft.com/library/dn510997.aspx) | [Все 64-разрядные драйверы ODBC поддерживают соединитель](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
+| [Универсальный соединитель SQL для FIM 2010 R2 или MIM](./reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Все 64-разрядные драйверы ODBC поддерживают соединитель](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md) |
 | [Соединитель для Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Заметки о выпуске Lotus 8.5.x |
 | [Соединитель служб SharePoint Services для UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint Server 2013 или 2016 с приложением службы профиля пользователя (UPA) |
 | [Соединитель для веб-служб](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 или 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
