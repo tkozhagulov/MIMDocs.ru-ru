@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 535c80fa2ff1b6250ae9a3f340cb514e58f390a9
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825813"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Установка MIM 2016: служба и портал MIM
 
@@ -68,11 +68,11 @@ ms.locfileid: "49358624"
 
 12. Укажите *CorpIDM* (имя этого компьютера) в качестве адреса сервера службы MIM для портала MIM.
 
-13. Укажите *http://mim.contoso.com* как URL-адрес коллекции сайтов SharePoint.
+13. Укажите `*http://mim.contoso.com*` как URL-адрес коллекции сайтов SharePoint.
 
-14. Укажите *http://passwordregistration.contoso.com* в качестве регистрации паролей URL-адреса 80 порта; рекомендуется позже обновить сертификат SSL на 443.
+14. Укажите `*http://passwordregistration.contoso.com*` в качестве регистрации паролей URL-адреса порта 80; рекомендуется позже изменить конфигурацию для использования сертификата SSL через порт 443.
 
-15. Укажите *http://passwordreset.contoso.com* в качестве 80 порта URL-адреса сброса пароля; рекомендуется позже обновить конфигурацию для использования сертификата SSL через порт 443.
+15. Укажите `*http://passwordreset.contoso.com*` в качестве порта 80 URL-адреса сброса пароля; рекомендуется позже изменить конфигурацию для использования сертификата SSL через порт 443.
 
 16. Установите флажки, чтобы открыть порты 5725 и 5726 в брандмауэре и предоставлять всем вошедшим пользователям доступ к порталу MIM.
 
