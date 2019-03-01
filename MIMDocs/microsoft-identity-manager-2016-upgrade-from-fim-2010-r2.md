@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 07998c20fcdc325cd33d8f9ee3d06c9c8572b654
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 36b5e97675d5900bf3b5348ad4857827c426e60e
+ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358677"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56952168"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Обновление с Forefront Identity Manager 2010 R2
 
@@ -41,7 +41,7 @@ ms.locfileid: "49358677"
 
 2.  На каждом сервере, где установлены компоненты FIM 2010 R2, например *CORPIDM*, войдите в качестве Contoso\Administrator. В этом примере для обновления FIM 2010 R2 до **MIM**требуются права администратора.
 
-3.  Загрузка или распаковка программного обеспечения MIM.
+3.  Загрузка или распаковка программного обеспечения MIM.  Если у вас нет этого программного обеспечения, см. сведения о [лицензировании и скачивании Microsoft Identity Manager](microsoft-identity-manager-licensing.md).
 
 ## <a name="upgrade-the-synchronization-service"></a>Обновление службы синхронизации
 
@@ -197,6 +197,6 @@ ms.locfileid: "49358677"
 
 4. Обратите внимание, что **служба Forefront Identity Manager** снова запущена.
 
-Примечание. Если надстройки и расширения FIM уже развернуты на компьютерах пользователей для SSPR, не следует настраивать новые телефонные шлюзы MFA для сброса паролей, пока все надстройки и расширения FIM не будут обновлены до MIM 2016.  Как для FIM 2010, так и для FIM 2010 R2 надстройки и расширения не распознают новые шлюзы, выдавая ошибку. В результате пользователь не может выполнить сброс пароля.
+Примечание. Если надстройки и расширения FIM уже развернуты на компьютерах пользователей для SSPR, не настраивайте новые телефонные шлюзы MFA для сброса паролей, пока все надстройки и расширения FIM не будут обновлены до MIM 2016.  Как для FIM 2010, так и для FIM 2010 R2 надстройки и расширения не распознают новые шлюзы, выдавая ошибку. В результате пользователь не может выполнить сброс пароля.
 
 Руководство по обновлению Microsoft Identity Manager 2016 с пакетом обновления 1 (SP1) см. [здесь](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/).
