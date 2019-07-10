@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 023232b9ddb3cb0a299cbc14ab4c311b8c63fc47
-ms.sourcegitcommit: fa30a8eb9c3a7f1ed6f8ce0f67362ca32751e00d
+ms.openlocfilehash: 1f7d4150ce7012cd4726126ba50b1ab0f94f474c
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56667205"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690685"
 ---
 # <a name="connect-to-your-directories"></a>Подключение к каталогам
 
@@ -43,8 +43,8 @@ ms.locfileid: "56667205"
 | Серверы каталогов Oracle (ранее Sun и Netscape) | Сервер каталогов Sun 6.x, 7.x и Oracle 11 |
 | [Соединитель Windows PowerShell](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 или более поздней версии |
 | [Соединитель Microsoft Azure Active Directory](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (не рекомендуется для новых развертываний) |
-| [Универсальный соединитель LDAP](https://msdn.microsoft.com/library/dn510997.aspx) | [Сервер LDAP v3 (совместимый с RFC 4510)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
-| [Универсальный соединитель SQL](./reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Все 64-разрядные драйверы ODBC поддерживают соединитель](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md) |
+| [Универсальный соединитель LDAP](https://msdn.microsoft.com/library/dn510997.aspx) | [Сервер LDAP v3 (совместимый с RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
+| [Универсальный соединитель SQL](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Все 64-разрядные драйверы ODBC поддерживают соединитель](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
 | [Соединитель для Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Заметки о выпуске Lotus 8.5.x |
 | [Соединитель служб SharePoint Services для UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint Server 2013 или 2016 с приложением службы профиля пользователя (UPA) |
 | [Соединитель для веб-служб](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 или 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 и другие SOAP API и REST API](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
