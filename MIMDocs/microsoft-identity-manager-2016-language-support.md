@@ -9,12 +9,12 @@ ms.date: 05/23/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 61d5f4ec20f5e29d1846a6822bec9669b364760f
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 2d843dcd5285d02a67955e763769a16f1a535abb
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358709"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690726"
 ---
 # <a name="supported-languages"></a>Поддерживаемые языки
 
@@ -30,12 +30,12 @@ ms.locfileid: "49358709"
 > [!IMPORTANT]
 > Текст в надстройке и на портале SSPR будет локализован, но для локализации вопросов потребуются дополнительные действия. Вам нужно будет создать рабочие процессы AuthN (и сопутствующие наборы и правила политики управления для целевой направленности), чтобы привязывать вопросы на каждом языке с целевым расположением.
 
-|       Language        | FIM (4.3.x.x)/MIM (4.4.xx) | MIM(4.5.x.x) |
+|       Язык        | FIM (4.3.x.x)/MIM (4.4.xx) | MIM(4.5.x.x) |
 |-----------------------|--------------------------|--------------|
 |       Болгарский       |          bg-BG           |      bg      |
 | Китайский (упрощенное письмо)  |          zh-CN           |   zh-Hans    |
 |   Китайский (Тайвань)    |          zh-TW           |   zh-Hant    |
-|       Хорватский        |          hr-HR           |      ч.      |
+|       Хорватский        |          hr-HR           |      hr      |
 |         Чешский         |          cs-CZ           |      CS      |
 |        Датский         |          da-DK           |      da      |
 |         Нидерландский         |          nl-NL           |      nl      |
@@ -44,7 +44,7 @@ ms.locfileid: "49358709"
 |        Финский        |          fi-FI           |      fi      |
 |        Немецкий         |          de-DE           |      de      |
 |         Греческий         |          el-GR           |      el      |
-|         хинди;         |          hi-IN           |      hi      |
+|         Хинди         |          hi-IN           |      hi      |
 |       Венгерский       |          hu-HU           |      hu      |
 |        Итальянский        |          it-IT           |      it      |
 |       Японский        |          ja-JP           |      ja      |
@@ -69,7 +69,7 @@ ms.locfileid: "49358709"
 ## <a name="certificate-management"></a>Управление сертификатами 
 Служба управления сертификатами Microsoft поддерживает следующие 9 языков. 
 
-|Language|FIM (4.3.x.x)/MIM (4.4.xx)|Новая служба MIM (4.5.x.x)
+|Язык|FIM (4.3.x.x)/MIM (4.4.xx)|Новая служба MIM (4.5.x.x)
 |-----|-----|-----|-----|
 |Китайский (упрощенное письмо)|zh-CN|zh-Hans|
 |Китайский (Тайвань)|zh-TW|zh-Hant|
@@ -84,7 +84,7 @@ ms.locfileid: "49358709"
 ## <a name="certificate-management-modern-application"></a>Современное приложение управления сертификатами  
 Современное приложение управления сертификатами Microsoft поддерживает следующие 33 языка. 
 
-|Language | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
+|Язык | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
 |-----|-----|-----|-----|
 |Нидерландский|nl-NL|nl|
 |Китайский (упрощенное письмо)|zh-CN|zh-Hans|
@@ -112,4 +112,4 @@ ms.locfileid: "49358709"
 ## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Первое развертывание](microsoft-identity-manager-deploy.md)
-- [Журнал версий](/reference/version-history.md)
+- [Журнал версий](reference/version-history.md)

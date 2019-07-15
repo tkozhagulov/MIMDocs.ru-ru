@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 750947d04f540e2c8317861c5826c2145deba1fd
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358408"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690750"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Использование настраиваемого поставщика многофакторной идентификации с помощью API при активации роли PAM или в сценарии SSPR
 
@@ -32,22 +32,22 @@ ms.locfileid: "49358408"
 Чтобы использовать API настраиваемого поставщика многофакторной идентификации с MIM, вам потребуются следующие компоненты.
 
 - Номера телефонов всех пользователей-кандидатов
-- Исправление MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) или более поздней версии — объявления см. в [журнале версий](/reference/version-history.md)
+- Исправление MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) или более поздней версии — объявления см. в [журнале версий](reference/version-history.md)
 - Служба MIM, настроенная для SSPR или PAM
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Подход с использованием пользовательского кода многофакторной идентификации
 
-### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Шаг 1. Использование службы MIM версии 4.5.202.0 или более поздней
+### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Шаг 1. Использование службы MIM версии 4.5.202.0 или более поздней
 
 Скачайте и установите исправление MIM [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) или более поздней версии.
 
-### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Шаг 2. Создание библиотеки DLL, реализующей интерфейс IPhoneServiceProvider
+### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Шаг 2. Создание библиотеки DLL, реализующей интерфейс IPhoneServiceProvider
 
 Библиотека DLL должна содержать класс, который реализует три метода.
 
-- `InitiateCall`. Этот метод будет вызываться службой MIM. Служба передает телефонный номер и идентификатор запроса в качестве параметров.  Метод должен вернуть значение `PhoneCallStatus`, равное `Pending`, `Success` или `Failed`.
-- `GetCallStatus`. Служба MIM вызовет этот метод, если предыдущий вызов `initiateCall` вернул `Pending`. Этот метод также возвращает значение `PhoneCallStatus`, равное `Pending`, `Success` или `Failed`.
-- `GetFailureMessage`. Служба MIM вызовет этот метод, если предыдущий вызов `InitiateCall` или `GetCallStatus` вернул `Failed`. Этот метод возвращает диагностическое сообщение.
+- `InitiateCall`: этот метод будет вызываться службой MIM. Служба передает телефонный номер и идентификатор запроса в качестве параметров.  Метод должен вернуть значение `PhoneCallStatus`, равное `Pending`, `Success` или `Failed`.
+- `GetCallStatus`: служба MIM вызовет этот метод, если предыдущий вызов `initiateCall` вернул `Pending`. Этот метод также возвращает значение `PhoneCallStatus`, равное `Pending`, `Success` или `Failed`.
+- `GetFailureMessage`: служба MIM вызовет этот метод, если предыдущий вызов `InitiateCall` или `GetCallStatus` вернул `Failed`. Этот метод возвращает диагностическое сообщение.
 
 Реализации этих методов должны быть потокобезопасными. Более того, в реализации `GetCallStatus` и `GetFailureMessage` не должно предполагаться, что эти методы будут вызываться тем же потоком, который ранее вызывал метод `InitiateCall`.
 
@@ -135,7 +135,7 @@ namespace CustomPhoneGate
     }
 }
 ```
-### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Шаг 3. Резервное копирование файла MfaSettings.xml, расположенного в папке "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
+### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Шаг 3 Резервное копирование файла MfaSettings.xml, расположенного в папке "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service"
 
 ### <a name="step-4-edit-the-mfasettingsxml-file"></a>Шаг 4. Изменение файла MfaSettings.xml
 

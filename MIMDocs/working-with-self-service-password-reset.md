@@ -5,27 +5,27 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 08/30/2018
+ms.date: 05/11/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 3a86569a8de77f4cf4d5aeafe0cd01dab40232b3
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 90452391170114270765e9a7fe08e98eea0747e4
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358472"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690698"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Варианты развертывания самостоятельного сброса паролей
 
-Для обеспечения взаимодействия с конечными пользователями новым клиентам с [лицензиями на Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing) рекомендуется использовать функцию [самостоятельного сброса пароля Azure AD](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks.md).  Функция самостоятельного сброса пароля в Azure AD предлагает преимущества веб-интерфейса и интегрированных в Windows возможностей, позволяющих пользователям сбрасывать пароли, а также поддерживает целый ряд возможностей MIM, включая альтернативные почтовые шлюзы и шлюзы вопросов и ответов.  При развертывании самостоятельного сброса пароля Azure AD служба Azure AD Connect поддерживает [обратную запись новых паролей в AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md), а [службу уведомлений о смене пароля](deploying-mim-password-change-notification-service-on-domain-controller.md) MIM можно использовать для пересылки паролей в другие системы, например на сервер каталогов другого поставщика.  Для развертывания MIM для [управления паролями](infrastructure/mim2016-password-management.md) не требуется развертывать службу MIM или портал регистрации SSPR и портал сброса SSPR.  Вместо этого можно выполнить следующие действия.
+Для обеспечения взаимодействия с конечными пользователями новым клиентам с [лицензиями на Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing) рекомендуется использовать функцию [самостоятельного сброса пароля Azure AD](/azure/active-directory/authentication/concept-sspr-howitworks).  Функция самостоятельного сброса пароля в Azure AD предлагает преимущества веб-интерфейса и интегрированных в Windows возможностей, позволяющих пользователям сбрасывать пароли, а также поддерживает целый ряд возможностей MIM, включая альтернативные почтовые шлюзы и шлюзы вопросов и ответов.  При развертывании самостоятельного сброса пароля Azure AD служба Azure AD Connect поддерживает [обратную запись новых паролей в AD DS](/azure/active-directory/authentication/concept-sspr-writeback), а [службу уведомлений о смене пароля](deploying-mim-password-change-notification-service-on-domain-controller.md) MIM можно использовать для пересылки паролей в другие системы, например на сервер каталогов другого поставщика.  Для развертывания MIM для [управления паролями](infrastructure/mim2016-password-management.md) не требуется развертывать службу MIM или портал регистрации SSPR и портал сброса SSPR.  Вместо этого можно выполнить следующие действия.
 
 - Если вам нужно отправлять пароли в каталоги, отличные от Azure AD и AD DS, разверните службу синхронизации MIM с соединителями в доменных службах Active Directory и дополнительных целевых системах, настройте MIM для [управления паролями](infrastructure/mim2016-password-management.md) и разверните [службу уведомлений о смене пароля](deploying-mim-password-change-notification-service-on-domain-controller.md).
-- Затем, если пароли требуется отправлять в каталоги, отличные от Azure AD, настройте Azure AD Connect для [обратной записи новых паролей в AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md).
-- При необходимости можно [предварительно зарегистрировать пользователей](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md).
-- Наконец, [разверните функцию самостоятельного сброса пароля Azure AD для конечных пользователей](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment.md).
+- Затем, если пароли требуется отправлять в каталоги, отличные от Azure AD, настройте Azure AD Connect для [обратной записи новых паролей в AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
+- При необходимости можно [предварительно зарегистрировать пользователей](/azure/active-directory/authentication/howto-sspr-authenticationdata).
+- Наконец, [разверните функцию самостоятельного сброса пароля Azure AD для конечных пользователей](/azure/active-directory/authentication/howto-sspr-deployment).
 
-Существующим клиентам, которые ранее развернули Forefront Identity Manager (FIM) для самостоятельного сброса паролей и имеют лицензии на Azure Active Directory Premium, рекомендуется запланировать переход на самостоятельный сброс паролей Azure AD.  Конечных пользователей можно перевести на самостоятельный сброс паролей Azure AD без их повторной регистрации — нужно [синхронизировать или задать с помощью PowerShell альтернативный адрес электронной почты или номер мобильного телефона пользователя](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md). После регистрации пользователей для использования самостоятельного сброса паролей Azure AD можно вывести из эксплуатации портал сброса паролей FIM.
+Существующим клиентам, которые ранее развернули Forefront Identity Manager (FIM) для самостоятельного сброса паролей и имеют лицензии на Azure Active Directory Premium, рекомендуется запланировать переход на самостоятельный сброс паролей Azure AD.  Конечных пользователей можно перевести на самостоятельный сброс паролей Azure AD без их повторной регистрации — нужно [синхронизировать или задать с помощью PowerShell альтернативный адрес электронной почты или номер мобильного телефона пользователя](/azure/active-directory/authentication/howto-sspr-authenticationdata). После регистрации пользователей для использования самостоятельного сброса паролей Azure AD можно вывести из эксплуатации портал сброса паролей FIM.
 
 Клиентам, которые еще не развернули функцию самостоятельного сброса паролей Azure AD для пользователей, MIM также предоставляет порталы SSPR.  По сравнению с FIM MIM 2016 включает в себя следующие возможности.
 
@@ -79,7 +79,7 @@ Azure MFA обеспечивает дополнительный механизм
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Регистрация поставщика многофакторной проверки подлинности в Azure
 
-1.  Создайте [поставщик MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider.md).
+1.  Создайте [поставщик MFA](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Обратитесь в службу поддержки и запросите пакет SDK для ASP.NET 2.0 C#. Пакет SDK предоставляется только для пользователей, работающих с MIM с MFA, так как пакет SDK не рекомендуется к использованию. Новым пользователям следует работать со следующей версией MIM, которая будет интегрирована с сервером MFA.
 
@@ -99,7 +99,7 @@ Azure MFA обеспечивает дополнительный механизм
 
     ![Изображение для кода pf_auth.cs](media/MIM-SSPR-pFile.png)
 
-6.  В папке **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**, откройте файл: **MfaSettings**.xml.
+6.  В папке **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service** откройте файл: **MfaSettings**.xml.
 
 7.  Скопируйте значения параметров `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD` из файла pf_aut.cs в соответствующие XML-элементы файла MfaSettings.xml.
 
@@ -125,6 +125,8 @@ Azure MFA обеспечивает дополнительный механизм
 
 4.  Выберите **Phone Gate** (Телефонный шлюз) или **Шлюз SMS для одноразового пароля**, нажмите кнопку **Выбрать** и затем **ОК**.
 
+Примечание. При использовании сервера Azure MFA или другого поставщика, который сам создает одноразовый пароль, убедитесь, что указанное выше поле длины совпадает с длиной, создаваемой поставщиком MFA.  Для сервера Azure MFA эта длина должна быть равна 6.  Сервер Azure MFA также создает собственный текст сообщения, поэтому заданный текст SMS пропускается.
+
 Теперь пользователи в вашей организации могут регистрироваться для сброса пароля.  Для этого пользователи должны будут указать номер рабочего или мобильного телефона, чтобы система могла позвонить им (или отправить СМС-сообщение).
 
 #### <a name="register-users-for-password-reset"></a>Регистрация пользователей для сброса пароля
@@ -148,7 +150,7 @@ Azure MFA обеспечивает дополнительный механизм
 
 #### <a name="windows-desktop-login-integrated-password-reset"></a>Интегрированный сброс пароля через рабочий стол Windows
 
-1.  Если пользователь несколько раз вводит неправильный пароль, на экране входа отображается элемент **Не удается войти?**. .
+1.  Если пользователь несколько раз вводит неправильный пароль, на экране входа отображается элемент **Не удается войти?** . .
 
     ![Изображения для экрана входа](media/MIM-SSPR-problemsloggingin.JPG)
 
