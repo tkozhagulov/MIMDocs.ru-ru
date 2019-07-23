@@ -47,7 +47,7 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
     ```PowerShell
     import-module activedirectory
     $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-    New-ADUser –SamAccountName MIMINSTALL –name MIMMA
+    New-ADUser –SamAccountName MIMINSTALL –name MIMINSTALL
     Set-ADAccountPassword –identity MIMINSTALL –NewPassword $sp
     Set-ADUser –identity MIMINSTALL –Enabled 1 –PasswordNeverExpires 1
     New-ADUser –SamAccountName MIMMA –name MIMMA
@@ -71,7 +71,7 @@ Microsoft Identity Manger (MIM) работает с доменом Active Direct
     New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
     Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
     Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
-    New-ADUser –SamAccountName MIMpool –name BackupAdmin
+    New-ADUser –SamAccountName MIMpool –name MIMpool
     Set-ADAccountPassword –identity MIMPool –NewPassword $sp
     Set-ADUser –identity MIMPool –Enabled 1 -PasswordNeverExpires 1
     ```
